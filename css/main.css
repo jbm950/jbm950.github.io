@@ -1,13 +1,67 @@
 /* Global */
 body
 {
-    background-color: #E3A869;
+    background-color: #FFE4B5;
+}
+/* */
+/* Layout */
+/* */
+
+/* Styles of the Header block */
+div#header
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #87CEFF;
+    margin: 0; 
+    width: 100%;
+    border-bottom: 10px solid #0000FF;
 }
 
-/* Layout */
+div#header h1
+{
+    font-size: 50px;
+    padding: 0 10px;
+}
+
+div#header ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div#header li
+{
+    display: inline;
+    font-size: 26px;
+    width: 100px;
+}
+
+div#header a:link, div#header a:visited
+{
+    padding: 0 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+div#header a:hover, div#header a:active
+{
+    background-color: #6CA6CD;
+}
+
+/* Style of the content block */
 div#content
 {
 	font-family: "Arial";
-	font-size: 14px;
-    padding:0 60px 0 60px;
+	font-size: 16px;
+    padding:0 60px 20px 60px;
+    background-color: white;
+    margin: 180px 80px 0;
+    border-style: solid;
+    border-width: medium;
+    border-color: blue; 
 }
