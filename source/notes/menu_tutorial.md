@@ -2,6 +2,8 @@
 Latex style equation  
 $a^{2} + b^{2} = c^{2}$
 
+added some more text
+
 #Menu Tutorial
 (Note: This tutorial is written for pygame_toolbox version 0.1)
 
