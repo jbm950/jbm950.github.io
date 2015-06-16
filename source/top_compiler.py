@@ -14,6 +14,10 @@ if sys.platform == 'win32':
 else:
     filesep = "/"
 
+# Create different front matters to be used by the compiler
+defaultfm = "---\nlayout: default\n---\n\n"
+
+# Find the current and final directory paths
 sourcedir = os.path.dirname(os.path.abspath(__file__)) + filesep
 parentdir = sourcedir.replace("source" + filesep, "")
 
@@ -27,10 +31,10 @@ for subdir, dirs, files in os.walk('.' + filesep):
             newfile = file.replace(".md", ".html")
             command = r"pandoc -s " + sourcefile + " -o " + newfile
             subprocess.call(command, shell=True)
-            
+
             # Create the jekyll front matter
             sourcenewfile = sourcedir + newfile
-            frontmatter = "---\nlayout: default\n---\n\n"
+            frontmatter = defaultfm
             with open(sourcenewfile, 'r') as original:
                 data = original.read()
             with open(sourcenewfile, 'w') as modified:
