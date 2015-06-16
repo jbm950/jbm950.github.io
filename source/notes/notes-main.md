@@ -1,7 +1,5 @@
 ## Full listing of my notes
 
-[test link](/notes/menu_tutorial.html)
-
 ### College Courses Notes
 
 <h4 style="text-indent: 20px">
@@ -9,7 +7,7 @@ Undergrad courses
 </h4>
 
 - Dynamics
-- Heat Transfer
+- [Heat Transfer](/notes/heat_transfer/heat_transfer_main.html)
 - Nanomaterials
 - Physics I
 - Physics II

@@ -29,7 +29,7 @@ for subdir, dirs, files in os.walk('.' + filesep):
                 filesep + file
             print("converting: " + subdir + filesep + file)
             newfile = file.replace(".md", ".html")
-            command = r"pandoc -s " + sourcefile + " -o " + newfile
+            command = r"pandoc -s " + sourcefile + " --webtex -o " + newfile
             subprocess.call(command, shell=True)
 
             # Create the jekyll front matter
