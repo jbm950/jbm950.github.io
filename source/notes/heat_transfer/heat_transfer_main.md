@@ -8,9 +8,19 @@
 
 >> $\dot{E}_{in} - \dot{E}_{out} + \dot{E}_{g} = \dot{E}_{st}$
 
+>>> $\dot{E}_{in}$ - Time rate of energy entering the system  
+>>> $\dot{E}_{out}$ - Time rate of energy leaving the system  
+>>> $\dot{E}_{g}$ - Time rate of energy generated in the system  
+>>> $\dot{E}_{st}$ - Time rate of change of energy stored in the system
+
 > ### Fourier's Law (Conduction)
 
->> $q_{x} = -KA\frac{dT}{dx}$
+>> $q_{x} = -kA\frac{dT}{dx}$
+
+>>> $q_{x}$ - Heat rate in the x direction  
+>>> k - Thermal conductivity  
+>>> A - Cross sectional area perpendicular to the heat flow  
+>>> $\frac{dT}{dx}$ - Temperature gradient in the x direction
 
 > ### Newton's Law of Cooling (Convection)
 
