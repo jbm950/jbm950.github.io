@@ -1,6 +1,8 @@
 # Heat Transfer
 **Taught by: Dr. Matt Maschmann**  
-**Taken: FS 2014**
+**Taken: FS 2014**  
+**Text: Introduction to Heat Transfer (Sixth Edition)**
+*by: Bergman, Lavine, Incropera, Dewitt*
 
 ## Exam 1 Formula Sheet 
 
@@ -24,11 +26,24 @@
 
 > ### Newton's Law of Cooling (Convection)
 
->> $q_{x} = hA(T - T_{\infty})$
+>> $q_{x} = hA(T - T_{\infty})$  
+
+>>> $q_{x}$ - Heat rate in the x direction  
+>>> h - Heat transfer coefficient  
+>>> A - Cross sectional area perpendicular to the heat flow  
+>>> T - Temperature of the solid surface  
+>>> $T_{\infty}$ - Temperature of the bulk air
 
 > ### Stephan-Boltzman Law (Radiation)
 
 >> $q_{x} = \epsilon \sigma A(T^{4} - T_{surr}^{4})$
+
+>>> $q_{x}$ - Heat rate in the x direction  
+>>> $\epsilon$ - Emissivity  
+>>> $\sigma = 5.67 * 10^{-8}$ - Stephan-Boltzman constant  
+>>> A - Cross sectional area perpendicular to the heat flow  
+>>> T - Temperature of the solid surface  
+>>> $T_{surr}$ - Temperature of the surroundings
 
 > ### Heat Diffusion Equation (Conduction)
 
