@@ -40,7 +40,7 @@
 
 >>> $q_{x}$ - Heat rate in the x direction  
 >>> $\epsilon$ - Emissivity  
->>> $\sigma = 5.67 * 10^{-8}$ - Stephan-Boltzman constant  
+>>> $\sigma = 5.67 * 10^{-8} (\frac{W}{m^{2}K^{4}})$ - Stephan-Boltzman constant  
 >>> A - Cross sectional area perpendicular to the heat flow  
 >>> T - Temperature of the solid surface  
 >>> $T_{surr}$ - Temperature of the surroundings
