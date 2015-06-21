@@ -20,7 +20,7 @@
 > - [Heat Transfer](/notes/heat_transfer/heat_transfer_main.html)
 > - Manufacturing Methods
 > - Modern Control
-> - Nanomaterials
+> - [Nanomaterials](/notes/nanomaterials/nanomaterials_main.html)
 > - Physics I
 > - Physics II
 > - Statics
