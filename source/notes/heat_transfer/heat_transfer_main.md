@@ -49,7 +49,7 @@
 
 >> $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
 $+ \frac{\partial}{\partial y}\left(k\frac{\partial T}{\partial y}\right)$
-$+ \frac{\partial}{\partial}\left(k\frac{\partial T}{\partial z}\right) + \dot{q}
+$+ \frac{\partial}{\partial z}\left(k\frac{\partial T}{\partial z}\right) + \dot{q}
 = p$$c_{p}\frac{\partial T}{\partial t}$
 
 > ### Thermal Resistances
