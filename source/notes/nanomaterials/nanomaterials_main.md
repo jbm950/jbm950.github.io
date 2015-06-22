@@ -82,3 +82,13 @@
 >>> - Provides surface information
 
 > ## Nano Composites
+
+>> ### Polymer vs. Ceramic vs. Metal
+
+>>> - Ceramic = high strength, low toughness
+>>> - Polymer = high toughness, low strength
+>>> - Metal = medium strength, medium toughness
+
+>> ### What Are Composites
+
+>>>
