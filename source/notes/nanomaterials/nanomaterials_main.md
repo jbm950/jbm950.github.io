@@ -4,7 +4,7 @@
 
 ## Exam 2 Review
 
-> ## Microscopy
+> ## Characterization of Nanomaterials
 
 >> ### Contrast Enhancement
 
@@ -91,4 +91,15 @@
 
 >> ### What Are Composites
 
->>>
+>>> - Consists of a matrix material base and added reinforcement material
+>>> - Create new and improved properties from the combination of materials
+
+>> ### Polymer/Nano Clay
+
+>>> #### Phase Separated (Microcomposites)
+
+>>> - Polymer is unable to enter silicate
+>>> - Poor mixing leaves regions properties largely dependant on single 
+       materials
+
+>>> #### Intercalated (Nanocomposite)
