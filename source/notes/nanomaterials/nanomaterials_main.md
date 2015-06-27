@@ -136,3 +136,57 @@ alt="XRE: Intensity vs. Phase Angle" title="XRE: Intensity vs. Phase Angle"/>
 >>>> B = Partially Exfoliated  
 >>>> C = Fully Exfoliated  
 >>>> D = Intercalated  
+
+>> ### CNT's/Polymer Nanocomposites
+
+>>> - Carbon nanotubes are favorable due to high aspect ratio and low
+      percolation threshold
+>>> - CNT's need to be well dispersed otherwise they crate high stress
+      concentration sites and lower the mechanical properties
+>>> - Improve mechanical properties by exceeding aspect ratio threshold for
+      CNT/Polymer composites
+>>> - Pass percolation threshold to significantly increase electrical properties
+
+>> ### Interface and Load Transfer
+
+>>> - Changes structure, phase transitions, molecular mobility
+>>> - AFM can measure its shear force/stress/strength
+>>> - Can deflect cracks away from center material
+
+> ## Nanosensors
+
+>> ### Why Nanosensors
+
+>>> - Large surface to volume ratio
+>>> - Debye length comparable to radius  
+>>>     - Debye length is the part of the material that contrubutes to electron
+       transport
+>>> - Can travel from interior to surface faster
+
+>> ### Parts Needed for a Sensor
+
+>>> - Detectors
+>>> - Receptors
+>>> - Conductors
+
+>> ### Preferable Sensor Characteristics
+
+>>> - Sensitivity
+>>>     - How much does the measured value change
+>>> - Response time
+>>>     - How quickly does the measured value change when stimulated
+>>> - Recover time
+>>>     - How quickly does the measured value return to steady state after the
+          stimulus has been removed
+>>> - Selectivity
+>>>     - Does the sensor react to stimulii other than what you're trying to
+          sense
+>>> - Cyclic performance
+>>>     - Will the sensor continue to work repeatedly
+
+>> ### Example
+
+>>> CNT, Field Effect Transistor
+
+>>> - Detects a resistance change of the CNT when gasses or other molecules
+      bind to the outside
