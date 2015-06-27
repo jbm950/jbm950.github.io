@@ -103,3 +103,36 @@
        materials
 
 >>> #### Intercalated (Nanocomposite)
+
+>>> - Single polymer inbetween silicate layers
+>>> - Overall material properties starting to not have localized zones 
+
+>>> #### Exfoliated/Delaminated
+
+>>> - Silicate layers are dispersed in polymer matrix (complete mixing)
+>>> - Properties are very different even compared to the microcomposite
+
+
+>> ### XRE of Possible Polymer/Nano Clay Samples
+
+>>> $d = \frac{\lambda}{2\sin{\theta}}$
+
+>>> d - Distance bewteen layers  
+>>> $\lambda$ - Wave length  
+>>> $\theta$ - Phase angle
+
+>>> $\theta$ $\uparrow$ $\Rightarrow$ d $\downarrow$
+
+<div align="center">
+<table class="image">
+<caption align="bottom">XRE: Intensity vs. Phase Angle</caption>
+<tr><td><img src="./img/intensity_vs_phaseangle_polynanoclay.png"
+alt="XRE: Intensity vs. Phase Angle" title="XRE: Intensity vs. Phase Angle"/>
+</td></tr>
+</table>
+</div>
+
+>>>> A = Phase Separated  
+>>>> B = Partially Exfoliated  
+>>>> C = Fully Exfoliated  
+>>>> D = Intercalated  
