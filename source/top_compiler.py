@@ -47,4 +47,3 @@ for subdir, dirs, files in os.walk('.' + filesep):
                 os.makedirs(newdir)
             shutil.copy(sourcedir + newfile, newdir + newfile)
             os.remove(sourcenewfile)
-            print("Removed: " + sourcenewfile)
