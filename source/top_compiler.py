@@ -14,8 +14,10 @@ if sys.platform == 'win32':
 else:
     filesep = "/"
 
+
 # Create different front matters to be used by the compiler
-defaultfm = "---\nlayout: default\n---\n\n"
+def fmbuild(layout, title):
+    return "---\nlayout: " + layout + "\ntitle: " + title + "\n---\n\n"
 
 # Find the current and final directory paths
 sourcedir = os.path.dirname(os.path.abspath(__file__)) + filesep
@@ -34,7 +36,10 @@ for subdir, dirs, files in os.walk('.' + filesep):
 
             # Create the jekyll front matter
             sourcenewfile = sourcedir + newfile
-            frontmatter = defaultfm
+            # Build the title for the page
+            title = file.replace(".md", "").replace("_", " ").title()
+            title = title.replace("Main", "")
+            frontmatter = fmbuild("default", title)
             with open(sourcenewfile, 'r') as original:
                 data = original.read()
             with open(sourcenewfile, 'w') as modified:
