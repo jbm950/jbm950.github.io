@@ -82,13 +82,22 @@ Table of Contents
 >> - Buy in bulk but be careful with spoilable items
 >>      - Split the order with a friend to obtain the better price but not
         worry about food spoiling
+>> - Using a slow cooker can cut down costs
+>>      - Avoid having to eat out on a busy night with a little prep time in
+          the morning
+>>      - Saves cooking time on non-busy nights too
+>>      - Use less energy than stovetop or oven
 
 >> #### Eating Out
 
 >> - Eat our for breakfast or lunch so that you can spend less for smaller
      portions
 
+> ### Reduce Taxes
+
 ## Sources {#sources}
 
 > Tyson, Eric. <i>Personal Finance in Your 20s for Dummies</i>. Hoboken, NJ:
   Wiley Pub., 2011. Print.
+> BREENE, SOPHIA. "13 Ways to Save Money With a Crock Pot." <i>Greatist</i>.
+  N.p., 16 Mar. 2014. Web. 3 July 2015.
