@@ -3,14 +3,16 @@ Collection of notes for managing money
 Table of Contents
 
 - [Banking](#banking)
+- [Investing](#investing)
+- [Saving Money](#saving)
 - [Sources](#sources)
 
 ## Banking {#banking}
 
 > ### Choose a Bank
 
->> - Look for banks that participate in the Federal Deposit Insurance Corporation
-     (FDIC). Need to verify participation on FDIC's [Bank
+>> - Look for banks that participate in the Federal Deposit Insurance
+     Corporation (FDIC). Need to verify participation on FDIC's [Bank
      Find](https://research.fdic.gov/bankfind/)
 >> - What is the process and options for withdrawing money
 >> - Look up the reputation of the bank for its services if possible
@@ -42,9 +44,49 @@ Table of Contents
 
 >>> __Credit Union__
 
->>> - Due to income tax exemptions Credit Unions can sometimes offer good deals on accounts
+>>> - Due to income tax exemptions Credit Unions can sometimes offer good deals
+      on accounts
 >>> - Not necessarily available for everyone.
 >>> - Find local credit unions [here](http://www.asmarterchoice.org/)
+
+> ### Account types
+
+>> #### Checking Account
+
+>> - Generally earning low to no interest
+>> - Easy to use for transactions
+>> - Have to give permission in advance for overdraft protection
+
+>> #### Credit Card
+
+>> - Avoid like the plague
+
+>> #### Savings Account
+
+>> - Higher interest earnings than checking accounts but historically less than
+     money market funds (see [Investing](#investing))
+>>      - Good banks now can offer competitive rates on savings accounts
+>> - Easier access to money than other options
+
+## Investing {#investing}
+
+## Saving Money {#saving}
+
+> ### Food
+
+>> - Learn to cook and eat leftovers
+>> - Use store brands instead of name brands. The extra price for name brands
+    is often advertising costs rather than food quality improvements.
+    Sometimes the store brand is even the same product/recipe as the name
+    brand.
+>> - Buy in bulk but be careful with spoilable items
+>>      - Split the order with a friend to obtain the better price but not
+        worry about food spoiling
+
+>> #### Eating Out
+
+>> - Eat our for breakfast or lunch so that you can spend less for smaller
+     portions
 
 ## Sources {#sources}
 
