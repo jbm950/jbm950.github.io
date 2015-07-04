@@ -4,6 +4,7 @@ Table of Contents
 
 - [Banking](#banking)
 - [Investing](#investing)
+- [Insurance](#insurance)
 - [Saving Money](#saving)
 - [Sources](#sources)
 
@@ -69,6 +70,8 @@ Table of Contents
 >> - Easier access to money than other options
 
 ## Investing {#investing}
+
+## Insurance {#insurance}
 
 ## Saving Money {#saving}
 
