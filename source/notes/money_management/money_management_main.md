@@ -99,5 +99,6 @@ Table of Contents
 
 > Tyson, Eric. <i>Personal Finance in Your 20s for Dummies</i>. Hoboken, NJ:
   Wiley Pub., 2011. Print.  
+
 > BREENE, SOPHIA. "13 Ways to Save Money With a Crock Pot." <i>Greatist</i>.
   N.p., 16 Mar. 2014. Web. 3 July 2015.
