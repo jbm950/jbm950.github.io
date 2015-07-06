@@ -93,7 +93,7 @@ Table of Contents
 
 >> #### Eating Out
 
->> - Eat our for breakfast or lunch so that you can spend less for smaller
+>> - Eat out for breakfast or lunch so that you can spend less for smaller
      portions
 
 > ### Reduce Taxes
