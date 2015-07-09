@@ -65,7 +65,7 @@ Table of Contents
 >> #### Savings Account
 
 >> - Higher interest earnings than checking accounts but historically less than
-     money market funds (see [Investing](#investing))
+     [money market funds](#money_market_fund)
 >>      - Good banks now can offer competitive rates on savings accounts
 >> - Easier access to money than other options
 
@@ -73,9 +73,31 @@ Table of Contents
 
 > ### Start Investing or Pay Off Debt
 
->  - Debt with high interest rates should be payed off before investing as you
-     would otherwise have to make enough on your investment to compensate for
-     this loss 
+>>  - Debt with high interest rates should be payed off before investing as you
+      would otherwise have to make enough on your investment to compensate for
+      this loss 
+>>      - Example: Consumer credit ~18% interest you'd have to make more than
+          18% post tax to not lose money
+
+>> #### Student Loans vs. Investing
+
+>> - No tax benefits to paying down student loans faster
+>>      - Federal tax reduction under very specific circumstances (not a
+          dependent and below a certain annual income)
+>> - Paying down student loans instead of investing reduces amount in emergency
+     reserves
+>> - Depending on the interest rate on the student loans you could make more
+     money from investing in relatively safe investments.
+>>      - If you have a higher interest rate on your loans you might have to be
+          ok with riskier investments to still outpace the interest on the
+          loans
+
+>> #### Pay Down Morgage vs. Investing
+
+>> - Like the student loans section you will need to compare the rate of return
+     of your investments to the interest of your loans
+
+> ### Money Market Fund {#money_market_fund}
 
 ## Insurance {#insurance}
 
@@ -106,8 +128,13 @@ Table of Contents
 
 ## Sources {#sources}
 
+
+> Breene, Sophia. "13 Ways to Save Money With a Crock Pot." <i>Greatist</i>.
+  N.p., 16 Mar. 2014. Web. 3 July 2015.
+
+> Tyson, Eric. <i>Investing in Your 20s &amp; 30s for Dummies</i>. Hoboken, NJ:
+  Wiley, 2013. Print.
+
 > Tyson, Eric. <i>Personal Finance in Your 20s for Dummies</i>. Hoboken, NJ:
   Wiley Pub., 2011. Print.  
 
-> BREENE, SOPHIA. "13 Ways to Save Money With a Crock Pot." <i>Greatist</i>.
-  N.p., 16 Mar. 2014. Web. 3 July 2015.
