@@ -97,7 +97,45 @@ Table of Contents
 >> - Like the student loans section you will need to compare the rate of return
      of your investments to the interest of your loans
 
+> ### Types of Investments
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+</style>
+<div align="center">
+<table>
+
+  <tr>
+  <th> Type of investment </th>
+  <th> Associated Risk </th>		
+  <th> Average Rate of Return </th>
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> <a href="#money_market_fund">Money Market
+      Fund</a> </td>
+  <td style="text-align:center"> Low </td>		
+  <td style="text-align:center"> 4 </td>
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> <a href="#bonds">Bonds</a> </td>
+  <td style="text-align:center"> Low-Medium </td>		
+  <td style="text-align:center"> 5 </td>
+  </tr>
+
+</table>
+</div>
+
 > ### Money Market Fund {#money_market_fund}
+
+> ### Bonds {#bonds}
 
 ## Insurance {#insurance}
 
@@ -137,4 +175,3 @@ Table of Contents
 
 > Tyson, Eric. <i>Personal Finance in Your 20s for Dummies</i>. Hoboken, NJ:
   Wiley Pub., 2011. Print.  
-
