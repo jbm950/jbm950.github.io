@@ -71,6 +71,12 @@ Table of Contents
 
 ## Investing {#investing}
 
+> ### Start Investing or Pay Off Debt
+
+>  - Debt with high interest rates should be payed off before investing as you
+     would otherwise have to make enough on your investment to compensate for
+     this loss 
+
 ## Insurance {#insurance}
 
 ## Saving Money {#saving}
