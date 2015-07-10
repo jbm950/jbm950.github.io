@@ -5,6 +5,7 @@ Table of Contents
 - [Banking](#banking)
 - [Investing](#investing)
 - [Insurance](#insurance)
+- [Big Purchases](#big_purchases)
 - [Saving Money](#saving)
 - [Sources](#sources)
 
@@ -113,21 +114,28 @@ th, td {
 
   <tr>
   <th> Type of investment </th>
-  <th> Associated Risk </th>		
-  <th> Average Rate of Return </th>
+  <th> Associated Risk/Return </th>		
   </tr>
 
   <tr>
   <td style="text-align:left"> <a href="#money_market_fund">Money Market
       Fund</a> </td>
   <td style="text-align:center"> Low </td>		
-  <td style="text-align:center"> 4 </td>
   </tr>
 
   <tr>
   <td style="text-align:left"> <a href="#bonds">Bonds</a> </td>
   <td style="text-align:center"> Low-Medium </td>		
-  <td style="text-align:center"> 5 </td>
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> <a href="#stocks">Stocks</a> </td>
+  <td style="text-align:center"> High </td>		
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> <a href="#real_estate">Real Estate</a> </td>
+  <td style="text-align:center"> High </td>		
   </tr>
 
 </table>
@@ -135,9 +143,35 @@ th, td {
 
 > ### Money Market Fund {#money_market_fund}
 
+> - Similar to a savings account.
+> - Safe place to keep reserve emergency funds or to save up for a big purchase
+    in the near future (1-4 years)
+
 > ### Bonds {#bonds}
 
+> ### Stocks {#stocks}
+
+> ### Real Estate {#real_estate}
+
+> ### Mutual Funds {#mutual_funds}
+
 ## Insurance {#insurance}
+
+> ### Health Insurance
+
+> ### Disability Insurance
+
+> ### Life Insurance
+
+> ### Home Insurance
+
+> ### Car Insurance
+
+## Big Purchases {#big_purchases}
+
+> ### Car Purchase
+
+> ### House Purchase
 
 ## Saving Money {#saving}
 
@@ -163,6 +197,14 @@ th, td {
      portions
 
 > ### Reduce Taxes
+
+> - Put investment money in retirement accounts
+>       - Most retirement accounts reduce your taxable income the year you
+          contribute to the account and are taxable upon withdraw
+>       - Grows tax-free
+> - Use a health savings account for medical expenses
+>       - Reduces taxable income the year contributed, grows tax-free and can
+          be withdrawn tax free for healthcare costs
 
 ## Sources {#sources}
 
