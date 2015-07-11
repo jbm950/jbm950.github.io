@@ -98,6 +98,36 @@ Table of Contents
 >> - Like the student loans section you will need to compare the rate of return
      of your investments to the interest of your loans
 
+> ### Retirement Accounts
+
+>> - Give up front tax break but are taxed upon withdraw with the exception of 
+     Roth IRA's which do it backwards
+>> - Grow tax free
+
+>> #### 401(k)
+
+>> #### 403 (b)
+
+>> #### Individual Retirement Accounts (IRA)
+
+>> #### Annuities
+     
+> ### Long Term Allocation of Funds
+
+>> Taken from _Investing in your 20's and 30's for Dummies_  
+
+>> For safe investors subtract your age from 100 and invest that in stocks and
+   the remaining in bonds
+
+>> - ex. Age 25 $\rightarrow$ 100 - 25 = 75% stocks $\rightarrow$ 100 - 75 = 25%
+     bonds
+
+>> For safe investors subtract your age from 120 and invest that in stocks and
+   the remaining in bonds
+   
+>> - ex. Age 25 $\rightarrow$ 120 - 25 = 95% stocks $\rightarrow$ 100 - 95 = 5%
+     bonds
+     
 > ### Types of Investments
 
 <style>
