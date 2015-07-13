@@ -106,6 +106,11 @@ Table of Contents
 
 >> #### 401(k)
 
+>> - Generally for employees of larger companies
+>> - Employers will sometimes match a percentange of contributions
+>> - Can sometimes take out a loan against your account then the interest you
+     pay goes back to you
+
 >> #### 403 (b)
 
 >> #### Individual Retirement Accounts (IRA)
