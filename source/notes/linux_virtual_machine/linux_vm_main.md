@@ -12,6 +12,8 @@
 
 > ### Install Ubuntu
 
+>> #### Fullscreen
+
 > ### Setting up vim
 
 > ### Setting up Python
