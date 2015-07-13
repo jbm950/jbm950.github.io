@@ -2,6 +2,7 @@
 
 ### General Notes
 
+- [Linux Virtual Machine Setup](/notes/linux_virtual_machine/linux_vm_main.html)
 - [Money Management](/notes/money_management/money_management_main.html)
 - [Sustainability](/notes/sustainability/sustainability_main.html)
 
