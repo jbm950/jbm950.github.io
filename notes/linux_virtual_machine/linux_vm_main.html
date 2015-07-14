@@ -14,6 +14,22 @@ title: Linux Vm
 </head>
 <body>
 <h1 id="linux-virtual-machines">Linux Virtual Machines</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<blockquote>
+<h3 id="ubuntu-desktop-vm">Ubuntu Desktop VM</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="#virtualbox_steps">Virtualbox Steps</a>
+<ul>
+<li><a href="#vb_additional_options">Additional Options</a></li>
+</ul></li>
+<li><a href="#install_ubuntu">Install Ubuntu</a></li>
+<li><a href="#set_up_vim">Set up Vim</a></li>
+<li><a href="#set_up_python">Set up Python</a></li>
+<li><a href="#other_libraries">Other Libraries</a></li>
+</ul>
+</blockquote>
 <h2 id="setting-up-an-ubuntu-desktop-for-use">Setting up an Ubuntu desktop for use</h2>
 <blockquote>
 <ul>
@@ -23,16 +39,173 @@ title: Linux Vm
 </ul>
 </blockquote>
 <blockquote>
-<h3 id="virtualbox-steps">VirtualBox steps</h3>
+<h3 id="virtualbox_steps">VirtualBox steps</h3>
 </blockquote>
 <blockquote>
-<h3 id="install-ubuntu">Install Ubuntu</h3>
+<blockquote>
+<p>Begin by clicking on the button in the upper left hand corner to create a new virtual machine</p>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Create a New Virtual Machine
+</caption>
+<tr>
+<td>
+<img src="./img/new_vmachine.jpg"
+alt="New Virtual Machine" title="New Virtual Machine"
+height="400" width="500"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<p>Now you're going to be asked what opperating system to use for the new virtual machine. You will also need to name your machine in this step to differentiate it from your other virtual machines. In this set of the notes I'm going to go over the creation of a Ubuntu desktop virtual machine and for the sake of the notes I'm going to name it test.</p>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Name and Choose System
+</caption>
+<tr>
+<td>
+<img src="./img/choose_system.jpg"
+alt="Name Virtual Machine" title="Name Virtual Machine"
+height="400" width="500"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<p>The next step will be to determine the amount of ram you want the virtual machine to be able to access. Of my 8 gb of ram I have decided to allow the vm to use 2 gb in case I still want to use the main operating system at the same time.</p>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Name and Choose System
+</caption>
+<tr>
+<td>
+<img src="./img/vm_memory.jpg"
+alt="Name Virtual Machine" title="Name Virtual Machine"
+height="400" width="500"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<p>Virtualbox will then ask if we want to create a new virtual disk or use an existing one. Most often a new disk will be made the only exception being if trying to used the same virtual machine on different computers and you want the same harddrive to be used.</p>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Create New Virtual Harddrive
+</caption>
+<tr>
+<td>
+<img src="./img/harddrivecreate.jpg"
+alt="Create Virtual Harddrive" title="Create Virtual Harddrive"
+height="400" width="500"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<p>The filetype for the disk needs to be determined next. Since I don't use vmware or any other virtual machine software, I'm just going to leave the file type as vdi.</p>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Choose Virtualdisk Filetype
+</caption>
+<tr>
+<td>
+<img src="./img/diskfiletype.jpg"
+alt="Choose Virtualdisk Filetype" title="Choose Virtualdisk Filetype"
+height="400" width="500"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<p>Virtualbox now needs to know if you want the new virtualdisk to expand as needed or if you want to leave it at a fixed value. I chose dynamically sized as I've had trouble with fixed size in the past and dynamically sized ones are easier to expand later if necessary.</p>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Choose Virtualdisk Storage Type
+</caption>
+<tr>
+<td>
+<img src="./img/type_of_storage.jpg"
+alt="Choose Virtualdisk Storage Type" title="Choose Virtualdisk Storage Type"
+height="400" width="500"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<p>Now the size and location of the virtualdisk is decided. I have marked the button for relocating the new virtualdisk. Also I changed the harddrive size to 10 gb.</p>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Choose Virtualdisk Storage Size
+</caption>
+<tr>
+<td>
+<img src="./img/size_of_storage.jpg"
+alt="Choose Virtualdisk Storage Size" title="Choose Virtualdisk Storage Size"
+height="400" width="500"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<h4 id="vb_additional_options">Additional Options</h4>
+</blockquote>
 </blockquote>
 <blockquote>
-<h3 id="setting-up-vim">Setting up vim</h3>
+<blockquote>
+<blockquote>
+<p><strong>Use a different ip address</strong></p>
+</blockquote>
+</blockquote>
 </blockquote>
 <blockquote>
-<h3 id="setting-up-python">Setting up Python</h3>
+<blockquote>
+<blockquote>
+<p><strong>Access USB ports</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<h3 id="install_ubuntu">Install Ubuntu</h3>
+</blockquote>
+<blockquote>
+<blockquote>
+<h4 id="fullscreen">Fullscreen</h4>
+</blockquote>
+</blockquote>
+<blockquote>
+<h3 id="set_up_vim">Setting up vim</h3>
+</blockquote>
+<blockquote>
+<h3 id="set_up_python">Setting up Python</h3>
 </blockquote>
 <blockquote>
 <blockquote>
@@ -61,6 +234,14 @@ title: Linux Vm
 <blockquote>
 <p><strong>Pygame</strong></p>
 </blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<h3 id="other_libraries">Other Important Libraries</h3>
+</blockquote>
+<blockquote>
+<blockquote>
+<h4 id="git">Git</h4>
 </blockquote>
 </blockquote>
 </body>
