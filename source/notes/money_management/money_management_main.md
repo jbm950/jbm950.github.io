@@ -118,6 +118,13 @@ Table of Contents
 
 >> #### Individual Retirement Accounts (IRA)
 
+>>> __Roth IRA's__
+
+>>> - Unlike the other retirement options a Roth IRA is included in taxable
+      income when put in.
+>>> - Also unlike other retirement account options a Roth IRA is not taxed upon
+      withdraw
+
 >> #### Annuities
      
 > ### Long Term Allocation of Funds
