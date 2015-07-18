@@ -200,6 +200,9 @@ th, td {
 
 > ### Mutual Funds {#mutual_funds}
 
+> - Mutual funds are combinations of other types of investments and therefore
+    have built in diversification.
+
 ## Insurance {#insurance}
 
 > ### Health Insurance
