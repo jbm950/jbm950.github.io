@@ -36,3 +36,5 @@
 > ####Grad courses
 
 ### Research
+
+> - [Grad Research](/notes/grad_notes/grad_notes_main.html)
