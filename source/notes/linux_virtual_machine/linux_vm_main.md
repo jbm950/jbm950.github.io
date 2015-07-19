@@ -50,7 +50,10 @@ height="400" width="500"/>
 </table>
 </div>
 
->> The next step will be to determine the amount of ram you want the virtual machine to be able to access. Of my 8 gb of ram I have decided to allow the vm to use 2 gb in case I still want to use the main operating system at the same time.
+>> The next step will be to determine the amount of ram you want the virtual
+   machine to be able to access. Of my 8 gb of ram I have decided to allow the
+   vm to use 2 gb in case I still want to use the main operating system at the
+   same time.
 
 <div align="center">
 <table class="image">
