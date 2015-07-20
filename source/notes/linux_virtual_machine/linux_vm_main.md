@@ -123,6 +123,9 @@ height="400" width="500"/>
 </table>
 </div>
 
+>> The virtual machine should now be made and you're ready to run the install
+   of the operating system.
+
 >> #### Additional Options {#vb_additional_options}
 
 >>> __Use a different ip address__
@@ -130,6 +133,127 @@ height="400" width="500"/>
 >>> __Access USB ports__
 
 > ### Install Ubuntu {#install_ubuntu}
+
+>> To begin the install of Ubuntu on the new virtual machine, start up the new
+   virtual machine.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Start the New Virtual Machine</caption>
+<tr><td><img src="./img/start_vm.jpg"
+alt="Start Virtual Machine" title="Start Virtual Machine"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
+
+>> The next step is to click the icon to browse your files for the Ubuntu
+   desktop iso file. This will allow the virtual machine to boot up using
+   Ubuntu. Once you've selected the iso file click start.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Select the ISO File</caption>
+<tr><td><img src="./img/select_iso.jpg"
+alt="Find iso File" title="Find iso File"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
+
+>> Now comes the time to actaully install Ubuntu on the new virtaul machine.
+   We'll be selecting install ubuntu instead of try Ubuntu.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Install Ubuntu</caption>
+<tr><td><img src="./img/ubuntu_install.jpg"
+alt="Install Ubuntu" title="Install Ubuntu"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
+
+>> I'm going to make it go ahead and download updates while installing to
+   possibly save time later. Other than that go ahead and click continue.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Install Ubuntu Step 1</caption>
+<tr><td><img src="./img/uinstall_step1.jpg"
+alt="Install Ubuntu Step 1" title="Install Ubuntu Step 1"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
+
+>> Now we're going to go ahead and install ubuntu. Don't worry about it's
+   warning about erasing the disk because it will be contained with the newly
+   created virtual harddrive which has nothing on it yet anyways.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Install Ubuntu Final Step</caption>
+<tr><td><img src="./img/inst_ubuntu_finalstep.jpg"
+alt="Install Ubuntu Final Step" title="Install Ubuntu Final Step"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
+
+>> Simply click continue and let the install begin.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Change Disk Warning</caption>
+<tr><td><img src="./img/disk_change_warning.jpg"
+alt="Change Disk Warning" title="Change Disk Warning"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
+
+>> This step is self explanitory. Go ahead and select your time zone and then
+   continue on.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Time Zone Selection</caption>
+<tr><td><img src="./img/time_zone_select.jpg"
+alt="Time Zone Selection" title="Time Zone Selection"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
+
+>> Select the keyboard language setup for your use. Being in the US I don't
+   have to change the defaults and can simply continue on to the next step.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Keyboard Language Selection</caption>
+<tr><td><img src="./img/keyboard_lang.jpg"
+alt="Keyboard Language Selection" title="Keyboard Language Selection"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
+
+>> The last step will be to set up the user account you will be using for the
+   Ubuntu system. Putting in your name will automatically fill in the next two
+   text boxes. Set your password and decided whether or not you want your
+   system to automatically log in when started or if you want it to prompt you
+   for your password. After hitting continue the install should begin.
+
+<div align="center">
+<table class="image">
+<caption align="bottom">User Setup</caption>
+<tr><td><img src="./img/ubuntu_usersetup.jpg"
+alt="User Setup" title="User Setup"
+height="400" width="500"/>
+</td></tr>
+</table>
+</div>
 
 >> #### Fullscreen
 
