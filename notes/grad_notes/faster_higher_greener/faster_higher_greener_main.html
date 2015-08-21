@@ -17,5 +17,32 @@ title: Faster Higher Greener
 <strong>Written by David J.N. Limebeer and Anil Rao</strong><br />
 <strong>Published in IEEE Control Systems Magazine: April 2015</strong><br />
 <a href="http://vdol.mae.ufl.edu/JournalPublications/IEEE-CSM-14-0038.pdf" target="_blank">Full Article</a></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#optimal_control">Optimal Control</a></li>
+<li><a href="#num_methods_used">Numerical Methods Used in Optimal Control</a></li>
+<li><a href="#explicit_simulation">Explicit Simulation (Time Marching)</a></li>
+<li><a href="#implicit_simulation">Implicit Simulation (Collocation)</a></li>
+</ul>
+<h2 id="optimal_control">Optimal Control</h2>
+<ul>
+<li>Often posed in the general Bolza form
+<ul>
+<li>Minimize the objective functional by determining the following
+<ul>
+<li>The state of the system (<strong>x</strong>(t))</li>
+<li>The control for the system (<strong>u</strong>(t))</li>
+<li>The initial time (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B0%7D" alt="t_{0}" title="t_{0}" />)</li>
+<li>The terminal time (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" />)</li>
+</ul></li>
+<li>Objective functional subject to:
+<ul>
+<li>Dynamic constraint</li>
+<li>Path constraint</li>
+<li>Boundary condition</li>
+</ul></li>
+</ul></li>
+<li>Bolza problem leads to first-order <a href="../grad_general_notes.html#calc_of_variations">calculus of variations</a> conditions</li>
+</ul>
 </body>
 </html>
