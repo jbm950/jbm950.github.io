@@ -23,6 +23,8 @@ title: Faster Higher Greener
 <li><a href="#num_methods_used">Numerical Methods Used in Optimal Control</a></li>
 <li><a href="#explicit_simulation">Explicit Simulation (Time Marching)</a></li>
 <li><a href="#implicit_simulation">Implicit Simulation (Collocation)</a></li>
+<li><a href="#indirect_methods">Indirect Methods</a></li>
+<li><a href="#direct_methods">Direct Methods</a></li>
 </ul>
 <h2 id="optimal_control">Optimal Control</h2>
 <ul>
@@ -43,6 +45,41 @@ title: Faster Higher Greener
 </ul></li>
 </ul></li>
 <li>Bolza problem leads to first-order <a href="../grad_general_notes.html#calc_of_variations">calculus of variations</a> conditions</li>
+<li>More details can be found in the <a href="../grad_general_notes.html#hamiltonian_bv_p">Hamiltonian Boundary-Value Problem</a> section.</li>
 </ul>
+<h2 id="num_methods_used">Numerical Methods Used in Optimal Control</h2>
+<ul>
+<li>Two different distinctions in solving optimal control problems
+<ul>
+<li>Problem being solved
+<ul>
+<li><a href="#indirect_methods">Indirect method</a> = Find solution to first-order necessary conditions</li>
+<li><a href="#direct_methods">Direct method</a> = Find solution to optimal control problem itself</li>
+</ul></li>
+<li>Type of numerical method to solve the problem
+<ul>
+<li><a href="#explicit_simulation">Explicit Simulation</a> = Solution obtained using a time marching approach</li>
+<li><a href="#implicit_simulation">Implicit Simulation</a> = Solution obtained for all time steps simultaneously (no time marching)</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="explicit_simulation">Explicit Simulation (Time Marching)</h2>
+<ul>
+<li>In explicit simulation the solution to future time steps is found using the solution to the current and past time steps, hence time marching</li>
+<li>Basic explicit simulation method is the <em>shooting method</em>
+<ul>
+<li>Guess at boundary conditions at one side of the time interval and time march to the other side</li>
+<li>Evaluate the error tolerance at the other side of the interval and if the tolerance is not met adjust the guess and repeat</li>
+<li>Can encounter difficulties due to instabilities in the dynamics</li>
+</ul></li>
+<li>Overcome difficulties with the <em>multiple-shooting method</em>
+<ul>
+<li>Same as <em>shooting method</em> but divide the time interval into smaller subintervals</li>
+<li>Reduces sensitivity to errors</li>
+</ul></li>
+</ul>
+<h2 id="implicit_simulation">Implicit Simulation (Collocation)</h2>
+<h2 id="indirect_methods">Indirect Methods</h2>
+<h2 id="direct_methods">Direct Methods</h2>
 </body>
 </html>
