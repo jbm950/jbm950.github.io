@@ -21,6 +21,22 @@ title: Grad General Notes
 <h2 id="hamiltonian">Hamiltonian</h2>
 </blockquote>
 <blockquote>
+<ul>
+<li>The control Hamiltonian is by definition <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=H%28x%2C%20u%2C%20%5Clambda%2C%20t%29%20%3D%20L%28x%2C%20u%2C%20t%29%20%2B%20%5Clambda%5E%7BT%7Df%28x%2C%20u%2C%20t%29" alt="H(x, u, \lambda, t) = L(x, u, t) + \lambda^{T}f(x, u, t)" title="H(x, u, \lambda, t) = L(x, u, t) + \lambda^{T}f(x, u, t)" /></li>
+<li>Used in the derivation of optimal control
+<ul>
+<li>The control function is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Ctextit%7B%5CPhi%7D%5Bx%28t_%7Bf%7D%29%5D%20%2B%20%20%5Cint_%7B0%7D%5E%7Bt_%7Bf%7D%7DL%28x%2C%20u%2C%20t%29%5Ctextit%7Bdt%7D" alt="J = \textit{\Phi}[x(t_{f})] +  \int_{0}^{t_{f}}L(x, u, t)\textit{dt}" title="J = \textit{\Phi}[x(t_{f})] +  \int_{0}^{t_{f}}L(x, u, t)\textit{dt}" /></li>
+<li>The control function can be re-written as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%20%5Ctextit%7B%5CPhi%7D%5Bx%28t_%7Bf%7D%29%5D%20%2B%20%5Cint_%7B0%7D%5E%7Bt_%7Bf%7D%7DL%28x%2C%20u%2C%20t%29%5Ctextit%7Bdt%7D%20%2B%20%20%5Cint_%7B0%7D%5E%7Bt_%7Bf%7D%7D%5Clambda%5E%7BT%7D%28f-%5Cdot%7Bx%7D%29%5Ctextit%7Bdt%7D" alt="J =  \textit{\Phi}[x(t_{f})] + \int_{0}^{t_{f}}L(x, u, t)\textit{dt} +  \int_{0}^{t_{f}}\lambda^{T}(f-\dot{x})\textit{dt}" title="J =  \textit{\Phi}[x(t_{f})] + \int_{0}^{t_{f}}L(x, u, t)\textit{dt} +  \int_{0}^{t_{f}}\lambda^{T}(f-\dot{x})\textit{dt}" /> where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%28f-%5Cdot%7Bx%7D%29" alt="(f-\dot{x})" title="(f-\dot{x})" /> is a zero vector and so the original equation hasn't been altered</li>
+<li>With the definition of the Hamiltonian the control function can be simplified to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Ctextit%7B%5CPhi%7D%5Bx%28t_%7Bf%7D%29%5D%20%2B%20%20%5Cint_%7B0%7D%5E%7Bt_%7Bf%7D%7D%5BH-%5Clambda%5E%7BT%7D%5Cdot%7Bx%7D%5D%5Ctextit%7Bdt%7D" alt="J = \textit{\Phi}[x(t_{f})] +  \int_{0}^{t_{f}}[H-\lambda^{T}\dot{x}]\textit{dt}" title="J = \textit{\Phi}[x(t_{f})] +  \int_{0}^{t_{f}}[H-\lambda^{T}\dot{x}]\textit{dt}" /></li>
+</ul></li>
+<li>The Hamiltonian is important as it provides the source of the costate (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Clambda" alt="\lambda" title="\lambda" />) differential equations and the optimality condition of the Two-Point Boundary Value Problem
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7B%5Clambda%7D%20%3D%20-%5Cfrac%7B%5Cpartial%20H%7D%7B%5Cpartial%20x%7D" alt="\dot{\lambda} = -\frac{\partial H}{\partial x}" title="\dot{\lambda} = -\frac{\partial H}{\partial x}" /> (Costate differential equations)</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20H%7D%7B%5Cpartial%20u%7D%20%3D%200" alt="\frac{\partial H}{\partial u} = 0" title="\frac{\partial H}{\partial u} = 0" /> (Optimality condition)</li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
 <h2 id="hamiltonian_bv_p">Hamiltonian Boundary-Value Problem</h2>
 </blockquote>
 <h1 id="terms">Terms</h1>
