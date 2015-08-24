@@ -16,15 +16,14 @@ title: Faster Higher Greener
 <p><strong>Faster, Higher and Greener: Vehicular Optimal Control</strong><br />
 <strong>Written by David J.N. Limebeer and Anil Rao</strong><br />
 <strong>Published in IEEE Control Systems Magazine: April 2015</strong><br />
-<a href="http://vdol.mae.ufl.edu/JournalPublications/IEEE-CSM-14-0038.pdf" target="_blank">Full Article</a></p>
+<a href="http://vdol.mae.ufl.edu/JournalPublications/IEEE-CSM-14-0038.pdf"
+target="_blank">Full Article</a></p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#optimal_control">Optimal Control</a></li>
 <li><a href="#num_methods_used">Numerical Methods Used in Optimal Control</a></li>
 <li><a href="#explicit_simulation">Explicit Simulation (Time Marching)</a></li>
 <li><a href="#implicit_simulation">Implicit Simulation (Collocation)</a></li>
-<li><a href="#indirect_methods">Indirect Methods</a></li>
-<li><a href="#direct_methods">Direct Methods</a></li>
 </ul>
 <h2 id="optimal_control">Optimal Control</h2>
 <ul>
@@ -53,8 +52,8 @@ title: Faster Higher Greener
 <ul>
 <li>Problem being solved
 <ul>
-<li><a href="#indirect_methods">Indirect method</a> = Find solution to first-order necessary conditions</li>
-<li><a href="#direct_methods">Direct method</a> = Find solution to optimal control problem itself</li>
+<li>Indirect method = Find solution to first-order necessary conditions</li>
+<li>Direct method = Find solution to optimal control problem itself</li>
 </ul></li>
 <li>Type of numerical method to solve the problem
 <ul>
@@ -79,7 +78,11 @@ title: Faster Higher Greener
 </ul></li>
 </ul>
 <h2 id="implicit_simulation">Implicit Simulation (Collocation)</h2>
-<h2 id="indirect_methods">Indirect Methods</h2>
-<h2 id="direct_methods">Direct Methods</h2>
+<ul>
+<li>In implicit simulation the time solution interval is subdivided into smaller mesh intervals</li>
+<li>In each mesh interval the state function (<strong>x</strong>(t)) is approximated by a set of basis functions <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cpsi_%7Bj%7D%5E%7B%28k%29%7D%28t%29" alt="\psi_{j}^{(k)}(t)" title="\psi_{j}^{(k)}(t)" /></li>
+<li>A matrix is formed of the resulting integral's quadrature approximations.</li>
+<li>All of the terms are found <em>simultaneously</em> by solving a large-scale algebraic system (<strong>F</strong>(<strong>z</strong>)=0) instead of solving for each time step individually and marching on to the next time step</li>
+</ul>
 </body>
 </html>
