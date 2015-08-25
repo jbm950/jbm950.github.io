@@ -1,4 +1,5 @@
-[General Notes](./grad_general_notes.html)
+[General Notes](./grad_general_notes.html)  
+[Weekly Status Updates](./weekly_status_updates.html)
 
 ## Articles
 
