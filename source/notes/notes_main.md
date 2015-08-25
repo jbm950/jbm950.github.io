@@ -35,8 +35,8 @@
 
 > ####Grad courses
 
-> [Analytical Dynamics](/notes/analytical_dynamics/analytical_dynamics_main.html)
-> [Robot Geometry](/notes/robot_geometry/robot_geometry_main.html)
+> - [Analytical Dynamics](/notes/analytical_dynamics/analytical_dynamics_main.html)
+> - [Robot Geometry](/notes/robot_geometry/robot_geometry_main.html)
 
 ### Research
 
