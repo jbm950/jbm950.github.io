@@ -2,6 +2,11 @@
 
 > ## Calculus of Variations {#calc_of_variations}
 
+> - Calculus of variations deals with the mathematics of finding a stationary
+    point (where $\dot{f}(x) = 0$)
+>       - Useful when trying to find maxima and minima to optimize a physical
+          quantity.
+
 > ## Hamiltonian {#hamiltonian}
 
 > - The control Hamiltonian is by definition $H(x, u, \lambda, t) = L(x, u, t)
@@ -20,7 +25,8 @@
 > - The Hamiltonian is important as it provides the source of the costate
     ($\lambda$) differential equations and the optimality condition of the
     Two-Point Boundary Value Problem
->       - $\dot{\lambda} = -\frac{\partial H}{\partial x}$    (Costate differential equations)
+>       - $\dot{\lambda} = -\frac{\partial H}{\partial x}$    (Costate
+          differential equations)
 >       - $\frac{\partial H}{\partial u} = 0$    (Optimality condition)
 
 
