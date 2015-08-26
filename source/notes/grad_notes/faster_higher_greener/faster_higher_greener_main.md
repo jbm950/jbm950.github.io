@@ -4,7 +4,7 @@ __Published in IEEE Control Systems Magazine: April 2015__
 <a href="http://vdol.mae.ufl.edu/JournalPublications/IEEE-CSM-14-0038.pdf"
 target="_blank">Full Article</a>
 
-##Table of Contents
+## Table of Contents
 
 - [Optimal Control](#optimal_control)
 - [Numerical Methods Used in Optimal Control](#num_methods_used)
