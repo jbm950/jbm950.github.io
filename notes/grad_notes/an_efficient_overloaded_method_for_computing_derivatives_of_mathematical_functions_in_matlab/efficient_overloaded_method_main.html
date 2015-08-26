@@ -1,0 +1,50 @@
+---
+layout: default
+title: Efficient Overloaded Method 
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<p><strong>An Efficient Overloaded Method for Computing Derivatives of Mathematical Functions in MATLAB </strong><br />
+<strong>Written by Michael A. Patterson, Matthew Weinstein and Anil Rao</strong><br />
+<strong>Published in ACM Transactions on Mathematical Software: July 2013</strong><br />
+<a href="http://vdol.mae.ufl.edu/JournalPublications/TOMS-2011-0055.pdf"
+target="_blank">Full Article</a></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>Three general categories of derivative approximation techniques
+<ul>
+<li>Numerical approximation
+<ul>
+<li>In numerical approximation the derivative is approximated by finding the values of the function around the desired point and finding the slope between those values</li>
+<li>Examples of this method include finite differencing and complex-step derivative approximation</li>
+<li>Space between point in finite-differencing can cause problems because if the space is too big the derivative will be inaccurate and if the space is too small there can be catastrophic cancellation in the numerator</li>
+<li>Complex-step derivative approximation does not suffer from catastrophic cancellation with extremely small perturbation sizes like finite differencing does</li>
+</ul></li>
+<li>Symbolic differentiation
+<ul>
+<li>Symbolic differentiation is the equivalent of the computer takeing the equations and solving for the derivative by hand as it will use the actual quantities or variables</li>
+<li>Not good for very large difficult problems because of possible expression explosion</li>
+</ul></li>
+<li>Automatic differentiation
+<ul>
+<li>Computers implement functions in code by doing one elementary mathematical operation or function at a time and so automatic differentiation uses the standard differentiation rules on each operation.</li>
+<li>Two most well known methods of automatic differentiation are forward and reverse mode</li>
+<li>Forward are reverse mode automatic differentiation are implemented using either operator overloading or source transformation</li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>
