@@ -8,6 +8,7 @@
 
 - [Coordinate Systems](#coord_sys)
 - [Coordinate Transformations](#coord_trans)
+- [Homogeneous Coordinates](#homogeneous_coordinates)
 
 ## Coordinate Systems {#coord_sys}
 
@@ -89,3 +90,30 @@ Nomenclature"/>
           $^{A}_{B}R$ is the 3x3 rotation matrix from system B to system A we
           can further simplify the previous result to $^{A}\underline{P}_{1} =  
           ^{A}\underline{P}_{B_{0}} + ^{A}_{B}R^{B}P_{1}$
+
+## Homogeneous Coordinates {#homogeneous_coordinates}
+
+- Four coordinates to define a vector (X, Y, Z, w)
+    - X = $\frac{x}{w}$
+    - Y = $\frac{y}{w}$
+    - Z = $\frac{z}{w}$
+- Advantage of using homogeneous coordinates is that as w goes to zero the
+  vectors point to infinity therefore there are unique vectors that point to
+  infinity
+
+> ### Transformation Matrix
+
+> - Coordinate system transformations with rotation matrices can be further simpified by using a transformation matrix that is defined as 
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/transformation_matrix_definition.png"
+alt="Transformation Matrix Definition" title="Transformation Matrix
+Definition" width="200" height="200"/>
+</td></tr>
+</table>
+</div>
+
+- The coordinate transformation can then be re-written from
+  $^{A}\underline{P}_{1} = ^{A}\underline{P}_{B_{0}} + ^{A}_{B}R^{B}P_{1}$ to
+  $^{A}\underline{P}_{1} = ^{A}_{B}T^{B}\underline{P}_{1}$

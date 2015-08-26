@@ -22,6 +22,7 @@ title: Robot Geometry
 <ul>
 <li><a href="#coord_sys">Coordinate Systems</a></li>
 <li><a href="#coord_trans">Coordinate Transformations</a></li>
+<li><a href="#homogeneous_coordinates">Homogeneous Coordinates</a></li>
 </ul>
 <h2 id="coord_sys">Coordinate Systems</h2>
 <ul>
@@ -80,5 +81,37 @@ Nomenclature"/>
 </ul></li>
 </ul>
 </blockquote>
+<h2 id="homogeneous_coordinates">Homogeneous Coordinates</h2>
+<ul>
+<li>Four coordinates to define a vector (X, Y, Z, w)
+<ul>
+<li>X = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bx%7D%7Bw%7D" alt="\frac{x}{w}" title="\frac{x}{w}" /></li>
+<li>Y = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7By%7D%7Bw%7D" alt="\frac{y}{w}" title="\frac{y}{w}" /></li>
+<li>Z = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bz%7D%7Bw%7D" alt="\frac{z}{w}" title="\frac{z}{w}" /></li>
+</ul></li>
+<li>Advantage of using homogeneous coordinates is that as w goes to zero the vectors point to infinity therefore there are unique vectors that point to infinity</li>
+</ul>
+<blockquote>
+<h3 id="transformation-matrix">Transformation Matrix</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>Coordinate system transformations with rotation matrices can be further simpified by using a transformation matrix that is defined as</li>
+</ul>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/transformation_matrix_definition.png"
+alt="Transformation Matrix Definition" title="Transformation Matrix
+Definition" width="200" height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<ul>
+<li>The coordinate transformation can then be re-written from <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7B1%7D%20%3D%20%5E%7BA%7D%5Cunderline%7BP%7D_%7BB_%7B0%7D%7D%20%2B%20%5E%7BA%7D_%7BB%7DR%5E%7BB%7DP_%7B1%7D" alt="^{A}\underline{P}_{1} = ^{A}\underline{P}_{B_{0}} + ^{A}_{B}R^{B}P_{1}" title="^{A}\underline{P}_{1} = ^{A}\underline{P}_{B_{0}} + ^{A}_{B}R^{B}P_{1}" /> to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7B1%7D%20%3D%20%5E%7BA%7D_%7BB%7DT%5E%7BB%7D%5Cunderline%7BP%7D_%7B1%7D" alt="^{A}\underline{P}_{1} = ^{A}_{B}T^{B}\underline{P}_{1}" title="^{A}\underline{P}_{1} = ^{A}_{B}T^{B}\underline{P}_{1}" /></li>
+</ul>
 </body>
 </html>
