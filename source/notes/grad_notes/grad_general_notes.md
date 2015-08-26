@@ -7,6 +7,10 @@
 >       - Useful when trying to find maxima and minima to optimize a physical
           quantity.
 
+>> ### Euler-Lagrange Equation Example
+
+>> - Unknown http://www.math.umn.edu/~olver/ln_/cv.pdf
+
 > ## Hamiltonian {#hamiltonian}
 
 > - The control Hamiltonian is by definition $H(x, u, \lambda, t) = L(x, u, t)
