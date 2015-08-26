@@ -48,4 +48,5 @@
 
 # Terms
 
+- CADA = Computation of Analytic Derivative Automatically
 - HBVP = Hamiltonian Boundary Value Problem
