@@ -116,4 +116,4 @@ Definition" width="200" height="200"/>
 
 - The coordinate transformation can then be re-written from
   $^{A}\underline{P}_{1} = ^{A}\underline{P}_{B_{0}} + ^{A}_{B}R^{B}P_{1}$ to
-  $^{A}\underline{P}_{1} = ^{A}_{B}T^{B}\underline{P}_{1}$
+  $^{A}\underline{P}_{1} = (^{A}_{B}T)^{B}\underline{P}_{1}$
