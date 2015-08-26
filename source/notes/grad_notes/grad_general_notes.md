@@ -9,7 +9,17 @@
 
 >> ### Euler-Lagrange Equation Example
 
->> - Unknown http://www.math.umn.edu/~olver/ln_/cv.pdf
+>> - Information obtained from this
+     <a href="http://www.math.umn.edu/~olver/ln_/cv.pdf"
+     target="_blank">article</a>
+>> - A simple class of variational problems
+>>      - Unknown is a continuously differentiable scalar function
+>>      - Functional to be minimized depends on at most its first derivative
+>> - Objective to find function y = u(x) that minimizes _objective functional_
+     $J[u] = \int^{b}_{a} L(x,u,u')dx$
+>>      - $L(x,u,u')$ is known as the Lagrangian for the variational problem
+          and is assumed to be reasonably smooth for its 3 scalar arguements x,
+          u, u'
 
 > ## Hamiltonian {#hamiltonian}
 
