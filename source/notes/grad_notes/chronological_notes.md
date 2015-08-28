@@ -1,5 +1,11 @@
 # Chronological Listing of Articles
 
+### January 1996
+
+> - [An Introduction to Automatic
+     Differentiation](./an_introduction_to_automatic_differentiation/an_introduction_to_auto_diff_main.html)
+     (Louis B. Rall and George F. Corliss)
+
 ### July 2013
 
 > - [An Efficient Overloaded Method for Computing Derivatives of Mathematical
