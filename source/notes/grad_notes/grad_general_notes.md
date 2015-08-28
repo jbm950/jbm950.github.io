@@ -1,5 +1,12 @@
 # Concepts
 
+> ## Automatic Differentiation, Algorithmic Differentiation {#auto_differentiation}
+
+> - An <a href="http://www.autodiff.org/" target="_blank">automatic
+    differentiation website</a> can be found through the following link
+>       - Contains lists of automatic differentiation articles, books, tools
+          and some basic information about automatic differentiation
+
 > ## Calculus of Variations {#calc_of_variations}
 
 > - Calculus of variations deals with the mathematics of finding a stationary
