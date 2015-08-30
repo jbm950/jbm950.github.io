@@ -55,5 +55,6 @@
 
 # Terms
 
+- AD = Automatic Differentiation/Algorithmic Differentiation
 - CADA = Computation of Analytic Derivative Automatically
 - HBVP = Hamiltonian Boundary Value Problem
