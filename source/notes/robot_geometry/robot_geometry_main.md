@@ -90,6 +90,12 @@ Nomenclature"/>
           $^{A}_{B}R$ is the 3x3 rotation matrix from system B to system A we
           can further simplify the previous result to $^{A}\underline{P}_{1} =  
           ^{A}\underline{P}_{B_{0}} + ^{A}_{B}R^{B}P_{1}$
+> - To reverse the direction of a rotation matrix simply take the transpose of
+    the original matrix ($^{A}_{B}R = (^{B}_{A}R)^{T}$)
+>       - This is saying that $^{A}_{B}R = \left[ ^{A}\underline{x}_{B},
+          ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} \right]$ $= \left[
+          (^{B}\underline{x}_{A})^{T} \\ (^{B}\underline{y}_{A})^{T} \\
+          (^{B}\underline{z}_{A})^{T} \right]$
 
 ## Homogeneous Coordinates {#homogeneous_coordinates}
 
@@ -103,7 +109,8 @@ Nomenclature"/>
 
 > ### Transformation Matrix
 
-> - Coordinate system transformations with rotation matrices can be further simpified by using a transformation matrix that is defined as 
+> - Coordinate system transformations with rotation matrices can be further
+    simpified by using a transformation matrix that is defined as 
 
 <div align="center">
 <table class="image">
@@ -114,6 +121,27 @@ Definition" width="200" height="200"/>
 </table>
 </div>
 
-- The coordinate transformation can then be re-written from
-  $^{A}\underline{P}_{1} = ^{A}\underline{P}_{B_{0}} + ^{A}_{B}R^{B}P_{1}$ to
-  $^{A}\underline{P}_{1} = (^{A}_{B}T)^{B}\underline{P}_{1}$
+> - The coordinate transformation can then be re-written from
+    $^{A}\underline{P}_{1} = ^{A}\underline{P}_{B_{0}} + ^{A}_{B}R^{B}P_{1}$ to
+    $^{A}\underline{P}_{1} = (^{A}_{B}T)^{B}\underline{P}_{1}$
+> - It is desired to reverse the direction of a transformation matrix (from $B
+    \rightarrow A$ to $A \rightarrow B$)
+>       - Start with the given transformation matrix we have knowledge of
+          $^{A}_{B}R$ and $^{A}P_{B{0}}$
+>       - For the new matrix we will need $^{B}_{A}R$ and $^{B}P_{A{0}}$
+>       - It is known from the properties of rotation matrices as shown above
+          that the rotation matrix in the reverse transforming direction is the
+          transpose of the original rotation matrix
+>           - $^{B}_{A}R$ = $(^{A}_{B}R)^{T}$
+>       - The general equation for transforming a point (1) from coordinate
+          system A to B is $^{B}P_{1} = ^{B}P_{A{0}} + ^{B}_{A}R^{A}P_{1}$
+>       - Taking the above equation and using it to find coordinate system B's
+          origin as seen from the A system gives the following equation
+          $^{B}P_{B_{0}} = ^{B}P_{A_{0}} + ^{B}_{A}R^{A}P_{B_{0}}$ where
+          $^{B}P_{B_{0}} = \underline{0}$ 
+>           - Now solving for the desired $^{B}P_{A_{0}}$ gives $^{B}P_{A_{0}}
+              = -^{B}_{A}R^{A}P_{B_{0}}$ &nbsp;&nbsp; or &nbsp;&nbsp;
+              $^{B}P_{A_{0}} = -(^{A}_{B}R)^{T}^{A}P_{B_{0}}$
+>       - Now the unknowns are in terms of the known values and the new
+          transformation matrix can be written in the form shown above
+
