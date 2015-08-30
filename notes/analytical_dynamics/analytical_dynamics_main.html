@@ -20,28 +20,45 @@ title: Analytical Dynamics
 <em>by: Anil Rao</em></p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
+<li><a href="#scalars">Scalars</a></li>
 <li><a href="#vectors">Vectors</a></li>
 <li><a href="#reference_frames">Reference Frames</a></li>
 <li><a href="#coordinate_system">Coordinate System</a></li>
+<li><a href="#vector_derivatives">Vector Derivatives</a></li>
+</ul>
+<h2 id="scalars">Scalars</h2>
+<ul>
+<li>Scalars do not need reference frames or coordinate systems</li>
+<li>Derivates of scalars follow the formal definition of the derivative
+<ul>
+<li>Ex. Let y(t) be a scalar function of time t, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bdy%7D%7Bdt%7D%20%3D%20%20%5Clim_%7B%5CDelta%20t%20%5Crightarrow%200%7D%20%5Cfrac%7By%28t%20%2B%20%5CDelta%20t%29%20-%20y%28t%29%7D%7B%5CDelta%20t%7D" alt="\frac{dy}{dt} =  \lim_{\Delta t \rightarrow 0} \frac{y(t + \Delta t) - y(t)}{\Delta t}" title="\frac{dy}{dt} =  \lim_{\Delta t \rightarrow 0} \frac{y(t + \Delta t) - y(t)}{\Delta t}" /></li>
+</ul></li>
 </ul>
 <h2 id="vectors">Vectors</h2>
 <ul>
 <li>Vectors are quantities in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=E%5E%7B3%7D" alt="E^{3}" title="E^{3}" /> (3D Euclidian Space) that have both magnitude and direction</li>
 <li>Magnitude is defined as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%7C%7C%20%5Cunderline%7Bb%7D%20%7C%7C%20%3D%20%5Csqrt%7Bb%20%5Ccdot%20b%7D" alt="|| \underline{b} || = \sqrt{b \cdot b}" title="|| \underline{b} || = \sqrt{b \cdot b}" /></li>
 <li>Direction of the vector is defined by its unit vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bb%7D%20%3D%20%5Cfrac%7B%5Cunderline%7Bb%7D%7D%7B%7C%7C%20%5Cunderline%7Bb%7D%20%7C%7C%7D" alt="\underline{u}_{b} = \frac{\underline{b}}{|| \underline{b} ||}" title="\underline{u}_{b} = \frac{\underline{b}}{|| \underline{b} ||}" /></li>
+<li>Vectors are reference frame independent
+<ul>
+<li>Vectors hold their true magnitude and direction no matter what reference frame you're observing from</li>
+</ul></li>
 </ul>
 <h2 id="reference_frames">Reference Frames</h2>
 <ul>
 <li>A reference frame is any set of at least 3 non-colinear points whose mutual distances are constant</li>
-<li>A reference frame is a rigid body</li>
-<li>Deciding reference frames allows for the formulation of problems</li>
+<li>A reference frame is a rigid body and vice versa</li>
+<li>Deciding reference frames allows for the formulation of problems
+<ul>
+<li>They define a point of view put not a basis of measurement</li>
+</ul></li>
 </ul>
 <h2 id="coordinate_system">Coordinate System</h2>
 <ul>
 <li>Coordinate systems are a set of three linearly independent vectors {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}" title="\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}" />} in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=E%5E%7B3%7D" alt="E^{3}" title="E^{3}" /> (3D Euclidian Space)</li>
 <li>There are three main conviences that are made when creating a coordinate system
 <ol style="list-style-type: decimal">
-<li>Have all three vectors {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}}, \underline{e_{2}},  \underline{e_{3}}" title="\underline{e_{1}}, \underline{e_{2}},  \underline{e_{3}}" />} be mutuall orthogonal</li>
+<li>Have all three vectors {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}}, \underline{e_{2}},  \underline{e_{3}}" title="\underline{e_{1}}, \underline{e_{2}},  \underline{e_{3}}" />} be mutually orthogonal</li>
 <li>Have all three vectors {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}}, \underline{e_{2}},  \underline{e_{3}}" title="\underline{e_{1}}, \underline{e_{2}},  \underline{e_{3}}" />} be unit vectors</li>
 <li>Create a right handed system</li>
 </ol></li>
@@ -51,6 +68,28 @@ title: Analytical Dynamics
 <li>Coordinate systems must be fixed with only one reference frame whereas each reference frame can have infinite coordinate systems</li>
 </ul></li>
 <li>Bigger problems come from mistakes in the formulation of the problem (deciding reference frames) than mistakes in the implementation of the problem (deciding and using the coordinate systems)</li>
+<li>Two steps to defining a coordinate system
+<ol style="list-style-type: decimal">
+<li>Pick an origin</li>
+<li>Define the three right-handed orthogonal unit vectors, {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}" title="\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}" />}</li>
+</ol></li>
+</ul>
+<h2 id="vector_derivatives">Vector Derivatives</h2>
+<ul>
+<li>This class will be using Newtonian Mechanics rather than Relativistic Mechanics
+<ul>
+<li>Time is the independent variable (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7Dt%20%3D%20%5E%7BB%7Dt%20%3D%20t%20%5Crightarrow" alt="^{A}t = ^{B}t = t \rightarrow" title="^{A}t = ^{B}t = t \rightarrow" /> Galilean Invariance)</li>
+</ul></li>
+<li>Although vectors are reference frame independent, the geometric meaning of their derivative vectors are not reference frame independent (though the derivative vectors themselves being vectors are reference frame independent)</li>
+<li>Development of the general form of a derivative of a vector as viewed from reference frame A
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Bb%7D%20%3D%20b_%7B1%7D%5Cunderline%7Be%7D_%7B1%7D%20%2B%20b_%7B2%7D%5Cunderline%7Be%7D_%7B2%7D%20%2B%20%20b_%7B3%7D%5Cunderline%7Be%7D_%7B3%7D" alt="^{A}\underline{b} = b_{1}\underline{e}_{1} + b_{2}\underline{e}_{2} +  b_{3}\underline{e}_{3}" title="^{A}\underline{b} = b_{1}\underline{e}_{1} + b_{2}\underline{e}_{2} +  b_{3}\underline{e}_{3}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Bb%7D%7D%7Bdt%7D%20%3D%20%5Cfrac%7Bdb_%7B1%7D%28t%29%7D%7Bdt%7D%5Cunderline%7Be%7D_%7B1%7D%20%2B%20%20%5Cfrac%7Bdb_%7B2%7D%28t%29%7D%7Bdt%7D%5Cunderline%7Be%7D_%7B2%7D%20%2B%20%20%5Cfrac%7Bdb_%7B3%7D%28t%29%7D%7Bdt%7D%5Cunderline%7Be%7D_%7B3%7D%20%2B" alt="\frac{^{A}d\underline{b}}{dt} = \frac{db_{1}(t)}{dt}\underline{e}_{1} +  \frac{db_{2}(t)}{dt}\underline{e}_{2} +  \frac{db_{3}(t)}{dt}\underline{e}_{3} +" title="\frac{^{A}d\underline{b}}{dt} = \frac{db_{1}(t)}{dt}\underline{e}_{1} +  \frac{db_{2}(t)}{dt}\underline{e}_{2} +  \frac{db_{3}(t)}{dt}\underline{e}_{3} +" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=b_%7B1%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B1%7D%7D%7Bdt%7D%20%2B%20%20b_%7B2%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B2%7D%7D%7Bdt%7D%20%2B%20%20b_%7B3%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B3%7D%7D%7Bdt%7D" alt="b_{1}\frac{^{A}d\underline{e}_{1}}{dt} +  b_{2}\frac{^{A}d\underline{e}_{2}}{dt} +  b_{3}\frac{^{A}d\underline{e}_{3}}{dt}" title="b_{1}\frac{^{A}d\underline{e}_{1}}{dt} +  b_{2}\frac{^{A}d\underline{e}_{2}}{dt} +  b_{3}\frac{^{A}d\underline{e}_{3}}{dt}" />
+<ul>
+<li>The derivatives of the scalars are reference frame independent but the derivatives of the vectors are not</li>
+<li>Utilizing the multiplication rule of derivatives</li>
+</ul></li>
+</ul></li>
 </ul>
 </body>
 </html>

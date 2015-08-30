@@ -6,9 +6,18 @@
 
 ## Table of Contents
 
+- [Scalars](#scalars)
 - [Vectors](#vectors)
 - [Reference Frames](#reference_frames)
 - [Coordinate System](#coordinate_system)
+- [Vector Derivatives](#vector_derivatives)
+
+## Scalars {#scalars}
+
+- Scalars do not need reference frames or coordinate systems
+- Derivates of scalars follow the formal definition of the derivative
+    - Ex. Let y(t) be a scalar function of time t, $\frac{dy}{dt} =
+      \lim_{\Delta t \rightarrow 0} \frac{y(t + \Delta t) - y(t)}{\Delta t}$
 
 ## Vectors {#vectors}
 
@@ -16,13 +25,17 @@
   magnitude and direction
 - Magnitude is defined as $|| \underline{b} || = \sqrt{b \cdot b}$
 - Direction of the vector is defined by its unit vector $\underline{u}_{b} = \frac{\underline{b}}{|| \underline{b} ||}$
+- Vectors are reference frame independent
+    - Vectors hold their true magnitude and direction no matter what reference
+      frame you're observing from
 
 ## Reference Frames {#reference_frames}
 
 - A reference frame is any set of at least 3 non-colinear points whose mutual
   distances are constant
-- A reference frame is a rigid body
+- A reference frame is a rigid body and vice versa
 - Deciding reference frames allows for the formulation of problems
+    - They define a point of view put not a basis of measurement
 
 ## Coordinate System {#coordinate_system}
 
@@ -32,7 +45,7 @@
 - There are three main conviences that are made when creating a coordinate
   system
     1. Have all three vectors {$\underline{e_{1}}, \underline{e_{2}},
-       \underline{e_{3}}$} be mutuall orthogonal
+       \underline{e_{3}}$} be mutually orthogonal
     2. Have all three vectors {$\underline{e_{1}}, \underline{e_{2}},
        \underline{e_{3}}$} be unit vectors
     3. Create a right handed system
@@ -44,3 +57,30 @@
 - Bigger problems come from mistakes in the formulation of the problem
   (deciding reference frames) than mistakes in the implementation of the
   problem (deciding and using the coordinate systems)
+- Two steps to defining a coordinate system
+    1. Pick an origin
+    2. Define the three right-handed orthogonal unit vectors,
+       {$\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}$}
+
+## Vector Derivatives {#vector_derivatives}
+
+- This class will be using Newtonian Mechanics rather than Relativistic
+  Mechanics
+    - Time is the independent variable ($^{A}t = ^{B}t = t \rightarrow$
+      Galilean Invariance)
+- Although vectors are reference frame independent, the geometric meaning of
+  their derivative vectors are not reference frame independent (though the
+  derivative vectors themselves being vectors are reference frame independent)
+- Development of the general form of a derivative of a vector as viewed from
+  reference frame A
+    - $^{A}\underline{b} = b_{1}\underline{e}_{1} + b_{2}\underline{e}_{2} +
+      b_{3}\underline{e}_{3}$
+    - $\frac{^{A}d\underline{b}}{dt} = \frac{db_{1}(t)}{dt}\underline{e}_{1} +
+      \frac{db_{2}(t)}{dt}\underline{e}_{2} +
+      \frac{db_{3}(t)}{dt}\underline{e}_{3} +$
+      $b_{1}\frac{^{A}d\underline{e}_{1}}{dt} +
+      b_{2}\frac{^{A}d\underline{e}_{2}}{dt} +
+      b_{3}\frac{^{A}d\underline{e}_{3}}{dt}$
+        - The derivatives of the scalars are reference frame independent but
+          the derivatives of the vectors are not
+        - Utilizing the multiplication rule of derivatives
