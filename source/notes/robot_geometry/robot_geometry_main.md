@@ -7,8 +7,8 @@
 ## Table of Contents
 
 - [Coordinate Systems](#coord_sys)
-- [Coordinate Transformations](#coord_trans)
 - [Homogeneous Coordinates](#homogeneous_coordinates)
+- [Coordinate Transformations](#coord_trans)
 
 ## Coordinate Systems {#coord_sys}
 
@@ -35,6 +35,16 @@ Nomenclature"/>
 </td></tr>
 </table>
 </div>
+
+## Homogeneous Coordinates {#homogeneous_coordinates}
+
+- Four coordinates to define a vector (X, Y, Z, w)
+    - X = $\frac{x}{w}$
+    - Y = $\frac{y}{w}$
+    - Z = $\frac{z}{w}$
+- Advantage of using homogeneous coordinates is that as w goes to zero the
+  vectors point to infinity therefore there are unique vectors that point to
+  infinity
 
 ## Coordinate Transformation {#coord_trans}
 
@@ -97,20 +107,11 @@ Nomenclature"/>
           (^{B}\underline{x}_{A})^{T} \\ (^{B}\underline{y}_{A})^{T} \\
           (^{B}\underline{z}_{A})^{T} \right]$
 
-## Homogeneous Coordinates {#homogeneous_coordinates}
-
-- Four coordinates to define a vector (X, Y, Z, w)
-    - X = $\frac{x}{w}$
-    - Y = $\frac{y}{w}$
-    - Z = $\frac{z}{w}$
-- Advantage of using homogeneous coordinates is that as w goes to zero the
-  vectors point to infinity therefore there are unique vectors that point to
-  infinity
-
 > ### Transformation Matrix
 
 > - Coordinate system transformations with rotation matrices can be further
-    simpified by using a transformation matrix that is defined as 
+    simpified by using homogenous coordinates and defining a transformation
+    matrix as 
 
 <div align="center">
 <table class="image">
