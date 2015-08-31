@@ -25,6 +25,7 @@ title: Analytical Dynamics
 <li><a href="#reference_frames">Reference Frames</a></li>
 <li><a href="#coordinate_system">Coordinate System</a></li>
 <li><a href="#vector_derivatives">Vector Derivatives</a></li>
+<li><a href="#transport_theorem">Transport Theorem</a></li>
 </ul>
 <h2 id="scalars">Scalars</h2>
 <ul>
@@ -38,11 +39,23 @@ title: Analytical Dynamics
 <ul>
 <li>Vectors are quantities in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=E%5E%7B3%7D" alt="E^{3}" title="E^{3}" /> (3D Euclidian Space) that have both magnitude and direction</li>
 <li>Magnitude is defined as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%7C%7C%20%5Cunderline%7Bb%7D%20%7C%7C%20%3D%20%5Csqrt%7Bb%20%5Ccdot%20b%7D" alt="|| \underline{b} || = \sqrt{b \cdot b}" title="|| \underline{b} || = \sqrt{b \cdot b}" /></li>
-<li>Direction of the vector is defined by its unit vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bb%7D%20%3D%20%5Cfrac%7B%5Cunderline%7Bb%7D%7D%7B%7C%7C%20%5Cunderline%7Bb%7D%20%7C%7C%7D" alt="\underline{u}_{b} = \frac{\underline{b}}{|| \underline{b} ||}" title="\underline{u}_{b} = \frac{\underline{b}}{|| \underline{b} ||}" /></li>
+<li>Direction of the vector is defined by its unit vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bb%7D%20%3D%20%20%5Cfrac%7B%5Cunderline%7Bb%7D%7D%7B%7C%7C%20%5Cunderline%7Bb%7D%20%7C%7C%7D" alt="\underline{u}_{b} =  \frac{\underline{b}}{|| \underline{b} ||}" title="\underline{u}_{b} =  \frac{\underline{b}}{|| \underline{b} ||}" /></li>
 <li>Vectors are reference frame independent
 <ul>
 <li>Vectors hold their true magnitude and direction no matter what reference frame you're observing from</li>
 </ul></li>
+<li>There are three types of vectors
+<ol style="list-style-type: decimal">
+<li>Free vectors - <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D" alt="\underline{b}" title="\underline{b}" /> &amp; <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D%27" alt="\underline{b}&#39;" title="\underline{b}&#39;" /> are the same vector if they have the same magnitude and direction</li>
+<li>Sliding vectors - <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D" alt="\underline{b}" title="\underline{b}" /> &amp; <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D%27" alt="\underline{b}&#39;" title="\underline{b}&#39;" /> are the same vector if they have the same magnitude and direction &amp; share the same line of action in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=E%5E%7B3%7D" alt="E^{3}" title="E^{3}" />
+<ul>
+<li>Ex. force vectors</li>
+</ul></li>
+<li>Bound vectors - <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D" alt="\underline{b}" title="\underline{b}" /> &amp; <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D%27" alt="\underline{b}&#39;" title="\underline{b}&#39;" /> are the same bound vector if they are the same sliding vector &amp; share the same point of application
+<ul>
+<li>Ex. position vectors</li>
+</ul></li>
+</ol></li>
 </ul>
 <h2 id="reference_frames">Reference Frames</h2>
 <ul>
@@ -88,8 +101,29 @@ title: Analytical Dynamics
 <ul>
 <li>The derivatives of the scalars are reference frame independent but the derivatives of the vectors are not</li>
 <li>Utilizing the multiplication rule of derivatives</li>
+<li>The first three terms represent the rate of change of vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D" alt="\underline{b}" title="\underline{b}" /> in the coordinate system defined by the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bi%7D" alt="\underline{e}_{i}" title="\underline{e}_{i}" /> vectors</li>
+<li>The last three terms represent the rate of change of the coordinate system defined by the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bi%7D" alt="\underline{e}_{i}" title="\underline{e}_{i}" /> vectors with respect to reference frame A
+<ul>
+<li>If the vectors {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}}, \underline{e_{2}},  \underline{e_{3}}" title="\underline{e_{1}}, \underline{e_{2}},  \underline{e_{3}}" />} are fixed in reference frame A then the last three terms in the derivative equal zero</li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
+<h2 id="transport_theorem">Transport Theorem</h2>
+<ul>
+<li>The transport theorem is a simplification of the vector derivative and can be stated as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Bb%7D%7D%7Bdt%7D%20%3D%20%5Cfrac%7B%5E%7BB%7Dd%5Cunderline%7Bb%7D%7D%7Bdt%7D%20%2B%20%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BB%7D%20%5Ctimes%20%5Cunderline%7Bb%7D" alt="\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +  ^{A}\underline{\omega}^{B} \times \underline{b}" title="\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +  ^{A}\underline{\omega}^{B} \times \underline{b}" /> where {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}},  \underline{e_{2}}, \underline{e_{3}}" title="\underline{e_{1}},  \underline{e_{2}}, \underline{e_{3}}" />} are fixed in reference frame B and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BB%7D" alt="^{A}\underline{\omega}^{B}" title="^{A}\underline{\omega}^{B}" /> is the angular velocity of frame B as seen by an observer in reference frame A</li>
+</ul>
+<blockquote>
+<h3 id="transport-theorem-derivation">Transport Theorem Derivation</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>Taking the resultant formula for the derivative of a vector from above where {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}" title="\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}" />} are fixed in reference frame B we have <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Bb%7D%7D%7Bdt%7D%20%3D%20%5Cfrac%7Bdb_%7B1%7D%28t%29%7D%7Bdt%7D%5Cunderline%7Be%7D_%7B1%7D%20%2B%20%5Cfrac%7Bdb_%7B2%7D%28t%29%7D%7Bdt%7D%5Cunderline%7Be%7D_%7B2%7D%20%2B%20%5Cfrac%7Bdb_%7B3%7D%28t%29%7D%7Bdt%7D%5Cunderline%7Be%7D_%7B3%7D%20%2B" alt="\frac{^{A}d\underline{b}}{dt} = \frac{db_{1}(t)}{dt}\underline{e}_{1} + \frac{db_{2}(t)}{dt}\underline{e}_{2} + \frac{db_{3}(t)}{dt}\underline{e}_{3} +" title="\frac{^{A}d\underline{b}}{dt} = \frac{db_{1}(t)}{dt}\underline{e}_{1} + \frac{db_{2}(t)}{dt}\underline{e}_{2} + \frac{db_{3}(t)}{dt}\underline{e}_{3} +" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=b_%7B1%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B1%7D%7D%7Bdt%7D%20%2B%20b_%7B2%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B2%7D%7D%7Bdt%7D%20%2B%20b_%7B3%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B3%7D%7D%7Bdt%7D" alt="b_{1}\frac{^{A}d\underline{e}_{1}}{dt} + b_{2}\frac{^{A}d\underline{e}_{2}}{dt} + b_{3}\frac{^{A}d\underline{e}_{3}}{dt}" title="b_{1}\frac{^{A}d\underline{e}_{1}}{dt} + b_{2}\frac{^{A}d\underline{e}_{2}}{dt} + b_{3}\frac{^{A}d\underline{e}_{3}}{dt}" />    or    <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Bb%7D%7D%7Bdt%7D%20%3D%20%5Cfrac%7B%5E%7BB%7Dd%5Cunderline%7Bb%7D%7D%7Bdt%7D%20%2B" alt="\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +" title="\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=b_%7B1%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B1%7D%7D%7Bdt%7D%20%2B%20b_%7B2%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B2%7D%7D%7Bdt%7D%20%2B%20b_%7B3%7D%5Cfrac%7B%5E%7BA%7Dd%5Cunderline%7Be%7D_%7B3%7D%7D%7Bdt%7D" alt="b_{1}\frac{^{A}d\underline{e}_{1}}{dt} + b_{2}\frac{^{A}d\underline{e}_{2}}{dt} + b_{3}\frac{^{A}d\underline{e}_{3}}{dt}" title="b_{1}\frac{^{A}d\underline{e}_{1}}{dt} + b_{2}\frac{^{A}d\underline{e}_{2}}{dt} + b_{3}\frac{^{A}d\underline{e}_{3}}{dt}" /></li>
+<li>Next we need to use some of the mathematical definitions of the {<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be_%7B1%7D%7D%2C%20%5Cunderline%7Be_%7B2%7D%7D%2C%20%5Cunderline%7Be_%7B3%7D%7D" alt="\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}" title="\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}" />} vectors
+<ul>
+<li>The vectors are all unit vectors therefore</li>
+</ul></li>
+</ul>
+</blockquote>
 </body>
 </html>

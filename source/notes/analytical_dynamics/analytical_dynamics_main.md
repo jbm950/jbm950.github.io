@@ -11,6 +11,7 @@
 - [Reference Frames](#reference_frames)
 - [Coordinate System](#coordinate_system)
 - [Vector Derivatives](#vector_derivatives)
+- [Transport Theorem](#transport_theorem)
 
 ## Scalars {#scalars}
 
@@ -24,10 +25,22 @@
 - Vectors are quantities in $E^{3}$ (3D Euclidian Space) that have both
   magnitude and direction
 - Magnitude is defined as $|| \underline{b} || = \sqrt{b \cdot b}$
-- Direction of the vector is defined by its unit vector $\underline{u}_{b} = \frac{\underline{b}}{|| \underline{b} ||}$
+- Direction of the vector is defined by its unit vector $\underline{u}_{b} =
+  \frac{\underline{b}}{|| \underline{b} ||}$
 - Vectors are reference frame independent
     - Vectors hold their true magnitude and direction no matter what reference
       frame you're observing from
+- There are three types of vectors
+    1. Free vectors - $\underline{b}$ & $\underline{b}'$ are the same vector if
+       they have the same magnitude and direction
+    2. Sliding vectors - $\underline{b}$ & $\underline{b}'$ are the same vector
+       if they have the same magnitude and direction & share the same line of
+       action in $E^{3}$
+        - Ex. force vectors
+    3. Bound vectors - $\underline{b}$ & $\underline{b}'$ are the same bound
+       vector if they are the same sliding vector & share the same point of
+       application
+        - Ex. position vectors
 
 ## Reference Frames {#reference_frames}
 
@@ -84,3 +97,39 @@
         - The derivatives of the scalars are reference frame independent but
           the derivatives of the vectors are not
         - Utilizing the multiplication rule of derivatives
+        - The first three terms represent the rate of change of vector
+          $\underline{b}$ in the coordinate system defined by the
+          $\underline{e}_{i}$ vectors
+        - The last three terms represent the rate of change of the coordinate
+          system defined by the $\underline{e}_{i}$ vectors with respect to
+          reference frame A
+            - If the vectors {$\underline{e_{1}}, \underline{e_{2}},
+              \underline{e_{3}}$} are fixed in reference frame A then the last
+              three terms in the derivative equal zero
+
+## Transport Theorem {#transport_theorem}
+
+- The transport theorem is a simplification of the vector derivative and can be
+  stated as $\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +
+  ^{A}\underline{\omega}^{B} \times \underline{b}$ where {$\underline{e_{1}},
+  \underline{e_{2}}, \underline{e_{3}}$} are fixed in reference frame B and
+  $^{A}\underline{\omega}^{B}$ is the angular velocity of frame B as seen by an
+  observer in reference frame A
+
+> ### Transport Theorem Derivation
+
+> - Taking the resultant formula for the derivative of a vector from above
+    where {$\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}$} are fixed
+    in reference frame B we have $\frac{^{A}d\underline{b}}{dt} =
+    \frac{db_{1}(t)}{dt}\underline{e}_{1} +
+    \frac{db_{2}(t)}{dt}\underline{e}_{2} +
+    \frac{db_{3}(t)}{dt}\underline{e}_{3} +$
+    $b_{1}\frac{^{A}d\underline{e}_{1}}{dt} +
+    b_{2}\frac{^{A}d\underline{e}_{2}}{dt} +
+    b_{3}\frac{^{A}d\underline{e}_{3}}{dt}$ &nbsp;&nbsp; or &nbsp;&nbsp;
+    $\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +$
+    $b_{1}\frac{^{A}d\underline{e}_{1}}{dt} +
+    b_{2}\frac{^{A}d\underline{e}_{2}}{dt} +
+    b_{3}\frac{^{A}d\underline{e}_{3}}{dt}$
+> - Next we need to use some of the mathematical definitions of the {$\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}$} vectors
+>       - The vectors are all unit vectors therefore 
