@@ -146,3 +146,22 @@ Definition" width="200" height="200"/>
 >       - Now the unknowns are in terms of the known values and the new
           transformation matrix can be written in the form shown above
 
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/reverse_transformation_matrix_definition.png"
+alt="Reverse Transformation Matrix Definition" title="Reverse Transformation
+Matrix Definition" width="300" height="200"/> 
+</td></tr>
+</table>
+</div>
+
+> ### Rotation Around a General Vector Passing Through the Origin 
+
+>> #### Common Rotations
+
+>> - Rotation $\alpha$ around the x-axis: $^{A}_{B}R = \left[ \begin{array} 1
+     & 0 & 0 \\ 0 & cos(\alpha) & -sin(\alpha) \\ 0 & sin(\alpha) & cos(\alpha)
+     \end{array} \right]$
+>> - Rotation $\beta$ around the y-axis: $^{A}_{B}R = \left[ \begin{array}
+     cos(\beta) & 0 & sin(\beta) \\ 0 & 1 & 0 \\ -sin(\beta) & 0 & cos(\beta)
+     \end{array} \right]$
