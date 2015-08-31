@@ -27,4 +27,20 @@ target="_blank">Full Article Download</a>
 
 ## 2. How and Why Does AD Work {#how_why_ad_work}
 
--
+- Basic automatic differentiation works by systematically applying the chain
+  rule for taking derivatives
+- When using automatic differentiation a formula is transformed into a code
+  list where each element in the list performs one basic operation
+    - Ex. $f(x,y) = (x^{2} + y)(x+3y^{2})$ becomes
+    - $t_{1} = x \\ t_{2} = y \\ t_{3} = t_{1}^{2} \\ t_{4} = t_{3} + t_{2} \\
+      t_{5} = t_{2}^{2} \\ t_{6} = 3*t_{5} \\ t_{7} = t_{1} +t_{6} \\ t_{8} =
+      t_{4} * t_{7} = f(x,y)$
+- The derivate is found for each term in the code list using traditional rules of calculus
+    - $t_{1} = x$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{1} = [1, 0]$
+    - $t_{2} = y$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{2} = [0, 1]$
+    - $t_{3} = t_{1}^{2}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{3} = 2*t_{1} * \nabla t_{1}$ yields [$2t_{1}$, 0]
+    - $t_{4} = t_{3} + t_{2}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{4} = \nabla t_{3} + \nabla t_{2}$ yields [$2t_{1}$, 1]
+    - $t_{5} = t_{2}^{2}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{5} = 2*t_{2} * \nabla t_{2}$ yields [0, $2t_{2}$]
+    - $t_{6} = 3*t_{5}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{6} = 3*\nabla t_{5}$ yields [0, $6t_{2}$]
+    - $t_{7} = t_{1} + t_{6}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{7} = \nabla t_{1} + \nabla t_{6}$ yields [1, $6t_{2}$]
+    - $t_{8} = t_{4} * t_{7} = f(x,y)$ &nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{8} = \nabla t_{4} * t_{7} + t_{4} * \nabla t_{7}$ yields [$3t_{1}^{2} + 6t_{1}t_{2}^{2} + t_{2}$, $t_{1} + 6t_{1}^{2}t_{2} + 9t_{2}^{2}$] when simplified down to $t_{1}$'s and $t_{2}$'s
