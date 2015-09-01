@@ -131,5 +131,42 @@
     $b_{1}\frac{^{A}d\underline{e}_{1}}{dt} +
     b_{2}\frac{^{A}d\underline{e}_{2}}{dt} +
     b_{3}\frac{^{A}d\underline{e}_{3}}{dt}$
-> - Next we need to use some of the mathematical definitions of the {$\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}$} vectors
->       - The vectors are all unit vectors therefore 
+> - Next we need to use some of the mathematical definitions of the
+    {$\underline{e_{1}}, \underline{e_{2}}, \underline{e_{3}}$} vectors
+>       - The vectors are all unit vectors therefore $\underline{e}_{i} \cdot
+          \underline{e}_{i} = 1$ for i = 1, 2, 3
+>       - The vectors are all mutually orthogonal therefore $\underline{e}_{i}
+          \cdot \underline{e}_{j} = 0$ for i $\neq$ j
+>       - Taking the derivative of the unit vector rule we obtain
+          $\frac{^{A}d(\underline{e}_{i} \cdot \underline{e}_{i})}{dt} =
+          \underline{e}_{i} \cdot \frac{^{A}d\underline{e}_{i}}{dt} +
+          \frac{^{A}d\underline{e}_{i}}{dt}$ $\cdot \underline{e}_{i} =
+          \underline{e}_{i} \cdot \frac{^{A}d\underline{e}_{i}}{dt} = 0$
+>           - A result of this is that it shows that a unit length vector,
+              $\underline{e}_{i}$, will always be perpendicular to its
+              derivative
+>       - Taking the derivative of the orthogonal rule we obtain
+          $\frac{^{A}d(\underline{e}_{i} \cdot \underline{e}_{j})}{dt} =
+          \underline{e}_{i} \cdot \frac{^{A}d\underline{e}_{j}}{dt} +
+          \frac{^{A}d\underline{e}_{i}}{dt} \cdot \underline{e}_{j} = 0$
+          &nbsp;&nbsp; or &nbsp;&nbsp; $\underline{e}_{i} \cdot
+          \frac{^{A}d\underline{e}_{j}}{dt} = -
+          \frac{^{A}d\underline{e}_{i}}{dt} \cdot \underline{e}_{j}$
+>       - The next step is to write out the derivate of each unit vector in
+          terms of a component of $\omega$, the angular velocity,  multiplied
+          by each of the unit vectors
+>           - $\frac{^{A}d\underline{e}_{1}}{dt} = \omega_{11}\underline{e}_{1}
+              + \omega_{21}\underline{e}_{2} + \omega_{31}\underline{e}_{3}$
+>           - $\frac{^{A}d\underline{e}_{2}}{dt} = \omega_{12}\underline{e}_{1}
+              + \omega_{22}\underline{e}_{2} + \omega_{32}\underline{e}_{3}$
+>           - $\frac{^{A}d\underline{e}_{3}}{dt} = \omega_{13}\underline{e}_{1}
+              + \omega_{23}\underline{e}_{2} + \omega_{33}\underline{e}_{3}$
+>       - We know from the derivative of the unit vector rule that the
+          derivative of a unit vector will not contain any component along the
+          direction of that unit vector ($\omega_{11} = \omega_{22} =
+          \omega_{33} = 0$)
+>       - We also know from the result of the derivative of the orthogonal rule
+          that the component of the derivative of first vector in the second
+          vectors direction is the negative of the second vectors derivative in
+          the first vector's direction ($\omega_{21} = - \omega_{12}$,
+          $\omega_{13} = - \omega_{31}$, $\omega_{23} = - \omega_{32}$)
