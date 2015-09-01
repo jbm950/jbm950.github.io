@@ -22,6 +22,7 @@ target="_blank">Full Article Download</a></p>
 <ul>
 <li><a href="#what_is_auto_diff">1. What Is Automatic Differentiation</a></li>
 <li><a href="#how_why_ad_work">2. How and Why Does AD Work</a></li>
+<li><a href="#higher_derivaties_and_taylor_series">3. Higher Derivatives and Taylor Series</a></li>
 </ul>
 <h2 id="what_is_auto_diff">1. What Is Automatic Differentiation</h2>
 <ul>
@@ -56,6 +57,11 @@ target="_blank">Full Article Download</a></p>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B7%7D%20%3D%20t_%7B1%7D%20%2B%20t_%7B6%7D" alt="t_{7} = t_{1} + t_{6}" title="t_{7} = t_{1} + t_{6}" />                   <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cnabla%20t_%7B7%7D%20%3D%20%5Cnabla%20t_%7B1%7D%20%2B%20%5Cnabla%20t_%7B6%7D" alt="\nabla t_{7} = \nabla t_{1} + \nabla t_{6}" title="\nabla t_{7} = \nabla t_{1} + \nabla t_{6}" /> yields [1, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=6t_%7B2%7D" alt="6t_{2}" title="6t_{2}" />]</li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B8%7D%20%3D%20t_%7B4%7D%20%2A%20t_%7B7%7D%20%3D%20f%28x%2Cy%29" alt="t_{8} = t_{4} * t_{7} = f(x,y)" title="t_{8} = t_{4} * t_{7} = f(x,y)" />      <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cnabla%20t_%7B8%7D%20%3D%20%5Cnabla%20t_%7B4%7D%20%2A%20t_%7B7%7D%20%2B%20t_%7B4%7D%20%2A%20%5Cnabla%20t_%7B7%7D" alt="\nabla t_{8} = \nabla t_{4} * t_{7} + t_{4} * \nabla t_{7}" title="\nabla t_{8} = \nabla t_{4} * t_{7} + t_{4} * \nabla t_{7}" /> yields [<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=3t_%7B1%7D%5E%7B2%7D%20%2B%206t_%7B1%7Dt_%7B2%7D%5E%7B2%7D%20%2B%20t_%7B2%7D" alt="3t_{1}^{2} + 6t_{1}t_{2}^{2} + t_{2}" title="3t_{1}^{2} + 6t_{1}t_{2}^{2} + t_{2}" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B1%7D%20%2B%206t_%7B1%7D%5E%7B2%7Dt_%7B2%7D%20%2B%209t_%7B2%7D%5E%7B2%7D" alt="t_{1} + 6t_{1}^{2}t_{2} + 9t_{2}^{2}" title="t_{1} + 6t_{1}^{2}t_{2} + 9t_{2}^{2}" />] when simplified down to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B1%7D" alt="t_{1}" title="t_{1}" />'s and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B2%7D" alt="t_{2}" title="t_{2}" />'s</li>
 </ul></li>
+<li>The previous example is an example of forward mode automatic differentiation
+<ul>
+<li>Reverse mode is the other main mode used by automatic differentiation software and will be discussed in section 5 of this article</li>
+</ul></li>
 </ul>
+<h2 id="higher_derivatives_and_taylor_series">3. Higher Derivatives and Taylor Series</h2>
 </body>
 </html>

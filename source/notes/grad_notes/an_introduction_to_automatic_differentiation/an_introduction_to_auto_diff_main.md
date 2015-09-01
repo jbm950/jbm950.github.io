@@ -9,6 +9,7 @@ target="_blank">Full Article Download</a>
 
 - [1. What Is Automatic Differentiation](#what_is_auto_diff)
 - [2. How and Why Does AD Work](#how_why_ad_work)
+- [3. Higher Derivatives and Taylor Series](#higher_derivaties_and_taylor_series)
 
 ## 1. What Is Automatic Differentiation {#what_is_auto_diff}
 
@@ -44,3 +45,8 @@ target="_blank">Full Article Download</a>
     - $t_{6} = 3*t_{5}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{6} = 3*\nabla t_{5}$ yields [0, $6t_{2}$]
     - $t_{7} = t_{1} + t_{6}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{7} = \nabla t_{1} + \nabla t_{6}$ yields [1, $6t_{2}$]
     - $t_{8} = t_{4} * t_{7} = f(x,y)$ &nbsp;&nbsp;&nbsp;&nbsp; $\nabla t_{8} = \nabla t_{4} * t_{7} + t_{4} * \nabla t_{7}$ yields [$3t_{1}^{2} + 6t_{1}t_{2}^{2} + t_{2}$, $t_{1} + 6t_{1}^{2}t_{2} + 9t_{2}^{2}$] when simplified down to $t_{1}$'s and $t_{2}$'s
+- The previous example is an example of forward mode automatic differentiation
+    - Reverse mode is the other main mode used by automatic differentiation
+      software and will be discussed in section 5 of this article
+
+## 3. Higher Derivatives and Taylor Series {#higher_derivatives_and_taylor_series}
