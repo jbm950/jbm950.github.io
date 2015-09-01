@@ -157,6 +157,23 @@ Matrix Definition" width="300" height="200"/>
 
 > ### Rotation Around a General Vector Passing Through the Origin 
 
+> - The rotation matrix for a rotation around a general vector, m, passing
+    through the origin is: 
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Figure taken from the book</caption>
+<tr><td><img src="./img/rotation_general_transform_matrix.jpg"
+alt="General Rotation Transformation Matrix" title="General Rotation
+Transformation Matrix" width="400" height="100"/> 
+</td></tr>
+</table>
+</div>
+
+> - Where $v = 1 - cos(\theta)$, $s = sin(\theta)$ and $c = cos(\theta)$
+
+>> #### Formula Derivation
+
 >> #### Common Rotations
 
 >> - Rotation $\alpha$ around the x-axis: $^{A}_{B}R = \left[ \begin{array} 1
@@ -165,3 +182,4 @@ Matrix Definition" width="300" height="200"/>
 >> - Rotation $\beta$ around the y-axis: $^{A}_{B}R = \left[ \begin{array}
      cos(\beta) & 0 & sin(\beta) \\ 0 & 1 & 0 \\ -sin(\beta) & 0 & cos(\beta)
      \end{array} \right]$
+>> - Rotation $\gamma$ around the z-axis: $^{A}_{B}R = \left[ \begin{array} cos(\gamma) & -sin(\gamma) & 0 \\ sin(\gamma) & cos(\gamma) & 0 \\ 0 & 0 & 1 \end{array} \right]$
