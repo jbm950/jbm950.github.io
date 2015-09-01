@@ -53,8 +53,27 @@
 
 > ## Hamiltonian Boundary-Value Problem {#hamiltonian_bv_p}
 
-# Terms
+> ## Hessian Matrix {#hessian_matrix}
+
+> - This is the matrix containing all of the second derivatives of a function
+>   just as the Jacobian matrix (J) contains all of the first derivatives
+>       - $H(f)(x) = J(\nabla f)(x)$
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Hessian Matrix (Image found on Wikipedia)</caption>
+<tr><td><img src="./img/hessian_matrix.png"
+alt="Hessian Matrix" title="Hessian Matrix" width="225" height="150"/>
+</td></tr>
+</table>
+</div>
+
+> ## Newton's Method in Optimization {#newton_method_optimization}
+
+# Terms/Acronyms
 
 - AD = Automatic Differentiation/Algorithmic Differentiation
 - CADA = Computation of Analytic Derivative Automatically
 - HBVP = Hamiltonian Boundary Value Problem
+- Recurrence Relation = An equation where future terms can be solved for using
+  current terms (ex. Fibonacci Numbers)
