@@ -6,6 +6,12 @@
      Differentiation](./an_introduction_to_automatic_differentiation/an_introduction_to_auto_diff_main.html)
      (Louis B. Rall and George F. Corliss)
 
+### May 2006
+
+> - [Nonlinear Programming: Theory and
+    Algorithms](./nonlinear_programming_theory_and_algorithms/nonlinear_programming_theory_and_algo_main.html)
+    (Mokhtar S.  Bazaraa, Hanif D, Sherali and C. M. Shetty)
+
 ### July 2013
 
 > - [An Efficient Overloaded Method for Computing Derivatives of Mathematical

@@ -1,7 +1,7 @@
 [General Notes](./grad_general_notes.html)  
 [Weekly Status Updates](./weekly_status_updates.html)
 
-## Articles
+## Articles/Books
 
 > - [__Chronological__](./chronological_notes.html)
 
@@ -17,3 +17,6 @@
 >> - [Faster, Higher and Greener: Vehicular Optimal
      Control](./faster_higher_greener/faster_higher_greener_main.html)
      (David J.N. Limebeer and Anil Rao)
+>> - [Nonlinear Programming: Theory and
+     Algorithms](./nonlinear_programming_theory_and_algorithms/nonlinear_programming_theory_and_algo_main.html)
+     (Mokhtar S.  Bazaraa, Hanif D, Sherali and C. M. Shetty)
