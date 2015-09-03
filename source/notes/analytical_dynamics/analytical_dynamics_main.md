@@ -170,3 +170,43 @@
           vectors direction is the negative of the second vectors derivative in
           the first vector's direction ($\omega_{21} = - \omega_{12}$,
           $\omega_{13} = - \omega_{31}$, $\omega_{23} = - \omega_{32}$)
+>       - With these two rules we can re-write the three
+          $\frac{^{A}d\underline{e}_{i}}{dt}$ equations
+>           - $\frac{^{A}d\underline{e}_{1}}{dt} = \omega_{21}\underline{e}_{2}
+              + \omega_{31}\underline{e}_{3}$
+>           - $\frac{^{A}d\underline{e}_{2}}{dt} = -\omega_{21}\underline{e}_{1}
+              + \omega_{32}\underline{e}_{3}$
+>           - $\frac{^{A}d\underline{e}_{3}}{dt} = -\omega_{31}\underline{e}_{1}
+              - \omega_{32}\underline{e}_{2}$
+>       - We now define the following three $\omega$'s: $\omega_{1} =
+          \omega_{32}$, $\omega_{2} = -\omega_{31}$ and $\omega_{3} =
+          \omega_{21}$
+>       - With the $\omega$ redefinitions we can introduce
+          $^{A}\underline{\omega}^{B}$, the angular velocity of frame B as seen
+          by an observer in frame A as $^{A}\underline{\omega}^{B} =
+          \omega_{1}\underline{e}_{1} + \omega_{2}\underline{e}_{2} +
+          \omega_{3}\underline{e}_{3}$
+>           - This definition of angular velocity allows the equation
+              $\frac{^{A}d\underline{e}_{i}}{dt} = ^{A}\underline{\omega}^{B}
+              \times \underline{e}_{i}$ to produce the three above equations
+>       - Substituting the equation for $\frac{^{A}d\underline{e}_{i}}{dt}$
+          into the very first equation results in
+          $\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +$
+          $b_{1}\frac{^{A}d\underline{e}_{1}}{dt} +
+          b_{2}\frac{^{A}d\underline{e}_{2}}{dt} +
+          b_{3}\frac{^{A}d\underline{e}_{3}}{dt}$ $=
+          \frac{^{B}d\underline{b}}{dt} + b_{1}^{A}\underline{\omega}^{B}
+          \times \underline{e}_{1} +$ $b_{2}^{A}\underline{\omega}^{B} \times
+          \underline{e}_{2} + b_{3}^{A}\underline{\omega}^{B} \times
+          \underline{e}_{3}$
+>       - To simplify further separate the angular velocity out of the cross
+          products: $\frac{^{A}d\underline{b}}{dt} =
+          \frac{^{B}d\underline{b}}{dt} + ^{A}\underline{\omega}^{B} \times
+          (b_{1}\underline{e}_{1} + b_{2}\underline{e}_{2} +
+          b_{3}\underline{e}_{3})$
+>           - Now taking the definition of $\underline{b}$ as $\underline{b} =
+              b_{1}\underline{e}_{1} + b_{2}\underline{e}_{2} +
+              b_{3}\underline{e}_{3}$ we can re-write the above expression as
+              $\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +
+              ^{A}\underline{\omega}^{B} \times \underline{b}$ which is the
+              transport theorem
