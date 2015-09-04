@@ -12,6 +12,7 @@
 - [Coordinate System](#coordinate_system)
 - [Vector Derivatives](#vector_derivatives)
 - [Transport Theorem](#transport_theorem)
+- [Examples](#examples)
 
 ## Scalars {#scalars}
 
@@ -115,6 +116,11 @@
   \underline{e_{2}}, \underline{e_{3}}$} are fixed in reference frame B and
   $^{A}\underline{\omega}^{B}$ is the angular velocity of frame B as seen by an
   observer in reference frame A
+- Some useful properties of the angular velocity are:
+    1. $^{A}\underline{\omega}^{B} = -^{B}\underline{\omega}^{A}$
+    2. $^{A}\underline{\omega}^{E} = ^{A}\underline{\omega}^{B} +
+       ^{B}\underline{\omega}^{C} + ^{C}\underline{\omega}^{D} +
+       ^{D}\underline{\omega}^{E}$
 
 > ### Transport Theorem Derivation
 
@@ -210,3 +216,15 @@
               $\frac{^{A}d\underline{b}}{dt} = \frac{^{B}d\underline{b}}{dt} +
               ^{A}\underline{\omega}^{B} \times \underline{b}$ which is the
               transport theorem
+
+## Examples {#examples}
+
+> ### Examples Content
+
+> - [Transport Theorem](#e_transport_theorem)
+
+> ### Transport Theorem Examples
+
+> - First Transport Theorem Example:
+
+>> - Given a disk (D) rotating about its centerpoint (O)
