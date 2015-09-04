@@ -157,8 +157,8 @@ Matrix Definition" width="300" height="200"/>
 
 > ### Rotation Around a General Vector Passing Through the Origin 
 
-> - The rotation matrix for a rotation around a general vector, m, passing
-    through the origin is: 
+> - The rotation matrix for a rotation, $\theta$, around a general vector, m,
+    passing through the origin is: 
 
 <div align="center">
 <table class="image">
@@ -173,6 +173,34 @@ Transformation Matrix" width="400" height="100"/>
 > - Where $v = 1 - cos(\theta)$, $s = sin(\theta)$ and $c = cos(\theta)$
 
 >> #### Formula Derivation
+
+>> - It is desired to find the rotation matrix from coordinate system A to
+     coordinate system B after a rotation $\theta$ about a generic vector m
+>> - To begin consider a coordinate system C whose z-axis is along the vector m
+     (the location of the x and y vectors will be arbitrary)
+>> - The rotation matrix from C to A can then be defined as $^{A}_{C}R = \left[
+     \begin{array} a_{x} & b_{x} & m_{x} \\ a_{y} & b_{y} & m_{y} \\ a_{z} &
+     b_{z} & m_{z} \end{array} \right]$
+>> - Now consider coordinate system D which is obtained by rotating coordinate
+     system C about its z-axis by $\theta$ degrees
+>> - The rotation matrix from D to C would then be defined as $^{C}_{D}R = \left[
+     \begin{array} cos(\theta) & -sin(\theta) & 0 \\ sin(\theta) & cos(\theta) & 0 \\ 0 &
+     0 & 1 \end{array} \right]$
+>> - Taking note that coordinate system B will have the same relation to
+     coordinate system D as coordinate system C has to coordinate system A, the
+     relation $^{A}_{C}R = ^{B}_{D}R$ exists
+>> - The desired rotation matrix can now be found by a series of matrix
+     multiplications: $^{A}_{B}R = (^{A}_{C}R) * (^{C}_{D}R) * (^{B}_{D}R)$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/rotate_gen_matrix_intermediate_step.png"
+alt="General Rotation Transformation Matrix Unsimplified" title="General
+Rotation Transformation Matrix Unsimplified" width="900" height="100"/> 
+</td></tr>
+</table>
+</div>
+
 
 >> #### Common Rotations
 
