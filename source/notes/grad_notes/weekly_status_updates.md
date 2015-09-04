@@ -35,7 +35,7 @@ Theory and Algorithms_ and plan to continue doing so for the forseeable future.
 > - <a href="http://www.amazon.com/Practical-Methods-Optimization-R-Fletcher/dp/0471494631"
     target="_blank">Practical Methods of Optimization</a>
     (R. Fletcher)
-> - <a href="http://www.amazon.com/Nonlinear-Programming-Dimitri-P-Bertsekas/dp/1886529000http://www.eng.mu.edu/corlissg/Pubs/Papers/1996d.ps.gz"
+> - <a href="http://www.amazon.com/Nonlinear-Programming-Dimitri-P-Bertsekas/dp/1886529000"
     target="_blank">Nonlinear Programming</a>
     (Dimitri P. Bertsekas)
 
