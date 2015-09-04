@@ -1,5 +1,45 @@
 # Weekly Status Updates
 
+### Week 8/29/2015 - 9/4/2015
+
+This week I started off reading the article _An Introduction to Automatic
+Differentiation_. After I finished reading the article I went back and started
+to take notes over the details of the article in order to gain a better
+understanding. During this note taking I differentiated a fucntion I made up
+using the automatic differentiation method described in the article. Also while
+taking notes I added information on Hessian matrices to my general notes page.
+About part way through the week Dr. Rao mentioned that I could maybe do a
+project involving writing a new non-linear programming problem solver and so I
+did a bit of research on NLP solvers. While serching for information I found
+more comparisons of current NLP solvers than research articles involving what a
+NLP solver is and how they are improved. Dr. Rao then lent me 3 text books to
+start reading: _Nonlinear Programming: Theory and Algorithms_ by Bazaraa,
+_Practical Methods of Optimization_ by Fletcher and _Nonlinear Programming_ by
+Bertsekas. I have begun reading and taking notes over _Nonlinear Programming:
+Theory and Algorithms_ and plan to continue doing so for the forseeable future.
+
+> #### Future Directions
+
+> - I plan to read and take notes over the three textbooks given to me over
+    nonlinear programming which I believe will take a significant amount of
+    time
+
+> #### Articles/Books Mentioned in Status Update
+
+> - <a href="http://www.eng.mu.edu/corlissg/Pubs/Papers/1996d.ps.gz"
+    target="_blank">An Introduction to Automatic Differentiation Download</a>
+    (Louis B. Rall and George F. Corliss)
+> - <a href="http://www.amazon.com/Nonlinear-Programming-Algorithms-Mokhtar-Bazaraa/dp/0471486000"
+    target="_blank">Nonlinear Programming: Theory and Algorithms</a>
+    (Mokhtar S. Bazaraa, Hanif D. Sherali and C.M. Shetty)
+> - <a href="http://www.amazon.com/Practical-Methods-Optimization-R-Fletcher/dp/0471494631"
+    target="_blank">Practical Methods of Optimization</a>
+    (R. Fletcher)
+> - <a href="http://www.amazon.com/Nonlinear-Programming-Dimitri-P-Bertsekas/dp/1886529000http://www.eng.mu.edu/corlissg/Pubs/Papers/1996d.ps.gz"
+    target="_blank">Nonlinear Programming</a>
+    (Dimitri P. Bertsekas)
+
+
 ### Week 8/21/2015 - 8/28/2015
 
 This week I started by taking general optimal control notes from the article
