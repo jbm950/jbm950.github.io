@@ -188,9 +188,9 @@ Transformation Matrix" width="400" height="100"/>
      0 & 1 \end{array} \right]$
 >> - Taking note that coordinate system B will have the same relation to
      coordinate system D as coordinate system C has to coordinate system A, the
-     relation $^{A}_{C}R = ^{B}_{D}R$ exists
+     relation $^{A}_{C}R = (^{B}_{D}R)$ exists
 >> - The desired rotation matrix can now be found by a series of matrix
-     multiplications: $^{A}_{B}R = (^{A}_{C}R) * (^{C}_{D}R) * (^{B}_{D}R)$
+     multiplications: $^{A}_{B}R = (^{A}_{C}R) * (^{C}_{D}R) * (^{D}_{B}R)$
 
 <div align="center">
 <table class="image">
@@ -201,6 +201,35 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 </table>
 </div>
 
+>> - Unfortunately we do not have values for $a_{x}, a_{y}, a_{z}$ or $b_{x},
+     b_{y}$ and $b_{z}$ because we chose the x and y axes for coordinate system
+     C arbitrarily and so we will need to find a way to cancel them out of the
+     resultant matrix
+>> - In order to simplify the terms in the rotation matrix $^{A}_{B}R$ we will
+     use the geometric meanings of the rotation matrix with matrix $^{A}_{C}R$
+>> - First each row in a rotation matrix represents a unit vector and so the
+     dot product of one of the rows with itself equals one (using matrix
+     $^{A}_{C}R$)
+>>      - $a_{x}^{2} + b_{x}^{2} + m_{x}^{2} = 1$
+>>      - $a_{x}^{2} + b_{x}^{2} = 1 - m_{x}^{2}$
+>>      - This rule should simplify all of the terms along the diagonal of
+          rotation matrix $^{A}_{B}R$ to the form $c(1-m_{i}^{2}) + m_{i}^{2}$
+          &nbsp;&nbsp; or &nbsp;&nbsp; $c + m_{i}^{2}(1-c)$
+>> - The second geometric meaning of the rotation matrix that is going to be
+     utilized is that all of the rows in the matrix represent vectors that are
+     orthogonal to one another and therefore their dot product will equal zero
+>>      - $a_{X}a_{y} + b_{x}b_{y} + m_{x}m_{y} = 0$
+>>      - $a_{X}a_{y} + b_{x}b_{y} = -m_{x}m_{y}$
+>> - The last geometric meaning of the rotation matrix that we are going to use
+     is that the columns of the matrix represent vectors chosen using the right
+     hand rule and therefore the cross product of the first two columns equals
+     the third column
+>>      - $(a_{y}b_{z}-a_{z}b_{y})\hat{\imath} +
+          (a_{x}b_{z}-a_{z}b_{x})\hat{\jmath} + (a_{x}b_{y}-a_{y}b_{x})\hat{k}$
+          $= m_{x}\hat{\imath} + m_{y}\hat{\jmath} + m_{z}\hat{k}$
+>> - Using the second two rules the formula for the rest of rotation matrix
+     $^{A}_{B}R$ can be simplified to the general form shown at the beginning of
+     this section
 
 >> #### Common Rotations
 
@@ -210,4 +239,6 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 >> - Rotation $\beta$ around the y-axis: $^{A}_{B}R = \left[ \begin{array}
      cos(\beta) & 0 & sin(\beta) \\ 0 & 1 & 0 \\ -sin(\beta) & 0 & cos(\beta)
      \end{array} \right]$
->> - Rotation $\gamma$ around the z-axis: $^{A}_{B}R = \left[ \begin{array} cos(\gamma) & -sin(\gamma) & 0 \\ sin(\gamma) & cos(\gamma) & 0 \\ 0 & 0 & 1 \end{array} \right]$
+>> - Rotation $\gamma$ around the z-axis: $^{A}_{B}R = \left[ \begin{array}
+     cos(\gamma) & -sin(\gamma) & 0 \\ sin(\gamma) & cos(\gamma) & 0 \\ 0 & 0 &
+     1 \end{array} \right]$
