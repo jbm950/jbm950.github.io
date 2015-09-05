@@ -227,4 +227,38 @@
 
 > - First Transport Theorem Example:
 
->> - Given a disk (D) rotating about its centerpoint (O)
+>> - Given a disk (D) rotating about its centerpoint (O), find the velocity and
+     acceleration of point P as seen by the disk (D) and the ground (G)
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/trans_theo_example1_diagram1.png"
+alt="Example 1, Diagram 1" title="Example 1, Diagram 1" width="200"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Start by defining reference frames and then coordinate systems within them
+>> - For this problem two reference frames will be used: the disk (D) and the
+     ground (G)
+>> - Coordinate system fixed in the disk reference frame (D)
+>>      - Origin at point O
+>>      - $\underline{e}_{r}$ = along the line $\underline{OP}$
+>>      - $\underline{e}_{z}$ = out of the page (positive with theta)
+>>      - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times \underline{e}_{r}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/disk_ref_frame.png"
+alt="Disk Reference Frame" title="Disk Reference Frame" width="125"
+height="125"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Coordinate system fixed in the ground reference frame (G)
+>>      - Origin at point O
+>>      - $\underline{E}_{z}$ = $\underline{e}_{z}$
+>>      - $\underline{E}_{x}$ = along the line $\underline{OP}$ @ $\theta = 0$
+>>      - $\underline{E}_{y}$ = $\underline{E}_{z} \time \underline{E}_{x}$
