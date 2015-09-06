@@ -37,3 +37,7 @@ target="_blank">Physical Book (Amazon Link)</a>
 - A vector __x__, where __x__ $\in X$, that satisfies all of the constraints is
   called a _feasible solution_
 - The collection of all feasible solutions form the _feasible region_
+- The feasible solution, $\mathbf{\bar{x}}$, that is smaller than all the other
+  feasible solutions ($f(\mathbf{x}) \geq f(\mathbf{\bar{x}})$) is called the
+  _optimal solution_
+    - Multiple optimum's might exist and are called _alternative optimal solutions_
