@@ -9,6 +9,8 @@
 - [Coordinate Systems](#coord_sys)
 - [Homogeneous Coordinates](#homogeneous_coordinates)
 - [Coordinate Transformations](#coord_trans)
+- [Links](#links)
+- [Joints](#joints)
 
 ## Coordinate Systems {#coord_sys}
 
@@ -242,3 +244,36 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 >> - Rotation $\gamma$ around the z-axis: $^{A}_{B}R = \left[ \begin{array}
      cos(\gamma) & -sin(\gamma) & 0 \\ sin(\gamma) & cos(\gamma) & 0 \\ 0 & 0 &
      1 \end{array} \right]$
+
+>> #### Find Vector and Rotation Angle from the Rotation Matrix
+
+## Links {#links}
+
+- Links are rigid bodies that maintain orientation between two axes
+- The two axes ($S_{i}$, $S_{j}$) contain a unique perpendicular between them
+  ($a_{ij}$) where $a_{ij}$ is defined as the link length
+    - If $S_{i}$ and $S_{j}$ intersect, then the link length is zero
+    - The length $a_{ij}$ is positive if chosen in such that it points from
+      $S_{i}$ to $S_{j}$
+- The angle from $S_{i}$ to $S_{j}$ using the right hand rule with one's thumb
+  on $a_{ij}$ is defined as $\alpha_{ij}$, where $\alpha_{ij}$ is called the
+  twist angle
+- It is common to replace all of the links in a system with their equivalent
+  kinematic link
+    - Kinematic link is represented by drawing just the $S_{i}$/$S_{j}$ axes
+      and the link length
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/phy_to_kinematic_link.png"
+alt="Physical to Kinematic Link" title="Physical to Kinematic Link" width="300"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+- Two special link cases are spherical links and planar links
+    - In spherical links $S_{i}$ intersects $S_{j}$ and $a_{ij} = 0$
+    - In planar links $S_{i}$ is parallel with $S_{j}$ and $\alpha_{ij} = 0$
+
+## Joints {#joints}

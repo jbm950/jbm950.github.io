@@ -23,6 +23,8 @@ title: Robot Geometry
 <li><a href="#coord_sys">Coordinate Systems</a></li>
 <li><a href="#homogeneous_coordinates">Homogeneous Coordinates</a></li>
 <li><a href="#coord_trans">Coordinate Transformations</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#joints">Joints</a></li>
 </ul>
 <h2 id="coord_sys">Coordinate Systems</h2>
 <ul>
@@ -43,42 +45,46 @@ Coordinate System A and Nomenclature
 </caption>
 <tr>
 <td>
-<img src="./img/coord<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-</head>
-<body>
-<h1 id="robot-geometry">Robot Geometry</h1>
-<p><strong>Taught by: Dr. Carl Crane</strong><br />
-<strong>Taken: FS 2015</strong><br />
-<strong>Text: Kinematic Analysis of Robot Manipulators</strong><br />
-<em>by: C. Crane and J. Duffy</em></p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<img src="./img/coordinate_system.png"
+alt="Coordinate System A and Nomenclature" title="Coordinate System A and
+Nomenclature"/>
+</td>
+</tr>
+</table>
+</div>
+<h2 id="homogeneous_coordinates">Homogeneous Coordinates</h2>
 <ul>
-<li><a href="#coord_sys">Coordinate Systems</a></li>
-<li><a href="#homogeneous_coordinates">Homogeneous Coordinates</a></li>
-<li><a href="#coord_trans">Coordinate Transformations</a></li>
+<li>Four coordinates to define a vector (X, Y, Z, w)
+<ul>
+<li>X = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bx%7D%7Bw%7D" alt="\frac{x}{w}" title="\frac{x}{w}" /></li>
+<li>Y = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7By%7D%7Bw%7D" alt="\frac{y}{w}" title="\frac{y}{w}" /></li>
+<li>Z = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bz%7D%7Bw%7D" alt="\frac{z}{w}" title="\frac{z}{w}" /></li>
+</ul></li>
+<li>Advantage of using homogeneous coordinates is that as w goes to zero the vectors point to infinity therefore there are unique vectors that point to infinity</li>
 </ul>
-<h2 id="coord_sys">Coordinate Systems</h2>
+<h2 id="coord_trans">Coordinate Transformation</h2>
 <ul>
-<li>A single coordinate system (A) defined by <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bx%7D_%7BA%7D%2C%20%20%5Cunderline%7By%7D_%7BA%7D%2C%20%5Cunderline%7Bz%7D_%7BA%7D" alt="\underline{x}_{A},  \underline{y}_{A}, \underline{z}_{A}" title="\underline{x}_{A},  \underline{y}_{A}, \underline{z}_{A}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=A_%7B0%7D" alt="A_{0}" title="A_{0}" /></li>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=A_%7B0%7D" alt="A_{0}" title="A_{0}" /> is the origin of the A coordinate system</li>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bx%7D_%7BA%7D%2C%20%5Cunderline%7By%7D_%7BA%7D%2C%20%5Cunderline%7Bz%7D_%7BA%7D" alt="\underline{x}_{A}, \underline{y}_{A}, \underline{z}_{A}" title="\underline{x}_{A}, \underline{y}_{A}, \underline{z}_{A}" /> are all unit vectors and are dimensionless because they represent direction not length</li>
-<li>In <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BB%7D%5Cunderline%7Bx%7D_%7BA%7D" alt="^{B}\underline{x}_{A}" title="^{B}\underline{x}_{A}" /> the B represents what coordinate system the values are being given for and the A represents that the vector is the unit vector in the x direction in the A coordinate system</li>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BA_%7B0%7D%20%5Crightarrow%20B_%7B0%7D%7D" alt="^{A}\underline{V}_{A_{0} \rightarrow B_{0}}" title="^{A}\underline{V}_{A_{0} \rightarrow B_{0}}" /> = Vector in coordinate system A pointing from the point <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=A_%7B0%7D" alt="A_{0}" title="A_{0}" /> to the point <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=B_%7B0%7D" alt="B_{0}" title="B_{0}" /></li>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7BB_%7B0%7D%7D" alt="^{A}\underline{P}_{B_{0}}" title="^{A}\underline{P}_{B_{0}}" /> = Point <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=B_%7B0%7D" alt="B_{0}" title="B_{0}" /> as seen from coordinate system A
+<li>Used to determine the position of a point from one coordinate system to another
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BA_%7B0%7D%20%5Crightarrow%20B_%7B0%7D%7D" alt="^{A}\underline{V}_{A_{0} \rightarrow B_{0}}" title="^{A}\underline{V}_{A_{0} \rightarrow B_{0}}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7BB_%7B0%7D%7D" alt="^{A}\underline{P}_{B_{0}}" title="^{A}\underline{P}_{B_{0}}" /></li>
+<li>Ex. point 1 may be defined in coordinate system B and it is desired to know the location of point 1 in coordinate system A</li>
+</ul></li>
+<li>To completely define the location and orientation from one coordinate system to another 6 values are needed (6 degrees of freedom)
+<ul>
+<li>Can use the vector pointing from the origin of one system to another to provide the translation information <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BA_%7B0%7D%20%5Crightarrow%20%20B_%7B0%7D%7D" alt="^{A}\underline{V}_{A_{0} \rightarrow  B_{0}}" title="^{A}\underline{V}_{A_{0} \rightarrow  B_{0}}" /> (Provides 3 of the 6 values)</li>
+<li>Can use Euler angles to provide orientation information where each angle accounts for a rotation around one of the primary axis (Provides the remaining 3 of the 6 values. This method is not going to be utilized in this class)</li>
+<li>Orientation information can also be provided by the following three unit vectors: <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Bx%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7By%7D_%7BB%7D%2C%20%20%5E%7BA%7D%5Cunderline%7Bz%7D_%7BB%7D" alt="^{A}\underline{x}_{B}, ^{A}\underline{y}_{B},  ^{A}\underline{z}_{B}" title="^{A}\underline{x}_{B}, ^{A}\underline{y}_{B},  ^{A}\underline{z}_{B}" />
+<ul>
+<li>Each vector provides three values for a total of nine values, however, they are constrained by having their magnitudes equal to one due to being unit vectors and all three are perpendicular to each other so their dot products equal zero</li>
+</ul></li>
+<li>The three unit vectors along with the vector pointing from the origin of one system to the origin of the other will be used in the class to completely define the position and orientation of one coordinate system to another (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BA_%7B0%7D%20%5Crightarrow%20B_%7B0%7D%7D" alt="^{A}\underline{V}_{A_{0} \rightarrow B_{0}}" title="^{A}\underline{V}_{A_{0} \rightarrow B_{0}}" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Bx%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7By%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7Bz%7D_%7BB%7D" alt="^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B}" title="^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B}" />)</li>
 </ul></li>
 </ul>
-<div align="center">
-<table class="image">
-<caption20%5E%7BA%7D%5Cunderline%7By%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7Bz%7D_%7BB%7D%20and%20%5E%7BB%7D%5Cunderline%7BP%7D_%7B1%7D" alt="^{A}\underline{P}_{B_{0}}, ^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} and ^{B}\underline{P}_{1}" title="^{A}\underline{P}_{B_{0}}, ^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} and ^{B}\underline{P}_{1}" /> are given values and you need to find the location of point 1 defined in the A coordinate system (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7B1%7D" alt="^{A}\underline{P}_{1}" title="^{A}\underline{P}_{1}" />)</li>
+<blockquote>
+<h3 id="rotation-matrix-and-example">Rotation Matrix and Example</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>Consider two coordinate systems A and B and point 1 where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7BB_%7B0%7D%7D%2C%20%5E%7BA%7D%5Cunderline%7Bx%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7By%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7Bz%7D_%7BB%7D%20and%20%5E%7BB%7D%5Cunderline%7BP%7D_%7B1%7D" alt="^{A}\underline{P}_{B_{0}}, ^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} and ^{B}\underline{P}_{1}" title="^{A}\underline{P}_{B_{0}}, ^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} and ^{B}\underline{P}_{1}" /> are given values and you need to find the location of point 1 defined in the A coordinate system (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7B1%7D" alt="^{A}\underline{P}_{1}" title="^{A}\underline{P}_{1}" />)</li>
 <li>Breaking <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BB%7D%5Cunderline%7BP%7D_%7B1%7D" alt="^{B}\underline{P}_{1}" title="^{B}\underline{P}_{1}" /> into its component gives <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BB%7D%5Cunderline%7BP%7D_%7B1%7D%20%3D%20%5Cleft%5B%20b_%7B1%7D%20%5C%5C%20b_%7B2%7D%20%5C%5C%20b_%7B3%7D%20%5Cright%5D" alt="^{B}\underline{P}_{1} = \left[ b_{1} \\ b_{2} \\ b_{3} \right]" title="^{B}\underline{P}_{1} = \left[ b_{1} \\ b_{2} \\ b_{3} \right]" /></li>
 <li>The vector from the origin of the B system to the point 1 can be defined in the A coordinate system as follows: <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BB_%7B0%7D%20%5Crightarrow%201%7D%20%3D%20b_%7B1%7D%5E%7BA%7D%5Cunderline%7Bx%7D_%7BB%7D%20%2B%20b_%7B2%7D%5E%7BA%7D%5Cunderline%7By%7D_%7BB%7D%20%2B%20b_%7B3%7D%5E%7BA%7D%5Cunderline%7Bz%7D_%7BB%7D" alt="^{A}\underline{V}_{B_{0} \rightarrow 1} = b_{1}^{A}\underline{x}_{B} + b_{2}^{A}\underline{y}_{B} + b_{3}^{A}\underline{z}_{B}" title="^{A}\underline{V}_{B_{0} \rightarrow 1} = b_{1}^{A}\underline{x}_{B} + b_{2}^{A}\underline{y}_{B} + b_{3}^{A}\underline{z}_{B}" />    or    <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BB_%7B0%7D%20%5Crightarrow%201%7D%20%3D%20%5Cleft%5B%20%5E%7BA%7D%5Cunderline%7Bx%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7By%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7Bz%7D_%7BB%7D%20%5Cright%5D%20%5Cleft%5B%20b_%7B1%7D%20%5C%5C%20b_%7B2%7D%20%5C%5C%20b_%7B3%7D%20%5Cright%5D" alt="^{A}\underline{V}_{B_{0} \rightarrow 1} = \left[ ^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} \right] \left[ b_{1} \\ b_{2} \\ b_{3} \right]" title="^{A}\underline{V}_{B_{0} \rightarrow 1} = \left[ ^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} \right] \left[ b_{1} \\ b_{2} \\ b_{3} \right]" /></li>
 <li>Vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7B1%7D" alt="^{A}\underline{P}_{1}" title="^{A}\underline{P}_{1}" /> can then be defined as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7B1%7D%20%3D%20%5E%7BA%7D%5Cunderline%7BP%7D_%7BB_%7B0%7D%7D%20%2B%20%5E%7BA%7D%5Cunderline%7BV%7D_%7BB_%7B0%7D%20%5Crightarrow%201%7D" alt="^{A}\underline{P}_{1} = ^{A}\underline{P}_{B_{0}} + ^{A}\underline{V}_{B_{0} \rightarrow 1}" title="^{A}\underline{P}_{1} = ^{A}\underline{P}_{B_{0}} + ^{A}\underline{V}_{B_{0} \rightarrow 1}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BP%7D_%7BB_%7B0%7D%7D%20%2B%20%5Cleft%5B%20%5E%7BA%7D%5Cunderline%7Bx%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7By%7D_%7BB%7D%2C%20%5E%7BA%7D%5Cunderline%7Bz%7D_%7BB%7D%20%5Cright%5D%20%5Cleft%5B%20b_%7B1%7D%20%5C%5C%20b_%7B2%7D%20%5C%5C%20b_%7B3%7D%20%5Cright%5D" alt="^{A}\underline{P}_{B_{0}} + \left[ ^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} \right] \left[ b_{1} \\ b_{2} \\ b_{3} \right]" title="^{A}\underline{P}_{B_{0}} + \left[ ^{A}\underline{x}_{B}, ^{A}\underline{y}_{B}, ^{A}\underline{z}_{B} \right] \left[ b_{1} \\ b_{2} \\ b_{3} \right]" />
@@ -235,5 +241,43 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 </ul>
 </blockquote>
 </blockquote>
+<blockquote>
+<blockquote>
+<h4 id="find-vector-and-rotation-angle-from-the-rotation-matrix">Find Vector and Rotation Angle from the Rotation Matrix</h4>
+</blockquote>
+</blockquote>
+<h2 id="links">Links</h2>
+<ul>
+<li>Links are rigid bodies that maintain orientation between two axes</li>
+<li>The two axes (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" />) contain a unique perpendicular between them (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D" alt="a_{ij}" title="a_{ij}" />) where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D" alt="a_{ij}" title="a_{ij}" /> is defined as the link length
+<ul>
+<li>If <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /> intersect, then the link length is zero</li>
+<li>The length <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D" alt="a_{ij}" title="a_{ij}" /> is positive if chosen in such that it points from <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" /> to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /></li>
+</ul></li>
+<li>The angle from <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" /> to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /> using the right hand rule with one's thumb on <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D" alt="a_{ij}" title="a_{ij}" /> is defined as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha_%7Bij%7D" alt="\alpha_{ij}" title="\alpha_{ij}" />, where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha_%7Bij%7D" alt="\alpha_{ij}" title="\alpha_{ij}" /> is called the twist angle</li>
+<li>It is common to replace all of the links in a system with their equivalent kinematic link
+<ul>
+<li>Kinematic link is represented by drawing just the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" />/<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /> axes and the link length</li>
+</ul></li>
+</ul>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/phy_to_kinematic_link.png"
+alt="Physical to Kinematic Link" title="Physical to Kinematic Link" width="300"
+height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<ul>
+<li>Two special link cases are spherical links and planar links
+<ul>
+<li>In spherical links <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" /> intersects <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D%20%3D%200" alt="a_{ij} = 0" title="a_{ij} = 0" /></li>
+<li>In planar links <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" /> is parallel with <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha_%7Bij%7D%20%3D%200" alt="\alpha_{ij} = 0" title="\alpha_{ij} = 0" /></li>
+</ul></li>
+</ul>
+<h2 id="joints">Joints</h2>
 </body>
 </html>
