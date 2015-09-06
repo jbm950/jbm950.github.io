@@ -225,7 +225,7 @@
 
 > ### Transport Theorem Examples
 
-> - First Transport Theorem Example:
+> - __First Transport Theorem Example:__
 
 >> - Given a disk (D) rotating about its centerpoint (O), find the velocity and
      acceleration of point P as seen by the disk (D) and the ground (G)
@@ -262,3 +262,33 @@ height="125"/>
 >>      - $\underline{E}_{z}$ = $\underline{e}_{z}$
 >>      - $\underline{E}_{x}$ = along the line $\underline{OP}$ @ $\theta = 0$
 >>      - $\underline{E}_{y}$ = $\underline{E}_{z} \time \underline{E}_{x}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/ground_ref_frame.png"
+alt="Ground Reference Frame" title="Ground Reference Frame" width="200"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Now to find the velocity and acceleration of point P in the disk reference
+     frame we take the time derivative of the vector from the origin O to point
+     P ($\underline{r} = \underline{OP} = r\underline{e}_{r}$)
+>>      - $^{D}\underline{V}_{P} = \frac{^{D}d\underline{r}}{dt} =
+          \frac{^{D}d}{dt}(r\underline{e}_{r})$ $=
+          \frac{dr}{dt}\underline{e}_{r} + r\frac{^{D}d\underline{e}_{r}}{dt}$
+>>      - Neither r nor $\underline{e}_{r}$ are changing in the disk reference
+          frame therefore $^{D}\underline{V}_{P} = 0$
+>> - Next the acceleration of point P in the disk reference frame is to be
+     found by taking a time derivative of the velocity of point P in the disk
+     reference frame
+>>      - $^{D}\underline{a}_{P} = \frac{^{D}d}{dt}(^{D}\underline{V}_{P}) = 0$
+>> - Now the velocity needs to be found for point P in the ground reference
+     frame and two different approaches will be shown
+
+>>> - First approach involves writing all of the equations with respect to the
+      coordinate system fixed in reference frame G
+>>>     - $\underline{r} = r\underline{e}_{r} = rcos(\theta)\underline{E}_{x} +
+          rsin(\theta)\underline{E}_{y}$
+>>>     - $^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}$ $= -r\dot{\theta}sin(\theta)\underline{E}_{x} + r\dot{\theta}cos(\theta)\underline{E}_{y}$
