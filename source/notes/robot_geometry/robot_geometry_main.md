@@ -277,3 +277,53 @@ height="200"/>
     - In planar links $S_{i}$ is parallel with $S_{j}$ and $\alpha_{ij} = 0$
 
 ## Joints {#joints}
+
+> ### Revolute Joint, R
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/revolute_joint.png"
+alt="Revolute Joint" title="Revolute Joint" width="300"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+> ### Prismatic Joint, P
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/prismatic_joint.png"
+alt="Prismatic Joint" title="Prismatic Joint" width="300"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+> ### Cylindrical Joint, C
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/cylindric_joint.png"
+alt="Cylindric Joint" title="Cylindric Joint" width="300"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+> ### Screw Joint, H
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/screw_joint.png"
+alt="Screw Joint" title="Screw Joint" width="300"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+> ### Plane Joint, E
+
+> ### Hook Joint, T
+
+> ### Spherical Joint, S
