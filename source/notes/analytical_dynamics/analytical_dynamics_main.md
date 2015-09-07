@@ -223,7 +223,7 @@
 
 > - [Transport Theorem](#e_transport_theorem)
 
-> ### Transport Theorem Examples
+> ### Transport Theorem Examples {#e_transport_theorem}
 
 > - __First Transport Theorem Example:__
 
@@ -291,4 +291,33 @@ height="200"/>
       coordinate system fixed in reference frame G
 >>>     - $\underline{r} = r\underline{e}_{r} = rcos(\theta)\underline{E}_{x} +
           rsin(\theta)\underline{E}_{y}$
->>>     - $^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}$ $= -r\dot{\theta}sin(\theta)\underline{E}_{x} + r\dot{\theta}cos(\theta)\underline{E}_{y}$
+>>>     - $^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}$ $=
+          -r\dot{\theta}sin(\theta)\underline{E}_{x} +
+          r\dot{\theta}cos(\theta)\underline{E}_{y}$
+
+>>> - The second approach involves leaving the equations with terms referenced
+      in the disk reference frame and uses the transport theorem
+>>>     - $^{G}V_{P} =^{D}V_{P} + ^{G}\underline{\omega}^{D} \times
+          \underline{r}$
+>>>         - $^{D}V_{P} = 0$
+>>>         - $^{G}\underline{\omega}^{D} =\dot{\theta}\underline{e}_{z}$
+>>>         - $\underline{r} = r\underline{e}_{r}$
+>>>     - $^{G}\underline{V}_{P} = \dot{\theta}\underline{e}_{z} \times
+          r\underline{e}_{r} = \dot{\theta}r\underline{e}_{\theta}$
+
+>> - The second approach leaves a much cleaner equation for further derivatives
+     and so this is the form we'll use when finding the acceleration
+>>      - $^{G}a_{P} = \frac{^{G}d}{dt}(^{G}\underline{V}_{P}) =
+          \frac{^{D}d}{dt}(^{G}\underline{V}_{P}) + ^{G}\underline{\omega}^{D}
+          \times$ $^{G}\underline{V}_{P} = \ddot{\theta}r\underline{e}_{\theta}
+          + \dot{\theta}\underline{e}_{z} \times
+          \dot{\theta}r\underline{e}_{\theta}$ $=
+          \ddot{\theta}r\underline{e}_{\theta} -
+          \dot{\theta}^{2}r\underline{e}_{r}$
+
+> - __Second Transport Theorem Example:__
+
+>> - This example is the same as the previous one execept it has an additional
+     rotation $\beta$ around its base
+>> - It's good practice to have two reference frames for each rotation and so
+     in this example we'll use three reference frames: disk (D), disk at $\theta = 0$ (C) and the ground (G)
