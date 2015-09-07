@@ -54,5 +54,19 @@ target="_blank">Physical Book (Amazon Link)</a></p>
 <li>Multiple optimum's might exist and are called <em>alternative optimal solutions</em></li>
 </ul></li>
 </ul>
+<h3 id="illustrative-examples">1.2 Illustrative Examples</h3>
+<blockquote>
+<p><strong>Discrete Optimal Control</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>A problem is divided into K individual periods where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7Bk-1%7D%7D" alt="\mathbf{y_{k-1}}" title="\mathbf{y_{k-1}}" /> is the <em>state vector</em> at the beginning of a period and is changed to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7Bk%7D%7D" alt="\mathbf{y_{k}}" title="\mathbf{y_{k}}" /> at the end of the period by the <em>control vector</em> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx_%7Bk%7D%7D" alt="\mathbf{x_{k}}" title="\mathbf{x_{k}}" />
+<ul>
+<li>The new state vector is determined by the following relationship: <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7Bk%7D%7D%20%3D%20%5Cmathbf%7By_%7Bk-1%7D%7D%20%2B%20%20%5Cmathbf%7B%5CPhi_%7Bk%7D%7D%28%5Cmathbf%7By_%7Bk-1%7D%7D%2C%20%5Cmathbf%7Bu_%7Bk%7D%7D%29" alt="\mathbf{y_{k}} = \mathbf{y_{k-1}} +  \mathbf{\Phi_{k}}(\mathbf{y_{k-1}}, \mathbf{u_{k}})" title="\mathbf{y_{k}} = \mathbf{y_{k-1}} +  \mathbf{\Phi_{k}}(\mathbf{y_{k-1}}, \mathbf{u_{k}})" /> for k = 1,...,K</li>
+</ul></li>
+<li>From the initial state <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7B0%7D%7D" alt="\mathbf{y_{0}}" title="\mathbf{y_{0}}" /> the sequence of controls (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bu_%7B1%7D%7D%2C...%2C%5Cmathbf%7Bu_%7BK%7D%7D" alt="\mathbf{u_{1}},...,\mathbf{u_{K}}" title="\mathbf{u_{1}},...,\mathbf{u_{K}}" />) resulting in a sequence of state vectors (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7B1%7D%7D%2C...%2C%5Cmathbf%7By_%7BK%7D%7D" alt="\mathbf{y_{1}},...,\mathbf{y_{K}}" title="\mathbf{y_{1}},...,\mathbf{y_{K}}" />) is refered to as the <em>trajectory</em></li>
+<li>Sequence of state and control vectors (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bu_%7B1%7D%7D%2C...%2C%5Cmathbf%7Bu_%7BK%7D%7D" alt="\mathbf{u_{1}},...,\mathbf{u_{K}}" title="\mathbf{u_{1}},...,\mathbf{u_{K}}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7B0%7D%7D%2C%5Cmathbf%7By_%7B1%7D%7D%2C...%2C%5Cmathbf%7By_%7BK%7D%7D" alt="\mathbf{y_{0}},\mathbf{y_{1}},...,\mathbf{y_{K}}" title="\mathbf{y_{0}},\mathbf{y_{1}},...,\mathbf{y_{K}}" />) are <em>admissible</em> or <em>feasible</em> if they satisfy <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7Bk%7D%7D%20%5Cin%20%5Cmathbf%7BY_%7Bk%7D%7D" alt="\mathbf{y_{k}} \in \mathbf{Y_{k}}" title="\mathbf{y_{k}} \in \mathbf{Y_{k}}" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bu_%7Bk%7D%7D%20%5Cin%20%5Cmathbf%7BU_%7Bk%7D%7D" alt="\mathbf{u_{k}} \in \mathbf{U_{k}}" title="\mathbf{u_{k}} \in \mathbf{U_{k}}" /> for k = 1,...,K and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5CPsi%7D%28%5Cmathbf%7By_%7B0%7D%7D%2C...%2C%5Cmathbf%7By_%7BK%7D%7D%2C%20%5Cmathbf%7Bu_%7B1%7D%7D%2C...%2C%5Cmathbf%7Bu_%7BK%7D%7D%29%20%5Cin%20D" alt="\mathbf{\Psi}(\mathbf{y_{0}},...,\mathbf{y_{K}}, \mathbf{u_{1}},...,\mathbf{u_{K}}) \in D" title="\mathbf{\Psi}(\mathbf{y_{0}},...,\mathbf{y_{K}}, \mathbf{u_{1}},...,\mathbf{u_{K}}) \in D" /></li>
+</ul>
+</blockquote>
 </body>
 </html>

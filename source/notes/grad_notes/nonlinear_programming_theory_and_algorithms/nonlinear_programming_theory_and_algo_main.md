@@ -41,3 +41,26 @@ target="_blank">Physical Book (Amazon Link)</a>
   feasible solutions ($f(\mathbf{x}) \geq f(\mathbf{\bar{x}})$) is called the
   _optimal solution_
     - Multiple optimum's might exist and are called _alternative optimal solutions_
+
+### 1.2 Illustrative Examples
+
+> __Discrete Optimal Control__
+
+> - A problem is divided into K individual periods where $\mathbf{y_{k-1}}$ is
+    the _state vector_ at the beginning of a period and is changed to
+    $\mathbf{y_{k}}$ at the end of the period by the _control vector_
+    $\mathbf{x_{k}}$
+>       - The new state vector is determined by the following relationship:
+          $\mathbf{y_{k}} = \mathbf{y_{k-1}} +
+          \mathbf{\Phi_{k}}(\mathbf{y_{k-1}}, \mathbf{u_{k}})$ for k = 1,...,K
+> - From the initial state $\mathbf{y_{0}}$ the sequence of controls
+    ($\mathbf{u_{1}},...,\mathbf{u_{K}}$) resulting in a sequence of state
+    vectors ($\mathbf{y_{1}},...,\mathbf{y_{K}}$) is refered to as the
+    _trajectory_
+> - Sequence of state and control vectors ($\mathbf{u_{1}},...,\mathbf{u_{K}}$
+    and $\mathbf{y_{0}},\mathbf{y_{1}},...,\mathbf{y_{K}}$) are _admissible_ or
+    _feasible_ if they satisfy $\mathbf{y_{k}} \in \mathbf{Y_{k}}$,
+    $\mathbf{u_{k}} \in \mathbf{U_{k}}$ for k = 1,...,K and
+    $\mathbf{\Psi}(\mathbf{y_{0}},...,\mathbf{y_{K}},
+    \mathbf{u_{1}},...,\mathbf{u_{K}}) \in D$
+
