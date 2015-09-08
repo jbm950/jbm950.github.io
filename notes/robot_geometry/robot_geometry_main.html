@@ -279,8 +279,23 @@ height="200"/>
 </ul></li>
 </ul>
 <h2 id="joints">Joints</h2>
+<ul>
+<li>There are two main values that define a joint: the joint offset distance (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" />) and the joint angle (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7Bj%7D" alt="\theta_{j}" title="\theta_{j}" />)</li>
+<li>The joint offset distance is the unique perpendicular between <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D_%7Bij%7D" alt="\underline{a}_{ij}" title="\underline{a}_{ij}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D_%7Bjk%7D" alt="\underline{a}_{jk}" title="\underline{a}_{jk}" />
+<ul>
+<li>The joint offset distance has no sense of direction and is therefore simply a scalar value not a vector</li>
+</ul></li>
+<li>The joint angle is defined by the right hand rule with thumb on <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" /> and sweeping from <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D_%7Bij%7D" alt="\underline{a}_{ij}" title="\underline{a}_{ij}" /> to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D_%7Bjk%7D" alt="\underline{a}_{jk}" title="\underline{a}_{jk}" /></li>
+<li>All joint pictures were taken from the lecture powerpoint</li>
+</ul>
 <blockquote>
 <h3 id="revolute-joint-r">Revolute Joint, R</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>Revolute joints only allow rotation between the links (1 degree of freedom)</li>
+<li>Joint offset distance is fixed and joint angle is variable</li>
+</ul>
 </blockquote>
 <div align="center">
 <table class="image">
@@ -296,6 +311,12 @@ height="200"/>
 <blockquote>
 <h3 id="prismatic-joint-p">Prismatic Joint, P</h3>
 </blockquote>
+<blockquote>
+<ul>
+<li>Prismatic joints only allow translation between the links (1 degree of freedom)</li>
+<li>Joint offset distance is variable and joint angle is fixed</li>
+</ul>
+</blockquote>
 <div align="center">
 <table class="image">
 <tr>
@@ -309,6 +330,12 @@ height="200"/>
 </div>
 <blockquote>
 <h3 id="cylindrical-joint-c">Cylindrical Joint, C</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>Cylindrical joints allow translation and rotation between joints (2 degrees of freedom)</li>
+<li>Joint offset distance is variable and joint angle is variable</li>
+</ul>
 </blockquote>
 <div align="center">
 <table class="image">
@@ -324,6 +351,11 @@ height="200"/>
 <blockquote>
 <h3 id="screw-joint-h">Screw Joint, H</h3>
 </blockquote>
+<blockquote>
+<ul>
+<li>Screw joints allow translation</li>
+</ul>
+</blockquote>
 <div align="center">
 <table class="image">
 <tr>
@@ -338,11 +370,44 @@ height="200"/>
 <blockquote>
 <h3 id="plane-joint-e">Plane Joint, E</h3>
 </blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/plane_joint.png"
+alt="Plane Joint" title="Plane Joint" width="600"
+height="450"/>
+</td>
+</tr>
+</table>
+</div>
 <blockquote>
 <h3 id="hook-joint-t">Hook Joint, T</h3>
 </blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/hook_joint.png"
+alt="Hook Joint" title="Hook Joint" width="400"
+height="300"/>
+</td>
+</tr>
+</table>
+</div>
 <blockquote>
 <h3 id="spherical-joint-s">Spherical Joint, S</h3>
 </blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/spherical_joint.png"
+alt="Spherical Joint" title="Spherical Joint" width="600"
+height="350"/>
+</td>
+</tr>
+</table>
+</div>
 </body>
 </html>

@@ -278,7 +278,21 @@ height="200"/>
 
 ## Joints {#joints}
 
+- There are two main values that define a joint: the joint offset distance
+  ($\underline{S}_{j}$) and the joint angle ($\theta_{j}$)
+- The joint offset distance is the unique perpendicular between
+  $\underline{a}_{ij}$ and $\underline{a}_{jk}$
+    - The joint offset distance has no sense of direction and is therefore
+      simply a scalar value not a vector
+- The joint angle is defined by the right hand rule with thumb on
+  $\underline{S}_{j}$ and sweeping from $\underline{a}_{ij}$ to
+  $\underline{a}_{jk}$
+- All joint pictures were taken from the lecture powerpoint
+
 > ### Revolute Joint, R
+
+> - Revolute joints only allow rotation between the links (1 degree of freedom)
+> - Joint offset distance is fixed and joint angle is variable
 
 <div align="center">
 <table class="image">
@@ -291,6 +305,10 @@ height="200"/>
 
 > ### Prismatic Joint, P
 
+> - Prismatic joints only allow translation between the links (1 degree of
+    freedom)
+> - Joint offset distance is variable and joint angle is fixed
+
 <div align="center">
 <table class="image">
 <tr><td><img src="./img/prismatic_joint.png"
@@ -301,6 +319,10 @@ height="200"/>
 </div>
 
 > ### Cylindrical Joint, C
+
+> - Cylindrical joints allow translation and rotation between joints (2 degrees
+    of freedom)
+> - Joint offset distance is variable and joint angle is variable
 
 <div align="center">
 <table class="image">
@@ -313,6 +335,8 @@ height="200"/>
 
 > ### Screw Joint, H
 
+> - Screw joints allow translation
+
 <div align="center">
 <table class="image">
 <tr><td><img src="./img/screw_joint.png"
@@ -324,6 +348,33 @@ height="200"/>
 
 > ### Plane Joint, E
 
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/plane_joint.png"
+alt="Plane Joint" title="Plane Joint" width="600"
+height="450"/> 
+</td></tr>
+</table>
+</div>
+
 > ### Hook Joint, T
 
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/hook_joint.png"
+alt="Hook Joint" title="Hook Joint" width="400"
+height="300"/> 
+</td></tr>
+</table>
+</div>
+
 > ### Spherical Joint, S
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/spherical_joint.png"
+alt="Spherical Joint" title="Spherical Joint" width="600"
+height="350"/> 
+</td></tr>
+</table>
+</div>
