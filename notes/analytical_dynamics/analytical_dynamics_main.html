@@ -312,7 +312,101 @@ height="200"/>
 <blockquote>
 <ul>
 <li>This example is the same as the previous one execept it has an additional rotation <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbeta" alt="\beta" title="\beta" /> around its base</li>
-<li>It's good practice to have two reference frames for each rotation and so in this example we'll use three reference frames: disk (D), disk at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" /> (C) and the ground (G)</li>
+<li>It's good practice to have an additional reference frame for each rotation and so in this example we'll use three reference frames: disk (D), disk at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" /> (C) and the ground (G)</li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/trans_theo_example2_diagram1.png"
+alt="Example 2, Diagram 1" title="Example 2, Diagram 1" width="200"
+height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Always start by defining the reference frames and then the coordinate systems within them</li>
+<li>Coordinate system fixed in the disk reference frame (D)
+<ul>
+<li>Origin at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{u}_{r}" title="\underline{u}_{r}" /> = along <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bz%7D" alt="\underline{u}_{z}" title="\underline{u}_{z}" /> = perpendicular to the disk, positive with <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7B%5Ctheta%7D" alt="\underline{u}_{\theta}" title="\underline{u}_{\theta}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bz%7D%20%5Ctimes%20%20%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{u}_{z} \times  \underline{u}_{r}" title="\underline{u}_{z} \times  \underline{u}_{r}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/disk_ref_frame2.png"
+alt="Disk Reference Frame 2" title="Disk Reference Frame 2" width="125"
+height="125"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Coordinate system fixed in the ground reference frame (G)
+<ul>
+<li>Origin at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D" alt="\underline{E}_{z}" title="\underline{E}_{z}" /> = Out of the page</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bx%7D" alt="\underline{E}_{x}" title="\underline{E}_{x}" /> = along the line <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /> @ <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbeta%20%3D%200" alt="\beta = 0" title="\beta = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7By%7D" alt="\underline{E}_{y}" title="\underline{E}_{y}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D%20%5Ctimes%20%5Cunderline%7BE%7D_%7Bx%7D" alt="\underline{E}_{z} \times \underline{E}_{x}" title="\underline{E}_{z} \times \underline{E}_{x}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/ground_ref_frame.png"
+alt="Ground Reference Frame" title="Ground Reference Frame" width="200"
+height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Coordinate system fixed in the disk at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" /> reference frame (C) (rotates with <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbeta" alt="\beta" title="\beta" />)
+<ul>
+<li>Origin at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%3D%20%5Cunderline%7BE%7D_%7By%7D" alt="\underline{e}_{\theta} = \underline{E}_{y}" title="\underline{e}_{\theta} = \underline{E}_{y}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{r}" title="\underline{e}_{r}" /> = along <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /> at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D" alt="\underline{e}_{z}" title="\underline{e}_{z}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bz%7D" alt="\underline{u}_{z}" title="\underline{u}_{z}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/disk_ref_frame3.png"
+alt="Disk Reference Frame Fixed with Theta = 0" title="Disk Reference Frame
+Fixed with Theta = 0" width="200" height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Just as in the previous example the velocity and acceleration in the disk reference frame (D) will equal zero
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5E%7BD%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%200" alt="^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0" title="^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0" /></li>
+</ul></li>
 </ul>
 </blockquote>
 </blockquote>

@@ -319,5 +319,70 @@ height="200"/>
 
 >> - This example is the same as the previous one execept it has an additional
      rotation $\beta$ around its base
->> - It's good practice to have two reference frames for each rotation and so
-     in this example we'll use three reference frames: disk (D), disk at $\theta = 0$ (C) and the ground (G)
+>> - It's good practice to have an additional reference frame for each rotation
+     and so in this example we'll use three reference frames: disk (D), disk at
+     $\theta = 0$ (C) and the ground (G)
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/trans_theo_example2_diagram1.png"
+alt="Example 2, Diagram 1" title="Example 2, Diagram 1" width="200"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Always start by defining the reference frames and then the coordinate
+     systems within them
+>> - Coordinate system fixed in the disk reference frame (D)
+>>      - Origin at point O
+>>      - $\underline{u}_{r}$ = along $\underline{OP}$
+>>      - $\underline{u}_{z}$ = perpendicular to the disk, positive with
+          $\theta$
+>>      - $\underline{u}_{\theta}$ = $\underline{u}_{z} \times
+          \underline{u}_{r}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/disk_ref_frame2.png"
+alt="Disk Reference Frame 2" title="Disk Reference Frame 2" width="125"
+height="125"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Coordinate system fixed in the ground reference frame (G)
+>>      - Origin at point O
+>>      - $\underline{E}_{z}$ = Out of the page
+>>      - $\underline{E}_{x}$ = along the line $\underline{OP}$ @ $\theta = 0$,
+          $\beta = 0$
+>>      - $\underline{E}_{y}$ = $\underline{E}_{z} \times \underline{E}_{x}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/ground_ref_frame.png"
+alt="Ground Reference Frame" title="Ground Reference Frame" width="200"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Coordinate system fixed in the disk at $\theta = 0$ reference frame (C)
+     (rotates with $\beta$)
+>>      - Origin at point O
+>>      - $\underline{e}_{\theta} = \underline{E}_{y}$
+>>      - $\underline{e}_{r}$ = along $\underline{OP}$ at $\theta = 0$
+>>      - $\underline{e}_{z}$ = $\underline{u}_{z}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/disk_ref_frame3.png"
+alt="Disk Reference Frame Fixed with Theta = 0" title="Disk Reference Frame
+Fixed with Theta = 0" width="200" height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Just as in the previous example the velocity and acceleration in the disk
+     reference frame (D) will equal zero
+>>      - $^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0$
