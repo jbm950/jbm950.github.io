@@ -223,8 +223,166 @@
 
 > - [Transport Theorem](#e_transport_theorem)
 
-> ### Transport Theorem Examples
+> ### Transport Theorem Examples {#e_transport_theorem}
 
-> - First Transport Theorem Example:
+> - __First Transport Theorem Example:__
 
->> - Given a disk (D) rotating about its centerpoint (O)
+>> - Given a disk (D) rotating about its centerpoint (O), find the velocity and
+     acceleration of point P as seen by the disk (D) and the ground (G)
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/trans_theo_example1_diagram1.png"
+alt="Example 1, Diagram 1" title="Example 1, Diagram 1" width="200"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Start by defining reference frames and then coordinate systems within them
+>> - For this problem two reference frames will be used: the disk (D) and the
+     ground (G)
+>> - Coordinate system fixed in the disk reference frame (D)
+>>      - Origin at point O
+>>      - $\underline{e}_{r}$ = along the line $\underline{OP}$
+>>      - $\underline{e}_{z}$ = out of the page (positive with theta)
+>>      - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times \underline{e}_{r}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/disk_ref_frame.png"
+alt="Disk Reference Frame" title="Disk Reference Frame" width="125"
+height="125"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Coordinate system fixed in the ground reference frame (G)
+>>      - Origin at point O
+>>      - $\underline{E}_{z}$ = $\underline{e}_{z}$
+>>      - $\underline{E}_{x}$ = along the line $\underline{OP}$ @ $\theta = 0$
+>>      - $\underline{E}_{y}$ = $\underline{E}_{z} \time \underline{E}_{x}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/ground_ref_frame.png"
+alt="Ground Reference Frame" title="Ground Reference Frame" width="200"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Now to find the velocity and acceleration of point P in the disk reference
+     frame we take the time derivative of the vector from the origin O to point
+     P ($\underline{r} = \underline{OP} = r\underline{e}_{r}$)
+>>      - $^{D}\underline{V}_{P} = \frac{^{D}d\underline{r}}{dt} =
+          \frac{^{D}d}{dt}(r\underline{e}_{r})$ $=
+          \frac{dr}{dt}\underline{e}_{r} + r\frac{^{D}d\underline{e}_{r}}{dt}$
+>>      - Neither r nor $\underline{e}_{r}$ are changing in the disk reference
+          frame therefore $^{D}\underline{V}_{P} = 0$
+>> - Next the acceleration of point P in the disk reference frame is to be
+     found by taking a time derivative of the velocity of point P in the disk
+     reference frame
+>>      - $^{D}\underline{a}_{P} = \frac{^{D}d}{dt}(^{D}\underline{V}_{P}) = 0$
+>> - Now the velocity needs to be found for point P in the ground reference
+     frame and two different approaches will be shown
+
+>>> - First approach involves writing all of the equations with respect to the
+      coordinate system fixed in reference frame G
+>>>     - $\underline{r} = r\underline{e}_{r} = rcos(\theta)\underline{E}_{x} +
+          rsin(\theta)\underline{E}_{y}$
+>>>     - $^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}$ $=
+          -r\dot{\theta}sin(\theta)\underline{E}_{x} +
+          r\dot{\theta}cos(\theta)\underline{E}_{y}$
+
+>>> - The second approach involves leaving the equations with terms referenced
+      in the disk reference frame and uses the transport theorem
+>>>     - $^{G}V_{P} =^{D}V_{P} + ^{G}\underline{\omega}^{D} \times
+          \underline{r}$
+>>>         - $^{D}V_{P} = 0$
+>>>         - $^{G}\underline{\omega}^{D} =\dot{\theta}\underline{e}_{z}$
+>>>         - $\underline{r} = r\underline{e}_{r}$
+>>>     - $^{G}\underline{V}_{P} = \dot{\theta}\underline{e}_{z} \times
+          r\underline{e}_{r} = \dot{\theta}r\underline{e}_{\theta}$
+
+>> - The second approach leaves a much cleaner equation for further derivatives
+     and so this is the form we'll use when finding the acceleration
+>>      - $^{G}a_{P} = \frac{^{G}d}{dt}(^{G}\underline{V}_{P}) =
+          \frac{^{D}d}{dt}(^{G}\underline{V}_{P}) + ^{G}\underline{\omega}^{D}
+          \times$ $^{G}\underline{V}_{P} = \ddot{\theta}r\underline{e}_{\theta}
+          + \dot{\theta}\underline{e}_{z} \times
+          \dot{\theta}r\underline{e}_{\theta}$ $=
+          \ddot{\theta}r\underline{e}_{\theta} -
+          \dot{\theta}^{2}r\underline{e}_{r}$
+
+> - __Second Transport Theorem Example:__
+
+>> - This example is the same as the previous one execept it has an additional
+     rotation $\beta$ around its base
+>> - It's good practice to have an additional reference frame for each rotation
+     and so in this example we'll use three reference frames: disk (D), disk at
+     $\theta = 0$ (C) and the ground (G)
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/trans_theo_example2_diagram1.png"
+alt="Example 2, Diagram 1" title="Example 2, Diagram 1" width="200"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Always start by defining the reference frames and then the coordinate
+     systems within them
+>> - Coordinate system fixed in the disk reference frame (D)
+>>      - Origin at point O
+>>      - $\underline{u}_{r}$ = along $\underline{OP}$
+>>      - $\underline{u}_{z}$ = perpendicular to the disk, positive with
+          $\theta$
+>>      - $\underline{u}_{\theta}$ = $\underline{u}_{z} \times
+          \underline{u}_{r}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/disk_ref_frame2.png"
+alt="Disk Reference Frame 2" title="Disk Reference Frame 2" width="125"
+height="125"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Coordinate system fixed in the ground reference frame (G)
+>>      - Origin at point O
+>>      - $\underline{E}_{z}$ = Out of the page
+>>      - $\underline{E}_{x}$ = along the line $\underline{OP}$ @ $\theta = 0$,
+          $\beta = 0$
+>>      - $\underline{E}_{y}$ = $\underline{E}_{z} \times \underline{E}_{x}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/ground_ref_frame.png"
+alt="Ground Reference Frame" title="Ground Reference Frame" width="200"
+height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Coordinate system fixed in the disk at $\theta = 0$ reference frame (C)
+     (rotates with $\beta$)
+>>      - Origin at point O
+>>      - $\underline{e}_{\theta} = \underline{E}_{y}$
+>>      - $\underline{e}_{r}$ = along $\underline{OP}$ at $\theta = 0$
+>>      - $\underline{e}_{z}$ = $\underline{u}_{z}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/disk_ref_frame3.png"
+alt="Disk Reference Frame Fixed with Theta = 0" title="Disk Reference Frame
+Fixed with Theta = 0" width="200" height="200"/> 
+</td></tr>
+</table>
+</div>
+
+>> - Just as in the previous example the velocity and acceleration in the disk
+     reference frame (D) will equal zero
+>>      - $^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0$

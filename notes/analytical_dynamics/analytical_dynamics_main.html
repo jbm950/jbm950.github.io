@@ -171,17 +171,242 @@ title: Analytical Dynamics
 </ul>
 </blockquote>
 <blockquote>
-<h3 id="transport-theorem-examples">Transport Theorem Examples</h3>
+<h3 id="e_transport_theorem">Transport Theorem Examples</h3>
 </blockquote>
 <blockquote>
 <ul>
-<li>First Transport Theorem Example:</li>
+<li><strong>First Transport Theorem Example:</strong></li>
 </ul>
 </blockquote>
 <blockquote>
 <blockquote>
 <ul>
-<li>Given a disk (D) rotating about its centerpoint (O)</li>
+<li>Given a disk (D) rotating about its centerpoint (O), find the velocity and acceleration of point P as seen by the disk (D) and the ground (G)</li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/trans_theo_example1_diagram1.png"
+alt="Example 1, Diagram 1" title="Example 1, Diagram 1" width="200"
+height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Start by defining reference frames and then coordinate systems within them</li>
+<li>For this problem two reference frames will be used: the disk (D) and the ground (G)</li>
+<li>Coordinate system fixed in the disk reference frame (D)
+<ul>
+<li>Origin at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{r}" title="\underline{e}_{r}" /> = along the line <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D" alt="\underline{e}_{z}" title="\underline{e}_{z}" /> = out of the page (positive with theta)</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="\underline{e}_{\theta}" title="\underline{e}_{\theta}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{z} \times \underline{e}_{r}" title="\underline{e}_{z} \times \underline{e}_{r}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/disk_ref_frame.png"
+alt="Disk Reference Frame" title="Disk Reference Frame" width="125"
+height="125"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Coordinate system fixed in the ground reference frame (G)
+<ul>
+<li>Origin at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D" alt="\underline{E}_{z}" title="\underline{E}_{z}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D" alt="\underline{e}_{z}" title="\underline{e}_{z}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bx%7D" alt="\underline{E}_{x}" title="\underline{E}_{x}" /> = along the line <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /> @ <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7By%7D" alt="\underline{E}_{y}" title="\underline{E}_{y}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D%20%5Ctime%20%5Cunderline%7BE%7D_%7Bx%7D" alt="\underline{E}_{z} \time \underline{E}_{x}" title="\underline{E}_{z} \time \underline{E}_{x}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/ground_ref_frame.png"
+alt="Ground Reference Frame" title="Ground Reference Frame" width="200"
+height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Now to find the velocity and acceleration of point P in the disk reference frame we take the time derivative of the vector from the origin O to point P (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D%20%3D%20%5Cunderline%7BOP%7D%20%3D%20r%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{r} = \underline{OP} = r\underline{e}_{r}" title="\underline{r} = \underline{OP} = r\underline{e}_{r}" />)
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BD%7Dd%5Cunderline%7Br%7D%7D%7Bdt%7D%20%3D%20%20%5Cfrac%7B%5E%7BD%7Dd%7D%7Bdt%7D%28r%5Cunderline%7Be%7D_%7Br%7D%29" alt="^{D}\underline{V}_{P} = \frac{^{D}d\underline{r}}{dt} =  \frac{^{D}d}{dt}(r\underline{e}_{r})" title="^{D}\underline{V}_{P} = \frac{^{D}d\underline{r}}{dt} =  \frac{^{D}d}{dt}(r\underline{e}_{r})" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20%5Cfrac%7Bdr%7D%7Bdt%7D%5Cunderline%7Be%7D_%7Br%7D%20%2B%20r%5Cfrac%7B%5E%7BD%7Dd%5Cunderline%7Be%7D_%7Br%7D%7D%7Bdt%7D" alt="=  \frac{dr}{dt}\underline{e}_{r} + r\frac{^{D}d\underline{e}_{r}}{dt}" title="=  \frac{dr}{dt}\underline{e}_{r} + r\frac{^{D}d\underline{e}_{r}}{dt}" /></li>
+<li>Neither r nor <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{r}" title="\underline{e}_{r}" /> are changing in the disk reference frame therefore <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%200" alt="^{D}\underline{V}_{P} = 0" title="^{D}\underline{V}_{P} = 0" /></li>
+</ul></li>
+<li>Next the acceleration of point P in the disk reference frame is to be found by taking a time derivative of the velocity of point P in the disk reference frame
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BD%7Dd%7D%7Bdt%7D%28%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%29%20%3D%200" alt="^{D}\underline{a}_{P} = \frac{^{D}d}{dt}(^{D}\underline{V}_{P}) = 0" title="^{D}\underline{a}_{P} = \frac{^{D}d}{dt}(^{D}\underline{V}_{P}) = 0" /></li>
+</ul></li>
+<li>Now the velocity needs to be found for point P in the ground reference frame and two different approaches will be shown</li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>First approach involves writing all of the equations with respect to the coordinate system fixed in reference frame G
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D%20%3D%20r%5Cunderline%7Be%7D_%7Br%7D%20%3D%20rcos%28%5Ctheta%29%5Cunderline%7BE%7D_%7Bx%7D%20%2B%20%20rsin%28%5Ctheta%29%5Cunderline%7BE%7D_%7By%7D" alt="\underline{r} = r\underline{e}_{r} = rcos(\theta)\underline{E}_{x} +  rsin(\theta)\underline{E}_{y}" title="\underline{r} = r\underline{e}_{r} = rcos(\theta)\underline{E}_{x} +  rsin(\theta)\underline{E}_{y}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BG%7Dd%5Cunderline%7Br%7D%7D%7Bdt%7D" alt="^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}" title="^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20-r%5Cdot%7B%5Ctheta%7Dsin%28%5Ctheta%29%5Cunderline%7BE%7D_%7Bx%7D%20%2B%20%20r%5Cdot%7B%5Ctheta%7Dcos%28%5Ctheta%29%5Cunderline%7BE%7D_%7By%7D" alt="=  -r\dot{\theta}sin(\theta)\underline{E}_{x} +  r\dot{\theta}cos(\theta)\underline{E}_{y}" title="=  -r\dot{\theta}sin(\theta)\underline{E}_{x} +  r\dot{\theta}cos(\theta)\underline{E}_{y}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>The second approach involves leaving the equations with terms referenced in the disk reference frame and uses the transport theorem
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7DV_%7BP%7D%20%3D%5E%7BD%7DV_%7BP%7D%20%2B%20%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%20%5Ctimes%20%20%5Cunderline%7Br%7D" alt="^{G}V_{P} =^{D}V_{P} + ^{G}\underline{\omega}^{D} \times  \underline{r}" title="^{G}V_{P} =^{D}V_{P} + ^{G}\underline{\omega}^{D} \times  \underline{r}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7DV_%7BP%7D%20%3D%200" alt="^{D}V_{P} = 0" title="^{D}V_{P} = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%20%3D%5Cdot%7B%5Ctheta%7D%5Cunderline%7Be%7D_%7Bz%7D" alt="^{G}\underline{\omega}^{D} =\dot{\theta}\underline{e}_{z}" title="^{G}\underline{\omega}^{D} =\dot{\theta}\underline{e}_{z}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D%20%3D%20r%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{r} = r\underline{e}_{r}" title="\underline{r} = r\underline{e}_{r}" /></li>
+</ul></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cdot%7B%5Ctheta%7D%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%20r%5Cunderline%7Be%7D_%7Br%7D%20%3D%20%5Cdot%7B%5Ctheta%7Dr%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="^{G}\underline{V}_{P} = \dot{\theta}\underline{e}_{z} \times  r\underline{e}_{r} = \dot{\theta}r\underline{e}_{\theta}" title="^{G}\underline{V}_{P} = \dot{\theta}\underline{e}_{z} \times  r\underline{e}_{r} = \dot{\theta}r\underline{e}_{\theta}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>The second approach leaves a much cleaner equation for further derivatives and so this is the form we'll use when finding the acceleration
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7Da_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BG%7Dd%7D%7Bdt%7D%28%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%29%20%3D%20%20%5Cfrac%7B%5E%7BD%7Dd%7D%7Bdt%7D%28%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%29%20%2B%20%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%20%20%5Ctimes" alt="^{G}a_{P} = \frac{^{G}d}{dt}(^{G}\underline{V}_{P}) =  \frac{^{D}d}{dt}(^{G}\underline{V}_{P}) + ^{G}\underline{\omega}^{D}  \times" title="^{G}a_{P} = \frac{^{G}d}{dt}(^{G}\underline{V}_{P}) =  \frac{^{D}d}{dt}(^{G}\underline{V}_{P}) + ^{G}\underline{\omega}^{D}  \times" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cddot%7B%5Ctheta%7Dr%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%20%2B%20%5Cdot%7B%5Ctheta%7D%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%20%5Cdot%7B%5Ctheta%7Dr%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="^{G}\underline{V}_{P} = \ddot{\theta}r\underline{e}_{\theta}  + \dot{\theta}\underline{e}_{z} \times  \dot{\theta}r\underline{e}_{\theta}" title="^{G}\underline{V}_{P} = \ddot{\theta}r\underline{e}_{\theta}  + \dot{\theta}\underline{e}_{z} \times  \dot{\theta}r\underline{e}_{\theta}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20%5Cddot%7B%5Ctheta%7Dr%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20-%20%20%5Cdot%7B%5Ctheta%7D%5E%7B2%7Dr%5Cunderline%7Be%7D_%7Br%7D" alt="=  \ddot{\theta}r\underline{e}_{\theta} -  \dot{\theta}^{2}r\underline{e}_{r}" title="=  \ddot{\theta}r\underline{e}_{\theta} -  \dot{\theta}^{2}r\underline{e}_{r}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>Second Transport Theorem Example:</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>This example is the same as the previous one execept it has an additional rotation <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbeta" alt="\beta" title="\beta" /> around its base</li>
+<li>It's good practice to have an additional reference frame for each rotation and so in this example we'll use three reference frames: disk (D), disk at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" /> (C) and the ground (G)</li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/trans_theo_example2_diagram1.png"
+alt="Example 2, Diagram 1" title="Example 2, Diagram 1" width="200"
+height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Always start by defining the reference frames and then the coordinate systems within them</li>
+<li>Coordinate system fixed in the disk reference frame (D)
+<ul>
+<li>Origin at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{u}_{r}" title="\underline{u}_{r}" /> = along <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bz%7D" alt="\underline{u}_{z}" title="\underline{u}_{z}" /> = perpendicular to the disk, positive with <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7B%5Ctheta%7D" alt="\underline{u}_{\theta}" title="\underline{u}_{\theta}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bz%7D%20%5Ctimes%20%20%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{u}_{z} \times  \underline{u}_{r}" title="\underline{u}_{z} \times  \underline{u}_{r}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/disk_ref_frame2.png"
+alt="Disk Reference Frame 2" title="Disk Reference Frame 2" width="125"
+height="125"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Coordinate system fixed in the ground reference frame (G)
+<ul>
+<li>Origin at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D" alt="\underline{E}_{z}" title="\underline{E}_{z}" /> = Out of the page</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bx%7D" alt="\underline{E}_{x}" title="\underline{E}_{x}" /> = along the line <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /> @ <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbeta%20%3D%200" alt="\beta = 0" title="\beta = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7By%7D" alt="\underline{E}_{y}" title="\underline{E}_{y}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D%20%5Ctimes%20%5Cunderline%7BE%7D_%7Bx%7D" alt="\underline{E}_{z} \times \underline{E}_{x}" title="\underline{E}_{z} \times \underline{E}_{x}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/ground_ref_frame.png"
+alt="Ground Reference Frame" title="Ground Reference Frame" width="200"
+height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Coordinate system fixed in the disk at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" /> reference frame (C) (rotates with <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbeta" alt="\beta" title="\beta" />)
+<ul>
+<li>Origin at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%3D%20%5Cunderline%7BE%7D_%7By%7D" alt="\underline{e}_{\theta} = \underline{E}_{y}" title="\underline{e}_{\theta} = \underline{E}_{y}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{r}" title="\underline{e}_{r}" /> = along <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /> at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20%3D%200" alt="\theta = 0" title="\theta = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D" alt="\underline{e}_{z}" title="\underline{e}_{z}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bz%7D" alt="\underline{u}_{z}" title="\underline{u}_{z}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/disk_ref_frame3.png"
+alt="Disk Reference Frame Fixed with Theta = 0" title="Disk Reference Frame
+Fixed with Theta = 0" width="200" height="200"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<blockquote>
+<ul>
+<li>Just as in the previous example the velocity and acceleration in the disk reference frame (D) will equal zero
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5E%7BD%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%200" alt="^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0" title="^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0" /></li>
+</ul></li>
 </ul>
 </blockquote>
 </blockquote>
