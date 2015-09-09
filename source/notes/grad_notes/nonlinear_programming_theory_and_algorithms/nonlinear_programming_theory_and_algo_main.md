@@ -88,4 +88,11 @@ target="_blank">Physical Book (Amazon Link)</a>
 > - The problem can now be approximated by a discrete solution if the planning
     horizon [0, T] is subdivided into K intervals of duration $\Delta$ such
     that $K\Delta = T$
->       - 
+>       - $\mathbf{y}(k\Delta) = \mathbf{y}_{k}$ and $\mathbf{u}(k\Delta) =
+          \mathbf{u}_{k}$ for k = 1, ..., K
+> - The problem can now be restated as minimize $\sum^{K}_{k=1} \alpha
+    (\mathbf{y_{k}}, \mathbf{u_{k}})$ subject to the constraints
+    $\mathbf{y_{k}} = \mathbf{y_{k-1}} + \Delta\mathbf{\Phi} (\mathbf{y_{k-1}},
+    \mathbf{u_{k}})$, $\mathbf{y_{k}} \in Y$, and $\mathbf{u_{k}} \in U$ for k
+    = 1, ..., K and $\mathbf{\Psi} (\mathbf{y_{0},..., \mathbf{y_{k}},
+    \mathbf{u_{1}},..., \mathbf{u_{k}}) \in D$
