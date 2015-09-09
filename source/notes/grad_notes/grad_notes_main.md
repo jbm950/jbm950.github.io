@@ -20,3 +20,5 @@
 >> - [Nonlinear Programming: Theory and
      Algorithms](./nonlinear_programming_theory_and_algorithms/nonlinear_programming_theory_and_algo_main.html)
      (Mokhtar S.  Bazaraa, Hanif D, Sherali and C. M. Shetty)
+
+>> Git example
