@@ -11,6 +11,7 @@
 - [Coordinate Transformations](#coord_trans)
 - [Links](#links)
 - [Joints](#joints)
+- [Kinematic Chains](#kinematic_chains)
 
 ## Coordinate Systems {#coord_sys}
 
@@ -276,6 +277,23 @@ height="200"/>
     - In spherical links $S_{i}$ intersects $S_{j}$ and $a_{ij} = 0$
     - In planar links $S_{i}$ is parallel with $S_{j}$ and $\alpha_{ij} = 0$
 
+> ### Standard Link Coordinate Systems
+
+> - The standard link coordinate system for link ij has its origin at the
+    intersection of $S_{i}$ and $a_{ij}$, it's x-axis along the vector $a_{ij}$
+    and it's z-axis along the vector $S_{i}$
+>       - The y-axis is determined using the right hand rule
+> - Figure taken from lecture powerpoint
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/standard_link_coordinate_system.png"
+alt="Standard Link Coordinate System" title="Standard Link Coordinate System"
+width="300" height="200"/> 
+</td></tr>
+</table>
+</div>
+
 ## Joints {#joints}
 
 - There are two main values that define a joint: the joint offset distance
@@ -335,7 +353,10 @@ height="200"/>
 
 > ### Screw Joint, H
 
-> - Screw joints allow translation
+> - Screw joints allow translation and rotation (1 degrees of freedom bc the
+    two variables are not independent)
+> - Both the joint offset distance and joint angle are variable but they are
+    not independent of one another
 
 <div align="center">
 <table class="image">
@@ -348,6 +369,11 @@ height="200"/>
 
 > ### Plane Joint, E
 
+> - Plane joints allow 2 degrees of translation and one degree of rotation (3
+    degrees of freedom)
+> - To make plane joints easier to analyze they are simplified to two prismatic
+    joints and a revolute joint
+
 <div align="center">
 <table class="image">
 <tr><td><img src="./img/plane_joint.png"
@@ -358,6 +384,11 @@ height="450"/>
 </div>
 
 > ### Hook Joint, T
+
+> - Hook joints allow rotation around two axes (2 degrees of freedom)
+> - A simplified view of hook joints is that it's a combination of two revolute
+    joints
+> - For a hook joint $a_{jk} =0$ and $\alpha_{ik} = 90 \deg$
 
 <div align="center">
 <table class="image">
@@ -370,6 +401,12 @@ height="300"/>
 
 > ### Spherical Joint, S
 
+> - A spherical joint allows rotation about all three axes (3 degrees of
+    freedom)
+> - For analysis purposes spherical joints are replaced by three revolute joints
+> - With spherical joints the $S_{i}$, $S_{j}$ and $S_{k}$ intersect resulting
+    in $a_{ij} = a_{jk} = S_{j} = 0$
+
 <div align="center">
 <table class="image">
 <tr><td><img src="./img/spherical_joint.png"
@@ -378,3 +415,5 @@ height="350"/>
 </td></tr>
 </table>
 </div>
+
+## Kinematic Chains {#kinematic_chains}

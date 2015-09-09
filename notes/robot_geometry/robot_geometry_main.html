@@ -25,6 +25,7 @@ title: Robot Geometry
 <li><a href="#coord_trans">Coordinate Transformations</a></li>
 <li><a href="#links">Links</a></li>
 <li><a href="#joints">Joints</a></li>
+<li><a href="#kinematic_chains">Kinematic Chains</a></li>
 </ul>
 <h2 id="coord_sys">Coordinate Systems</h2>
 <ul>
@@ -278,6 +279,28 @@ height="200"/>
 <li>In planar links <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" /> is parallel with <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha_%7Bij%7D%20%3D%200" alt="\alpha_{ij} = 0" title="\alpha_{ij} = 0" /></li>
 </ul></li>
 </ul>
+<blockquote>
+<h3 id="standard-link-coordinate-systems">Standard Link Coordinate Systems</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>The standard link coordinate system for link ij has its origin at the intersection of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D" alt="a_{ij}" title="a_{ij}" />, it's x-axis along the vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D" alt="a_{ij}" title="a_{ij}" /> and it's z-axis along the vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" />
+<ul>
+<li>The y-axis is determined using the right hand rule</li>
+</ul></li>
+</ul>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/standard_link_coordinate_system.png"
+alt="Standard Link Coordinate System" title="Standard Link Coordinate System"
+width="300" height="200"/>
+</td>
+</tr>
+</table>
+</div>
 <h2 id="joints">Joints</h2>
 <ul>
 <li>There are two main values that define a joint: the joint offset distance (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" />) and the joint angle (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7Bj%7D" alt="\theta_{j}" title="\theta_{j}" />)</li>
@@ -353,7 +376,8 @@ height="200"/>
 </blockquote>
 <blockquote>
 <ul>
-<li>Screw joints allow translation</li>
+<li>Screw joints allow translation and rotation (1 degrees of freedom bc the two variables are not independent)</li>
+<li>Both the joint offset distance and joint angle are variable but they are not independent of one another</li>
 </ul>
 </blockquote>
 <div align="center">
@@ -370,6 +394,12 @@ height="200"/>
 <blockquote>
 <h3 id="plane-joint-e">Plane Joint, E</h3>
 </blockquote>
+<blockquote>
+<ul>
+<li>Plane joints allow 2 degrees of translation and one degree of rotation (3 degrees of freedom)</li>
+<li>To make plane joints easier to analyze they are simplified to two prismatic joints and a revolute joint</li>
+</ul>
+</blockquote>
 <div align="center">
 <table class="image">
 <tr>
@@ -383,6 +413,13 @@ height="450"/>
 </div>
 <blockquote>
 <h3 id="hook-joint-t">Hook Joint, T</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>Hook joints allow rotation around two axes (2 degrees of freedom)</li>
+<li>A simplified view of hook joints is that it's a combination of two revolute joints</li>
+<li>For a hook joint <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bjk%7D%20%3D0" alt="a_{jk} =0" title="a_{jk} =0" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha_%7Bik%7D%20%3D%2090%20%5Cdeg" alt="\alpha_{ik} = 90 \deg" title="\alpha_{ik} = 90 \deg" /></li>
+</ul>
 </blockquote>
 <div align="center">
 <table class="image">
@@ -398,6 +435,13 @@ height="300"/>
 <blockquote>
 <h3 id="spherical-joint-s">Spherical Joint, S</h3>
 </blockquote>
+<blockquote>
+<ul>
+<li>A spherical joint allows rotation about all three axes (3 degrees of freedom)</li>
+<li>For analysis purposes spherical joints are replaced by three revolute joints</li>
+<li>With spherical joints the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bk%7D" alt="S_{k}" title="S_{k}" /> intersect resulting in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D%20%3D%20a_%7Bjk%7D%20%3D%20S_%7Bj%7D%20%3D%200" alt="a_{ij} = a_{jk} = S_{j} = 0" title="a_{ij} = a_{jk} = S_{j} = 0" /></li>
+</ul>
+</blockquote>
 <div align="center">
 <table class="image">
 <tr>
@@ -409,5 +453,6 @@ height="350"/>
 </tr>
 </table>
 </div>
+<h2 id="kinematic_chains">Kinematic Chains</h2>
 </body>
 </html>
