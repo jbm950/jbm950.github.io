@@ -31,10 +31,40 @@ def gen_vec_rotation_matrix(theta, vector):
     R_33 = mz * mz * v + c
 
     R_1_2 = np.matrix([[R_11, R_12, R_13],
-                      [R_21, R_22, R_23],
-                      [R_31, R_32, R_33]])
+                       [R_21, R_22, R_23],
+                       [R_31, R_32, R_33]])
 
     return R_1_2
+
+
+def rev_gen_vec_rotation_matrix(R_1_2):
+    """This function will take a rotation matrix and determine what rotation
+    angle will be needed and the vector that is rotated around. Returns theta in
+    degrees and the vector m"""
+
+    theta = m.acos((R_1_2[0, 0] + R_1_2[1, 1] + R_1_2[2, 2] - 1) / 2)
+
+    mx = (R_1_2[2, 1] - R_1_2[1, 2]) / (2 * m.sin(theta))
+    my = (R_1_2[2, 0] - R_1_2[0, 2]) / (2 * m.sin(theta))
+    mz = (R_1_2[1, 0] - R_1_2[0, 1]) / (2 * m.sin(theta))
+
+    m_v = np.matrix([[mx], [my], [mz]])
+    theta = m.degrees(theta)
+
+    return [theta, m_v]
+
+
+def trans_matrix_form(R_1_2, P_2o):
+    """This function will return the transformation matrix 2 to 1 given a
+    rotation matrix and vector pointing to the origin of system 2 as seen in
+    system 1"""
+
+    T_1_2 = np.matrix([[R_1_2[0, 0], R_1_2[0, 1], R_1_2[0, 2], P_2o[0, 0]],
+                       [R_1_2[1, 0], R_1_2[1, 1], R_1_2[1, 2], P_2o[1, 0]],
+                       [R_1_2[2, 0], R_1_2[2, 1], R_1_2[2, 2], P_2o[2, 0]],
+                       [0,           0,           0,           1]])
+
+    return T_1_2
 
 
 def inv_trans_matrix(trans_matrix):
@@ -52,5 +82,5 @@ def inv_trans_matrix(trans_matrix):
     new_trans_matrix = np.matrix([[nrm[0, 0], nrm[0, 1], nrm[0, 2], nPo[0, 0]],
                                   [nrm[1, 0], nrm[1, 1], nrm[1, 2], nPo[1, 0]],
                                   [nrm[2, 0], nrm[2, 1], nrm[2, 2], nPo[2, 0]],
-                                  [0, 0, 0, 1]])
+                                  [0,         0,         0,         1]])
     return new_trans_matrix
