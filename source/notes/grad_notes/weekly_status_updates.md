@@ -1,5 +1,31 @@
 # Weekly Status Updates
 
+### Week 9/5/2015 - 9/11/2015
+
+This week time was spent exclusively working with the book _Nonlinear
+Programming: Theory and Algorithms_ by Bazaraa. Over the course of the week I
+have completely read chapter 1 of this book which deals with the format of
+nonlinear programming problems and have taken notes over that chapter.  I have
+also read through chapter 2 section 1 which covers convex sets and convex hulls
+and am currently taking notes over this section.
+
+> #### Future Directions
+
+> - I plan to continue reading and taking notes over  _Nonlinear Programming:
+    Theory and Applications_
+
+> #### Articles/Books Mentioned in Status Update
+
+> - <a href="http://www.amazon.com/Nonlinear-Programming-Algorithms-Mokhtar-Bazaraa/dp/0471486000"
+    target="_blank">Nonlinear Programming: Theory and Algorithms Book</a>
+    (Mokhtar S. Bazaraa, Hanif D. Sherali and C.M. Shetty)
+
+> #### Notes Mentioned in Status Update
+
+> - [Nonlinear Programming: Theory and
+     Algorithms](./nonlinear_programming_theory_and_algorithms/nonlinear_programming_theory_and_algo_main.html)
+     (Mokhtar S.  Bazaraa, Hanif D, Sherali and C. M. Shetty)
+
 ### Week 8/29/2015 - 9/4/2015
 
 This week I started off reading the article _An Introduction to Automatic
