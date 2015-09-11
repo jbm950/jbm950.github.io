@@ -26,6 +26,7 @@ title: Analytical Dynamics
 <li><a href="#coordinate_system">Coordinate System</a></li>
 <li><a href="#vector_derivatives">Vector Derivatives</a></li>
 <li><a href="#transport_theorem">Transport Theorem</a></li>
+<li><a href="#cylindrical_coordinate_systems">Cylindrical Coordinate Systems</a></li>
 <li><a href="#examples">Examples</a></li>
 </ul>
 <h2 id="scalars">Scalars</h2>
@@ -161,6 +162,7 @@ title: Analytical Dynamics
 </ul></li>
 </ul>
 </blockquote>
+<h2 id="cylindrical_coordinate_systems">Cylindrical Coordinate Systems</h2>
 <h2 id="examples">Examples</h2>
 <blockquote>
 <h3 id="examples-content">Examples Content</h3>
@@ -281,9 +283,9 @@ height="200"/>
 <ul>
 <li>The second approach involves leaving the equations with terms referenced in the disk reference frame and uses the transport theorem
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7DV_%7BP%7D%20%3D%5E%7BD%7DV_%7BP%7D%20%2B%20%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%20%5Ctimes%20%20%5Cunderline%7Br%7D" alt="^{G}V_{P} =^{D}V_{P} + ^{G}\underline{\omega}^{D} \times  \underline{r}" title="^{G}V_{P} =^{D}V_{P} + ^{G}\underline{\omega}^{D} \times  \underline{r}" />
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%28%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%29%20%2B%20%20%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%20%5Ctimes%20%5Cunderline%7Br%7D" alt="^{G}\underline{V}_{P} = (^{D}\underline{V}_{P}) +  ^{G}\underline{\omega}^{D} \times \underline{r}" title="^{G}\underline{V}_{P} = (^{D}\underline{V}_{P}) +  ^{G}\underline{\omega}^{D} \times \underline{r}" />
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7DV_%7BP%7D%20%3D%200" alt="^{D}V_{P} = 0" title="^{D}V_{P} = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%200" alt="^{D}\underline{V}_{P} = 0" title="^{D}\underline{V}_{P} = 0" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%20%3D%5Cdot%7B%5Ctheta%7D%5Cunderline%7Be%7D_%7Bz%7D" alt="^{G}\underline{\omega}^{D} =\dot{\theta}\underline{e}_{z}" title="^{G}\underline{\omega}^{D} =\dot{\theta}\underline{e}_{z}" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D%20%3D%20r%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{r} = r\underline{e}_{r}" title="\underline{r} = r\underline{e}_{r}" /></li>
 </ul></li>
@@ -405,7 +407,26 @@ Fixed with Theta = 0" width="200" height="200"/>
 <ul>
 <li>Just as in the previous example the velocity and acceleration in the disk reference frame (D) will equal zero
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5E%7BD%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%200" alt="^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0" title="^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%28%5E%7BD%7D%5Cunderline%7Ba%7D_%7BP%7D%29%20%3D%200" alt="^{D}\underline{V}_{P} = (^{D}\underline{a}_{P}) = 0" title="^{D}\underline{V}_{P} = (^{D}\underline{a}_{P}) = 0" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>Now to find the velocity of point P in the ground reference frame we are going to take advantage of the transport theorem again
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D%20%3D%20r%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{r} = r\underline{u}_{r}" title="\underline{r} = r\underline{u}_{r}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BC%7D%20%3D%20%5Cdot%7B%5Cbeta%7D%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="^{G}\underline{\omega}^{C} = \dot{\beta}\underline{e}_{\theta}" title="^{G}\underline{\omega}^{C} = \dot{\beta}\underline{e}_{\theta}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BC%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%20%3D%20%5Cdot%7B%5Ctheta%7D%5Cunderline%7Bu%7D_%7Bz%7D" alt="^{C}\underline{\omega}^{D} = \dot{\theta}\underline{u}_{z}" title="^{C}\underline{\omega}^{D} = \dot{\theta}\underline{u}_{z}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BG%7Dd%5Cunderline%7Br%7D%7D%7Bdt%7D" alt="^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}" title="^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20%5Cfrac%7B%5E%7BD%7Dd%5Cunderline%7Br%7D%7D%7Bdt%7D%20%2B%20%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%20%5Ctimes%20%20%5Cunderline%7Br%7D" alt="=  \frac{^{D}d\underline{r}}{dt} + ^{G}\underline{\omega}^{D} \times  \underline{r}" title="=  \frac{^{D}d\underline{r}}{dt} + ^{G}\underline{\omega}^{D} \times  \underline{r}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5E%7BD%7D%5Cunderline%7BV%7D_%7BP%7D%20%2B%20%20%28%5E%7BG%7D%5Cunderline%7B%5Comega%7D%5E%7BC%7D%20%2B%20%5E%7BC%7D%5Cunderline%7B%5Comega%7D%5E%7BD%7D%29%20%5Ctimes%20%20%5Cunderline%7Br%7D" alt="^{G}\underline{V}_{P} = ^{D}\underline{V}_{P} +  (^{G}\underline{\omega}^{C} + ^{C}\underline{\omega}^{D}) \times  \underline{r}" title="^{G}\underline{V}_{P} = ^{D}\underline{V}_{P} +  (^{G}\underline{\omega}^{C} + ^{C}\underline{\omega}^{D}) \times  \underline{r}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%200%20%2B%20%28%5Cdot%7B%5Cbeta%7D%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%2B%20%20%5Cdot%7B%5Ctheta%7D%5Cunderline%7Bu%7D_%7Bz%7D%29%20%5Ctimes%20%28r%5Cunderline%7Bu%7D_%7Br%7D%29" alt="^{G}\underline{V}_{P} = 0 + (\dot{\beta}\underline{e}_{\theta} +  \dot{\theta}\underline{u}_{z}) \times (r\underline{u}_{r})" title="^{G}\underline{V}_{P} = 0 + (\dot{\beta}\underline{e}_{\theta} +  \dot{\theta}\underline{u}_{z}) \times (r\underline{u}_{r})" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%20%5B%5Cdot%7B%5Cbeta%7D%28cos%28%5Ctheta%29%5Cunderline%7Bu%7D_%7B%5Ctheta%7D%20%2B%20%20sin%28%5Ctheta%29%5Cunderline%7Bu%7D_%7Br%7D%29%20%2B%20%5Cdot%7B%5Ctheta%7D%5Cunderline%7Bu%7D_%7Bz%7D%5D%20%20%5Ctimes%20%28r%5Cunderline%7Bu%7D_%7Br%7D%29" alt="^{G}\underline{V}_{P} =  [\dot{\beta}(cos(\theta)\underline{u}_{\theta} +  sin(\theta)\underline{u}_{r}) + \dot{\theta}\underline{u}_{z}]  \times (r\underline{u}_{r})" title="^{G}\underline{V}_{P} =  [\dot{\beta}(cos(\theta)\underline{u}_{\theta} +  sin(\theta)\underline{u}_{r}) + \dot{\theta}\underline{u}_{z}]  \times (r\underline{u}_{r})" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%20-%5Cdot%7B%5Cbeta%7Dcos%28%5Ctheta%29r%5Cunderline%7Bu%7D_%7Bz%7D%20%2B%20%20%5Cdot%7B%5Ctheta%7Dr%5Cunderline%7Bu%7D_%7B%5Ctheta%7D" alt="^{G}\underline{V}_{P} =  -\dot{\beta}cos(\theta)r\underline{u}_{z} +  \dot{\theta}r\underline{u}_{\theta}" title="^{G}\underline{V}_{P} =  -\dot{\beta}cos(\theta)r\underline{u}_{z} +  \dot{\theta}r\underline{u}_{\theta}" /></li>
+</ul></li>
 </ul></li>
 </ul>
 </blockquote>

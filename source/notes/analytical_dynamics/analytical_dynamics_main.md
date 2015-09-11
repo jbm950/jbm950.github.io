@@ -12,6 +12,7 @@
 - [Coordinate System](#coordinate_system)
 - [Vector Derivatives](#vector_derivatives)
 - [Transport Theorem](#transport_theorem)
+- [Cylindrical Coordinate Systems](#cylindrical_coordinate_systems)
 - [Examples](#examples)
 
 ## Scalars {#scalars}
@@ -217,6 +218,8 @@
               ^{A}\underline{\omega}^{B} \times \underline{b}$ which is the
               transport theorem
 
+## Cylindrical Coordinate Systems {#cylindrical_coordinate_systems}
+
 ## Examples {#examples}
 
 > ### Examples Content
@@ -297,9 +300,9 @@ height="200"/>
 
 >>> - The second approach involves leaving the equations with terms referenced
       in the disk reference frame and uses the transport theorem
->>>     - $^{G}V_{P} =^{D}V_{P} + ^{G}\underline{\omega}^{D} \times
-          \underline{r}$
->>>         - $^{D}V_{P} = 0$
+>>>     - $^{G}\underline{V}_{P} = (^{D}\underline{V}_{P}) +
+          ^{G}\underline{\omega}^{D} \times \underline{r}$
+>>>         - $^{D}\underline{V}_{P} = 0$
 >>>         - $^{G}\underline{\omega}^{D} =\dot{\theta}\underline{e}_{z}$
 >>>         - $\underline{r} = r\underline{e}_{r}$
 >>>     - $^{G}\underline{V}_{P} = \dot{\theta}\underline{e}_{z} \times
@@ -385,4 +388,25 @@ Fixed with Theta = 0" width="200" height="200"/>
 
 >> - Just as in the previous example the velocity and acceleration in the disk
      reference frame (D) will equal zero
->>      - $^{D}\underline{V}_{P} = ^{D}\underline{a}_{P} = 0$
+>>      - $^{D}\underline{V}_{P} = (^{D}\underline{a}_{P}) = 0$
+
+>> - Now to find the velocity of point P in the ground reference frame we
+     are going to take advantage of the transport theorem again
+>>      - $\underline{r} = r\underline{u}_{r}$
+>>      - $^{G}\underline{\omega}^{C} = \dot{\beta}\underline{e}_{\theta}$
+>>      - $^{C}\underline{\omega}^{D} = \dot{\theta}\underline{u}_{z}$
+>>      - $^{G}\underline{V}_{P} = \frac{^{G}d\underline{r}}{dt}$ $=
+          \frac{^{D}d\underline{r}}{dt} + ^{G}\underline{\omega}^{D} \times
+          \underline{r}$
+>>          - $^{G}\underline{V}_{P} = ^{D}\underline{V}_{P} +
+              (^{G}\underline{\omega}^{C} + ^{C}\underline{\omega}^{D}) \times
+              \underline{r}$
+>>          - $^{G}\underline{V}_{P} = 0 + (\dot{\beta}\underline{e}_{\theta} +
+              \dot{\theta}\underline{u}_{z}) \times (r\underline{u}_{r})$
+>>          - $^{G}\underline{V}_{P} =
+              [\dot{\beta}(cos(\theta)\underline{u}_{\theta} +
+              sin(\theta)\underline{u}_{r}) + \dot{\theta}\underline{u}_{z}]
+              \times (r\underline{u}_{r})$
+>>          - $^{G}\underline{V}_{P} =
+              -\dot{\beta}cos(\theta)r\underline{u}_{z} +
+              \dot{\theta}r\underline{u}_{\theta}$
