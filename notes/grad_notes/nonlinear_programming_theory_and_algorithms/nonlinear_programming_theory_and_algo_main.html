@@ -21,6 +21,7 @@ target="_blank">Physical Book (Amazon Link)</a></p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#introduction">1. Introduction</a></li>
+<li><a href="#convex_sets">2. Convex Sets</a></li>
 </ul>
 <h2 id="notation">Notation</h2>
 <ul>
@@ -89,6 +90,46 @@ target="_blank">Physical Book (Amazon Link)</a></p>
 </ul></li>
 <li>The problem can now be restated as minimize <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Csum%5E%7BK%7D_%7Bk%3D1%7D%20%5Calpha%20%28%5Cmathbf%7By_%7Bk%7D%7D%2C%20%5Cmathbf%7Bu_%7Bk%7D%7D%29" alt="\sum^{K}_{k=1} \alpha (\mathbf{y_{k}}, \mathbf{u_{k}})" title="\sum^{K}_{k=1} \alpha (\mathbf{y_{k}}, \mathbf{u_{k}})" /> subject to the constraints <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7Bk%7D%7D%20%3D%20%5Cmathbf%7By_%7Bk-1%7D%7D%20%2B%20%5CDelta%5Cmathbf%7B%5CPhi%7D%20%28%5Cmathbf%7By_%7Bk-1%7D%7D%2C%20%5Cmathbf%7Bu_%7Bk%7D%7D%29" alt="\mathbf{y_{k}} = \mathbf{y_{k-1}} + \Delta\mathbf{\Phi} (\mathbf{y_{k-1}}, \mathbf{u_{k}})" title="\mathbf{y_{k}} = \mathbf{y_{k-1}} + \Delta\mathbf{\Phi} (\mathbf{y_{k-1}}, \mathbf{u_{k}})" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7By_%7Bk%7D%7D%20%5Cin%20Y" alt="\mathbf{y_{k}} \in Y" title="\mathbf{y_{k}} \in Y" />, and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bu_%7Bk%7D%7D%20%5Cin%20U" alt="\mathbf{u_{k}} \in U" title="\mathbf{u_{k}} \in U" /> for k = 1, ..., K and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5CPsi%7D%20%28%5Cmathbf%7By_%7B0%7D%2C...%2C%20%5Cmathbf%7By_%7Bk%7D%7D%2C%20%5Cmathbf%7Bu_%7B1%7D%7D%2C...%2C%20%5Cmathbf%7Bu_%7Bk%7D%7D%29%20%5Cin%20D" alt="\mathbf{\Psi} (\mathbf{y_{0},..., \mathbf{y_{k}}, \mathbf{u_{1}},..., \mathbf{u_{k}}) \in D" title="\mathbf{\Psi} (\mathbf{y_{0},..., \mathbf{y_{k}}, \mathbf{u_{1}},..., \mathbf{u_{k}}) \in D" /></li>
 </ul>
+</blockquote>
+<h2 id="convex_sets">2. Convex Sets</h2>
+<h3 id="convex-hulls">2.1 Convex Hulls</h3>
+<blockquote>
+<p><strong>Convex Sets</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>A set is <em>convex</em> if the line segment joining any two points in a set does not leave the boundary of the set (is also contained in the set)
+<ul>
+<li>This can be stated mathematically as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Csum%5E%7Bk%7D_%7Bj%3D1%7D%20%20%5Clambda_%7Bj%7D%5Cmathbf%7Bx%7D_%7Bj%7D" alt="\sum^{k}_{j=1}  \lambda_{j}\mathbf{x}_{j}" title="\sum^{k}_{j=1}  \lambda_{j}\mathbf{x}_{j}" /> where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Csum%5E%7Bk%7D_%7Bj%7D%20%5Clambda_%7Bj%7D%20%3D%201" alt="\sum^{k}_{j} \lambda_{j} = 1" title="\sum^{k}_{j} \lambda_{j} = 1" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Clambda_%7Bj%7D%20%5Cgeq%200" alt="\lambda_{j} \geq 0" title="\lambda_{j} \geq 0" /> for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=j%20%3D%201%2C...%2Ck" alt="j = 1,...,k" title="j = 1,...,k" /> meaning the weighted averages of the <strong>x</strong> values are also within the set
+<ul>
+<li>These weighted averages are called <em>convex combinations</em> of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx%7D_%7B1%7D%2C...%2C%5Cmathbf%7Bx%7D_%7Bk%7D" alt="\mathbf{x}_{1},...,\mathbf{x}_{k}" title="\mathbf{x}_{1},...,\mathbf{x}_{k}" /></li>
+<li>Getting rid of the non-negativity requirement for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Clambda" alt="\lambda" title="\lambda" /> (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Clambda_%7Bj%7D%20%5Cgeq%200" alt="\lambda_{j} \geq 0" title="\lambda_{j} \geq 0" />) results in the requirements for an <em>affine combination</em></li>
+<li>The combination <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Csum%5E%7Bk%7D_%7Bj%3D1%7D%20%5Clambda_%7Bj%7D%5Cmathbf%7Bx%7D_%7Bj%7D" alt="\sum^{k}_{j=1} \lambda_{j}\mathbf{x}_{j}" title="\sum^{k}_{j=1} \lambda_{j}\mathbf{x}_{j}" /> where the only requirement on <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Clambda_%7Bj%7D" alt="\lambda_{j}" title="\lambda_{j}" /> is that it is in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=R" alt="R" title="R" /> is called a <em>linear combination</em></li>
+</ul></li>
+</ul></li>
+<li>Some properties of convex sets include
+<ol style="list-style-type: decimal">
+<li>The intersection of two convex sets is convex (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B1%7D%20%5Ccap%20S_%7B2%7D" alt="S_{1} \cap S_{2}" title="S_{1} \cap S_{2}" /> is convex)</li>
+<li>The sum of two convex sets is convex (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B1%7D%20%5Coplus%20S_%7B2%7D" alt="S_{1} \oplus S_{2}" title="S_{1} \oplus S_{2}" /> is convex)</li>
+<li>The difference of two convex sets is convex (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B1%7D%20%5Cominus%20S_%7B2%7D" alt="S_{1} \ominus S_{2}" title="S_{1} \ominus S_{2}" /> is convex)</li>
+</ol></li>
+</ul>
+</blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Figure taken from the book
+</caption>
+<tr>
+<td>
+<img src="./img/convex_sets.jpg"
+alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<p><strong>Convex Hulls</strong></p>
 </blockquote>
 </body>
 </html>

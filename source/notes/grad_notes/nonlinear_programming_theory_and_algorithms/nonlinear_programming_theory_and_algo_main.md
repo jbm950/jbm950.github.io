@@ -7,6 +7,7 @@ target="_blank">Physical Book (Amazon Link)</a>
 ## Table of Contents
 
 - [1. Introduction](#introduction)
+- [2. Convex Sets](#convex_sets)
 
 ## Notation
 
@@ -96,3 +97,39 @@ target="_blank">Physical Book (Amazon Link)</a>
     \mathbf{u_{k}})$, $\mathbf{y_{k}} \in Y$, and $\mathbf{u_{k}} \in U$ for k
     = 1, ..., K and $\mathbf{\Psi} (\mathbf{y_{0},..., \mathbf{y_{k}},
     \mathbf{u_{1}},..., \mathbf{u_{k}}) \in D$
+
+## 2. Convex Sets {#convex_sets}
+
+### 2.1 Convex Hulls
+
+> __Convex Sets__
+
+> - A set is _convex_ if the line segment joining any two points in a set does
+    not leave the boundary of the set (is also contained in the set)
+>       - This can be stated mathematically as $\sum^{k}_{j=1}
+          \lambda_{j}\mathbf{x}_{j}$ where $\sum^{k}_{j} \lambda_{j} = 1$,
+          $\lambda_{j} \geq 0$ for $j = 1,...,k$ meaning the weighted averages
+          of the __x__ values are also within the set
+>           - These weighted averages are called _convex combinations_ of
+              $\mathbf{x}_{1},...,\mathbf{x}_{k}$
+>           - Getting rid of the non-negativity requirement for $\lambda$
+              ($\lambda_{j} \geq 0$) results in the requirements for an _affine
+              combination_
+>           - The combination $\sum^{k}_{j=1} \lambda_{j}\mathbf{x}_{j}$ where
+              the only requirement on $\lambda_{j}$ is that it is in $R$ is
+              called a _linear combination_
+> - Some properties of convex sets include
+>       1. The intersection of two convex sets is convex ($S_{1} \cap S_{2}$ is convex)
+>       2. The sum of two convex sets is convex ($S_{1} \oplus S_{2}$ is convex)
+>       3. The difference of two convex sets is convex ($S_{1} \ominus S_{2}$ is convex)
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Figure taken from the book</caption>
+<tr><td><img src="./img/convex_sets.jpg"
+alt="Convex Sets" title="Convex Sets" width="400" height="250"/> 
+</td></tr>
+</table>
+</div>
+
+> __Convex Hulls__
