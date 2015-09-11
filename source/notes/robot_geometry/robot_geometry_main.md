@@ -248,6 +248,23 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 
 >> #### Find Vector and Rotation Angle from the Rotation Matrix
 
+>> - For the rotation matrix about a general vector passing through the origin,
+     using the notation $^{A}_{B}R = \left[ \begin{array} r_{11} & r_{12} &
+     r_{13} \\ r_{21} & r_{22} & r_{23} \\ r_{31} & r_{32} & r_{33} \end{array}
+     \right]$
+>> - Adding all of the elements in the diagonal gives $r_{11} + r_{22} + r_{33}
+     = m_{x}^{2}v + c + m_{y}^{2}v + c + m_{z}^{2}v + c$ where vector $m$ is a
+     unit vector ($m_{x}^{2} + m_{y}^{2} + m_{z}^{2} = 1$)
+>>      - $r_{11} + r_{22} + r_{33} = (m_{x}^{2} + m_{y}^{2} + m_{z}^{2})v + 3c$
+>>      - $r_{11} + r_{22} + r_{33} = v - 3c = (1 - cos(\theta)) + 3cos(\theta)$
+>>      - $r_{11} + r_{22} + r_{33} = 1 + 2 cos(\theta)$
+>> - To find the values of the vector m use the equation of the form $r_{ji} -
+     r_{ij} = m_{i}m_{j}v + m_{k}s - (m_{j}m_{i}v - m_{k}s)$ for $i \neq j \neq
+     k$
+>>      - This simplifies to $r_{ji} - r_{ij} = 2m_{k}sin(\theta)$
+>>      - Example $r_{21} - r_{12} = 2m_{z}sin(\theta)$
+
+
 ## Links {#links}
 
 - Links are rigid bodies that maintain orientation between two axes

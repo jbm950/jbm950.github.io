@@ -247,6 +247,24 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 <h4 id="find-vector-and-rotation-angle-from-the-rotation-matrix">Find Vector and Rotation Angle from the Rotation Matrix</h4>
 </blockquote>
 </blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>For the rotation matrix about a general vector passing through the origin, using the notation <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D_%7BB%7DR%20%3D%20%5Cleft%5B%20%5Cbegin%7Barray%7D%20r_%7B11%7D%20%26%20r_%7B12%7D%20%26%20%20r_%7B13%7D%20%5C%5C%20r_%7B21%7D%20%26%20r_%7B22%7D%20%26%20r_%7B23%7D%20%5C%5C%20r_%7B31%7D%20%26%20r_%7B32%7D%20%26%20r_%7B33%7D%20%5Cend%7Barray%7D%20%20%5Cright%5D" alt="^{A}_{B}R = \left[ \begin{array} r_{11} &amp; r_{12} &amp;  r_{13} \\ r_{21} &amp; r_{22} &amp; r_{23} \\ r_{31} &amp; r_{32} &amp; r_{33} \end{array}  \right]" title="^{A}_{B}R = \left[ \begin{array} r_{11} &amp; r_{12} &amp;  r_{13} \\ r_{21} &amp; r_{22} &amp; r_{23} \\ r_{31} &amp; r_{32} &amp; r_{33} \end{array}  \right]" /></li>
+<li>Adding all of the elements in the diagonal gives <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B11%7D%20%2B%20r_%7B22%7D%20%2B%20r_%7B33%7D%20%20%3D%20m_%7Bx%7D%5E%7B2%7Dv%20%2B%20c%20%2B%20m_%7By%7D%5E%7B2%7Dv%20%2B%20c%20%2B%20m_%7Bz%7D%5E%7B2%7Dv%20%2B%20c" alt="r_{11} + r_{22} + r_{33}  = m_{x}^{2}v + c + m_{y}^{2}v + c + m_{z}^{2}v + c" title="r_{11} + r_{22} + r_{33}  = m_{x}^{2}v + c + m_{y}^{2}v + c + m_{z}^{2}v + c" /> where vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=m" alt="m" title="m" /> is a unit vector (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=m_%7Bx%7D%5E%7B2%7D%20%2B%20m_%7By%7D%5E%7B2%7D%20%2B%20m_%7Bz%7D%5E%7B2%7D%20%3D%201" alt="m_{x}^{2} + m_{y}^{2} + m_{z}^{2} = 1" title="m_{x}^{2} + m_{y}^{2} + m_{z}^{2} = 1" />)
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B11%7D%20%2B%20r_%7B22%7D%20%2B%20r_%7B33%7D%20%3D%20%28m_%7Bx%7D%5E%7B2%7D%20%2B%20m_%7By%7D%5E%7B2%7D%20%2B%20m_%7Bz%7D%5E%7B2%7D%29v%20%2B%203c" alt="r_{11} + r_{22} + r_{33} = (m_{x}^{2} + m_{y}^{2} + m_{z}^{2})v + 3c" title="r_{11} + r_{22} + r_{33} = (m_{x}^{2} + m_{y}^{2} + m_{z}^{2})v + 3c" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B11%7D%20%2B%20r_%7B22%7D%20%2B%20r_%7B33%7D%20%3D%20v%20-%203c%20%3D%20%281%20-%20cos%28%5Ctheta%29%29%20%2B%203cos%28%5Ctheta%29" alt="r_{11} + r_{22} + r_{33} = v - 3c = (1 - cos(\theta)) + 3cos(\theta)" title="r_{11} + r_{22} + r_{33} = v - 3c = (1 - cos(\theta)) + 3cos(\theta)" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B11%7D%20%2B%20r_%7B22%7D%20%2B%20r_%7B33%7D%20%3D%201%20%2B%202%20cos%28%5Ctheta%29" alt="r_{11} + r_{22} + r_{33} = 1 + 2 cos(\theta)" title="r_{11} + r_{22} + r_{33} = 1 + 2 cos(\theta)" /></li>
+</ul></li>
+<li>To find the values of the vector m use the equation of the form <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7Bji%7D%20-%20r_%7Bij%7D%20%3D%20m_%7Bi%7Dm_%7Bj%7Dv%20%2B%20m_%7Bk%7Ds%20-%20%28m_%7Bj%7Dm_%7Bi%7Dv%20-%20m_%7Bk%7Ds%29" alt="r_{ji} - r_{ij} = m_{i}m_{j}v + m_{k}s - (m_{j}m_{i}v - m_{k}s)" title="r_{ji} - r_{ij} = m_{i}m_{j}v + m_{k}s - (m_{j}m_{i}v - m_{k}s)" /> for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=i%20%5Cneq%20j%20%5Cneq%20k" alt="i \neq j \neq k" title="i \neq j \neq k" />
+<ul>
+<li>This simplifies to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7Bji%7D%20-%20r_%7Bij%7D%20%3D%202m_%7Bk%7Dsin%28%5Ctheta%29" alt="r_{ji} - r_{ij} = 2m_{k}sin(\theta)" title="r_{ji} - r_{ij} = 2m_{k}sin(\theta)" /></li>
+<li>Example <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B21%7D%20-%20r_%7B12%7D%20%3D%202m_%7Bz%7Dsin%28%5Ctheta%29" alt="r_{21} - r_{12} = 2m_{z}sin(\theta)" title="r_{21} - r_{12} = 2m_{z}sin(\theta)" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
 <h2 id="links">Links</h2>
 <ul>
 <li>Links are rigid bodies that maintain orientation between two axes</li>
