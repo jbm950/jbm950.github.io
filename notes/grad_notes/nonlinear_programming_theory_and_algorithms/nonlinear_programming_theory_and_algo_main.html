@@ -131,5 +131,31 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 <blockquote>
 <p><strong>Convex Hulls</strong></p>
 </blockquote>
+<blockquote>
+<ul>
+<li>A convex hull is the intersection of all of the convex sets containing set S (the smallest convex set containing S) where S is an arbitrary set in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=R%5E%7Bn%7D" alt="R^{n}" title="R^{n}" />
+<ul>
+<li>The convex hull is denoted <em>conv(S)</em></li>
+<li>The convex hull is subject to the same mathematical constraints as the convex set: <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx%7D%20%3D%20%5Csum%5E%7Bk%7D_%7Bj%3D1%7D%20%20%5Clambda_%7Bj%7D%5Cmathbf%7Bx%7D_%7Bj%7D" alt="\mathbf{x} = \sum^{k}_{j=1}  \lambda_{j}\mathbf{x}_{j}" title="\mathbf{x} = \sum^{k}_{j=1}  \lambda_{j}\mathbf{x}_{j}" /> where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Csum%5E%7Bk%7D_%7Bj%7D%20%5Clambda_%7Bj%7D%20%3D%201" alt="\sum^{k}_{j} \lambda_{j} = 1" title="\sum^{k}_{j} \lambda_{j} = 1" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Clambda_%7Bj%7D%20%5Cgeq%200" alt="\lambda_{j} \geq 0" title="\lambda_{j} \geq 0" /> for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=j%20%3D%201%2C...%2Ck" alt="j = 1,...,k" title="j = 1,...,k" /> for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx_%7B1%7D%7D%2C...%2C%5Cmathbf%7Bx_%7Bk%7D%7D%20%5Cin%20S" alt="\mathbf{x_{1}},...,\mathbf{x_{k}} \in S" title="\mathbf{x_{1}},...,\mathbf{x_{k}} \in S" />
+<ul>
+<li>An <em>affine hull</em> of S is the collection of all affine combinations of points in S</li>
+<li>A <em>linear hull</em> of S is the collection of all linear combinations of points in S</li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Polytope and Simplex</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>A <em>polytope</em> is the convex hull of a finite number of points <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx_%7B1%7D%7D%2C...%2C%5Cmathbf%7Bx_%7Bk%2B1%7D%7D" alt="\mathbf{x_{1}},...,\mathbf{x_{k+1}}" title="\mathbf{x_{1}},...,\mathbf{x_{k+1}}" /> in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=R%5E%7Bn%7D" alt="R^{n}" title="R^{n}" /></li>
+<li>If <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx_%7B2%7D%7D%20-%20%5Cmathbf%7Bx_%7B1%7D%7D%2C%20%5Cmathbf%7Bx_%7B3%7D%7D%20-%20%5Cmathbf%7Bx_%7B1%7D%7D%2C...%2C%20%5Cmathbf%7Bx_%7Bk%2B1%7D%7D%20-%20%5Cmathbf%7Bx_%7B1%7D%7D" alt="\mathbf{x_{2}} - \mathbf{x_{1}}, \mathbf{x_{3}} - \mathbf{x_{1}},..., \mathbf{x_{k+1}} - \mathbf{x_{1}}" title="\mathbf{x_{2}} - \mathbf{x_{1}}, \mathbf{x_{3}} - \mathbf{x_{1}},..., \mathbf{x_{k+1}} - \mathbf{x_{1}}" /> are linearlly independent then <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx_%7B1%7D%7D%2C...%2C%5Cmathbf%7Bx_%7Bk%2B1%7D%7D" alt="\mathbf{x_{1}},...,\mathbf{x_{k+1}}" title="\mathbf{x_{1}},...,\mathbf{x_{k+1}}" /> are <em>affinely independent</em></li>
+<li>The convex hull of a set of affinely independent points (conv(<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx_%7B1%7D%7D%2C...%5Cmathbf%7Bx_%7Bk%2B1%7D%7D" alt="\mathbf{x_{1}},...\mathbf{x_{k+1}}" title="\mathbf{x_{1}},...\mathbf{x_{k+1}}" />)) is called a <em>simplex</em> with vertices <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx_%7B1%7D%7D%2C...%2C%5Cmathbf%7Bx_%7Bk%2B1%7D%7D" alt="\mathbf{x_{1}},...,\mathbf{x_{k+1}}" title="\mathbf{x_{1}},...,\mathbf{x_{k+1}}" />
+<ul>
+<li>Maximum number of linearlly independent vectors in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=R%5E%7Bn%7D" alt="R^{n}" title="R^{n}" /> is n <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Crightarrow" alt="\rightarrow" title="\rightarrow" /> no simplex in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=R%5E%7Bn%7D" alt="R^{n}" title="R^{n}" /> with more than n + 1 vertices</li>
+</ul></li>
+</ul>
+</blockquote>
 </body>
 </html>

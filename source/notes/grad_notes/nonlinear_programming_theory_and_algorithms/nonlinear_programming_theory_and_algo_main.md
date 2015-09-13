@@ -41,7 +41,8 @@ target="_blank">Physical Book (Amazon Link)</a>
 - The feasible solution, $\mathbf{\bar{x}}$, that is smaller than all the other
   feasible solutions ($f(\mathbf{x}) \geq f(\mathbf{\bar{x}})$) is called the
   _optimal solution_
-    - Multiple optimum's might exist and are called _alternative optimal solutions_
+    - Multiple optimum's might exist and are called _alternative optimal
+      solutions_
 
 ### 1.2 Illustrative Examples
 
@@ -119,9 +120,11 @@ target="_blank">Physical Book (Amazon Link)</a>
               the only requirement on $\lambda_{j}$ is that it is in $R$ is
               called a _linear combination_
 > - Some properties of convex sets include
->       1. The intersection of two convex sets is convex ($S_{1} \cap S_{2}$ is convex)
+>       1. The intersection of two convex sets is convex ($S_{1} \cap S_{2}$ is
+           convex)
 >       2. The sum of two convex sets is convex ($S_{1} \oplus S_{2}$ is convex)
->       3. The difference of two convex sets is convex ($S_{1} \ominus S_{2}$ is convex)
+>       3. The difference of two convex sets is convex ($S_{1} \ominus S_{2}$
+           is convex)
 
 <div align="center">
 <table class="image">
@@ -133,3 +136,30 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 </div>
 
 > __Convex Hulls__
+
+> - A convex hull is the intersection of all of the convex sets containing set
+    S (the smallest convex set containing S) where S is an arbitrary set in
+    $R^{n}$
+>       - The convex hull is denoted _conv(S)_
+>       - The convex hull is subject to the same mathematical constraints as
+          the convex set: $\mathbf{x} = \sum^{k}_{j=1}
+          \lambda_{j}\mathbf{x}_{j}$ where $\sum^{k}_{j} \lambda_{j} = 1$,
+          $\lambda_{j} \geq 0$ for $j = 1,...,k$ for
+          $\mathbf{x_{1}},...,\mathbf{x_{k}} \in S$
+>           - An _affine hull_ of S is the collection of all affine
+              combinations of points in S 
+>           - A _linear hull_ of S is the collection of all linear combinations
+              of points in S
+
+> __Polytope and Simplex__
+
+> - A _polytope_ is the convex hull of a finite number of points
+    $\mathbf{x_{1}},...,\mathbf{x_{k+1}}$ in $R^{n}$
+> - If $\mathbf{x_{2}} - \mathbf{x_{1}}, \mathbf{x_{3}} - \mathbf{x_{1}},...,
+    \mathbf{x_{k+1}} - \mathbf{x_{1}}$ are linearlly independent then
+    $\mathbf{x_{1}},...,\mathbf{x_{k+1}}$ are _affinely independent_
+> - The convex hull of a set of affinely independent points
+    (conv($\mathbf{x_{1}},...\mathbf{x_{k+1}}$)) is called a _simplex_ with
+    vertices $\mathbf{x_{1}},...,\mathbf{x_{k+1}}$
+>       - Maximum number of linearlly independent vectors in $R^{n}$ is n
+          $\rightarrow$ no simplex in $R^{n}$ with more than n + 1 vertices
