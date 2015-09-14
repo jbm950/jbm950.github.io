@@ -13,6 +13,7 @@
 - [Joints](#joints)
 - [Kinematic Chains](#kinematic_chains)
 - [Forward Analysis](#forward_analysis)
+- [Reverse Analysis](#reverse_analysis)
 
 ## Coordinate Systems {#coord_sys}
 
@@ -476,3 +477,43 @@ Transformation Matrix" width="300" height="150"/>
 </td></tr>
 </table>
 </div>
+
+- Where $c_{j}$ and $s_{j}$ are $cos(\theta_{j})$ and $sin(\theta_{j})$,
+  $c_{ij}$ and $s_{ij}$ are $cos(\alpha_{ij})$ and $sin(\alpha_{ij})$ and
+  $S_{j}$ is the joint offset distance
+- The location and orientation of the last link as viewed from the fixed
+  reference frame can then be found by the series of matrix multiplications:
+  $^{F}_{6}T = ^{F}_{1}T ^{1}_{2}T ^{2}_{3}T ^{3}_{4}T ^{4}_{5}T ^{5}_{6}T$
+    - $^{F}P_{tool} = ^{F}_{6}T ^{6}P_{tool}$
+
+> ### General Link to Link Transformation Matrix Derivation
+
+## Reverse Analysis {#reverse_analysis}
+
+- The objective of reverse analysis is to find all of the variable joint
+  parameters that will position the robot such that its tool has the desired
+  position and orientation as viewed from the fixed reference frame
+
+> __Iterative Technique__
+
+> - For a standard 6 link robot with all revolute joints, the transformation
+    matrix relating the fixed coordinate system to the last link can be found
+    by the series of matrix multiplications: $^{F}_{6}T = ^{F}_{1}T ^{1}_{2}T
+    ^{2}_{3}T ^{3}_{4}T ^{4}_{5}T ^{5}_{6}T$
+>       - Each transformation matrix corresponds to a specific variable joint
+          angle ($\phi_{1} \rightarrow \theta_{6}$)
+> - The iterative technique consists of making a guess as to the variable joint
+    angles then using forward analysis to find a $^{F}_{6}T$ matrix then that
+    matrix is compared with the desired $^{F}_{6}T$ matrix
+>       - Based on the comparison the guesses for the variable joint angles are
+          adjusted and the process is repeated
+> - This process can be optimized using an objective function $F(\phi_{1}
+    \rightarrow \theta_{6})$
+> - The iterative technique is not a very direct process for doing analysis and
+    so this will not be the prefered technique for the class
+
+> __Hypothetical Link Technique__
+
+> - This technique consists of adding a hypothetical link to the kinematic
+    chain that connects the last link (link 6) to the ground to make the chain
+    a closed loop resulting in only 1 degree of freedom for the chain

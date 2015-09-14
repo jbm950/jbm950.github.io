@@ -27,6 +27,7 @@ title: Robot Geometry
 <li><a href="#joints">Joints</a></li>
 <li><a href="#kinematic_chains">Kinematic Chains</a></li>
 <li><a href="#forward_analysis">Forward Analysis</a></li>
+<li><a href="#reverse_analysis">Reverse Analysis</a></li>
 </ul>
 <h2 id="coord_sys">Coordinate Systems</h2>
 <ul>
@@ -515,5 +516,44 @@ Transformation Matrix" width="300" height="150"/>
 </tr>
 </table>
 </div>
+<ul>
+<li>Where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=c_%7Bj%7D" alt="c_{j}" title="c_{j}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=s_%7Bj%7D" alt="s_{j}" title="s_{j}" /> are <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=cos%28%5Ctheta_%7Bj%7D%29" alt="cos(\theta_{j})" title="cos(\theta_{j})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=sin%28%5Ctheta_%7Bj%7D%29" alt="sin(\theta_{j})" title="sin(\theta_{j})" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=c_%7Bij%7D" alt="c_{ij}" title="c_{ij}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=s_%7Bij%7D" alt="s_{ij}" title="s_{ij}" /> are <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=cos%28%5Calpha_%7Bij%7D%29" alt="cos(\alpha_{ij})" title="cos(\alpha_{ij})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=sin%28%5Calpha_%7Bij%7D%29" alt="sin(\alpha_{ij})" title="sin(\alpha_{ij})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bj%7D" alt="S_{j}" title="S_{j}" /> is the joint offset distance</li>
+<li>The location and orientation of the last link as viewed from the fixed reference frame can then be found by the series of matrix multiplications: <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D_%7B6%7DT%20%3D%20%5E%7BF%7D_%7B1%7DT%20%5E%7B1%7D_%7B2%7DT%20%5E%7B2%7D_%7B3%7DT%20%5E%7B3%7D_%7B4%7DT%20%5E%7B4%7D_%7B5%7DT%20%5E%7B5%7D_%7B6%7DT" alt="^{F}_{6}T = ^{F}_{1}T ^{1}_{2}T ^{2}_{3}T ^{3}_{4}T ^{4}_{5}T ^{5}_{6}T" title="^{F}_{6}T = ^{F}_{1}T ^{1}_{2}T ^{2}_{3}T ^{3}_{4}T ^{4}_{5}T ^{5}_{6}T" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7DP_%7Btool%7D%20%3D%20%5E%7BF%7D_%7B6%7DT%20%5E%7B6%7DP_%7Btool%7D" alt="^{F}P_{tool} = ^{F}_{6}T ^{6}P_{tool}" title="^{F}P_{tool} = ^{F}_{6}T ^{6}P_{tool}" /></li>
+</ul></li>
+</ul>
+<blockquote>
+<h3 id="general-link-to-link-transformation-matrix-derivation">General Link to Link Transformation Matrix Derivation</h3>
+</blockquote>
+<h2 id="reverse_analysis">Reverse Analysis</h2>
+<ul>
+<li>The objective of reverse analysis is to find all of the variable joint parameters that will position the robot such that its tool has the desired position and orientation as viewed from the fixed reference frame</li>
+</ul>
+<blockquote>
+<p><strong>Iterative Technique</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>For a standard 6 link robot with all revolute joints, the transformation matrix relating the fixed coordinate system to the last link can be found by the series of matrix multiplications: <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D_%7B6%7DT%20%3D%20%5E%7BF%7D_%7B1%7DT%20%5E%7B1%7D_%7B2%7DT%20%5E%7B2%7D_%7B3%7DT%20%5E%7B3%7D_%7B4%7DT%20%5E%7B4%7D_%7B5%7DT%20%5E%7B5%7D_%7B6%7DT" alt="^{F}_{6}T = ^{F}_{1}T ^{1}_{2}T ^{2}_{3}T ^{3}_{4}T ^{4}_{5}T ^{5}_{6}T" title="^{F}_{6}T = ^{F}_{1}T ^{1}_{2}T ^{2}_{3}T ^{3}_{4}T ^{4}_{5}T ^{5}_{6}T" />
+<ul>
+<li>Each transformation matrix corresponds to a specific variable joint angle (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cphi_%7B1%7D%20%5Crightarrow%20%5Ctheta_%7B6%7D" alt="\phi_{1} \rightarrow \theta_{6}" title="\phi_{1} \rightarrow \theta_{6}" />)</li>
+</ul></li>
+<li>The iterative technique consists of making a guess as to the variable joint angles then using forward analysis to find a <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D_%7B6%7DT" alt="^{F}_{6}T" title="^{F}_{6}T" /> matrix then that matrix is compared with the desired <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D_%7B6%7DT" alt="^{F}_{6}T" title="^{F}_{6}T" /> matrix
+<ul>
+<li>Based on the comparison the guesses for the variable joint angles are adjusted and the process is repeated</li>
+</ul></li>
+<li>This process can be optimized using an objective function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=F%28%5Cphi_%7B1%7D%20%5Crightarrow%20%5Ctheta_%7B6%7D%29" alt="F(\phi_{1} \rightarrow \theta_{6})" title="F(\phi_{1} \rightarrow \theta_{6})" /></li>
+<li>The iterative technique is not a very direct process for doing analysis and so this will not be the prefered technique for the class</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Hypothetical Link Technique</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>This technique consists of adding a hypothetical link to the kinematic chain that connects the last link (link 6) to the ground to make the chain a closed loop resulting in only 1 degree of freedom for the chain</li>
+</ul>
+</blockquote>
 </body>
 </html>
