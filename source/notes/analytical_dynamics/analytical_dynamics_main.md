@@ -220,11 +220,23 @@
 
 ## Cylindrical Coordinate Systems {#cylindrical_coordinate_systems}
 
+- In the given diagram a cylindrical coordinate system can be established in
+  the reference frame defined by the plane containing points O, P and Q (or
+  vectors r and $\underline{r}$)
+- The coordinate system in this reference frame will be:
+    - Origin at O
+    - $\underline{e}_{r}$ = along $\underline{OQ}$
+    - $\underline{e}_{z}$ = $\underline{E}_{z}$
+    - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times \underline{e}_{r}$
+- This coordinate system rotates with $\theta$ and as it rotates the line
+  $\underline{QP}$ forms the outside of a cylinder which gives the coordinate
+  system its name
+
 <div align="center">
 <table class="image">
 <tr><td><img src="./img/cylindrical_coor_sys.png"
 alt="Cylindrical Coordinate System" title="Cylindrical Coordinate System"
-width="200" height="200"/> 
+width="300" height="300"/> 
 </td></tr>
 </table>
 </div>
@@ -234,6 +246,7 @@ width="200" height="200"/>
 > ### Examples Content
 
 > - [Transport Theorem](#e_transport_theorem)
+> - [Cylindrical Coordinate System](#e_cylindrical_coor_sys)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
@@ -419,3 +432,29 @@ Fixed with Theta = 0" width="200" height="200"/>
 >>          - $^{G}\underline{V}_{P} =
               -\dot{\beta}cos(\theta)r\underline{u}_{z} +
               \dot{\theta}r\underline{u}_{\theta}$
+
+> ### Cylindrical Coordinate System {#e_cylindrical_coor_sys}
+
+> - Find the equation for the velocity and acceleration of point P in the A
+    reference frame ($^{A}\underline{V}_{P}, ^{A}\underline{a}_{P}$)
+> - For this problem we will use two different approaches:
+>       - The first approach will be to derive the velocity and acceleration
+          using a coordinate system fixed in reference frame A
+>       - The second approach will be to develop and use a cylindrical
+          coordinate system fixed in a reference frame C
+
+> - For the first approach the reference frame is already defined in the
+    following figure
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/cylindrical_coor_sys.png"
+alt="Cylindrical Coordinate System" title="Cylindrical Coordinate System"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - The vector $\underline{r}$ will be defined in these coordinates as
+    $\underline{r} = x\underline{E}_{x} + y\underline{E}_{y} +
+    z\underline{E}_{z}$
