@@ -220,6 +220,15 @@
 
 ## Cylindrical Coordinate Systems {#cylindrical_coordinate_systems}
 
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/cylindrical_coor_sys.png"
+alt="Cylindrical Coordinate System" title="Cylindrical Coordinate System"
+width="200" height="200"/> 
+</td></tr>
+</table>
+</div>
+
 ## Examples {#examples}
 
 > ### Examples Content
