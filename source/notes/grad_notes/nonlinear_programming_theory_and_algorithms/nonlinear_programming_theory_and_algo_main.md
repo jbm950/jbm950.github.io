@@ -163,3 +163,7 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
     vertices $\mathbf{x_{1}},...,\mathbf{x_{k+1}}$
 >       - Maximum number of linearlly independent vectors in $R^{n}$ is n
           $\rightarrow$ no simplex in $R^{n}$ with more than n + 1 vertices
+
+> __Carath&eacute;odory Theorem__
+
+### 2.2 Closure and Interior of a Set
