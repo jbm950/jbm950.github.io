@@ -12,6 +12,7 @@
 - [Links](#links)
 - [Joints](#joints)
 - [Kinematic Chains](#kinematic_chains)
+- [Forward Analysis](#forward_analysis)
 
 ## Coordinate Systems {#coord_sys}
 
@@ -260,7 +261,7 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 >>      - $r_{11} + r_{22} + r_{33} = 1 + 2 cos(\theta)$
 >> - To find the values of the vector m use the equation of the form $r_{ji} -
      r_{ij} = m_{i}m_{j}v + m_{k}s - (m_{j}m_{i}v - m_{k}s)$ for $i \neq j \neq
-     k$
+     k$ and $i < j$
 >>      - This simplifies to $r_{ji} - r_{ij} = 2m_{k}sin(\theta)$
 >>      - Example $r_{21} - r_{12} = 2m_{z}sin(\theta)$
 
@@ -434,3 +435,44 @@ height="350"/>
 </div>
 
 ## Kinematic Chains {#kinematic_chains}
+
+- When labeling a kinematic chain of links start by defining the $S_{i}$
+  vectors and then the $a_{ij}$ vectors
+- Next you can define all of the twist angles $\alpha_{ij}$ and joint angles
+  $\theta_{i}$
+
+> ### Standard Fixed Coordinate System
+
+> - The standard fixed coordinate system is used to define the location and
+    orientation of the first link relative to the ground which in turn defines
+    the rest of the links
+> - The origin of the standard fixed coordinate system is at the intersection
+    of $S_{1}$ and $a_{12}$
+> - The z-axis of the standard fixed coordinate system ($z_{F}$) points along
+    $S_{1}$ and the directions of the x and y axes are chosen at will as long
+    as the system remains right handed ortho-normal
+> - The angle from $x_{F}$ to $a_{12}$ is labeled $\phi_{1}$ instead of $\theta$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/kinematic_chain.png"
+alt="Kinematic Chain" title="Kinematic Chain" width="600"
+height="350"/> 
+</td></tr>
+</table>
+</div>
+
+## Forward Analysis {#forward_analysis}
+
+- The objective of forward analysis is to find the position and orientation of
+  the end effector in the fixed standard coordinate system of a kinematic chain
+  given the link lengths, twist angles, joint offset distances and joint angles
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/link2link_trans_matrix.png"
+alt="General Link to Link Transformation Matrix" title="General Link to Link
+Transformation Matrix" width="300" height="150"/> 
+</td></tr>
+</table>
+</div>

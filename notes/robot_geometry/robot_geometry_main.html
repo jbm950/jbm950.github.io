@@ -26,6 +26,7 @@ title: Robot Geometry
 <li><a href="#links">Links</a></li>
 <li><a href="#joints">Joints</a></li>
 <li><a href="#kinematic_chains">Kinematic Chains</a></li>
+<li><a href="#forward_analysis">Forward Analysis</a></li>
 </ul>
 <h2 id="coord_sys">Coordinate Systems</h2>
 <ul>
@@ -257,7 +258,7 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B11%7D%20%2B%20r_%7B22%7D%20%2B%20r_%7B33%7D%20%3D%20v%20-%203c%20%3D%20%281%20-%20cos%28%5Ctheta%29%29%20%2B%203cos%28%5Ctheta%29" alt="r_{11} + r_{22} + r_{33} = v - 3c = (1 - cos(\theta)) + 3cos(\theta)" title="r_{11} + r_{22} + r_{33} = v - 3c = (1 - cos(\theta)) + 3cos(\theta)" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B11%7D%20%2B%20r_%7B22%7D%20%2B%20r_%7B33%7D%20%3D%201%20%2B%202%20cos%28%5Ctheta%29" alt="r_{11} + r_{22} + r_{33} = 1 + 2 cos(\theta)" title="r_{11} + r_{22} + r_{33} = 1 + 2 cos(\theta)" /></li>
 </ul></li>
-<li>To find the values of the vector m use the equation of the form <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7Bji%7D%20-%20%20r_%7Bij%7D%20%3D%20m_%7Bi%7Dm_%7Bj%7Dv%20%2B%20m_%7Bk%7Ds%20-%20%28m_%7Bj%7Dm_%7Bi%7Dv%20-%20m_%7Bk%7Ds%29" alt="r_{ji} -  r_{ij} = m_{i}m_{j}v + m_{k}s - (m_{j}m_{i}v - m_{k}s)" title="r_{ji} -  r_{ij} = m_{i}m_{j}v + m_{k}s - (m_{j}m_{i}v - m_{k}s)" /> for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=i%20%5Cneq%20j%20%5Cneq%20%20k" alt="i \neq j \neq  k" title="i \neq j \neq  k" />
+<li>To find the values of the vector m use the equation of the form <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7Bji%7D%20-%20%20r_%7Bij%7D%20%3D%20m_%7Bi%7Dm_%7Bj%7Dv%20%2B%20m_%7Bk%7Ds%20-%20%28m_%7Bj%7Dm_%7Bi%7Dv%20-%20m_%7Bk%7Ds%29" alt="r_{ji} -  r_{ij} = m_{i}m_{j}v + m_{k}s - (m_{j}m_{i}v - m_{k}s)" title="r_{ji} -  r_{ij} = m_{i}m_{j}v + m_{k}s - (m_{j}m_{i}v - m_{k}s)" /> for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=i%20%5Cneq%20j%20%5Cneq%20%20k" alt="i \neq j \neq  k" title="i \neq j \neq  k" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=i%20%3C%20j" alt="i &lt; j" title="i &lt; j" />
 <ul>
 <li>This simplifies to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7Bji%7D%20-%20r_%7Bij%7D%20%3D%202m_%7Bk%7Dsin%28%5Ctheta%29" alt="r_{ji} - r_{ij} = 2m_{k}sin(\theta)" title="r_{ji} - r_{ij} = 2m_{k}sin(\theta)" /></li>
 <li>Example <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B21%7D%20-%20r_%7B12%7D%20%3D%202m_%7Bz%7Dsin%28%5Ctheta%29" alt="r_{21} - r_{12} = 2m_{z}sin(\theta)" title="r_{21} - r_{12} = 2m_{z}sin(\theta)" /></li>
@@ -473,5 +474,46 @@ height="350"/>
 </table>
 </div>
 <h2 id="kinematic_chains">Kinematic Chains</h2>
+<ul>
+<li>When labeling a kinematic chain of links start by defining the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7Bi%7D" alt="S_{i}" title="S_{i}" /> vectors and then the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7Bij%7D" alt="a_{ij}" title="a_{ij}" /> vectors</li>
+<li>Next you can define all of the twist angles <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha_%7Bij%7D" alt="\alpha_{ij}" title="\alpha_{ij}" /> and joint angles <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7Bi%7D" alt="\theta_{i}" title="\theta_{i}" /></li>
+</ul>
+<blockquote>
+<h3 id="standard-fixed-coordinate-system">Standard Fixed Coordinate System</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>The standard fixed coordinate system is used to define the location and orientation of the first link relative to the ground which in turn defines the rest of the links</li>
+<li>The origin of the standard fixed coordinate system is at the intersection of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B1%7D" alt="S_{1}" title="S_{1}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B12%7D" alt="a_{12}" title="a_{12}" /></li>
+<li>The z-axis of the standard fixed coordinate system (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=z_%7BF%7D" alt="z_{F}" title="z_{F}" />) points along <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B1%7D" alt="S_{1}" title="S_{1}" /> and the directions of the x and y axes are chosen at will as long as the system remains right handed ortho-normal</li>
+<li>The angle from <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7BF%7D" alt="x_{F}" title="x_{F}" /> to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B12%7D" alt="a_{12}" title="a_{12}" /> is labeled <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cphi_%7B1%7D" alt="\phi_{1}" title="\phi_{1}" /> instead of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /></li>
+</ul>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/kinematic_chain.png"
+alt="Kinematic Chain" title="Kinematic Chain" width="600"
+height="350"/>
+</td>
+</tr>
+</table>
+</div>
+<h2 id="forward_analysis">Forward Analysis</h2>
+<ul>
+<li>The objective of forward analysis is to find the position and orientation of the end effector in the fixed standard coordinate system of a kinematic chain given the link lengths, twist angles, joint offset distances and joint angles</li>
+</ul>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/link2link_trans_matrix.png"
+alt="General Link to Link Transformation Matrix" title="General Link to Link
+Transformation Matrix" width="300" height="150"/>
+</td>
+</tr>
+</table>
+</div>
 </body>
 </html>
