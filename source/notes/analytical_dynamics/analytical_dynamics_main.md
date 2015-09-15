@@ -458,3 +458,50 @@ width="300" height="300"/>
 > - The vector $\underline{r}$ will be defined in these coordinates as
     $\underline{r} = x\underline{E}_{x} + y\underline{E}_{y} +
     z\underline{E}_{z}$
+> - We can now find $^{A}\underline{V}_{P}$
+>       - $^{A}\underline{V}_{P} = \frac{^{A}d\underline{r}}{dt} =
+          \dot{x}\underline{E}_{x} + \dot{y}\underline{E}_{y} +
+          \dot{z}\underline{E}_{z}$
+> - The same process can be used to find $^{A}a_{P}$
+>       - $^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(^{A}\underline{V}_{P}) =
+          \ddot{x}\underline{E}_{x} + \ddot{y}\underline{E}_{y} +
+          \ddot{z}\underline{E}_{z}$
+
+> - For the second approach we need more formal clarifications of our reference
+    frames and coordinate systems
+>       - We will be using two reference frames: reference frame A in which the
+          {$\underline{E}_{x}, \underline{E}_{y}, \underline{E}_{z}$} are
+          already fixed and reference frame B which is the plane containing
+          points O, P and Q (or vectors $r$ and $\underline{r}$)
+> - Coordinate system fixed in reference frame B (Cylindrical Coordinates)
+>       - Origin at point O
+>       - $\underline{e}_{r}$ = along line $\underline{OQ}$
+>       - $\underline{e}_{z}$ = $\underline{E}_{z}$
+>       - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times
+          \underline{e}_{r}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_cylindrical_coor_sys.png"
+alt="Cylindrical Coordinate System Example" title="Cylindrical Coordinate
+System Example" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - Now we're going to define $\underline{r}$ in the cylindrical coordinates
+    (in reference frame B)
+>       - $\underline{r} = r\underline{e}_{r} + z\underline{e}_{z}$
+> - We can now find $^{A}\underline{V}_{P}$ using the cylindrical coordinates
+>       - $^{A}\underline{V}_{P} = \frac{^{A}d\underline{r}}{dt} =
+          \frac{^{B}d\underline{r}}{dt} + ^{A}\underline{\omega}^{B} \times
+          \underline{r}$
+>       - $^{A}\underline{V}_{P} = \dot{r}\underline{e}_{r} +
+          \dot{z}\underline{e}_{z} + (\dot{\theta}\underline{e}_{z}) \times
+          (r\underline{e}_{r} + z\underline{e}_{z})$
+>       - $^{A}\underline{V}_{P} = \dot{r}\underline{e}_{r} +
+          \dot{z}\underline{e}_{z} + \dot{\theta}r\underline{e}_{\theta}$
+> - Now that we have the velocity we can find the acceleration
+>       - $^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(^{A}\underline{V}_{P}) =
+          \frac{^{B}d}{dt}(^{A}\underline{V}_{P}) + ^{A}\underline{\omega}^{B}
+          \times ^{A}\underline{V}_{P}$
