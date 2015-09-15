@@ -36,6 +36,51 @@ title: Optimal Control Dis
 <li>This would be considered direct optimization because the function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f%28x%29" alt="f(x)" title="f(x)" /> is actually evaluated when finding the optimal input</li>
 </ul>
 <h2 id="functions_vs_functionals">Functions vs. Functionals</h2>
+<ul>
+<li>Functions map real numbers to real numbers whereas functionals map functions to real numbers
+<ul>
+<li>An example of a functional is an integral. It takes a function as an input and maps it to a real number</li>
+</ul></li>
+<li>When optimizing functions only ordinary calculus is required but when optimizing functionals variational calculus is required</li>
+</ul>
+<blockquote>
+<p><strong><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5CDelta" alt="\Delta" title="\Delta" /> vs. <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta" alt="\delta" title="\delta" /></strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5CDelta" alt="\Delta" title="\Delta" /> is the difference between points in real space</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta" alt="\delta" title="\delta" /> is variation in a function
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20f%28t%29" alt="\delta f(t)" title="\delta f(t)" /> is itself a function</li>
+</ul></li>
+</ul>
+</blockquote>
 <h2 id="calculus_of_variations">Calculus of Variations</h2>
+<ul>
+<li>Suppose we want to determine a function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> that minimizes an integral that is a function of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bx%7D%28t%29" alt="\dot{x}(t)" title="\dot{x}(t)" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7DL%5Bx%28t%29%2C%5Cdot%7Bx%7D%28t%29%2Ct%5Ddt" alt="J = \int^{t_{f}}_{t_{0}}L[x(t),\dot{x}(t),t]dt" title="J = \int^{t_{f}}_{t_{0}}L[x(t),\dot{x}(t),t]dt" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J" alt="J" title="J" /> is refered to as the <em>action integral</em></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7B0%7D%29" alt="x(t_{0})" title="x(t_{0})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B0%7D" alt="t_{0}" title="t_{0}" /> are fixed</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> are fixed</li>
+</ul></li>
+<li>Let <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%5E%7B%2A%7D%28t%29" alt="x^{*}(t)" title="x^{*}(t)" /> be the optimal solution and the function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> be determined as follows
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29%20%3D%20x%5E%7B%2A%7D%28t%29%20%2B%20%5Cepsilon%20y%28t%29" alt="x(t) = x^{*}(t) + \epsilon y(t)" title="x(t) = x^{*}(t) + \epsilon y(t)" /> where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y%28t%29" alt="y(t)" title="y(t)" /> is arbitrary and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon" alt="\epsilon" title="\epsilon" /> is chosen at will</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7B0%7D%29%20%3D%20x%5E%7B%2A%7D%28t_%7B0%7D%29" alt="x(t_{0}) = x^{*}(t_{0})" title="x(t_{0}) = x^{*}(t_{0})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29%20%3D%20x%5E%7B%2A%7D%28t_%7Bf%7D%29" alt="x(t_{f}) = x^{*}(t_{f})" title="x(t_{f}) = x^{*}(t_{f})" /> because those points are fixed, therefore <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y%28t_%7B0%7D%29%20%3D%20y%28t_%7Bf%7D%29%20%3D%200" alt="y(t_{0}) = y(t_{f}) = 0" title="y(t_{0}) = y(t_{f}) = 0" /></li>
+</ul></li>
+<li>Rewriting <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J" alt="J" title="J" /> with the new definition of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> gives the following expression
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7DL%5Bx%5E%7B%2A%7D%28t%29%20%2B%20%5Cepsilon%20y%28t%29%2C%5Cdot%7Bx%7D%5E%7B%2A%7D%28t%29%20%2B%20%20%5Cepsilon%20%5Cdot%7By%7D%28t%29%2Ct%5Ddt" alt="J = \int^{t_{f}}_{t_{0}}L[x^{*}(t) + \epsilon y(t),\dot{x}^{*}(t) +  \epsilon \dot{y}(t),t]dt" title="J = \int^{t_{f}}_{t_{0}}L[x^{*}(t) + \epsilon y(t),\dot{x}^{*}(t) +  \epsilon \dot{y}(t),t]dt" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J" alt="J" title="J" /> is now solely a function of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon" alt="\epsilon" title="\epsilon" /> and so the critical point can be found at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%20%7C%20_%7B%5Cepsilon%20%3D%200%7D" alt="\frac{dJ}{d\epsilon} | _{\epsilon = 0}" title="\frac{dJ}{d\epsilon} | _{\epsilon = 0}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon" alt="\epsilon" title="\epsilon" /> is set to zero because that is what results in the optimal solution (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29%20%3D%20x%5E%7B%2A%7D%28t%29" alt="x(t) = x^{*}(t)" title="x(t) = x^{*}(t)" />)</li>
+</ul></li>
+</ul></li>
+<li>Using the definition of the critical point determined above the followin expression emerges
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%7C_%7B%5Cepsilon%20%3D%200%7D%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D" alt="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} (\frac{\partial L}{\partial x}" title="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} (\frac{\partial L}{\partial x}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20x%7D%7B%5Cpartial%20%5Cepsilon%7D%20%2B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cfrac%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%7B%5Cpartial%20%5Cepsilon%7D%29dt" alt="\frac{\partial x}{\partial \epsilon} + \frac{\partial L}{\partial \dot{x}} \frac{\partial \dot{x}}{\partial \epsilon})dt" title="\frac{\partial x}{\partial \epsilon} + \frac{\partial L}{\partial \dot{x}} \frac{\partial \dot{x}}{\partial \epsilon})dt" /></li>
+</ul></li>
+</ul>
 </body>
 </html>
