@@ -162,8 +162,8 @@ Matrix Definition" width="300" height="200"/>
 
 > ### Rotation Around a General Vector Passing Through the Origin 
 
-> - The rotation matrix for a rotation, $\theta$, around a general vector, m,
-    passing through the origin is: 
+> - The rotation matrix for a rotation, $\theta$, around a general vector,
+    $\underline{m}$, passing through the origin is: 
 
 <div align="center">
 <table class="image">
@@ -180,17 +180,18 @@ Transformation Matrix" width="400" height="100"/>
 >> #### Formula Derivation
 
 >> - It is desired to find the rotation matrix from coordinate system A to
-     coordinate system B after a rotation $\theta$ about a generic vector m
->> - To begin consider a coordinate system C whose z-axis is along the vector m
-     (the location of the x and y vectors will be arbitrary)
+     coordinate system B after a rotation $\theta$ about a generic vector
+     $\underline{m}$
+>> - To begin consider a coordinate system C whose z-axis is along the vector
+     $\underline{m}$ (the location of the x and y vectors will be arbitrary)
 >> - The rotation matrix from C to A can then be defined as $^{A}_{C}R = \left[
      \begin{array} a_{x} & b_{x} & m_{x} \\ a_{y} & b_{y} & m_{y} \\ a_{z} &
      b_{z} & m_{z} \end{array} \right]$
 >> - Now consider coordinate system D which is obtained by rotating coordinate
      system C about its z-axis by $\theta$ degrees
->> - The rotation matrix from D to C would then be defined as $^{C}_{D}R = \left[
-     \begin{array} cos(\theta) & -sin(\theta) & 0 \\ sin(\theta) & cos(\theta) & 0 \\ 0 &
-     0 & 1 \end{array} \right]$
+>> - The rotation matrix from D to C would then be defined as $^{C}_{D}R =
+     \left[ \begin{array} cos(\theta) & -sin(\theta) & 0 \\ sin(\theta) &
+     cos(\theta) & 0 \\ 0 & 0 & 1 \end{array} \right]$
 >> - Taking note that coordinate system B will have the same relation to
      coordinate system D as coordinate system C has to coordinate system A, the
      relation $^{A}_{C}R = (^{B}_{D}R)$ exists
@@ -270,18 +271,20 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 ## Links {#links}
 
 - Links are rigid bodies that maintain orientation between two axes
-- The two axes ($S_{i}$, $S_{j}$) contain a unique perpendicular between them
-  ($a_{ij}$) where $a_{ij}$ is defined as the link length
-    - If $S_{i}$ and $S_{j}$ intersect, then the link length is zero
-    - The length $a_{ij}$ is positive if chosen in such that it points from
-      $S_{i}$ to $S_{j}$
-- The angle from $S_{i}$ to $S_{j}$ using the right hand rule with one's thumb
-  on $a_{ij}$ is defined as $\alpha_{ij}$, where $\alpha_{ij}$ is called the
-  twist angle
+- The two axes ($\underline{S}_{i}$, $\underline{S}_{j}$) contain a unique
+  perpendicular between them ($\underline{a}_{ij}$) where $\underline{a}_{ij}$
+  is defined as the link length
+    - If $\underline{S}_{i}$ and $\underline{S}_{j}$ intersect, then the link
+      length is zero
+    - The length $\underline{a}_{ij}$ is positive if chosen in such that it
+      points from $\underline{S}_{i}$ to $\underline{S}_{j}$
+- The angle from $\underline{S}_{i}$ to $\underline{S}_{j}$ using the right
+  hand rule with one's thumb on $\underline{a}_{ij}$ is defined as
+  $\alpha_{ij}$, where $\alpha_{ij}$ is called the twist angle
 - It is common to replace all of the links in a system with their equivalent
   kinematic link
-    - Kinematic link is represented by drawing just the $S_{i}$/$S_{j}$ axes
-      and the link length
+    - Kinematic link is represented by drawing just the
+      $\underline{S}_{i}$/$\underline{S}_{j}$ axes and the link length
 
 <div align="center">
 <table class="image">
@@ -293,14 +296,17 @@ height="200"/>
 </div>
 
 - Two special link cases are spherical links and planar links
-    - In spherical links $S_{i}$ intersects $S_{j}$ and $a_{ij} = 0$
-    - In planar links $S_{i}$ is parallel with $S_{j}$ and $\alpha_{ij} = 0$
+    - In spherical links $\underline{S}_{i}$ intersects $\underline{S}_{j}$ and
+      $a_{ij} = 0$
+    - In planar links $\underline{S}_{i}$ is parallel with $\underline{S}_{j}$
+      and $\alpha_{ij} = 0$
 
 > ### Standard Link Coordinate Systems
 
 > - The standard link coordinate system for link ij has its origin at the
-    intersection of $S_{i}$ and $a_{ij}$, it's x-axis along the vector $a_{ij}$
-    and it's z-axis along the vector $S_{i}$
+    intersection of $\underline{S}_{i}$ and $\underline{a}_{ij}$, it's x-axis
+    along the vector $\underline{a}_{ij}$ and it's z-axis along the vector
+    $\underline{S}_{i}$
 >       - The y-axis is determined using the right hand rule
 > - Figure taken from lecture powerpoint
 
@@ -517,3 +523,13 @@ Transformation Matrix" width="300" height="150"/>
 > - This technique consists of adding a hypothetical link to the kinematic
     chain that connects the last link (link 6) to the ground to make the chain
     a closed loop resulting in only 1 degree of freedom for the chain
+> - For the new hypothetical link 7 we will need values for $a_{67}$ and
+    $\alpha_{67}$ which we will be free to choose
+>       - Convenient to choose $a_{67} = 0$ and $\alpha_{67} = 90^{\circ}$
+          because then $^{F}S_{7} = -^{F}y_{6}$
+> - This set up leaves three angles and three distances that need to be solved:
+    $\alpha_{71}$, $\theta_{7}$, $\gamma_{1}$, $S_{7}$, $a_{71}$ and $S_{1}$
+> - All vectors mentioned in the following process are unit vectors
+> - The first step in solving for the unknowns is using the definition of dot
+    product with vectors $^{F}\underline{S}_{7}$ and$^{F}\underline{S}_{1}$ 
+>       - $^{F}\underline{S}_{7} \cdot ^{F}\underline{S}_{1} =$
