@@ -57,8 +57,40 @@
     - $J = \int^{t_{f}}_{t_{0}}L[x^{*}(t) + \epsilon y(t),\dot{x}^{*}(t) +
       \epsilon \dot{y}(t),t]dt$
     - $J$ is now solely a function of $\epsilon$ and so the critical point can
-      be found at $\frac{dJ}{d\epsilon} | _{\epsilon = 0}$
+      be found at $\frac{dJ}{d\epsilon} | _{\epsilon = 0} = 0$
         - $\epsilon$ is set to zero because that is what results in the optimal
           solution ($x(t) = x^{*}(t)$)
-- Using the definition of the critical point determined above the followin expression emerges
-    - $\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} (\frac{\partial L}{\partial x}$ $\frac{\partial x}{\partial \epsilon} + \frac{\partial L}{\partial \dot{x}} \frac{\partial \dot{x}}{\partial \epsilon})dt$
+- Using the definition of the critical point determined above the followin
+  expression emerges
+    - $\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}
+      (\frac{\partial L}{\partial x}$ $\frac{\partial x}{\partial \epsilon} +
+      \frac{\partial L}{\partial \dot{x}} \frac{\partial \dot{x}}{\partial
+      \epsilon})dt$
+- The following results from taking the derivative of x as given above with
+  respect to $\epsilon$
+    - $\frac{\partial x}{\partial \epsilon} = y$
+    - $\frac{\partial \dot{x}}{\partial \epsilon} = \dot{y}$
+- When substituted into the above expression the following is the result
+    - $\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}
+      (\frac{\partial L}{\partial x}$ $y +
+      \frac{\partial L}{\partial \dot{x}} \dot{y})dt$
+        - Note, however, that $\dot{y}$ is not independent of $y$
+- In order to finish solving the equation we will integrate the second term in
+  the integral by parts
+    - $\int^{t_{f}}_{t_{o}} \frac{\partial L}{\partial \dot{x}} \dot{y} dt$ $=
+      \left[ \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}}$ $-
+      \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial L}{\partial
+      \dot{x}})ydt$
+        - Keeping in mind from earlier that y evaluated at the boundary points
+          is zero the first term in the result goes to zero ($\left[
+          \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}} = 0$)
+- We can now rewrite the expression for the critical point as:
+    - $\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}
+      \left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial
+      L}{\partial \dot{x}}) \right] y dt = 0$
+- Since the choice of y is arbitrary the portion inside the brackets has to
+  equal zero in order to meet the equality
+    - $\left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial
+      L}{\partial \dot{x}}) \right] = 0$
+- This is the result of the analysis, however, note that it does not give a
+  solution, just a condition for optimality
