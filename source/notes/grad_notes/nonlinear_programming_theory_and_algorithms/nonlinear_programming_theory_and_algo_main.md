@@ -167,3 +167,34 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 > __Carath&eacute;odory Theorem__
 
 ### 2.2 Closure and Interior of a Set
+
+> __Neighborhood__
+
+> - The neighborhood around a point is the area/volume surrounding that point
+> - The neighborhood can be represented by the set $N_{\epsilon}(\mathbf{x}) =
+    \left{ \mathbf{y}: ||\mathbf{y} - \mathbf{x}|| < \epsilon \right}$
+
+> __Closure__
+
+> - A point x is in the closure of a set S if $S \cap N_{\epsilon}(\mathbf{x})
+    \neq \emptyset$ for EVERY $\epsilon > 0$
+> - This mathematical definition is saying that point x is in the closure of S
+    if there is an intersection of the area around the point and S as the
+    radius of that area goes to zero
+> - The closure of set S is represented by cl S
+> - A _Closed_ set is a set where the set is equivalent to its closure (S = cl S)
+
+> __Interior__
+
+> - A point x is in the interior of a set S if $N_{\epsilon}(\mathbf{x})
+    \subset S$ for SOME $\epsilon > 0$
+> - _Solid_ set
+> - _Open_ set
+
+> __Boundary__
+
+> - _Bounded_
+> - Boundary points of any set and its complement are the same
+
+- _Compact_ set is a set that is both closed and bounded
+- The complement of an open set is a closed set and vice versa
