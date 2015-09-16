@@ -13,6 +13,8 @@
 - [Vector Derivatives](#vector_derivatives)
 - [Transport Theorem](#transport_theorem)
 - [Cylindrical Coordinate Systems](#cylindrical_coordinate_systems)
+- [Spherical Coordinate Systems](#spherical_coordinate_system)
+- [Euler Angles](#euler_angles)
 - [Examples](#examples)
 
 ## Scalars {#scalars}
@@ -240,6 +242,32 @@ width="300" height="300"/>
 </td></tr>
 </table>
 </div>
+
+## Spherical Coordinate Systems {#spherical_coordinate_system}
+
+- For the given diagram we will create a new reference frame that conatains the
+  vector $\underline{r}$ and is perpendicular to the plane created by
+  $\underline{E}_{z}$ and $\underline{r}$
+    - Note that this new reference plane differs from the reference frame
+      containing the cylindrical coordinate system by an angle $\phi$
+    - This reference frame rotates with $\theta$ and $\phi$
+- The spherical coordinate system in this new reference frame will be:
+    - Origin at O
+    - $\underline{u}_{r}$ = along $\underline{r}$
+    - $\underline{u}_{\theta}$ = $\underline{e}_{\theta}$ (from cylindrical
+      coordinate system)
+    - $\underline{u}_{\phi}$ = $\underline{u}_{\theta} \times \underline{u}_{r}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/spherical_coor_sys.png"
+alt="Spherical Coordinate System" title="Spherical Coordinate System"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+## Euler Angles {#euler_angles}
 
 ## Examples {#examples}
 
@@ -505,3 +533,12 @@ System Example" width="300" height="300"/>
 >       - $^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(^{A}\underline{V}_{P}) =
           \frac{^{B}d}{dt}(^{A}\underline{V}_{P}) + ^{A}\underline{\omega}^{B}
           \times ^{A}\underline{V}_{P}$
+>       - $^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(\dot{r}\underline{e}_{r} +
+          \dot{z}\underline{e}_{z} + \dot{\theta}r\underline{e}_{\theta})$ $+
+          \dot{\theta}\underline{e}_{z} \times (\dot{r}\underline{e}_{r} +
+          \dot{z}\underline{e}_{z} + \dot{\theta}r\underline{e}_{\theta})$
+>       - $^{A}\underline{a}_{P} = \ddot{r}\underline{e}_{r} +
+          \ddot{z}\underline{e}_{z} + (\ddot{\theta}r +
+          \dot{\theta}\dot{r})\underline{e}_{\theta}$ $+
+          \dot{\theta}\dot{r}\underline{e}_{\theta} +
+          \dot{\theta}^{2}r\underline{e}_{r}$

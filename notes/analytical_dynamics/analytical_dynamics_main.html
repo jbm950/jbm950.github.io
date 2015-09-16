@@ -27,6 +27,8 @@ title: Analytical Dynamics
 <li><a href="#vector_derivatives">Vector Derivatives</a></li>
 <li><a href="#transport_theorem">Transport Theorem</a></li>
 <li><a href="#cylindrical_coordinate_systems">Cylindrical Coordinate Systems</a></li>
+<li><a href="#spherical_coordinate_system">Spherical Coordinate Systems</a></li>
+<li><a href="#euler_angles">Euler Angles</a></li>
 <li><a href="#examples">Examples</a></li>
 </ul>
 <h2 id="scalars">Scalars</h2>
@@ -185,6 +187,33 @@ width="300" height="300"/>
 </tr>
 </table>
 </div>
+<h2 id="spherical_coordinate_system">Spherical Coordinate Systems</h2>
+<ul>
+<li>For the given diagram we will create a new reference frame that conatains the vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D" alt="\underline{r}" title="\underline{r}" /> and is perpendicular to the plane created by <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D" alt="\underline{E}_{z}" title="\underline{E}_{z}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D" alt="\underline{r}" title="\underline{r}" />
+<ul>
+<li>Note that this new reference plane differs from the reference frame containing the cylindrical coordinate system by an angle <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cphi" alt="\phi" title="\phi" /></li>
+<li>This reference frame rotates with <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cphi" alt="\phi" title="\phi" /></li>
+</ul></li>
+<li>The spherical coordinate system in this new reference frame will be:
+<ul>
+<li>Origin at O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{u}_{r}" title="\underline{u}_{r}" /> = along <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D" alt="\underline{r}" title="\underline{r}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7B%5Ctheta%7D" alt="\underline{u}_{\theta}" title="\underline{u}_{\theta}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="\underline{e}_{\theta}" title="\underline{e}_{\theta}" /> (from cylindrical coordinate system)</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7B%5Cphi%7D" alt="\underline{u}_{\phi}" title="\underline{u}_{\phi}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7B%5Ctheta%7D%20%5Ctimes%20%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{u}_{\theta} \times \underline{u}_{r}" title="\underline{u}_{\theta} \times \underline{u}_{r}" /></li>
+</ul></li>
+</ul>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/spherical_coor_sys.png"
+alt="Spherical Coordinate System" title="Spherical Coordinate System"
+width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
+<h2 id="euler_angles">Euler Angles</h2>
 <h2 id="examples">Examples</h2>
 <blockquote>
 <h3 id="examples-content">Examples Content</h3>
@@ -537,6 +566,8 @@ System Example" width="300" height="300"/>
 <li>Now that we have the velocity we can find the acceleration
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%28%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%29%20%3D%20%20%5Cfrac%7B%5E%7BB%7Dd%7D%7Bdt%7D%28%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%29%20%2B%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BB%7D%20%20%5Ctimes%20%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D" alt="^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(^{A}\underline{V}_{P}) =  \frac{^{B}d}{dt}(^{A}\underline{V}_{P}) + ^{A}\underline{\omega}^{B}  \times ^{A}\underline{V}_{P}" title="^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(^{A}\underline{V}_{P}) =  \frac{^{B}d}{dt}(^{A}\underline{V}_{P}) + ^{A}\underline{\omega}^{B}  \times ^{A}\underline{V}_{P}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%28%5Cdot%7Br%7D%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%20%5Cdot%7Bz%7D%5Cunderline%7Be%7D_%7Bz%7D%20%2B%20%5Cdot%7B%5Ctheta%7Dr%5Cunderline%7Be%7D_%7B%5Ctheta%7D%29" alt="^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(\dot{r}\underline{e}_{r} +  \dot{z}\underline{e}_{z} + \dot{\theta}r\underline{e}_{\theta})" title="^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(\dot{r}\underline{e}_{r} +  \dot{z}\underline{e}_{z} + \dot{\theta}r\underline{e}_{\theta})" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%2B%20%20%5Cdot%7B%5Ctheta%7D%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%28%5Cdot%7Br%7D%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%20%5Cdot%7Bz%7D%5Cunderline%7Be%7D_%7Bz%7D%20%2B%20%5Cdot%7B%5Ctheta%7Dr%5Cunderline%7Be%7D_%7B%5Ctheta%7D%29" alt="+  \dot{\theta}\underline{e}_{z} \times (\dot{r}\underline{e}_{r} +  \dot{z}\underline{e}_{z} + \dot{\theta}r\underline{e}_{\theta})" title="+  \dot{\theta}\underline{e}_{z} \times (\dot{r}\underline{e}_{r} +  \dot{z}\underline{e}_{z} + \dot{\theta}r\underline{e}_{\theta})" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%20%5Cddot%7Br%7D%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%20%5Cddot%7Bz%7D%5Cunderline%7Be%7D_%7Bz%7D%20%2B%20%28%5Cddot%7B%5Ctheta%7Dr%20%2B%20%20%5Cdot%7B%5Ctheta%7D%5Cdot%7Br%7D%29%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="^{A}\underline{a}_{P} = \ddot{r}\underline{e}_{r} +  \ddot{z}\underline{e}_{z} + (\ddot{\theta}r +  \dot{\theta}\dot{r})\underline{e}_{\theta}" title="^{A}\underline{a}_{P} = \ddot{r}\underline{e}_{r} +  \ddot{z}\underline{e}_{z} + (\ddot{\theta}r +  \dot{\theta}\dot{r})\underline{e}_{\theta}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%2B%20%20%5Cdot%7B%5Ctheta%7D%5Cdot%7Br%7D%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%2B%20%20%5Cdot%7B%5Ctheta%7D%5E%7B2%7Dr%5Cunderline%7Be%7D_%7Br%7D" alt="+  \dot{\theta}\dot{r}\underline{e}_{\theta} +  \dot{\theta}^{2}r\underline{e}_{r}" title="+  \dot{\theta}\dot{r}\underline{e}_{\theta} +  \dot{\theta}^{2}r\underline{e}_{r}" /></li>
 </ul></li>
 </ul>
 </blockquote>
