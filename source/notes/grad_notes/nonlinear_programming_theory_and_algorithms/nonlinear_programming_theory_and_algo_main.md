@@ -183,18 +183,41 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
     radius of that area goes to zero
 > - The closure of set S is represented by cl S
 > - A _Closed_ set is a set where the set is equivalent to its closure (S = cl S)
+>       - This includes both the interior of S and its boundary
 
 > __Interior__
 
 > - A point x is in the interior of a set S if $N_{\epsilon}(\mathbf{x})
     \subset S$ for SOME $\epsilon > 0$
-> - _Solid_ set
-> - _Open_ set
+> - The mathematical definition is saying that point x is in the interior of S
+    if for some radius larger than zero the entirety of the neighborhood is
+    enclosed in S, however, it is understood that as the radius increases it
+    will eventually not be enclosed by S
+> - The interior of set S is represented by int S
+> - A _Solid_ set S $\subseteq$ $R^{n}$ is a set with a nonempty interior (int
+    S $\neq$ $\emptyset$)
+> - An _Open_ set is a set where the set is equal to its interior (S = int S)
 
 > __Boundary__
 
-> - _Bounded_
+> - A point x is in the boundary of a set S if $N_{\epsilon}(x)$ contains one
+    point in S and one point not in S for every $\epsilon > 0$
+> - The above definition is saying that point x is in the boundary of S if its
+    neighborhood includes both a portion outside of set S and a portion inside
+    of set S for any radius
+> - The boundary of S is represented by $\partial$S
+> - Set S is considered _Bounded_ if it can be contained by a ball of
+    sufficiently large radius
 > - Boundary points of any set and its complement are the same
 
 - _Compact_ set is a set that is both closed and bounded
 - The complement of an open set is a closed set and vice versa
+
+- The line segment between a point in cl S and a point in int S, where S is a
+  convex set with a nonempty interior, is within the interior of set S
+  (excluding the endpoints)
+- Corollaries from the line segment definition:
+    1. If set S is convex then its interior is convex
+    2. If set S is convex with a nonempty interior then its closure is convex
+    3. If set S is convex with a nonempty interior then cl(int S) = cl S
+    4. If set S is convex with a nonempty interior then int(cl S) = int S

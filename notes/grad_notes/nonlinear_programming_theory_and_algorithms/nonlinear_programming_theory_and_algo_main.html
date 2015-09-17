@@ -178,7 +178,10 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 <li>A point x is in the closure of a set S if <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S%20%5Ccap%20N_%7B%5Cepsilon%7D%28%5Cmathbf%7Bx%7D%29%20%5Cneq%20%5Cemptyset" alt="S \cap N_{\epsilon}(\mathbf{x}) \neq \emptyset" title="S \cap N_{\epsilon}(\mathbf{x}) \neq \emptyset" /> for EVERY <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon%20%3E%200" alt="\epsilon &gt; 0" title="\epsilon &gt; 0" /></li>
 <li>This mathematical definition is saying that point x is in the closure of S if there is an intersection of the area around the point and S as the radius of that area goes to zero</li>
 <li>The closure of set S is represented by cl S</li>
-<li>A <em>Closed</em> set is a set where the set is equivalent to its closure (S = cl S)</li>
+<li>A <em>Closed</em> set is a set where the set is equivalent to its closure (S = cl S)
+<ul>
+<li>This includes both the interior of S and its boundary</li>
+</ul></li>
 </ul>
 </blockquote>
 <blockquote>
@@ -187,8 +190,10 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 <blockquote>
 <ul>
 <li>A point x is in the interior of a set S if <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=N_%7B%5Cepsilon%7D%28%5Cmathbf%7Bx%7D%29%20%5Csubset%20S" alt="N_{\epsilon}(\mathbf{x}) \subset S" title="N_{\epsilon}(\mathbf{x}) \subset S" /> for SOME <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon%20%3E%200" alt="\epsilon &gt; 0" title="\epsilon &gt; 0" /></li>
-<li><em>Solid</em> set</li>
-<li><em>Open</em> set</li>
+<li>The mathematical definition is saying that point x is in the interior of S if for some radius larger than zero the entirety of the neighborhood is enclosed in S, however, it is understood that as the radius increases it will eventually not be enclosed by S</li>
+<li>The interior of set S is represented by int S</li>
+<li>A <em>Solid</em> set S <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Csubseteq" alt="\subseteq" title="\subseteq" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=R%5E%7Bn%7D" alt="R^{n}" title="R^{n}" /> is a set with a nonempty interior (int S <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cneq" alt="\neq" title="\neq" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cemptyset" alt="\emptyset" title="\emptyset" />)</li>
+<li>An <em>Open</em> set is a set where the set is equal to its interior (S = int S)</li>
 </ul>
 </blockquote>
 <blockquote>
@@ -196,13 +201,24 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 </blockquote>
 <blockquote>
 <ul>
-<li><em>Bounded</em></li>
+<li>A point x is in the boundary of a set S if <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=N_%7B%5Cepsilon%7D%28x%29" alt="N_{\epsilon}(x)" title="N_{\epsilon}(x)" /> contains one point in S and one point not in S for every <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon%20%3E%200" alt="\epsilon &gt; 0" title="\epsilon &gt; 0" /></li>
+<li>The above definition is saying that point x is in the boundary of S if its neighborhood includes both a portion outside of set S and a portion inside of set S for any radius</li>
+<li>The boundary of S is represented by <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cpartial" alt="\partial" title="\partial" />S</li>
+<li>Set S is considered <em>Bounded</em> if it can be contained by a ball of sufficiently large radius</li>
 <li>Boundary points of any set and its complement are the same</li>
 </ul>
 </blockquote>
 <ul>
 <li><em>Compact</em> set is a set that is both closed and bounded</li>
-<li>The complement of an open set is a closed set and vice versa</li>
+<li><p>The complement of an open set is a closed set and vice versa</p></li>
+<li>The line segment between a point in cl S and a point in int S, where S is a convex set with a nonempty interior, is within the interior of set S (excluding the endpoints)</li>
+<li>Corollaries from the line segment definition:
+<ol style="list-style-type: decimal">
+<li>If set S is convex then its interior is convex</li>
+<li>If set S is convex with a nonempty interior then its closure is convex</li>
+<li>If set S is convex with a nonempty interior then cl(int S) = cl S</li>
+<li>If set S is convex with a nonempty interior then int(cl S) = int S</li>
+</ol></li>
 </ul>
 </body>
 </html>
