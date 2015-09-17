@@ -5,6 +5,45 @@ import numpy as np
 import math as m
 
 
+def rotation_about_x(theta):
+    """This function will return the rotation matrix for a rotation theta about
+    the x-axis where theta is in degrees"""
+
+    theta = m.radians(theta)
+
+    R_1_2 = np.matrix([[1, 0,             0],
+                       [0, m.cos(theta), -m.sin(theta)],
+                       [0, m.sin(theta), m.cos(theta)]])
+
+    return R_1_2
+
+
+def rotation_about_y(theta):
+    """This function will return the rotation matrix for a rotation theta about
+    the z-axis where theta is in degrees"""
+
+    theta = m.radians(theta)
+
+    R_1_2 = np.matrix([[m.cos(theta), 0, m.sin(theta)],
+                       [0,            1, 0],
+                       [-m.sin(theta), 0, m.cos(theta)]])
+
+    return R_1_2
+
+
+def rotation_about_z(theta):
+    """This function will return the rotation matrix for a rotation theta about
+    the z-axis where theta is in degrees"""
+
+    theta = m.radians(theta)
+
+    R_1_2 = np.matrix([[m.cos(theta), -m.sin(theta), 0],
+                       [m.sin(theta), m.cos(theta),  0],
+                       [0,            0,             1]])
+
+    return R_1_2
+
+
 def gen_vec_rotation_matrix(theta, vector):
     """This function will return the rotation matrix for a rotation around a
     given vector (doesn't have to be unit length). The rotation angle theta
