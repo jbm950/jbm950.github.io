@@ -29,6 +29,7 @@ title: Analytical Dynamics
 <li><a href="#cylindrical_coordinate_systems">Cylindrical Coordinate Systems</a></li>
 <li><a href="#spherical_coordinate_system">Spherical Coordinate Systems</a></li>
 <li><a href="#euler_angles">Euler Angles</a></li>
+<li><a href="#intrinsic_coordinates">Intrinsic Coordinates</a></li>
 <li><a href="#examples">Examples</a></li>
 </ul>
 <h2 id="scalars">Scalars</h2>
@@ -201,6 +202,7 @@ width="300" height="300"/>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7B%5Ctheta%7D" alt="\underline{u}_{\theta}" title="\underline{u}_{\theta}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="\underline{e}_{\theta}" title="\underline{e}_{\theta}" /> (from cylindrical coordinate system)</li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7B%5Cphi%7D" alt="\underline{u}_{\phi}" title="\underline{u}_{\phi}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7B%5Ctheta%7D%20%5Ctimes%20%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{u}_{\theta} \times \underline{u}_{r}" title="\underline{u}_{\theta} \times \underline{u}_{r}" /></li>
 </ul></li>
+<li>For a constant <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D" alt="\underline{r}" title="\underline{r}" />, the full rotation of point P with respect to both <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cphi" alt="\phi" title="\phi" /> produces a sphere which is where the name for this coordinate system originates</li>
 </ul>
 <div align="center">
 <table class="image">
@@ -214,6 +216,70 @@ width="300" height="300"/>
 </table>
 </div>
 <h2 id="euler_angles">Euler Angles</h2>
+<ul>
+<li>Start with a few important defintions of angles
+<ol style="list-style-type: decimal">
+<li>There is no vector such that its derivative is equal to the angular acceleration
+<ul>
+<li>For <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%20%3D%20%5Comega_%7B1%7D%20%5Cunderline%7Be%7D_%7B1%7D%20%2B%20%20%5Comega_%7B2%7D%20%5Cunderline%7Be%7D_%7B2%7D%20%2B%20%5Comega_%7B3%7D%20%5Cunderline%7Be%7D_%7B3%7D" alt="^{A}\underline{\omega}^{R} = \omega_{1} \underline{e}_{1} +  \omega_{2} \underline{e}_{2} + \omega_{3} \underline{e}_{3}" title="^{A}\underline{\omega}^{R} = \omega_{1} \underline{e}_{1} +  \omega_{2} \underline{e}_{2} + \omega_{3} \underline{e}_{3}" /> there will never be a vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=b" alt="b" title="b" /> such that <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bb%7D_%7B1%7D%20%3D%20%5Comega_%7B1%7D" alt="\dot{b}_{1} = \omega_{1}" title="\dot{b}_{1} = \omega_{1}" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bb%7D_%7B2%7D%20%3D%20%5Comega_%7B2%7D" alt="\dot{b}_{2} = \omega_{2}" title="\dot{b}_{2} = \omega_{2}" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bb%7D_%7B3%7D%20%3D%20%5Comega_%7B3%7D" alt="\dot{b}_{3} = \omega_{3}" title="\dot{b}_{3} = \omega_{3}" /></li>
+</ul></li>
+<li>Rotations do NOT commute
+<ul>
+<li>Order is extremely important</li>
+</ul></li>
+</ol></li>
+<li>There are many different rotation orders (12 combinations for three axes)
+<ul>
+<li>Can repeat numbers so long as the repeated numbers are not sequential</li>
+</ul></li>
+<li>The most commonly used rotation sequence is the 321 sequence (z, y, x)
+<ul>
+<li>First rotation is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cpsi" alt="\psi" title="\psi" /> around the z-axis</li>
+</ul></li>
+</ul>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/euler_angle_step_1.png"
+alt="Euler Angle First Rotation" title="Euler Angle First Rotation"
+width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
+<ul>
+<li>The second rotation is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /> around the new y-axis</li>
+</ul>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/euler_angle_step_2.png"
+alt="Euler Angle Second Rotation" title="Euler Angle Second Rotation"
+width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
+<ul>
+<li>Last rotation is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cphi" alt="\phi" title="\phi" /> around the new x-axis</li>
+</ul>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/euler_angle_step_3.png"
+alt="Euler Angle Third Rotation" title="Euler Angle Third Rotation"
+width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
+<ul>
+<li>Careful with the second and third rotations as they are around the NEW axis formed from the previous rotations</li>
+</ul>
+<h2 id="intrinsic_coordinates">Intrinsic Coordinates</h2>
 <h2 id="examples">Examples</h2>
 <blockquote>
 <h3 id="examples-content">Examples Content</h3>
@@ -222,6 +288,7 @@ width="300" height="300"/>
 <ul>
 <li><a href="#e_transport_theorem">Transport Theorem</a></li>
 <li><a href="#e_cylindrical_coor_sys">Cylindrical Coordinate System</a></li>
+<li><a href="#e_spherical_coor_sys">Spherical Coordinate System</a></li>
 </ul>
 </blockquote>
 <blockquote>
@@ -260,7 +327,7 @@ height="200"/>
 <li>Origin at point O</li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{r}" title="\underline{e}_{r}" /> = along the line <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D" alt="\underline{e}_{z}" title="\underline{e}_{z}" /> = out of the page (positive with theta)</li>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="\underline{e}_{\theta}" title="\underline{e}_{\theta}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{z} \times \underline{e}_{r}" title="\underline{e}_{z} \times \underline{e}_{r}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="\underline{e}_{\theta}" title="\underline{e}_{\theta}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%20%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{z} \times  \underline{e}_{r}" title="\underline{e}_{z} \times  \underline{e}_{r}" /></li>
 </ul></li>
 </ul>
 </blockquote>
@@ -484,7 +551,7 @@ Fixed with Theta = 0" width="200" height="200"/>
 </blockquote>
 </blockquote>
 <blockquote>
-<h3 id="e_cylindrical_coor_sys">Cylindrical Coordinate System</h3>
+<h3 id="e_cylindrical_coor_sys">Cylindrical Coordinate System Example</h3>
 </blockquote>
 <blockquote>
 <ul>
@@ -570,6 +637,9 @@ System Example" width="300" height="300"/>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%20%5Cddot%7Br%7D%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%20%5Cddot%7Bz%7D%5Cunderline%7Be%7D_%7Bz%7D%20%2B%20%28%5Cddot%7B%5Ctheta%7Dr%20%2B%20%20%5Cdot%7B%5Ctheta%7D%5Cdot%7Br%7D%29%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="^{A}\underline{a}_{P} = \ddot{r}\underline{e}_{r} +  \ddot{z}\underline{e}_{z} + (\ddot{\theta}r +  \dot{\theta}\dot{r})\underline{e}_{\theta}" title="^{A}\underline{a}_{P} = \ddot{r}\underline{e}_{r} +  \ddot{z}\underline{e}_{z} + (\ddot{\theta}r +  \dot{\theta}\dot{r})\underline{e}_{\theta}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%2B%20%20%5Cdot%7B%5Ctheta%7D%5Cdot%7Br%7D%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%2B%20%20%5Cdot%7B%5Ctheta%7D%5E%7B2%7Dr%5Cunderline%7Be%7D_%7Br%7D" alt="+  \dot{\theta}\dot{r}\underline{e}_{\theta} +  \dot{\theta}^{2}r\underline{e}_{r}" title="+  \dot{\theta}\dot{r}\underline{e}_{\theta} +  \dot{\theta}^{2}r\underline{e}_{r}" /></li>
 </ul></li>
 </ul>
+</blockquote>
+<blockquote>
+<h3 id="e_spherical_coor_sys">Spherical Coordinate System Example</h3>
 </blockquote>
 </body>
 </html>

@@ -15,6 +15,7 @@
 - [Cylindrical Coordinate Systems](#cylindrical_coordinate_systems)
 - [Spherical Coordinate Systems](#spherical_coordinate_system)
 - [Euler Angles](#euler_angles)
+- [Intrinsic Coordinates](#intrinsic_coordinates)
 - [Examples](#examples)
 
 ## Scalars {#scalars}
@@ -257,6 +258,9 @@ width="300" height="300"/>
     - $\underline{u}_{\theta}$ = $\underline{e}_{\theta}$ (from cylindrical
       coordinate system)
     - $\underline{u}_{\phi}$ = $\underline{u}_{\theta} \times \underline{u}_{r}$
+- For a constant $\underline{r}$, the full rotation of point P with respect to
+  both $\theta$ and $\phi$ produces a sphere which is where the name for this
+  coordinate system originates
 
 <div align="center">
 <table class="image">
@@ -269,12 +273,63 @@ width="300" height="300"/>
 
 ## Euler Angles {#euler_angles}
 
+- Start with a few important defintions of angles
+    1. There is no vector such that its derivative is equal to the angular
+       acceleration
+        - For $^{A}\underline{\omega}^{R} = \omega_{1} \underline{e}_{1} +
+          \omega_{2} \underline{e}_{2} + \omega_{3} \underline{e}_{3}$ there
+          will never be a vector $b$ such that $\dot{b}_{1} = \omega_{1}$,
+          $\dot{b}_{2} = \omega_{2}$, $\dot{b}_{3} = \omega_{3}$
+    2. Rotations do NOT commute
+        - Order is extremely important
+- There are many different rotation orders (12 combinations for three axes)
+    - Can repeat numbers so long as the repeated numbers are not sequential
+- The most commonly used rotation sequence is the 321 sequence (z, y, x)
+    - First rotation is $\psi$ around the z-axis
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/euler_angle_step_1.png"
+alt="Euler Angle First Rotation" title="Euler Angle First Rotation"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+- The second rotation is $\theta$ around the new y-axis
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/euler_angle_step_2.png"
+alt="Euler Angle Second Rotation" title="Euler Angle Second Rotation"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+- Last rotation is $\phi$ around the new x-axis
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/euler_angle_step_3.png"
+alt="Euler Angle Third Rotation" title="Euler Angle Third Rotation"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+- Careful with the second and third rotations as they are around the NEW
+  axis formed from the previous rotations
+
+## Intrinsic Coordinates {#intrinsic_coordinates}
+
 ## Examples {#examples}
 
 > ### Examples Content
 
 > - [Transport Theorem](#e_transport_theorem)
 > - [Cylindrical Coordinate System](#e_cylindrical_coor_sys)
+> - [Spherical Coordinate System](#e_spherical_coor_sys)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
@@ -299,7 +354,8 @@ height="200"/>
 >>      - Origin at point O
 >>      - $\underline{e}_{r}$ = along the line $\underline{OP}$
 >>      - $\underline{e}_{z}$ = out of the page (positive with theta)
->>      - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times \underline{e}_{r}$
+>>      - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times
+          \underline{e}_{r}$
 
 <div align="center">
 <table class="image">
@@ -461,7 +517,7 @@ Fixed with Theta = 0" width="200" height="200"/>
               -\dot{\beta}cos(\theta)r\underline{u}_{z} +
               \dot{\theta}r\underline{u}_{\theta}$
 
-> ### Cylindrical Coordinate System {#e_cylindrical_coor_sys}
+> ### Cylindrical Coordinate System Example {#e_cylindrical_coor_sys}
 
 > - Find the equation for the velocity and acceleration of point P in the A
     reference frame ($^{A}\underline{V}_{P}, ^{A}\underline{a}_{P}$)
@@ -542,3 +598,5 @@ System Example" width="300" height="300"/>
           \dot{\theta}\dot{r})\underline{e}_{\theta}$ $+
           \dot{\theta}\dot{r}\underline{e}_{\theta} +
           \dot{\theta}^{2}r\underline{e}_{r}$
+
+> ### Spherical Coordinate System Example {#e_spherical_coor_sys}
