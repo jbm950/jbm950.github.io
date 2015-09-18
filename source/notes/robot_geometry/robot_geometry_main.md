@@ -531,5 +531,41 @@ Transformation Matrix" width="300" height="150"/>
     $\alpha_{71}$, $\theta_{7}$, $\gamma_{1}$, $S_{7}$, $a_{71}$ and $S_{1}$
 > - All vectors mentioned in the following process are unit vectors
 > - The first step in solving for the unknowns is using the definition of dot
-    product with vectors $^{F}\underline{S}_{7}$ and$^{F}\underline{S}_{1}$ 
->       - $^{F}\underline{S}_{7} \cdot ^{F}\underline{S}_{1} =$
+    product with vectors $^{F}\underline{S}_{7}$ and$^{F}\underline{S}_{1}$ to
+    find $\alpha_{71}$
+>       - $^{F}\underline{S}_{7} \cdot ^{F}\underline{S}_{1} = \|
+          \underline{S}_{7} \| \| \underline{S}_{1} \| cos(\alpha_{71}) =
+          cos(\alpha_{71})$
+>            - Keeping in mind that $\underline{S}_{7}$ and $\underline{S}_{1}$
+               are unit vectors therefore thier magnitudes are one
+>       - If $\alpha_{71}$ is close to 0 or 180 degrees then a different set of
+          steps from the ones that are about to be presented will need to be
+          followed
+> - The next step is to determine the $^{F}\underline{a}_{71}$ vector and this
+    can be accomplished by taking the cross product of the $\underline{S}_{7}$
+    and $\underline{S}_{1}$ vectors and then dividing by the magnitude of that
+    cross product to ensure that the vector is unit length
+>       - $^{F}\underline{a}_{71} = \frac{^{F}\underline{S}_{7} \times
+          ^{F}\underline{S}_{1}}{\| ^{F}\underline{S}_{7} \times
+          ^{F}\underline{S}_{1} \|}$
+> - Now using the properties of dot products and cross products $\theta_{7}$
+    and $\gamma_{1}$ can be determined where $\phi_{1} = \theta_{1} -
+    \gamma_{1}$
+>       - Both dot product and cross product definitions are needed because
+          individually $sin^{-1}$ and $cos^{-1}$ give two different answers but
+          when compared together only one answer emerges
+>       - $cos(\theta_{7}) = (^{F}\underline{a}_{67}) \cdot
+          ^{F}\underline{a}_{71}$
+>       - $sin(\theta_{7}) = (^{F}\underline{a}_{67} \times
+          ^{F}\underline{a}_{71}) \cdot ^{F}\underline{S}_{7}$
+>       - $cos(\gamma_{1}) = (^{F}\underline{a}_{71}) \cdot
+          ^{F}\underline{x}_{F}$
+>       - $sin(\gamma_{1}) = (^{F}\underline{a}_{71} \times
+          ^{F}\underline{x}_{F}) \cdot ^{F}\underline{S}_{1}$
+> - Now that the three unknown vectors have been obtained the three unknown
+    distances need to be found
+
+>> __Special Case 1: $\underline{S}_{7}$ and $\underline{S}_{1}$ are Parallel__
+
+>> __Special Case 2: $\underline{S}_{7}$ and $\underline{S}_{1}$ are Parallel
+   and $a_{71} = 0$__
