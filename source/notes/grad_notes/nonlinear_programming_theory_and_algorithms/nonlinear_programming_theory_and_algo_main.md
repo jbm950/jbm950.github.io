@@ -221,3 +221,21 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
     2. If set S is convex with a nonempty interior then its closure is convex
     3. If set S is convex with a nonempty interior then cl(int S) = cl S
     4. If set S is convex with a nonempty interior then int(cl S) = int S
+
+### 2.3 Weierstrass's Theorem
+
+> __Greatest Lower Bound and Least Upper Bound__
+
+> - The _greatest lower bound_ of set S is the largest possible scalar $\alpha$
+    such that $\alpha \leq x$ for $x \in S$
+> - This means that the greatest lower bound is the point that reaches the
+    lowest point of set S
+> - The greatest lower bound is also refered to as the _infimum_ of set S and
+    is denoted by $inf \left{ x: x \in S \right}$
+
+> - The _least upper bound_ of set S is the smallest possible scalar $\alpha$
+    such that $\alpha \geq x$ for $x \in S$
+> - This means that the least upper bound is the point that matches the highest
+    point of S but no higher
+> - The least upper bound is also refered to as the _supremum_ of set S and is
+    denoted by  $sup\left{ x: x \in S \right}$
