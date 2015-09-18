@@ -239,3 +239,8 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
     point of S but no higher
 > - The least upper bound is also refered to as the _supremum_ of set S and is
     denoted by  $sup\left{ x: x \in S \right}$
+
+> __Weierstrass's Theorem__
+
+> - If set S is nonempty, closed and bounded and f is continuous on S then a
+    minimum of $\left{ f(\mathbf{x}): \mathbf{x} \in S \right}$ exists
