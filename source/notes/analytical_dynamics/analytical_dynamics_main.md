@@ -285,7 +285,8 @@ width="300" height="300"/>
 - There are many different rotation orders (12 combinations for three axes)
     - Can repeat numbers so long as the repeated numbers are not sequential
 - The most commonly used rotation sequence is the 321 sequence (z, y, x)
-    - First rotation is $\psi$ around the z-axis
+
+- First rotation in the 321 sequence is $\psi$ around the z-axis
 
 <div align="center">
 <table class="image">
@@ -320,6 +321,22 @@ width="300" height="300"/>
 
 - Careful with the second and third rotations as they are around the NEW
   axis formed from the previous rotations
+- We now have 4 different coordinate systems fixed in four different reference
+  frames
+    - $A \Rightarrow \left{\underline{E}_{x}, \underline{E}_{y},
+      \underline{E}_{z}\right}$
+    - $R \Rightarrow \left{\underline{e}_{x}, \underline{e}_{y},
+      \underline{e}_{z}\right}$
+    - $P \Rightarrow \left{\underline{p}_{x}, \underline{p}_{y},
+      \underline{p}_{z}\right}$
+    - $Q \Rightarrow \left{\underline{q}_{x}, \underline{q}_{y},
+      \underline{q}_{z}\right}$
+- We can now define the angular velocity of the final, body frame as seen by
+  the initial frame as:
+    - $^{A}\underline{\omega}^{B} = ^{A}\underline{\omega}^{P} +
+      ^{P}\underline{\omega}^{Q} + ^{Q}\underline{\omega}^{R}$ $=
+      \dot{\psi}\underline{p}_{z} + \dot{\theta}\underline{q}_{2} +
+      \dot{\phi}\underline{e}_{x}$
 
 ## Intrinsic Coordinates {#intrinsic_coordinates}
 
