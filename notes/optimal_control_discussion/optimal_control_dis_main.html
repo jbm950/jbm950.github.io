@@ -56,6 +56,10 @@ title: Optimal Control Dis
 </ul>
 </blockquote>
 <h2 id="calculus_of_variations">Calculus of Variations</h2>
+<blockquote>
+<p><strong>Simple Example Analogous to Calculus of Variations</strong></p>
+</blockquote>
+<blockquote>
 <ul>
 <li>Suppose we want to determine a function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> that minimizes an integral that is a function of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bx%7D%28t%29" alt="\dot{x}(t)" title="\dot{x}(t)" />
 <ul>
@@ -71,7 +75,7 @@ title: Optimal Control Dis
 </ul></li>
 <li>Rewriting <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J" alt="J" title="J" /> with the new definition of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> gives the following expression
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7DL%5Bx%5E%7B%2A%7D%28t%29%20%2B%20%5Cepsilon%20y%28t%29%2C%5Cdot%7Bx%7D%5E%7B%2A%7D%28t%29%20%2B%20%20%5Cepsilon%20%5Cdot%7By%7D%28t%29%2Ct%5Ddt" alt="J = \int^{t_{f}}_{t_{0}}L[x^{*}(t) + \epsilon y(t),\dot{x}^{*}(t) +  \epsilon \dot{y}(t),t]dt" title="J = \int^{t_{f}}_{t_{0}}L[x^{*}(t) + \epsilon y(t),\dot{x}^{*}(t) +  \epsilon \dot{y}(t),t]dt" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7DL%5Bx%5E%7B%2A%7D%28t%29%20%2B%20%5Cepsilon%20y%28t%29%2C%5Cdot%7Bx%7D%5E%7B%2A%7D%28t%29%20%2B%20%5Cepsilon%20%5Cdot%7By%7D%28t%29%2Ct%5Ddt" alt="J = \int^{t_{f}}_{t_{0}}L[x^{*}(t) + \epsilon y(t),\dot{x}^{*}(t) + \epsilon \dot{y}(t),t]dt" title="J = \int^{t_{f}}_{t_{0}}L[x^{*}(t) + \epsilon y(t),\dot{x}^{*}(t) + \epsilon \dot{y}(t),t]dt" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J" alt="J" title="J" /> is now solely a function of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon" alt="\epsilon" title="\epsilon" /> and so the critical point can be found at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%20%7C%20_%7B%5Cepsilon%20%3D%200%7D%20%3D%200" alt="\frac{dJ}{d\epsilon} | _{\epsilon = 0} = 0" title="\frac{dJ}{d\epsilon} | _{\epsilon = 0} = 0" />
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon" alt="\epsilon" title="\epsilon" /> is set to zero because that is what results in the optimal solution (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29%20%3D%20x%5E%7B%2A%7D%28t%29" alt="x(t) = x^{*}(t)" title="x(t) = x^{*}(t)" />)</li>
@@ -79,7 +83,7 @@ title: Optimal Control Dis
 </ul></li>
 <li>Using the definition of the critical point determined above the followin expression emerges
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%7C_%7B%5Cepsilon%20%3D%200%7D%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D" alt="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}  (\frac{\partial L}{\partial x}" title="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}  (\frac{\partial L}{\partial x}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20x%7D%7B%5Cpartial%20%5Cepsilon%7D%20%2B%20%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cfrac%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%7B%5Cpartial%20%20%5Cepsilon%7D%29dt" alt="\frac{\partial x}{\partial \epsilon} +  \frac{\partial L}{\partial \dot{x}} \frac{\partial \dot{x}}{\partial  \epsilon})dt" title="\frac{\partial x}{\partial \epsilon} +  \frac{\partial L}{\partial \dot{x}} \frac{\partial \dot{x}}{\partial  \epsilon})dt" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%7C_%7B%5Cepsilon%20%3D%200%7D%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D" alt="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} (\frac{\partial L}{\partial x}" title="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} (\frac{\partial L}{\partial x}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20x%7D%7B%5Cpartial%20%5Cepsilon%7D%20%2B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cfrac%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%7B%5Cpartial%20%5Cepsilon%7D%29dt" alt="\frac{\partial x}{\partial \epsilon} + \frac{\partial L}{\partial \dot{x}} \frac{\partial \dot{x}}{\partial \epsilon})dt" title="\frac{\partial x}{\partial \epsilon} + \frac{\partial L}{\partial \dot{x}} \frac{\partial \dot{x}}{\partial \epsilon})dt" /></li>
 </ul></li>
 <li>The following results from taking the derivative of x as given above with respect to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cepsilon" alt="\epsilon" title="\epsilon" />
 <ul>
@@ -88,27 +92,79 @@ title: Optimal Control Dis
 </ul></li>
 <li>When substituted into the above expression the following is the result
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%7C_%7B%5Cepsilon%20%3D%200%7D%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D" alt="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}  (\frac{\partial L}{\partial x}" title="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}  (\frac{\partial L}{\partial x}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y%20%2B%20%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cdot%7By%7D%29dt" alt="y +  \frac{\partial L}{\partial \dot{x}} \dot{y})dt" title="y +  \frac{\partial L}{\partial \dot{x}} \dot{y})dt" />
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%7C_%7B%5Cepsilon%20%3D%200%7D%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D" alt="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} (\frac{\partial L}{\partial x}" title="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} (\frac{\partial L}{\partial x}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y%20%2B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cdot%7By%7D%29dt" alt="y + \frac{\partial L}{\partial \dot{x}} \dot{y})dt" title="y + \frac{\partial L}{\partial \dot{x}} \dot{y})dt" />
 <ul>
 <li>Note, however, that <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7By%7D" alt="\dot{y}" title="\dot{y}" /> is not independent of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y" alt="y" title="y" /></li>
 </ul></li>
 </ul></li>
 <li>In order to finish solving the equation we will integrate the second term in the integral by parts
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7Bo%7D%7D%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cdot%7By%7D%20dt" alt="\int^{t_{f}}_{t_{o}} \frac{\partial L}{\partial \dot{x}} \dot{y} dt" title="\int^{t_{f}}_{t_{o}} \frac{\partial L}{\partial \dot{x}} \dot{y} dt" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20y%20%5Cright%5D%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D" alt="=  \left[ \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}}" title="=  \left[ \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=-%20%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%20%5Cdot%7Bx%7D%7D%29ydt" alt="-  \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial L}{\partial  \dot{x}})ydt" title="-  \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial L}{\partial  \dot{x}})ydt" />
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7Bo%7D%7D%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cdot%7By%7D%20dt" alt="\int^{t_{f}}_{t_{o}} \frac{\partial L}{\partial \dot{x}} \dot{y} dt" title="\int^{t_{f}}_{t_{o}} \frac{\partial L}{\partial \dot{x}} \dot{y} dt" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20y%20%5Cright%5D%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D" alt="= \left[ \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}}" title="= \left[ \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=-%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29ydt" alt="- \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}})ydt" title="- \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}})ydt" />
 <ul>
-<li>Keeping in mind from earlier that y evaluated at the boundary points is zero the first term in the result goes to zero (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20y%20%5Cright%5D%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%3D%200" alt="\left[  \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}} = 0" title="\left[  \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}} = 0" />)</li>
+<li>Keeping in mind from earlier that y evaluated at the boundary points is zero the first term in the result goes to zero (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20y%20%5Cright%5D%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%3D%200" alt="\left[ \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}} = 0" title="\left[ \frac{\partial L}{\partial \dot{x}} y \right]^{t_{f}}_{t_{0}} = 0" />)</li>
 </ul></li>
 </ul></li>
 <li>We can now rewrite the expression for the critical point as:
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%7C_%7B%5Cepsilon%20%3D%200%7D%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%20%5Cleft%5B%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20-%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%5Cright%5D%20y%20dt%20%3D%200" alt="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}  \left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) \right] y dt = 0" title="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}}  \left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) \right] y dt = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BdJ%7D%7Bd%5Cepsilon%7D%7C_%7B%5Cepsilon%20%3D%200%7D%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cleft%5B%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20-%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%5Cright%5D%20y%20dt%20%3D%200" alt="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} \left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right] y dt = 0" title="\frac{dJ}{d\epsilon}|_{\epsilon = 0} = \int^{t_{f}}_{t_{0}} \left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right] y dt = 0" /></li>
 </ul></li>
 <li>Since the choice of y is arbitrary the portion inside the brackets has to equal zero in order to meet the equality
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20-%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%5Cright%5D%20%3D%200" alt="\left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) \right] = 0" title="\left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) \right] = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20-%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%5Cright%5D%20%3D%200" alt="\left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right] = 0" title="\left[\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right] = 0" /></li>
 </ul></li>
 <li>This is the result of the analysis, however, note that it does not give a solution, just a condition for optimality</li>
 </ul>
+</blockquote>
+<blockquote>
+<p><strong>Simple Calculus of Variations Example (same as previous example)</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>This will be the same example as the previous one but variational calculus will be used this time</li>
+<li>The problem statement remains the same: suppose we want to determine a function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> that minimizes an integral that is a function of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bx%7D%28t%29" alt="\dot{x}(t)" title="\dot{x}(t)" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7DL%5Bx%28t%29%2C%5Cdot%7Bx%7D%28t%29%2Ct%5Ddt" alt="J = \int^{t_{f}}_{t_{0}}L[x(t),\dot{x}(t),t]dt" title="J = \int^{t_{f}}_{t_{0}}L[x(t),\dot{x}(t),t]dt" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J" alt="J" title="J" /> is refered to as the <em>action integral</em></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7B0%7D%29" alt="x(t_{0})" title="x(t_{0})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B0%7D" alt="t_{0}" title="t_{0}" /> are fixed</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> are fixed</li>
+</ul></li>
+<li>The first step this time will be to take the variation of J as the extremal solution is obtained by setting the first variation equal to zero (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%200" alt="\delta J = 0" title="\delta J = 0" />)
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%20%5Cdelta%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7DL%5Bx%28t%29%2C%5Cdot%7Bx%7D%28t%29%2Ct%5Ddt" alt="\delta J = \delta \int^{t_{f}}_{t_{0}}L[x(t),\dot{x}(t),t]dt" title="\delta J = \delta \int^{t_{f}}_{t_{0}}L[x(t),\dot{x}(t),t]dt" /></li>
+</ul></li>
+<li>Now due to the start and end times being fixed the variation can be moved inside the integral as the integral itself will be providing no variation
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cdelta%20L%5Bx%28t%29%2C%5Cdot%7Bx%7D%28t%29%2Ct%5Ddt" alt="\delta J = \int^{t_{f}}_{t_{0}} \delta L[x(t),\dot{x}(t),t]dt" title="\delta J = \int^{t_{f}}_{t_{0}} \delta L[x(t),\dot{x}(t),t]dt" /></li>
+</ul></li>
+<li>The next step is to find the variation of L with respect to its components
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20%20%5Cdelta%20x%20%2B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cdelta%20%5Cdot%7Bx%7D%20%20%5Cright%5Ddt" alt="\delta J = \int^{t_{f}}_{t_{0}} \left[ \frac{\partial L}{\partial x}  \delta x + \frac{\partial L}{\partial \dot{x}} \delta \dot{x}  \right]dt" title="\delta J = \int^{t_{f}}_{t_{0}} \left[ \frac{\partial L}{\partial x}  \delta x + \frac{\partial L}{\partial \dot{x}} \delta \dot{x}  \right]dt" /></li>
+<li>Note that t has dropped from the function L. This is because the integral is definite and therefore t will be integrated out meaning J is not a function of t</li>
+</ul></li>
+<li>This is the same form of equation that was found above where y is now equivalent to x and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7By%7D" alt="\dot{y}" title="\dot{y}" /> is now equivalent to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bx%7D" alt="\dot{x}" title="\dot{x}" /></li>
+<li>Using the same integration by parts method as above and keeping in mind that the boundary conditions are still fixed the following expression can be derived
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20%20%2B%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%5Cright%5D%5Cdelta%20%20x%28t%29dt%20%3D%200" alt="\delta J = \int^{t_{f}}_{t_{0}} \left[ \frac{\partial L}{\partial x}  + \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right]\delta  x(t)dt = 0" title="\delta J = \int^{t_{f}}_{t_{0}} \left[ \frac{\partial L}{\partial x}  + \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right]\delta  x(t)dt = 0" /></li>
+</ul></li>
+<li>Therefore for the condition to hold for any variational function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x%28t%29" alt="\delta x(t)" title="\delta x(t)" /> the part in brackets must equal zero
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20%2B%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%3D%200" alt="\frac{\partial L}{\partial x} + \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) = 0" title="\frac{\partial L}{\partial x} + \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) = 0" /></li>
+</ul></li>
+<li>This result is the same as was previously obtained and is still not a solution but rather a condition for optimality</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Advanced Calculus of Variations</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>More advanced calculus of variations problems arise when portions of the boundary conditions are no longer fixed (ex. <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /> is free or <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> is free)</li>
+<li>One example of this would be a specified start time and position and a specified end position but no specified end time
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7B0%7D%29" alt="x(t_{0})" title="x(t_{0})" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B0%7D" alt="t_{0}" title="t_{0}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /> are fixed</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> is free</li>
+</ul></li>
+</ul>
+</blockquote>
 </body>
 </html>
