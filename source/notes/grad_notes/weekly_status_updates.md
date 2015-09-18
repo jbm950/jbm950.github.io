@@ -1,5 +1,37 @@
 # Weekly Status Updates
 
+### Week 9/12/2015 - 9/18/2015
+
+This week I continued making progress through the book _Nonlinear Programming:
+Theory and Algorithms_ by Bazaraa. I was able to finish taking notes over
+chapter 2 section 1 which covered convex sets and convex hulls. I have also
+completely read and taken notes over chapter 2 section 2. This section had a
+multitude of set definitions in it including neighborhood of a point, set
+closure, interior of a set, set boundaries and compact sets. I have also spent
+some time reading the mathematical review of sets and sequences presented in
+appendix A.3 of the book in order to further my understanding of chapter 2
+section 2. I have read chapter 2 section 3 and am currently in the process of
+taking notes over that section, however, I have had to spend more time in the
+mathematical review in the appendix in order to aid in comprehension of the
+chapter 2 section 3 material.
+
+> #### Future Directions
+
+> - I plan to continue reading and taking notes over  _Nonlinear Programming:
+    Theory and Applications_
+
+> #### Articles/Books Mentioned in Status Update
+
+> - <a href="http://www.amazon.com/Nonlinear-Programming-Algorithms-Mokhtar-Bazaraa/dp/0471486000"
+    target="_blank">Nonlinear Programming: Theory and Algorithms Book</a>
+    (Mokhtar S. Bazaraa, Hanif D. Sherali and C.M. Shetty)
+
+> #### Notes Mentioned in Status Update
+
+> - [Nonlinear Programming: Theory and
+     Algorithms](./nonlinear_programming_theory_and_algorithms/nonlinear_programming_theory_and_algo_main.html)
+     (Mokhtar S.  Bazaraa, Hanif D, Sherali and C. M. Shetty)
+
 ### Week 9/5/2015 - 9/11/2015
 
 This week time was spent exclusively working with the book _Nonlinear
