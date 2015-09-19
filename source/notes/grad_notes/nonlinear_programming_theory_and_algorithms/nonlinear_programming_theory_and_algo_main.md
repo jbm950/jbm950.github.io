@@ -8,6 +8,7 @@ target="_blank">Physical Book (Amazon Link)</a>
 
 - [1. Introduction](#introduction)
 - [2. Convex Sets](#convex_sets)
+- [4. The Fritz John and Karush-Kuhn-Tucker Optimality Conditions](#fritz_john_and_KKT_optimality_conditions)
 
 ## Notation
 
@@ -242,5 +243,12 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 
 > __Weierstrass's Theorem__
 
-> - If set S is nonempty, closed and bounded and f is continuous on S then a
-    minimum of $\left{ f(\mathbf{x}): \mathbf{x} \in S \right}$ exists
+> - If set S is nonempty, closed and bounded (compact) and f is continuous on S
+    then a minimum of $\left{ f(\mathbf{x}): \mathbf{x} \in S \right}$ exists
+
+## 4. The Fritz John and Karush-Kuhn-Tucker Optimality Conditions {#fritz_john_and_KKT_optimality_conditions}
+
+### 4.1 Unconstrained Problems
+
+- The general form of an unconstrained problem is to minimize $f(\mathbf{x})$
+  without any constraints on the vector $\mathbf{x}$
