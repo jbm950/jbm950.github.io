@@ -562,8 +562,39 @@ Transformation Matrix" width="300" height="150"/>
           ^{F}\underline{x}_{F}$
 >       - $sin(\gamma_{1}) = (^{F}\underline{a}_{71} \times
           ^{F}\underline{x}_{F}) \cdot ^{F}\underline{S}_{1}$
-> - Now that the three unknown vectors have been obtained the three unknown
-    distances need to be found
+> - Now that the three unknown angles and the direction of vector
+    $^{F}\underline{a}_{71}$ has been obtained the three unknown distances need
+    to be found: $S_{7}$, $a_{71}$ and $S_{1}$
+> - To find these distances we will use the vector loop equation for the
+    following closed loop:
+>       - $^{F}\underline{P}_{6orig} + S_{7}(^{F}\underline{S}_{7}) +
+          a_{71}(^{F}\underline{a}_{71}) + S_{1}(^{F}\underline{S}_{1}) =
+          \underline{0}$
+>       - Technically this is a series of 3 equations with 3 unknowns and
+          therefore can be solved as is, however, this class includes a
+          derivation of an equation for each unknown
+> - To begin the derivation for an expression for $S_{7}$ we take the cross
+    product of each term in the preceding equation with vector
+    $\underline{S}_{1}$
+>       - $(^{F}\underline{P}_{6orig} \times ^{F}\underline{S}_{1}) + S_{7}
+          (^{F}\underline{S}_{7} \times ^{F}\underline{S}_{1})$ $+ a_{71}
+          (^{F}\underline{a}_{71} \times ^{F}\underline{S}_{1}) + S_{1}
+          (^{F}\underline{S}_{1} \times ^{F}\underline{S}_{1}) = \underline{0}$
+>       - Note that the vector $^{F}\underline{S}_{1}$ crossed with itself is
+          zero and so the last term goes away
+>       - Also note that $^{F}\underline{S}_{7} \times ^{F}\underline{S}_{1}$
+          is equivalent to $sin(\alpha_{71})^{F}\underline{a}_{71}$ by
+          definition of how we set up the vectors
+> - Now take the dot product of each remaining term of the expression with the
+    vector $^{F}\underline{a}_{71}$
+>       - $(^{F}\underline{P}_{6orig} \times ^{F}\underline{S}_{1}) \cdot
+          ^{F}\underline{a}_{71} +
+          S_{7}sin(\alpha_{71})(^{F}\underline{a}_{71}$ $\cdot
+          ^{F}\underline{a}_{71}) + a_{71}(^{F}\underline{a}_{71} \times
+          ^{F}\underline{S}_{1}) \cdot ^{F}\underline{a}_{71}$
+>       - First take note that when the dot product of the vector
+          $^{F}\underline{a}_{71}$ is taken with itself it equals one and so
+          all vectors in that term drop out
 
 >> __Special Case 1: $\underline{S}_{7}$ and $\underline{S}_{1}$ are Parallel__
 
