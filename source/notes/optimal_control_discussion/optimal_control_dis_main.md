@@ -146,3 +146,36 @@
     specified end position but no specified end time
 >       - $x(t_{0})$, $t_{0}$ and $x(t_{f})$ are fixed
 >       - $t_{f}$ is free
+> - Another example would be a specified start time and position and a
+    specified end time but no specified end position
+>       - $x(t_{0})$, $t_{0}$ and $t_{f}$ are fixed
+>       - $x(t_{f})$ is free
+
+> - Before beginning the process to solve the two above examples a
+    differentiation first needs to be made at the boundary of the function
+    $x(t)$
+>       - $\delta x_{f}$ is the difference in the final value of the variation
+          $\delta x(t)$ and the function $x(t)$
+>       - $\delta x(t_{f})$ is the difference between the value of the
+          variation at $\delta x(t_{f})$ (original $t_{f}$ not $\delta t_{f}$)
+          and the function $x(t_{f})$
+>       - These two values are related by the expression $\delta x_{f} =
+          \delta x(t_{f}) + \dot{x}(t_{f}) \delta t_{f}$
+
+> - To begin working through the optimality conditions of the first example
+    listed above we start with the problem statement
+>       - $J = \int^{t_{f}}_{t_{0}} L \left[ x(t), \dot{x}(t), t \right] dt$
+          where $x(t_{0})$, $t_{0}$ and $x(t_{f})$ are fixed and $t_{f}$ is
+          free
+>       - min $J$ at $\delta J = 0$
+>       - There are two quantities that vary ($t_{f}$ and $x(t)$) and these two
+          quantities are independent of each other
+> - Taking the variation of the function just like before gives
+>       - $\delta J = \delta \int^{t_{f}}_{t_{0}} L \left[ x(t), \dot{x}(t), t
+          \right] dt = 0$
+>       - Unlike in the simple calculus of variations example the variation can
+          not simply be moved inside the integral because $t_{f}$ is now
+          allowed to vary also
+> - Taking into account the ability of $t_{f}$ to vary the expression becomes
+>       - $\delta J = \frac{\partial J}{\partial t_{f}} \delta t_{f} +
+          \int^{t_{f}}_{t_{0}} \delta L$ $\left[ x(t), \dot{x}(t), t]dt$

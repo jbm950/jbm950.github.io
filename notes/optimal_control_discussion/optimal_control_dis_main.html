@@ -164,6 +164,40 @@ title: Optimal Control Dis
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7B0%7D%29" alt="x(t_{0})" title="x(t_{0})" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B0%7D" alt="t_{0}" title="t_{0}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /> are fixed</li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> is free</li>
 </ul></li>
+<li>Another example would be a specified start time and position and a specified end time but no specified end position
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7B0%7D%29" alt="x(t_{0})" title="x(t_{0})" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B0%7D" alt="t_{0}" title="t_{0}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> are fixed</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /> is free</li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Before beginning the process to solve the two above examples a differentiation first needs to be made at the boundary of the function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x_%7Bf%7D" alt="\delta x_{f}" title="\delta x_{f}" /> is the difference in the final value of the variation <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x%28t%29" alt="\delta x(t)" title="\delta x(t)" /> and the function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x%28t_%7Bf%7D%29" alt="\delta x(t_{f})" title="\delta x(t_{f})" /> is the difference between the value of the variation at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x%28t_%7Bf%7D%29" alt="\delta x(t_{f})" title="\delta x(t_{f})" /> (original <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> not <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20t_%7Bf%7D" alt="\delta t_{f}" title="\delta t_{f}" />) and the function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /></li>
+<li>These two values are related by the expression <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x_%7Bf%7D%20%3D%20%20%5Cdelta%20x%28t_%7Bf%7D%29%20%2B%20%5Cdot%7Bx%7D%28t_%7Bf%7D%29%20%5Cdelta%20t_%7Bf%7D" alt="\delta x_{f} =  \delta x(t_{f}) + \dot{x}(t_{f}) \delta t_{f}" title="\delta x_{f} =  \delta x(t_{f}) + \dot{x}(t_{f}) \delta t_{f}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>To begin working through the optimality conditions of the first example listed above we start with the problem statement
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20L%20%5Cleft%5B%20x%28t%29%2C%20%5Cdot%7Bx%7D%28t%29%2C%20t%20%5Cright%5D%20dt" alt="J = \int^{t_{f}}_{t_{0}} L \left[ x(t), \dot{x}(t), t \right] dt" title="J = \int^{t_{f}}_{t_{0}} L \left[ x(t), \dot{x}(t), t \right] dt" /> where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7B0%7D%29" alt="x(t_{0})" title="x(t_{0})" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7B0%7D" alt="t_{0}" title="t_{0}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /> are fixed and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> is free</li>
+<li>min <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J" alt="J" title="J" /> at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%200" alt="\delta J = 0" title="\delta J = 0" /></li>
+<li>There are two quantities that vary (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t%29" alt="x(t)" title="x(t)" />) and these two quantities are independent of each other</li>
+</ul></li>
+<li>Taking the variation of the function just like before gives
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%20%5Cdelta%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20L%20%5Cleft%5B%20x%28t%29%2C%20%5Cdot%7Bx%7D%28t%29%2C%20t%20%20%5Cright%5D%20dt%20%3D%200" alt="\delta J = \delta \int^{t_{f}}_{t_{0}} L \left[ x(t), \dot{x}(t), t  \right] dt = 0" title="\delta J = \delta \int^{t_{f}}_{t_{0}} L \left[ x(t), \dot{x}(t), t  \right] dt = 0" /></li>
+<li>Unlike in the simple calculus of variations example the variation can not simply be moved inside the integral because <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> is now allowed to vary also</li>
+</ul></li>
+<li>Taking into account the ability of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /> to vary the expression becomes
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%20%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20t_%7Bf%7D%7D%20%5Cdelta%20t_%7Bf%7D%20%2B%20%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cdelta%20L" alt="\delta J = \frac{\partial J}{\partial t_{f}} \delta t_{f} +  \int^{t_{f}}_{t_{0}} \delta L" title="\delta J = \frac{\partial J}{\partial t_{f}} \delta t_{f} +  \int^{t_{f}}_{t_{0}} \delta L" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20x%28t%29%2C%20%5Cdot%7Bx%7D%28t%29%2C%20t%5Ddt" alt="\left[ x(t), \dot{x}(t), t]dt" title="\left[ x(t), \dot{x}(t), t]dt" /></li>
+</ul></li>
 </ul>
 </blockquote>
 </body>
