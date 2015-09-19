@@ -30,6 +30,8 @@ title: Analytical Dynamics
 <li><a href="#spherical_coordinate_system">Spherical Coordinate Systems</a></li>
 <li><a href="#euler_angles">Euler Angles</a></li>
 <li><a href="#intrinsic_coordinates">Intrinsic Coordinates</a></li>
+<li><a href="#motion_two_points">Motion Between Two Points in the Same Reference Frame</a></li>
+<li><a href="#rolling_and_slipping">Rolling and Slipping</a></li>
 <li><a href="#examples">Examples</a></li>
 </ul>
 <h2 id="scalars">Scalars</h2>
@@ -285,10 +287,42 @@ width="300" height="300"/>
 </ul></li>
 <li>We can now define the angular velocity of the final, body frame as seen by the initial frame as:
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BB%7D%20%3D%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BP%7D%20%2B%20%20%5E%7BP%7D%5Cunderline%7B%5Comega%7D%5E%7BQ%7D%20%2B%20%5E%7BQ%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D" alt="^{A}\underline{\omega}^{B} = ^{A}\underline{\omega}^{P} +  ^{P}\underline{\omega}^{Q} + ^{Q}\underline{\omega}^{R}" title="^{A}\underline{\omega}^{B} = ^{A}\underline{\omega}^{P} +  ^{P}\underline{\omega}^{Q} + ^{Q}\underline{\omega}^{R}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20%5Cdot%7B%5Cpsi%7D%5Cunderline%7Bp%7D_%7Bz%7D%20%2B%20%5Cdot%7B%5Ctheta%7D%5Cunderline%7Bq%7D_%7B2%7D%20%2B%20%20%5Cdot%7B%5Cphi%7D%5Cunderline%7Be%7D_%7Bx%7D" alt="=  \dot{\psi}\underline{p}_{z} + \dot{\theta}\underline{q}_{2} +  \dot{\phi}\underline{e}_{x}" title="=  \dot{\psi}\underline{p}_{z} + \dot{\theta}\underline{q}_{2} +  \dot{\phi}\underline{e}_{x}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%20%3D%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BP%7D%20%2B%20%20%5E%7BP%7D%5Cunderline%7B%5Comega%7D%5E%7BQ%7D%20%2B%20%5E%7BQ%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D" alt="^{A}\underline{\omega}^{R} = ^{A}\underline{\omega}^{P} +  ^{P}\underline{\omega}^{Q} + ^{Q}\underline{\omega}^{R}" title="^{A}\underline{\omega}^{R} = ^{A}\underline{\omega}^{P} +  ^{P}\underline{\omega}^{Q} + ^{Q}\underline{\omega}^{R}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20%5Cdot%7B%5Cpsi%7D%5Cunderline%7Bp%7D_%7Bz%7D%20%2B%20%5Cdot%7B%5Ctheta%7D%5Cunderline%7Bq%7D_%7B2%7D%20%2B%20%20%5Cdot%7B%5Cphi%7D%5Cunderline%7Be%7D_%7Bx%7D" alt="=  \dot{\psi}\underline{p}_{z} + \dot{\theta}\underline{q}_{2} +  \dot{\phi}\underline{e}_{x}" title="=  \dot{\psi}\underline{p}_{z} + \dot{\theta}\underline{q}_{2} +  \dot{\phi}\underline{e}_{x}" /></li>
+</ul></li>
+<li>Due to the fact that the rotations can often be measured in reference frame R by gyroscopes, it is often desired to have the angular velocity defined in that coordinate system
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%20%3D%20%28%5Cdot%7B%5Cphi%7D%20-%20%5Cdot%7B%5Cpsi%7Dsin%5Ctheta%29%20%20%5Cunderline%7Be%7D_%7Bx%7D%20%2B%20%28%5Cdot%7B%5Cpsi%7Dcos%5Ctheta%20sin%5Cphi%20%2B" alt="^{A}\underline{\omega}^{R} = (\dot{\phi} - \dot{\psi}sin\theta)  \underline{e}_{x} + (\dot{\psi}cos\theta sin\phi +" title="^{A}\underline{\omega}^{R} = (\dot{\phi} - \dot{\psi}sin\theta)  \underline{e}_{x} + (\dot{\psi}cos\theta sin\phi +" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7B%5Ctheta%7Dcos%5Cphi%29%20%20%5Cunderline%7Be%7D_%7By%7D%20%2B%20%28%5Cdot%7B%5Cpsi%7Dcos%5Ctheta%20cos%5Cphi%20-%20%5Cdot%7B%5Ctheta%7Dsin%5Cphi%29%20%20%5Cunderline%7Be%7D_%7Bz%7D" alt="\dot{\theta}cos\phi)  \underline{e}_{y} + (\dot{\psi}cos\theta cos\phi - \dot{\theta}sin\phi)  \underline{e}_{z}" title="\dot{\theta}cos\phi)  \underline{e}_{y} + (\dot{\psi}cos\theta cos\phi - \dot{\theta}sin\phi)  \underline{e}_{z}" /></li>
 </ul></li>
 </ul>
+<blockquote>
+<h3 id="limitations-of-euler-angles">Limitations of Euler Angles</h3>
+</blockquote>
+<blockquote>
+<ul>
+<li>For each sequence of rotations there is a rotation that will result in a singularity where there is an infinite combination of values for the first two rotations to arrive at that same orientation
+<ul>
+<li>For a 321 sequence for example there is a singularity for a 90 degree rotation as the second rotation causing an infinite number of combinations of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cpsi" alt="\psi" title="\psi" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cphi" alt="\phi" title="\phi" /> to arrive at the same final orientation</li>
+</ul></li>
+<li>Singularities basically occur when the same axis in space is reused</li>
+</ul>
+</blockquote>
 <h2 id="intrinsic_coordinates">Intrinsic Coordinates</h2>
+<ul>
+<li>An intrinsic coordinate system is one that is based within the motion and trajectory of a particle
+<ul>
+<li>If there's no motion there can not be an intrinsic coordinate system</li>
+</ul></li>
+<li>The three unit vectors of an intrinsic coordinate system are the tangential vector (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bt%7D" alt="\underline{e}_{t}" title="\underline{e}_{t}" />), the principal normal to the trajectory (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bn%7D" alt="\underline{e}_{n}" title="\underline{e}_{n}" />) and the principal binormal to the trajectory (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bb%7D" alt="\underline{e}_{b}" title="\underline{e}_{b}" />)</li>
+<li>When defined for a using the motion of point P in the general reference frame A the three vectors are defined as:
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bt%7D%20%3D%20%5Cfrac%7B%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%7D%7B%5C%7C%20%20%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%5C%7C%7D" alt="\underline{e}_{t} = \frac{^{A}\underline{V}_{P}}{\|  ^{A}\underline{V}_{P} \|}" title="\underline{e}_{t} = \frac{^{A}\underline{V}_{P}}{\|  ^{A}\underline{V}_{P} \|}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bn%7D%20%3D%20%5Cfrac%7B%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%20%5Cunderline%7Be%7D_%7Bt%7D%7D%7B%5C%7C%20%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%20%5Cunderline%7Be%7D_%7Bt%7D%20%5C%7C%7D" alt="\underline{e}_{n} = \frac{ \frac{^{A}d}{dt} \underline{e}_{t}}{\|  \frac{^{A}d}{dt} \underline{e}_{t} \|}" title="\underline{e}_{n} = \frac{ \frac{^{A}d}{dt} \underline{e}_{t}}{\|  \frac{^{A}d}{dt} \underline{e}_{t} \|}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bb%7D%20%3D%20%5Cunderline%7Be%7D_%7Bt%7D%20%5Ctimes%20%5Cunderline%7Be%7D_%7Bn%7D" alt="\underline{e}_{b} = \underline{e}_{t} \times \underline{e}_{n}" title="\underline{e}_{b} = \underline{e}_{t} \times \underline{e}_{n}" /></li>
+</ul></li>
+<li>Vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bn%7D" alt="\underline{e}_{n}" title="\underline{e}_{n}" /> points to the center of curvature of the trajectory of point P in reference frame A and so difficulties can be encountered when the trajectory is a straight line</li>
+</ul>
+<h2 id="motion_two_points">Motion Between Two Points in the Same Reference Frame</h2>
+<h2 id="rolling_and_slipping">Rolling and Slipping</h2>
 <h2 id="examples">Examples</h2>
 <blockquote>
 <h3 id="examples-content">Examples Content</h3>
@@ -298,6 +332,7 @@ width="300" height="300"/>
 <li><a href="#e_transport_theorem">Transport Theorem</a></li>
 <li><a href="#e_cylindrical_coor_sys">Cylindrical Coordinate System</a></li>
 <li><a href="#e_spherical_coor_sys">Spherical Coordinate System</a></li>
+<li><a href="#e_intrinsic_coor_sys">Intrinsic Coordinate System</a></li>
 </ul>
 </blockquote>
 <blockquote>
@@ -649,6 +684,9 @@ System Example" width="300" height="300"/>
 </blockquote>
 <blockquote>
 <h3 id="e_spherical_coor_sys">Spherical Coordinate System Example</h3>
+</blockquote>
+<blockquote>
+<h3 id="e_intrinsic_coor_sys">Intrinsic Coordinate System Example</h3>
 </blockquote>
 </body>
 </html>

@@ -16,6 +16,8 @@
 - [Spherical Coordinate Systems](#spherical_coordinate_system)
 - [Euler Angles](#euler_angles)
 - [Intrinsic Coordinates](#intrinsic_coordinates)
+- [Motion Between Two Points in the Same Reference Frame](#motion_two_points)
+- [Rolling and Slipping](#rolling_and_slipping)
 - [Examples](#examples)
 
 ## Scalars {#scalars}
@@ -333,12 +335,52 @@ width="300" height="300"/>
       \underline{q}_{z}\right}$
 - We can now define the angular velocity of the final, body frame as seen by
   the initial frame as:
-    - $^{A}\underline{\omega}^{B} = ^{A}\underline{\omega}^{P} +
+    - $^{A}\underline{\omega}^{R} = ^{A}\underline{\omega}^{P} +
       ^{P}\underline{\omega}^{Q} + ^{Q}\underline{\omega}^{R}$ $=
       \dot{\psi}\underline{p}_{z} + \dot{\theta}\underline{q}_{2} +
       \dot{\phi}\underline{e}_{x}$
+- Due to the fact that the rotations can often be measured in reference frame R
+  by gyroscopes, it is often desired to have the angular velocity defined in
+  that coordinate system
+    - $^{A}\underline{\omega}^{R} = (\dot{\phi} - \dot{\psi}sin\theta)
+      \underline{e}_{x} + (\dot{\psi}cos\theta sin\phi +$ $\dot{\theta}cos\phi)
+      \underline{e}_{y} + (\dot{\psi}cos\theta cos\phi - \dot{\theta}sin\phi)
+      \underline{e}_{z}$
+
+> ### Limitations of Euler Angles
+
+> - For each sequence of rotations there is a rotation that will result in a
+    singularity where there is an infinite combination of values for the first
+    two rotations to arrive at that same orientation
+>       - For a 321 sequence for example there is a singularity for a 90 degree
+          rotation as the second rotation causing an infinite number of
+          combinations of $\psi$ and $\phi$ to arrive at the same final
+          orientation
+> - Singularities basically occur when the same axis in space is reused
 
 ## Intrinsic Coordinates {#intrinsic_coordinates}
+
+- An intrinsic coordinate system is one that is based within the motion and
+  trajectory of a particle
+    - If there's no motion there can not be an intrinsic coordinate system
+- The three unit vectors of an intrinsic coordinate system are the tangential
+  vector ($\underline{e}_{t}$), the principal normal to the trajectory
+  ($\underline{e}_{n}$) and the principal binormal to the trajectory
+  ($\underline{e}_{b}$)
+- When defined for a using the motion of point P in the general reference frame
+  A the three vectors are defined as:
+    - $\underline{e}_{t} = \frac{^{A}\underline{V}_{P}}{\|
+      ^{A}\underline{V}_{P} \|}$
+    - $\underline{e}_{n} = \frac{ \frac{^{A}d}{dt} \underline{e}_{t}}{\|
+      \frac{^{A}d}{dt} \underline{e}_{t} \|}$
+    - $\underline{e}_{b} = \underline{e}_{t} \times \underline{e}_{n}$
+- Vector $\underline{e}_{n}$ points to the center of curvature of the
+  trajectory of point P in reference frame A and so difficulties can be
+  encountered when the trajectory is a straight line
+
+## Motion Between Two Points in the Same Reference Frame {#motion_two_points}
+
+## Rolling and Slipping {#rolling_and_slipping}
 
 ## Examples {#examples}
 
@@ -347,6 +389,7 @@ width="300" height="300"/>
 > - [Transport Theorem](#e_transport_theorem)
 > - [Cylindrical Coordinate System](#e_cylindrical_coor_sys)
 > - [Spherical Coordinate System](#e_spherical_coor_sys)
+> - [Intrinsic Coordinate System](#e_intrinsic_coor_sys)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
@@ -617,3 +660,5 @@ System Example" width="300" height="300"/>
           \dot{\theta}^{2}r\underline{e}_{r}$
 
 > ### Spherical Coordinate System Example {#e_spherical_coor_sys}
+
+> ### Intrinsic Coordinate System Example {#e_intrinsic_coor_sys}
