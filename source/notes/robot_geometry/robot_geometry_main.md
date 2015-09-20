@@ -591,12 +591,43 @@ Transformation Matrix" width="300" height="150"/>
           ^{F}\underline{a}_{71} +
           S_{7}sin(\alpha_{71})(^{F}\underline{a}_{71}$ $\cdot
           ^{F}\underline{a}_{71}) + a_{71}(^{F}\underline{a}_{71} \times
-          ^{F}\underline{S}_{1}) \cdot ^{F}\underline{a}_{71}$
+          ^{F}\underline{S}_{1}) \cdot ^{F}\underline{a}_{71} = \underline{0}$
 >       - First take note that when the dot product of the vector
           $^{F}\underline{a}_{71}$ is taken with itself it equals one and so
           all vectors in that term drop out
+>       - Next take note that the cross product between
+          $^{F}\underline{a}_{71}$ and $^{F}\underline{S}_{1}$ produces a
+          result vector perpendicular to those two vectors and so when the dot
+          product of that result vector and $^{F}\underline{a}_{71}$ is taken
+          the result is zero and so the last term drops out of the above
+          expression
+> - The final expression is then only in terms of known values and can be
+    rearranged to solve for $S_{7}$
+>       - $S_{7} = \frac{(^{F}\underline{S}_{1} \times
+          ^{F}\underline{P}_{6orig}) \cdot
+          ^{F}\underline{a}_{71}}{sin\alpha_{71}}$
+
+> - The same process is followed to find the other two unknown lengths and the
+    resulting expression are as follows
+>       - $a_{71} = \frac{(^{F}\underline{P}_{6orig} \times
+          ^{F}\underline{S}_{1}) \cdot ^{F}\underline{S}_{7}}{sin\alpha_{71}}$
+>       - $S_{1} = \frac{(^{F}\underline{P}_{6orig} \times
+          ^{F}\underline{S}_{7}) \cdot ^{F}\underline{a}_{71}}{sin\alpha_{71}}$
 
 >> __Special Case 1: $\underline{S}_{7}$ and $\underline{S}_{1}$ are Parallel__
+
+>> - As mentioned above, problems are encountered when $\alpha_{71}$ is very
+     close to either 0 or 180 degrees
+>> - The first step to solving special case one is to set $S_{7}$ equal to zero
+     ($S_{7} = 0$)
+>> - The vector loop equation from above therefore simplifies to the following expression
+>>      - $^{F}\underline{P}_{6orig} + a_{71} ^{F}\underline{a}_{71} + S_{1}
+          ^{F}\underline{S}_{1} = \underline{0}$
+>> - Now take the dot product of each term in the vector loop equation with
+     vector $^{F}\underline{S}_{1}$
+>>      - $^{F}\underline{P}_{6orig} \cdot ^{F}\underline{S}_{1} + a_{71}
+          (^{F}\underline{a}_{71} \cdot ^{F}\underline{S}_{1}) + S_{1}
+          (^{F}\underline{S}_{1} \cdot ^{F}\underline{S}_{1}) = \underline{0}$
 
 >> __Special Case 2: $\underline{S}_{7}$ and $\underline{S}_{1}$ are Parallel
    and $a_{71} = 0$__
