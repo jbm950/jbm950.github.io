@@ -19,6 +19,10 @@ title: Analytical Dynamics
 <strong>Text: Dynamics of Particles and Rigid Bodies: A Systematic Approach</strong><br />
 <em>by: Anil Rao</em></p>
 <h2 id="table-of-contents">Table of Contents</h2>
+<blockquote>
+<h3 id="kinematics">Kinematics</h3>
+</blockquote>
+<blockquote>
 <ul>
 <li><a href="#scalars">Scalars</a></li>
 <li><a href="#vectors">Vectors</a></li>
@@ -32,6 +36,9 @@ title: Analytical Dynamics
 <li><a href="#intrinsic_coordinates">Intrinsic Coordinates</a></li>
 <li><a href="#motion_two_points">Motion Between Two Points in the Same Reference Frame</a></li>
 <li><a href="#rolling_and_slipping">Rolling and Slipping</a></li>
+</ul>
+</blockquote>
+<ul>
 <li><a href="#examples">Examples</a></li>
 </ul>
 <h2 id="scalars">Scalars</h2>
@@ -322,11 +329,39 @@ width="300" height="300"/>
 <li>Vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bn%7D" alt="\underline{e}_{n}" title="\underline{e}_{n}" /> points to the center of curvature of the trajectory of point P in reference frame A and so difficulties can be encountered when the trajectory is a straight line</li>
 </ul>
 <h2 id="motion_two_points">Motion Between Two Points in the Same Reference Frame</h2>
+<ul>
+<li>For two points Q and P in the same rigid body, a relation can be derived for their velocities and accelerations</li>
+<li>For general reference frame A the position vector between points Q and P fixed in reference frame R can be given as:
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D_%7B%5E%7BQ%7D%2F_%7BP%7D%7D%20%3D%20%5Cunderline%7Br%7D_%7BQ%7D%20-%20%5Cunderline%7Br%7D_%7BP%7D" alt="\underline{r}_{^{Q}/_{P}} = \underline{r}_{Q} - \underline{r}_{P}" title="\underline{r}_{^{Q}/_{P}} = \underline{r}_{Q} - \underline{r}_{P}" /></li>
+</ul></li>
+<li>Now taking the time derivative of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D_%7B%5E%7BQ%7D%2F_%7BP%7D%7D" alt="\underline{r}_{^{Q}/_{P}}" title="\underline{r}_{^{Q}/_{P}}" /> in the A reference frame and including the transport theorem between the A reference frame and the R reference frame leads to the following expression
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%20%5Cunderline%7Br%7D_%7B%5E%7BQ%7D%2F_%7BP%7D%7D%20%3D%20%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%28%5Cunderline%7Br%7D_%7BQ%7D%20-%20%5Cunderline%7Br%7D_%7BP%7D%29" alt="\frac{^{A}d}{dt} \underline{r}_{^{Q}/_{P}} =  \frac{^{A}d}{dt}(\underline{r}_{Q} - \underline{r}_{P})" title="\frac{^{A}d}{dt} \underline{r}_{^{Q}/_{P}} =  \frac{^{A}d}{dt}(\underline{r}_{Q} - \underline{r}_{P})" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BQ%7D%20-%20%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%20%5Cfrac%7B%5E%7BR%7Dd%7D%7Bdt%7D%5Cunderline%7Br%7D_%7B%5E%7BQ%7D%2F_%7BP%7D%7D%20%2B%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%20%20%5Ctimes%20%28%5Cunderline%7Br%7D_%7BQ%7D%20-%20%5Cunderline%7Br%7D_%7BP%7D%29" alt="^{A}\underline{V}_{Q} - ^{A}\underline{V}_{P} =  \frac{^{R}d}{dt}\underline{r}_{^{Q}/_{P}} + ^{A}\underline{\omega}^{R}  \times (\underline{r}_{Q} - \underline{r}_{P})" title="^{A}\underline{V}_{Q} - ^{A}\underline{V}_{P} =  \frac{^{R}d}{dt}\underline{r}_{^{Q}/_{P}} + ^{A}\underline{\omega}^{R}  \times (\underline{r}_{Q} - \underline{r}_{P})" /></li>
+</ul></li>
+<li>Noting that the distance between points Q and P do not change by definition of a rigid body the first term on the right hand side of the above expression equals zero
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BQ%7D%20-%20%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%20%5Ctimes%20%28%5Cunderline%7Br%7D_%7BQ%7D%20-%20%20%5Cunderline%7Br%7D_%7BP%7D%29" alt="^{A}\underline{V}_{Q} - ^{A}\underline{V}_{P} =  ^{A}\underline{\omega}^{R} \times (\underline{r}_{Q} -  \underline{r}_{P})" title="^{A}\underline{V}_{Q} - ^{A}\underline{V}_{P} =  ^{A}\underline{\omega}^{R} \times (\underline{r}_{Q} -  \underline{r}_{P})" /></li>
+</ul></li>
+<li>By taking another time derivative of the above expression the difference in accelerations of the two points can be obtained
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Ba%7D_%7BQ%7D%20-%20%5E%7BA%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%20%20%5B%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%20%5Ctimes%20%28%5Cunderline%7Br%7D_%7BQ%7D%20-%20%20%5Cunderline%7Br%7D_%7BP%7D%29%5D" alt="^{A}\underline{a}_{Q} - ^{A}\underline{a}_{P} = \frac{^{A}d}{dt}  [^{A}\underline{\omega}^{R} \times (\underline{r}_{Q} -  \underline{r}_{P})]" title="^{A}\underline{a}_{Q} - ^{A}\underline{a}_{P} = \frac{^{A}d}{dt}  [^{A}\underline{\omega}^{R} \times (\underline{r}_{Q} -  \underline{r}_{P})]" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7Ba%7D_%7BQ%7D%20-%20%5E%7BA%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%20%20%28%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%29%20%5Ctimes%20%28%5Cunderline%7Br%7D_%7BQ%7D%20-%20%20%5Cunderline%7Br%7D_%7BP%7D%29" alt="^{A}\underline{a}_{Q} - ^{A}\underline{a}_{P} = \frac{^{A}d}{dt}  (^{A}\underline{\omega}^{R}) \times (\underline{r}_{Q} -  \underline{r}_{P})" title="^{A}\underline{a}_{Q} - ^{A}\underline{a}_{P} = \frac{^{A}d}{dt}  (^{A}\underline{\omega}^{R}) \times (\underline{r}_{Q} -  \underline{r}_{P})" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%2B%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%20%5Ctimes%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%20%20%28%5Cunderline%7Br%7D_%7BQ%7D%20-%20%5Cunderline%7Br%7D_%7BP%7D%29" alt="+ ^{A}\underline{\omega}^{R} \times \frac{^{A}d}{dt}  (\underline{r}_{Q} - \underline{r}_{P})" title="+ ^{A}\underline{\omega}^{R} \times \frac{^{A}d}{dt}  (\underline{r}_{Q} - \underline{r}_{P})" /></li>
+</ul></li>
+<li>Now keeping in mind that <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%20%28%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BR%7D%29" alt="\frac{^{A}d}{dt} (^{A}\underline{\omega}^{R})" title="\frac{^{A}d}{dt} (^{A}\underline{\omega}^{R})" /> is the angular acceleration <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7B%5Calpha%7D%5E%7BR%7D" alt="^{A}\underline{\alpha}^{R}" title="^{A}\underline{\alpha}^{R}" /> and that <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%20%28%5Cunderline%7Br%7D_%7BQ%7D%20-%20%5Cunderline%7Br%7D_%7BP%7D%29" alt="\frac{^{A}d}{dt} (\underline{r}_{Q} - \underline{r}_{P})" title="\frac{^{A}d}{dt} (\underline{r}_{Q} - \underline{r}_{P})" /> is the velocity expression that has already been found, the acceleration expression can be simplified to the following expression</li>
+</ul>
 <h2 id="rolling_and_slipping">Rolling and Slipping</h2>
 <h2 id="examples">Examples</h2>
 <blockquote>
 <h3 id="examples-content">Examples Content</h3>
 </blockquote>
+<blockquote>
+<blockquote>
+<h4 id="kinematics-1">Kinematics</h4>
+</blockquote>
+</blockquote>
+<blockquote>
 <blockquote>
 <ul>
 <li><a href="#e_transport_theorem">Transport Theorem</a></li>
@@ -334,6 +369,7 @@ width="300" height="300"/>
 <li><a href="#e_spherical_coor_sys">Spherical Coordinate System</a></li>
 <li><a href="#e_intrinsic_coor_sys">Intrinsic Coordinate System</a></li>
 </ul>
+</blockquote>
 </blockquote>
 <blockquote>
 <h3 id="e_transport_theorem">Transport Theorem Examples</h3>

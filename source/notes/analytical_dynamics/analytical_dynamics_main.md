@@ -6,18 +6,21 @@
 
 ## Table of Contents
 
-- [Scalars](#scalars)
-- [Vectors](#vectors)
-- [Reference Frames](#reference_frames)
-- [Coordinate System](#coordinate_system)
-- [Vector Derivatives](#vector_derivatives)
-- [Transport Theorem](#transport_theorem)
-- [Cylindrical Coordinate Systems](#cylindrical_coordinate_systems)
-- [Spherical Coordinate Systems](#spherical_coordinate_system)
-- [Euler Angles](#euler_angles)
-- [Intrinsic Coordinates](#intrinsic_coordinates)
-- [Motion Between Two Points in the Same Reference Frame](#motion_two_points)
-- [Rolling and Slipping](#rolling_and_slipping)
+> ### Kinematics
+
+> - [Scalars](#scalars)
+> - [Vectors](#vectors)
+> - [Reference Frames](#reference_frames)
+> - [Coordinate System](#coordinate_system)
+> - [Vector Derivatives](#vector_derivatives)
+> - [Transport Theorem](#transport_theorem)
+> - [Cylindrical Coordinate Systems](#cylindrical_coordinate_systems)
+> - [Spherical Coordinate Systems](#spherical_coordinate_system)
+> - [Euler Angles](#euler_angles)
+> - [Intrinsic Coordinates](#intrinsic_coordinates)
+> - [Motion Between Two Points in the Same Reference Frame](#motion_two_points)
+> - [Rolling and Slipping](#rolling_and_slipping)
+
 - [Examples](#examples)
 
 ## Scalars {#scalars}
@@ -380,16 +383,52 @@ width="300" height="300"/>
 
 ## Motion Between Two Points in the Same Reference Frame {#motion_two_points}
 
+- For two points Q and P in the same rigid body, a relation can be derived for
+  their velocities and accelerations
+- For general reference frame A the position vector between points Q and P
+  fixed in reference frame R can be given as:
+    - $\underline{r}_{^{Q}/_{P}} = \underline{r}_{Q} - \underline{r}_{P}$
+- Now taking the time derivative of $\underline{r}_{^{Q}/_{P}}$ in the A
+  reference frame and including the transport theorem between the A reference
+  frame and the R reference frame leads to the following expression
+    - $\frac{^{A}d}{dt} \underline{r}_{^{Q}/_{P}} =
+      \frac{^{A}d}{dt}(\underline{r}_{Q} - \underline{r}_{P})$
+    - $^{A}\underline{V}_{Q} - ^{A}\underline{V}_{P} =
+      \frac{^{R}d}{dt}\underline{r}_{^{Q}/_{P}} + ^{A}\underline{\omega}^{R}
+      \times (\underline{r}_{Q} - \underline{r}_{P})$
+- Noting that the distance between points Q and P do not change by definition
+  of a rigid body the first term on the right hand side of the above expression
+  equals zero
+    - $^{A}\underline{V}_{Q} - ^{A}\underline{V}_{P} =
+      ^{A}\underline{\omega}^{R} \times (\underline{r}_{Q} -
+      \underline{r}_{P})$
+- By taking another time derivative of the above expression the difference in
+  accelerations of the two points can be obtained
+    - $^{A}\underline{a}_{Q} - ^{A}\underline{a}_{P} = \frac{^{A}d}{dt}
+      [^{A}\underline{\omega}^{R} \times (\underline{r}_{Q} -
+      \underline{r}_{P})]$
+    - $^{A}\underline{a}_{Q} - ^{A}\underline{a}_{P} = \frac{^{A}d}{dt}
+      (^{A}\underline{\omega}^{R}) \times (\underline{r}_{Q} -
+      \underline{r}_{P})$ $+ ^{A}\underline{\omega}^{R} \times \frac{^{A}d}{dt}
+      (\underline{r}_{Q} - \underline{r}_{P})$
+- Now keeping in mind that $\frac{^{A}d}{dt} (^{A}\underline{\omega}^{R})$ is
+  the angular acceleration $^{A}\underline{\alpha}^{R}$ and that
+  $\frac{^{A}d}{dt} (\underline{r}_{Q} - \underline{r}_{P})$ is the velocity
+  expression that has already been found, the acceleration expression can be
+  simplified to the following expression
+
 ## Rolling and Slipping {#rolling_and_slipping}
 
 ## Examples {#examples}
 
 > ### Examples Content
 
-> - [Transport Theorem](#e_transport_theorem)
-> - [Cylindrical Coordinate System](#e_cylindrical_coor_sys)
-> - [Spherical Coordinate System](#e_spherical_coor_sys)
-> - [Intrinsic Coordinate System](#e_intrinsic_coor_sys)
+>> #### Kinematics
+
+>> - [Transport Theorem](#e_transport_theorem)
+>> - [Cylindrical Coordinate System](#e_cylindrical_coor_sys)
+>> - [Spherical Coordinate System](#e_spherical_coor_sys)
+>> - [Intrinsic Coordinate System](#e_intrinsic_coor_sys)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
