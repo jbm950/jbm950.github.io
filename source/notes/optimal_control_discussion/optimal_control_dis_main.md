@@ -179,3 +179,30 @@
 > - Taking into account the ability of $t_{f}$ to vary the expression becomes
 >       - $\delta J = \frac{\partial J}{\partial t_{f}} \delta t_{f} +
           \int^{t_{f}}_{t_{0}} \delta L$ $\left[ x(t), \dot{x}(t), t]dt$
+> - The left term of the right hand side of the above expression can be
+    simplified with the following result
+>       - $\frac{\partial J}{\partial t_{f}} = L \left[ x(t), \dot{x}(t), t
+          \right] |_{t_{f}}$ $= L \left[ x(t_{f}), \dot{x}(t_{f}), t_{f}
+          \right]$
+> - The second term of the $\delta J$ expression needs to be simplified using
+    integration by parts just like it was in the simple calculus of variations
+    example
+>       - $\int^{t_{f}}_{t_{0}} \delta L \left[ x(t), \dot{x}(t), t \right] dt$
+          $= \int^{t_{f}}_{t_{0}} \left[ \frac{\partial L}{\partial x} \delta x
+          + \frac{\partial L}{\partial \dot{x}} \delta \dot{x} \right] dt$
+>       - $\int^{t_{f}}_{t_{o}} \frac{\partial L}{\partial \dot{x}} \delta
+          \dot{x} dt$ $= \left[ \frac{\partial L}{\partial \dot{x}} \delta x
+          \right]^{t_{f}}_{t_{0}}$ $- \int^{t_{f}}_{t_{0}} \frac{d}{dt}
+          (\frac{\partial L}{\partial \dot{x}})\delta xdt$ $= \frac{\partial
+          L}{\partial \dot{x}}|_{t_{f}} \delta x(t_{f})$ $-
+          \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial L}{\partial
+          \dot{x}})\delta xdt$
+> - Since in this problem $\delta x_{f} = 0$ the term $\delta x(t_{f}) =
+    -\dot{x}(t_{f}) \delta t_{f}$
+> - Arranging all of the terms back into the expression for the variation of
+    the action integral yields
+>       - $\delta J = L \left[ x(t_{f}), \dot{x}(t_{f}), t_{f} \right] \delta
+          t_{f} - \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \dot{x}(t_{f})
+          \delta t_{f}$ $+ \int^{t_{f}}_{t_{0}} \left[ \frac{\partial
+          L}{\partial x} - \frac{d}{dt}\frac{\partial L}{\partial \dot{x}}
+          \right] \delta x dt = 0$
