@@ -620,14 +620,58 @@ Transformation Matrix" width="300" height="150"/>
      close to either 0 or 180 degrees
 >> - The first step to solving special case one is to set $S_{7}$ equal to zero
      ($S_{7} = 0$)
->> - The vector loop equation from above therefore simplifies to the following expression
->>      - $^{F}\underline{P}_{6orig} + a_{71} ^{F}\underline{a}_{71} + S_{1}
-          ^{F}\underline{S}_{1} = \underline{0}$
+>> - The vector loop equation from above therefore simplifies to the following
+     expression
+>>      - $^{F}\underline{P}_{6orig} + a_{71} (^{F}\underline{a}_{71}) + S_{1}
+          (^{F}\underline{S}_{1}) = \underline{0}$
 >> - Now take the dot product of each term in the vector loop equation with
      vector $^{F}\underline{S}_{1}$
 >>      - $^{F}\underline{P}_{6orig} \cdot ^{F}\underline{S}_{1} + a_{71}
           (^{F}\underline{a}_{71} \cdot ^{F}\underline{S}_{1}) + S_{1}
           (^{F}\underline{S}_{1} \cdot ^{F}\underline{S}_{1}) = \underline{0}$
+>>      - The vectors $^{F}\underline{a}_{71}$ and $^{F}\underline{S}_{1}$ are
+          perpendicular and so their dot product is zero and therefore the
+          middle term goes away
+>>      - The dot product of vector $^{F}\underline{S}_{1}$ with itself is one
+          and so the vectors drop out of the last term in the expression
+>> - Simplifying the above expression for the length $S_{1}$ gives the
+     following expression
+>>      - $S_{1} = - ^{F}\underline{P}_{6orig} \cdot ^{F}\underline{S}_{1}$
+>> - Now we rearrange the vector loop equation so that the $a_{71}$ terms are
+     all on one side
+>>      - $-(^{F}\underline{P}_{6orig} + S_{1} (^{F}\underline{S}_{1})) =
+          a_{71} (^{F}\underline{a}_{71})$
+>> - From the expression the length can be found by recognizing that it
+     represents the magnitude of the left hand side of the equation
+>>      - $a_{71} = \| (^{F}\underline{P}_{6orig} + S_{1}
+          (^{F}\underline{S}_{1})) \|$
+>>      - If $a_{71} = 0$ then problems arise and the process has to move to
+          special case 2
+>> - Using the same expression above where the $a_{71}$ terms are isolated, the
+     unit vector $^{F}\underline{a}_{71}$ can be found by dividing the left
+     hand side of the equation by length $a_{71}$
+>>      - $^{F}\underline{a}_{71} = \frac{-(^{F}\underline{P}_{6orig} + S_{1}
+          (^{F}\underline{S}_{1}))}{a_{71}}$
+>> - Now the same series of sin and cos equations as the normal case can be used
+     to find the remaining angles $\theta_{7}$ and $\gamma_{1}$
 
 >> __Special Case 2: $\underline{S}_{7}$ and $\underline{S}_{1}$ are Parallel
    and $a_{71} = 0$__
+
+>> - If $\underline{S}_{7}$ and $\underline{S}_{1}$ are Parallel and $a_{71} =
+     0$ then we set $S_{7} = 0$ and $\theta_{7} = 0$
+>> - This makes $^{F}\underline{a}_{71} = ^{F}\underline{a}_{67}$
+>> - The remaining value to find is the angle $\gamma_{1}$ which is found using
+     sin and cos as it was for the normal case and special case one
+
+> - The hypothetical link technique including the special cases can be
+    summarized in the following flow chart taken from the lecture slides
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/hypothetical_link_flow.png"
+alt="Hypothetical Link Flow Chart" title="Hypothetical Link Flow Chart"
+width="800" height="700"/> 
+</td></tr>
+</table>
+</div>

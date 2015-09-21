@@ -624,12 +624,32 @@ Transformation Matrix" width="300" height="150"/>
 <li>The first step to solving special case one is to set <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B7%7D" alt="S_{7}" title="S_{7}" /> equal to zero (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B7%7D%20%3D%200" alt="S_{7} = 0" title="S_{7} = 0" />)</li>
 <li>The vector loop equation from above therefore simplifies to the following expression
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7BP%7D_%7B6orig%7D%20%2B%20a_%7B71%7D%20%5E%7BF%7D%5Cunderline%7Ba%7D_%7B71%7D%20%2B%20S_%7B1%7D%20%20%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%20%3D%20%5Cunderline%7B0%7D" alt="^{F}\underline{P}_{6orig} + a_{71} ^{F}\underline{a}_{71} + S_{1}  ^{F}\underline{S}_{1} = \underline{0}" title="^{F}\underline{P}_{6orig} + a_{71} ^{F}\underline{a}_{71} + S_{1}  ^{F}\underline{S}_{1} = \underline{0}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7BP%7D_%7B6orig%7D%20%2B%20a_%7B71%7D%20%28%5E%7BF%7D%5Cunderline%7Ba%7D_%7B71%7D%29%20%2B%20S_%7B1%7D%20%20%28%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%29%20%3D%20%5Cunderline%7B0%7D" alt="^{F}\underline{P}_{6orig} + a_{71} (^{F}\underline{a}_{71}) + S_{1}  (^{F}\underline{S}_{1}) = \underline{0}" title="^{F}\underline{P}_{6orig} + a_{71} (^{F}\underline{a}_{71}) + S_{1}  (^{F}\underline{S}_{1}) = \underline{0}" /></li>
 </ul></li>
 <li>Now take the dot product of each term in the vector loop equation with vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D" alt="^{F}\underline{S}_{1}" title="^{F}\underline{S}_{1}" />
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7BP%7D_%7B6orig%7D%20%5Ccdot%20%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%20%2B%20a_%7B71%7D%20%20%28%5E%7BF%7D%5Cunderline%7Ba%7D_%7B71%7D%20%5Ccdot%20%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%29%20%2B%20S_%7B1%7D%20%20%28%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%20%5Ccdot%20%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%29%20%3D%20%5Cunderline%7B0%7D" alt="^{F}\underline{P}_{6orig} \cdot ^{F}\underline{S}_{1} + a_{71}  (^{F}\underline{a}_{71} \cdot ^{F}\underline{S}_{1}) + S_{1}  (^{F}\underline{S}_{1} \cdot ^{F}\underline{S}_{1}) = \underline{0}" title="^{F}\underline{P}_{6orig} \cdot ^{F}\underline{S}_{1} + a_{71}  (^{F}\underline{a}_{71} \cdot ^{F}\underline{S}_{1}) + S_{1}  (^{F}\underline{S}_{1} \cdot ^{F}\underline{S}_{1}) = \underline{0}" /></li>
+<li>The vectors <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7Ba%7D_%7B71%7D" alt="^{F}\underline{a}_{71}" title="^{F}\underline{a}_{71}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D" alt="^{F}\underline{S}_{1}" title="^{F}\underline{S}_{1}" /> are perpendicular and so their dot product is zero and therefore the middle term goes away</li>
+<li>The dot product of vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D" alt="^{F}\underline{S}_{1}" title="^{F}\underline{S}_{1}" /> with itself is one and so the vectors drop out of the last term in the expression</li>
 </ul></li>
+<li>Simplifying the above expression for the length <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B1%7D" alt="S_{1}" title="S_{1}" /> gives the following expression
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B1%7D%20%3D%20-%20%5E%7BF%7D%5Cunderline%7BP%7D_%7B6orig%7D%20%5Ccdot%20%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D" alt="S_{1} = - ^{F}\underline{P}_{6orig} \cdot ^{F}\underline{S}_{1}" title="S_{1} = - ^{F}\underline{P}_{6orig} \cdot ^{F}\underline{S}_{1}" /></li>
+</ul></li>
+<li>Now we rearrange the vector loop equation so that the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B71%7D" alt="a_{71}" title="a_{71}" /> terms are all on one side
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=-%28%5E%7BF%7D%5Cunderline%7BP%7D_%7B6orig%7D%20%2B%20S_%7B1%7D%20%28%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%29%29%20%3D%20%20a_%7B71%7D%20%28%5E%7BF%7D%5Cunderline%7Ba%7D_%7B71%7D%29" alt="-(^{F}\underline{P}_{6orig} + S_{1} (^{F}\underline{S}_{1})) =  a_{71} (^{F}\underline{a}_{71})" title="-(^{F}\underline{P}_{6orig} + S_{1} (^{F}\underline{S}_{1})) =  a_{71} (^{F}\underline{a}_{71})" /></li>
+</ul></li>
+<li>From the expression the length can be found by recognizing that it represents the magnitude of the left hand side of the equation
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B71%7D%20%3D%20%5C%7C%20%28%5E%7BF%7D%5Cunderline%7BP%7D_%7B6orig%7D%20%2B%20S_%7B1%7D%20%20%28%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%29%29%20%5C%7C" alt="a_{71} = \| (^{F}\underline{P}_{6orig} + S_{1}  (^{F}\underline{S}_{1})) \|" title="a_{71} = \| (^{F}\underline{P}_{6orig} + S_{1}  (^{F}\underline{S}_{1})) \|" /></li>
+<li>If <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B71%7D%20%3D%200" alt="a_{71} = 0" title="a_{71} = 0" /> then problems arise and the process has to move to special case 2</li>
+</ul></li>
+<li>Using the same expression above where the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B71%7D" alt="a_{71}" title="a_{71}" /> terms are isolated, the unit vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7Ba%7D_%7B71%7D" alt="^{F}\underline{a}_{71}" title="^{F}\underline{a}_{71}" /> can be found by dividing the left hand side of the equation by length <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B71%7D" alt="a_{71}" title="a_{71}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7Ba%7D_%7B71%7D%20%3D%20%5Cfrac%7B-%28%5E%7BF%7D%5Cunderline%7BP%7D_%7B6orig%7D%20%2B%20S_%7B1%7D%20%20%28%5E%7BF%7D%5Cunderline%7BS%7D_%7B1%7D%29%29%7D%7Ba_%7B71%7D%7D" alt="^{F}\underline{a}_{71} = \frac{-(^{F}\underline{P}_{6orig} + S_{1}  (^{F}\underline{S}_{1}))}{a_{71}}" title="^{F}\underline{a}_{71} = \frac{-(^{F}\underline{P}_{6orig} + S_{1}  (^{F}\underline{S}_{1}))}{a_{71}}" /></li>
+</ul></li>
+<li>Now the same series of sin and cos equations as the normal case can be used to find the remaining angles <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7B7%7D" alt="\theta_{7}" title="\theta_{7}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cgamma_%7B1%7D" alt="\gamma_{1}" title="\gamma_{1}" /></li>
 </ul>
 </blockquote>
 </blockquote>
@@ -638,5 +658,30 @@ Transformation Matrix" width="300" height="150"/>
 <p><strong>Special Case 2: <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7B7%7D" alt="\underline{S}_{7}" title="\underline{S}_{7}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7B1%7D" alt="\underline{S}_{1}" title="\underline{S}_{1}" /> are Parallel and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B71%7D%20%3D%200" alt="a_{71} = 0" title="a_{71} = 0" /></strong></p>
 </blockquote>
 </blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>If <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7B7%7D" alt="\underline{S}_{7}" title="\underline{S}_{7}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7B1%7D" alt="\underline{S}_{1}" title="\underline{S}_{1}" /> are Parallel and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=a_%7B71%7D%20%3D%20%200" alt="a_{71} =  0" title="a_{71} =  0" /> then we set <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S_%7B7%7D%20%3D%200" alt="S_{7} = 0" title="S_{7} = 0" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7B7%7D%20%3D%200" alt="\theta_{7} = 0" title="\theta_{7} = 0" /></li>
+<li>This makes <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BF%7D%5Cunderline%7Ba%7D_%7B71%7D%20%3D%20%5E%7BF%7D%5Cunderline%7Ba%7D_%7B67%7D" alt="^{F}\underline{a}_{71} = ^{F}\underline{a}_{67}" title="^{F}\underline{a}_{71} = ^{F}\underline{a}_{67}" /></li>
+<li>The remaining value to find is the angle <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cgamma_%7B1%7D" alt="\gamma_{1}" title="\gamma_{1}" /> which is found using sin and cos as it was for the normal case and special case one</li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<ul>
+<li>The hypothetical link technique including the special cases can be summarized in the following flow chart taken from the lecture slides</li>
+</ul>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/hypothetical_link_flow.png"
+alt="Hypothetical Link Flow Chart" title="Hypothetical Link Flow Chart"
+width="800" height="700"/>
+</td>
+</tr>
+</table>
+</div>
 </body>
 </html>
