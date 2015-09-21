@@ -416,8 +416,30 @@ width="300" height="300"/>
   $\frac{^{A}d}{dt} (\underline{r}_{Q} - \underline{r}_{P})$ is the velocity
   expression that has already been found, the acceleration expression can be
   simplified to the following expression
+    - $^{A}\underline{a}_{Q} - ^{A}\underline{a}_{P} =
+      ^{A}\underline{\alpha}^{R} \times (\underline{r}_{Q} - \underline{r}_{P})
+      +$ $^{A}\underline{\omega}^{R} \times \left[ ^{A}\underline{\omega}^{R}
+      \times (\underline{r}_{Q} - \underline{r}_{P}) \right]$
+    - It is important to remember that cross products are not commutative and
+      that the order in which they are performed is important
 
 ## Rolling and Slipping {#rolling_and_slipping}
+
+- The condition for rolling between two rigid bodies R and S in a general
+  reference frame is the following expression
+    - $^{A}\underline{V}^{R}_{C} = ^{A}\underline{V}^{S}_{C}$ where point C is
+      the point of contact between rigid bodies R and S
+- Sliding between two rigid bodies occurs anytime the rolling condition is not
+  met
+- Note that when considering rolling motion there are three point C's to
+  consider
+    1. The instantaneous point of contact between the two rigid bodies which
+       doesn't belong to either body
+    2. The point C belonging to rigid body R
+    3. The point C belonging to rigid body S
+- Therefore in the above condition for rolling the term
+  $^{A}\underline{V}^{R}_{C}$ stands for the velocity of point C belonging to
+  rigid body R in reference frame A
 
 ## Examples {#examples}
 
@@ -429,6 +451,7 @@ width="300" height="300"/>
 >> - [Cylindrical Coordinate System](#e_cylindrical_coor_sys)
 >> - [Spherical Coordinate System](#e_spherical_coor_sys)
 >> - [Intrinsic Coordinate System](#e_intrinsic_coor_sys)
+>> - [Rolling Motion](#e_rolling_motion)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
@@ -700,4 +723,36 @@ System Example" width="300" height="300"/>
 
 > ### Spherical Coordinate System Example {#e_spherical_coor_sys}
 
+> - The problem is to find the velocity and acceleration of point P in the A
+    reference frame ($^{A}\underline{V}_{P}$ and $^{A}\underline{V}_{P}$)
+> - Since the example for cylindrical coordinate systems already found the
+    expression using the coordinate system in reference frame A and using the
+    cylindrical coordinate system, this example will only be using the
+    spherical coordinate system approach
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/spherical_coor_sys.png"
+alt="Cylindrical Coordinate System" title="Cylindrical Coordinate System"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - In order to define the spherical coordinate system three reference frames
+    will be used:
+>       - The given reference frame (A)
+>       - The reference frame fixed in the plane containing points O, P and Q
+          (or vectors $r$ and $\underline{r}$) (B)
+>       - The reference frame fixed in the plane containing vector
+          $\underline{r}$ that is perpendicular to the plane containing vectors
+          $\underline{E}_{z}$ and $\underline{r}$ (C)
+
+>> # Not completed
+
 > ### Intrinsic Coordinate System Example {#e_intrinsic_coor_sys}
+
+> ### Rolling Motion {#e_rolling_motion}
+
+> - This example also includes examples on motion between two points fixed in
+    the same rigid body
