@@ -252,3 +252,29 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 
 - The general form of an unconstrained problem is to minimize $f(\mathbf{x})$
   without any constraints on the vector $\mathbf{x}$
+
+> __Minimum Values__
+
+> - When minimizing a function $f(\mathbf{x})$ over $R^{n}$ with
+    $\mathbf{\bar{x}} \in R^{n}$ the point $\mathbf{\bar{x}}$ is a _local
+    minimum_ if there exists an $\epsilon$ neighborhood around
+    $\mathbf{\bar{x}}$ such that $f(\mathbf{\bar{x}}) \leq f(\mathbf{x})$ for
+    $\mathbf{x} \in N_{\epsilon}(\mathbf{\bar{x}})$
+> - If the local minimum $\mathbf{\bar{x}}$ satisfies $f(\mathbf{\bar{x}}) <
+    f(\mathbf{x})$ for $\mathbf{x} \in N_{\epsilon}(\mathbf{\bar{x}})$ where
+    $\mathbf{x} \neq \mathbf{\bar{x}}$ then the value is refered to as a
+    _strict local minimum_
+> - Lastly if the optimal solution $\mathbf{\bar{x}}$ satisfies
+    $f(\mathbf{\bar{x}}) \leq f(\mathbf{x})$ for all $\mathbf{x} \in R^{n}$
+    then the value is refered to as a _global minimum_
+>       - Note that all global minimums are also local minimums
+
+> __Necessary and Sufficient Conditions__
+
+> - Necessary conditions are conditions which must be satisfied for every local
+    optimal solution, however, satisfying them does not prove that the point is
+    a local optimal solution
+> - Sufficient Conditions are conditions that, when satisfied, are enough to
+    prove that a point is a local optimal solution
+
+> __Descent Direction__
