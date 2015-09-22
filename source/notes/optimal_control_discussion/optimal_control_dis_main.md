@@ -206,3 +206,50 @@
           \delta t_{f}$ $+ \int^{t_{f}}_{t_{0}} \left[ \frac{\partial
           L}{\partial x} - \frac{d}{dt}\frac{\partial L}{\partial \dot{x}}
           \right] \delta x dt = 0$
+>       - $\delta J = \left( L \left[ x(t_{f}), \dot{x}(t_{f}), t_{f} \right] -
+          \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \dot{x}(t_{f}) \right)
+          \delta t_{f}$ $+ \int^{t_{f}}_{t_{0}} \left[ \frac{\partial
+          L}{\partial x} - \frac{d}{dt}\frac{\partial L}{\partial \dot{x}}
+          \right] \delta x dt = 0$
+> - Keeping in mind that $\delta t_{f}$ and $\delta x$ are independent of one
+    another, for the above expression to be valid for any varitiation in
+    $t_{f}$ or $x(t)$ both terms have to equal zero
+>       - $L \left[ x(t_{f}), \dot{x}(t_{f}), t_{f} \right] -
+          \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \dot{x}(t_{f}) = 0$
+          (refered to as the natural boundary condition)
+>       - $\frac{\partial L}{\partial x} - \frac{d}{dt}\frac{\partial
+          L}{\partial \dot{x}} = 0$
+> - We now have optimality conditions for the case with a non-fixed end time
+    $t_{f}$
+
+> - Now for the second advanced calculus of variations example we will have
+    fixed start position and time and a fixed end time but not a fixed end
+    position
+>       - $x(t_{0})$, $t_{0}$ and $t_{f}$ are fixed
+>       - $x(t_{f})$ is free
+> - We will again begin by taking the variation of functional $J$ and noting
+    that this time because the start and end times are fixed the variation can
+    be moved inside the integral
+>       - $\delta J = \delta \int^{t_{f}}_{t_{0}} L \left[ x(t), \dot{x}(t), t
+          \right] dt$
+>       - $\delta J = \int^{t_{f}}_{t_{0}} \delta L \left[ x(t), \dot{x}(t), t
+          \right] dt$
+>       - $\delta J = \int^{t_{f}}_{t_{0}} \left[ \frac{\partial L}{\partial x}
+          \delta x + \frac{\partial L}{\partial \dot{x}} \delta \dot{x}
+          \right]dt$
+> - The next step moving forward will be to integrate the second term in the
+    integral by parts as has been done in the previous examples
+>       - $\int^{t_{f}}_{t_{0}} \frac{\partial L}{\partial \dot{x}} \delta
+          \dot{x}(t)dt$ $= \left[ \frac{\partial L}{\partial \dot{x}} \delta x
+          \right]^{t_{f}}_{t_{0}} - \int^{t_{f}}_{t_{0}} \frac{d}{dt}
+          (\frac{\partial L}{\partial \dot{x}}) \delta x dt$
+>       - $\int^{t_{f}}_{t_{0}} \frac{\partial L}{\partial \dot{x}} \delta
+          \dot{x}(t)dt$ $= \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \delta
+          x(t_{f}) - \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial
+          L}{\partial \dot{x}}) \delta x dt$
+> - Putting this result back in the previous equation yields the following
+    expression
+>       - $\delta J = \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \delta
+          x(t_{f}) + \int^{t_{f}}_{t_{0}}$ $\left[ \frac{\partial L}{\partial
+          x} - \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right]\delta
+          x dt = 0$
