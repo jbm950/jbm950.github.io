@@ -21,6 +21,11 @@
 > - [Motion Between Two Points in the Same Reference Frame](#motion_two_points)
 > - [Rolling and Slipping](#rolling_and_slipping)
 
+> ### Kinetics
+
+> - [Inertial Reference Frame(s)](#inertial_ref_frames)
+> - [Three Laws of Mechanics](#three_laws_of_mechanics)
+
 - [Examples](#examples)
 
 ## Scalars {#scalars}
@@ -441,6 +446,35 @@ width="300" height="300"/>
   $^{A}\underline{V}^{R}_{C}$ stands for the velocity of point C belonging to
   rigid body R in reference frame A
 
+## Inertial Reference Frames {#inertial_ref_frames}
+
+- An inertial reference frame is one for which we will assume exists as a set
+  of absolutely stationary points
+- Inertial reference frames are an imaginary concept that is an approximation
+  of reality since all motion is relative the question arises to whom are the
+  set of points stationary
+- We can pick reference frames to be our inertial reference frame when the
+  degree of motion of the points is negligible compared to the motion that we
+  are studying
+
+## Three Laws of Mechanics {#three_laws_of_mechanics}
+
+- When studying kinetics there the particles are no longer massless and we are
+  considering the effect of action on the particles (forces/vectors)
+
+1. The first law of mechanics or the inertia law states that an object at rest
+   tends to remain at rest and an object in motion tends to remain in motion
+2. The second law of mechanics relates forces to momentum as it's most common
+   form shows ($\underline{F} = m ^{N}\underline{a}$ where $^{N}\underline{a}$
+   is the acceleration in an inertial reference frame)
+3. The last of the three laws of mechanics states that for every action there
+   is an equal and opposite reaction
+    - If the resultant force lies on the same line of action as the initial
+      force (sliding vectors) then it is considered the strong form of the 3rd
+      law
+    - The weak form of the third law is when the resultant force and the
+      initial force are not on the same line of action
+
 ## Examples {#examples}
 
 > ### Examples Content
@@ -452,6 +486,10 @@ width="300" height="300"/>
 >> - [Spherical Coordinate System](#e_spherical_coor_sys)
 >> - [Intrinsic Coordinate System](#e_intrinsic_coor_sys)
 >> - [Rolling Motion](#e_rolling_motion)
+
+>> #### Kinetics
+
+>> - [Basic Equation of Motion](#e_basic_equation_of_motion)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
@@ -747,8 +785,37 @@ width="300" height="300"/>
 >       - The reference frame fixed in the plane containing vector
           $\underline{r}$ that is perpendicular to the plane containing vectors
           $\underline{E}_{z}$ and $\underline{r}$ (C)
+> - Coordinate system in reference frame A is already given $A \right
+    \left{E_{x},E_{y},E_{z}\right}$ and origin at point O
+> - Coordinate system fixed in reference frame B (Cylindrical Coordinates)
+>       - Origin at point O
+>       - $\underline{e}_{r}$ = along line $\underline{OQ}$
+>       - $\underline{e}_{z}$ = $\underline{E}_{z}$
+>       - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times
+          \underline{e}_{r}$
 
->> # Not completed
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_cylindrical_coor_sys.png"
+alt="Cylindrical Coordinate System Example" title="Cylindrical Coordinate
+System Example" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - Coordinate system fixed in referenc frame C (Spherical Coordinates)
+>       - Origin at point O
+>       - $\underline{u}_{r} = \frac{\underline{r}}{\| \underline{r} \|}$
+>       - $\underline{u}_{\theta} = \underline{e}_{\theta}$
+>       - $\underline{u}_{\phi} = \underline{u}_{\theta} \times
+          \underline{u}_{r}$
+
+>> # Add Figure
+
+> - First note that the angular accelertation between reference frames A and C can be expressed as
+>       - $^{A}\underline{\omega}^{C} = ^{A}\underline{\omega}^{B} +
+          ^{B}\underline{\omega}^{C}  = \dot{\theta} \underline{e}_{z} +
+          \dot{\phi} \underline{u}_{\theta}$
 
 > ### Intrinsic Coordinate System Example {#e_intrinsic_coor_sys}
 
@@ -756,3 +823,6 @@ width="300" height="300"/>
 
 > - This example also includes examples on motion between two points fixed in
     the same rigid body
+
+
+> ### Basic Equation of Motion {#e_basic_equation_of_motion}
