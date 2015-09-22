@@ -277,5 +277,23 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 <blockquote>
 <p><strong>Descent Direction</strong></p>
 </blockquote>
+<blockquote>
+<ul>
+<li>Given a function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f" alt="f" title="f" /> that maps an amount <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=n" alt="n" title="n" /> real numbers to a real number and is differentiable at point <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbar%7B%5Cmathbf%7Bx%7D%7D" alt="\bar{\mathbf{x}}" title="\bar{\mathbf{x}}" /></li>
+<li>If there is a vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bd%7D" alt="\mathbf{d}" title="\mathbf{d}" /> such that <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cnabla%20f%28%5Cbar%7B%5Cmathbf%7Bx%7D%7D%29%5E%7Bt%7D%5Cmathbf%7Bd%7D%20%3C%200" alt="\nabla f(\bar{\mathbf{x}})^{t}\mathbf{d} &lt; 0" title="\nabla f(\bar{\mathbf{x}})^{t}\mathbf{d} &lt; 0" /> then there exists a <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20%3E%200" alt="\delta &gt; 0" title="\delta &gt; 0" /> such that <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f%28%5Cbar%7B%5Cmathbf%7Bx%7D%7D%20%2B%20%5Clambda%20%5Cmathbf%7Bd%7D%29%20%3C%20f%28%5Cbar%7B%5Cmathbf%7Bx%7D%7D%29" alt="f(\bar{\mathbf{x}} + \lambda \mathbf{d}) &lt; f(\bar{\mathbf{x}})" title="f(\bar{\mathbf{x}} + \lambda \mathbf{d}) &lt; f(\bar{\mathbf{x}})" /> for each <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Clambda%20%5Cin%20%280%2C%20%5Cdelta%29" alt="\lambda \in (0, \delta)" title="\lambda \in (0, \delta)" /> then <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bd%7D" alt="\mathbf{d}" title="\mathbf{d}" /> is a <em>descent direction</em> of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f" alt="f" title="f" /> at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbar%7B%5Cmathbf%7Bx%7D%7D" alt="\bar{\mathbf{x}}" title="\bar{\mathbf{x}}" /></li>
+<li>The above definition is saying that if the gradient of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f" alt="f" title="f" /> at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbar%7B%5Cmathbf%7Bx%7D%7D" alt="\bar{\mathbf{x}}" title="\bar{\mathbf{x}}" /> is negative in the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bd%7D" alt="\mathbf{d}" title="\mathbf{d}" /> direction then a variation in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f" alt="f" title="f" /> in that direction will cause the value of the function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f" alt="f" title="f" /> to decrease</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Corollary to descent direction
+<ul>
+<li>If <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f%3A%20R%5E%7Bn%7D%20%5Crightarrow%20R" alt="f: R^{n} \rightarrow R" title="f: R^{n} \rightarrow R" /> is differentiable at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbar%7B%5Cmathbf%7Bx%7D%7D" alt="\bar{\mathbf{x}}" title="\bar{\mathbf{x}}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cnabla%20f%28%5Cbar%7B%5Cmathbf%7Bx%7D%7D%29%20%3D%200" alt="\nabla f(\bar{\mathbf{x}}) = 0" title="\nabla f(\bar{\mathbf{x}}) = 0" /> then <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cbar%7B%5Cmathbf%7Bx%7D%7D" alt="\bar{\mathbf{x}}" title="\bar{\mathbf{x}}" /> is a local minimum
+<ul>
+<li>The condition uses the gradient of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f" alt="f" title="f" /> which contains the first partials of the function <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=f" alt="f" title="f" /> and therefore it is an example of a <em>first-order condition</em></li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
 </body>
 </html>

@@ -278,3 +278,23 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
     prove that a point is a local optimal solution
 
 > __Descent Direction__
+
+> - Given a function $f$ that maps an amount $n$ real numbers to a real number
+    and is differentiable at point $\bar{\mathbf{x}}$ 
+> - If there is a vector $\mathbf{d}$ such that $\nabla
+    f(\bar{\mathbf{x}})^{t}\mathbf{d} < 0$ then there exists a $\delta > 0$
+    such that $f(\bar{\mathbf{x}} + \lambda \mathbf{d}) < f(\bar{\mathbf{x}})$
+    for each $\lambda \in (0, \delta)$ then $\mathbf{d}$ is a _descent
+    direction_ of $f$ at $\bar{\mathbf{x}}$
+> - The above definition is saying that if the gradient of $f$ at
+    $\bar{\mathbf{x}}$ is negative in the $\mathbf{d}$ direction then a
+    variation in $f$ in that direction will cause the value of the function $f$
+    to decrease
+
+> - Corollary to descent direction
+>       - If $f: R^{n} \rightarrow R$ is differentiable at $\bar{\mathbf{x}}$
+          and $\nabla f(\bar{\mathbf{x}}) = 0$ then $\bar{\mathbf{x}}$ is a
+          local minimum
+>           - The condition uses the gradient of $f$ which contains the first
+              partials of the function $f$ and therefore it is an example of a
+              _first-order condition_
