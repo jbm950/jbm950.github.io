@@ -14,6 +14,8 @@
 - [Kinematic Chains](#kinematic_chains)
 - [Forward Analysis](#forward_analysis)
 - [Reverse Analysis](#reverse_analysis)
+- [Mobility](#mobility)
+- [Equivalent Spherical Mechanisms](#equivalent_spherical_mechanisms)
 
 ## Coordinate Systems {#coord_sys}
 
@@ -675,3 +677,49 @@ width="800" height="700"/>
 </td></tr>
 </table>
 </div>
+
+## Mobility {#mobility}
+
+- Mobility is the determination of the degrees of freedom of the system
+- For $n$ unconnected non-fixed bodies the mobility of the system is $M = 6n$
+- For $n$ unconnected bodies with one fixed to ground the mobility of the
+  system is $M = 6(n-1)$
+- For a system of $n$ bodies with one fixed to the ground and the rest
+  connected by $j$ joints the mobility of the system can be represented by $M =
+  6(n-1) - \sum^{j}_{i=1} (6-f_{i})$
+    - This equation does not hold for all cases but in general should be
+      appliciable
+- For a closed loop system the number of bodies is equivalent to the number of
+  joints ($n = j$) and the mobility expression simplifies to $M =
+  \sum^{n}_{i=1} f_{i} - 6$
+- For an open loop robot there is one fewer joint than the number of bodies
+  ($n-1 = j$) and the mobility expression simplifies to $M = \sum^{j}_{i=1}
+  f_{i}$
+
+## Equivalent Spherical Mechanisms {#equivalent_spherical_mechanisms}
+
+- The equivalent spherical mechanism of a closed loop spatial mechanism will
+  hold all twist angles constant and the $\underline{S}$ and $\underline{a}$
+  vectors will remain parallel to their equivalents in the spatial mechanism,
+  however translations will not be accounted for
+    - The result is that any relations for the $\alpha$ and $\theta$ angles
+      found in the spherical mechanism will also be valid in the closed loop
+      spatial mechanism
+
+> __Create Equivalent Spherical Mechanism__
+
+> - The first step to creating an equivalent spherical mechanism from a closed
+    loop spatial mechanism is to take all of the $\underline{S}$ vectors and
+    give them the same origin point
+> - Now simply draw links lying on a sphere centered at the origin to hold the
+    twist angles ($\alpha$'s) constant and connect them using revolute joints
+    irregardless of what the joint was on the original closed loop spatial
+    mechanism
+
+>> # Input figure from lecture
+
+- The $\underline{a}_{ij}$ vector is perpendicular to the plane formed by
+  vectors $\underline{S}_{i}$ and $\underline{S}_{j}$
+- The angle between the plane containing vectors $\underline{S}_{i}$ and
+  $\underline{S}_{j}$ and the plane containing $\underline{S}_{j}$ and
+  $\underline{S}_{k}$ is $\theta_{j}$
