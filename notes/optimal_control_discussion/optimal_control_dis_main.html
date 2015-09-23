@@ -23,6 +23,7 @@ title: Optimal Control Dis
 <li><a href="#minimum_principle">Minimum Principle</a></li>
 <li><a href="#functions_vs_functionals">Functions vs. Functionals</a></li>
 <li><a href="#calculus_of_variations">Calculus of Variations</a></li>
+<li><a href="#dynamical_systems">Dynamical Systems</a></li>
 </ul>
 <h2 id="minimum_principle">Minimum Principle</h2>
 <ul>
@@ -182,6 +183,12 @@ title: Optimal Control Dis
 </ul>
 </blockquote>
 <blockquote>
+<blockquote>
+<p><strong>First Example</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
 <ul>
 <li>To begin working through the optimality conditions of the first example listed above we start with the problem statement
 <ul>
@@ -207,7 +214,7 @@ title: Optimal Control Dis
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cdelta%20L%20%5Cleft%5B%20x%28t%29%2C%20%5Cdot%7Bx%7D%28t%29%2C%20t%20%5Cright%5D%20dt" alt="\int^{t_{f}}_{t_{0}} \delta L \left[ x(t), \dot{x}(t), t \right] dt" title="\int^{t_{f}}_{t_{0}} \delta L \left[ x(t), \dot{x}(t), t \right] dt" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20%5Cdelta%20x%20%20%2B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cdelta%20%5Cdot%7Bx%7D%20%5Cright%5D%20dt" alt="= \int^{t_{f}}_{t_{0}} \left[ \frac{\partial L}{\partial x} \delta x  + \frac{\partial L}{\partial \dot{x}} \delta \dot{x} \right] dt" title="= \int^{t_{f}}_{t_{0}} \left[ \frac{\partial L}{\partial x} \delta x  + \frac{\partial L}{\partial \dot{x}} \delta \dot{x} \right] dt" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7Bo%7D%7D%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cdelta%20%20%5Cdot%7Bx%7D%20dt" alt="\int^{t_{f}}_{t_{o}} \frac{\partial L}{\partial \dot{x}} \delta  \dot{x} dt" title="\int^{t_{f}}_{t_{o}} \frac{\partial L}{\partial \dot{x}} \delta  \dot{x} dt" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%5Cdelta%20x%20%20%5Cright%5D%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D" alt="= \left[ \frac{\partial L}{\partial \dot{x}} \delta x  \right]^{t_{f}}_{t_{0}}" title="= \left[ \frac{\partial L}{\partial \dot{x}} \delta x  \right]^{t_{f}}_{t_{0}}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=-%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cfrac%7Bd%7D%7Bdt%7D%20%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%5Cdelta%20xdt" alt="- \int^{t_{f}}_{t_{0}} \frac{d}{dt}  (\frac{\partial L}{\partial \dot{x}})\delta xdt" title="- \int^{t_{f}}_{t_{0}} \frac{d}{dt}  (\frac{\partial L}{\partial \dot{x}})\delta xdt" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cfrac%7B%5Cpartial%20%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%7C_%7Bt_%7Bf%7D%7D%20%5Cdelta%20x%28t_%7Bf%7D%29" alt="= \frac{\partial  L}{\partial \dot{x}}|_{t_{f}} \delta x(t_{f})" title="= \frac{\partial  L}{\partial \dot{x}}|_{t_{f}} \delta x(t_{f})" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=-%20%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%20%5Cdot%7Bx%7D%7D%29%5Cdelta%20xdt" alt="-  \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial L}{\partial  \dot{x}})\delta xdt" title="-  \int^{t_{f}}_{t_{0}} \frac{d}{dt} (\frac{\partial L}{\partial  \dot{x}})\delta xdt" /></li>
 </ul></li>
-<li>Since in this problem <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x_%7Bf%7D%20%3D%200" alt="\delta x_{f} = 0" title="\delta x_{f} = 0" /> the term <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x%28t_%7Bf%7D%29%20%3D%20-%5Cdot%7Bx%7D%28t_%7Bf%7D%29%20%5Cdelta%20t_%7Bf%7D" alt="\delta x(t_{f}) = -\dot{x}(t_{f}) \delta t_{f}" title="\delta x(t_{f}) = -\dot{x}(t_{f}) \delta t_{f}" /></li>
+<li>Since in this problem <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x_%7Bf%7D%20%3D%200" alt="\delta x_{f} = 0" title="\delta x_{f} = 0" /> the term <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x%28t_%7Bf%7D%29%20%3D%20%20-%5Cdot%7Bx%7D%28t_%7Bf%7D%29%20%5Cdelta%20t_%7Bf%7D" alt="\delta x(t_{f}) =  -\dot{x}(t_{f}) \delta t_{f}" title="\delta x(t_{f}) =  -\dot{x}(t_{f}) \delta t_{f}" /></li>
 <li>Arranging all of the terms back into the expression for the variation of the action integral yields
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%20L%20%5Cleft%5B%20x%28t_%7Bf%7D%29%2C%20%5Cdot%7Bx%7D%28t_%7Bf%7D%29%2C%20t_%7Bf%7D%20%5Cright%5D%20%5Cdelta%20%20t_%7Bf%7D%20-%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%7C_%7Bt_%7Bf%7D%7D%20%5Cdot%7Bx%7D%28t_%7Bf%7D%29%20%20%5Cdelta%20t_%7Bf%7D" alt="\delta J = L \left[ x(t_{f}), \dot{x}(t_{f}), t_{f} \right] \delta  t_{f} - \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \dot{x}(t_{f})  \delta t_{f}" title="\delta J = L \left[ x(t_{f}), \dot{x}(t_{f}), t_{f} \right] \delta  t_{f} - \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \dot{x}(t_{f})  \delta t_{f}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%2B%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20%20L%7D%7B%5Cpartial%20x%7D%20-%20%5Cfrac%7Bd%7D%7Bdt%7D%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%20%20%5Cright%5D%20%5Cdelta%20x%20dt%20%3D%200" alt="+ \int^{t_{f}}_{t_{0}} \left[ \frac{\partial  L}{\partial x} - \frac{d}{dt}\frac{\partial L}{\partial \dot{x}}  \right] \delta x dt = 0" title="+ \int^{t_{f}}_{t_{0}} \left[ \frac{\partial  L}{\partial x} - \frac{d}{dt}\frac{\partial L}{\partial \dot{x}}  \right] \delta x dt = 0" /></li>
@@ -221,6 +228,13 @@ title: Optimal Control Dis
 <li>We now have optimality conditions for the case with a non-fixed end time <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D" alt="t_{f}" title="t_{f}" /></li>
 </ul>
 </blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Second Example</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
 <blockquote>
 <ul>
 <li>Now for the second advanced calculus of variations example we will have fixed start position and time and a fixed end time but not a fixed end position
@@ -243,7 +257,35 @@ title: Optimal Control Dis
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20J%20%3D%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%7C_%7Bt_%7Bf%7D%7D%20%5Cdelta%20%20x%28t_%7Bf%7D%29%20%2B%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D" alt="\delta J = \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \delta  x(t_{f}) + \int^{t_{f}}_{t_{0}}" title="\delta J = \frac{\partial L}{\partial \dot{x}}|_{t_{f}} \delta  x(t_{f}) + \int^{t_{f}}_{t_{0}}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%20x%7D%20-%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%5Cright%5D%5Cdelta%20%20x%20dt%20%3D%200" alt="\left[ \frac{\partial L}{\partial  x} - \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right]\delta  x dt = 0" title="\left[ \frac{\partial L}{\partial  x} - \frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) \right]\delta  x dt = 0" /></li>
 </ul></li>
+<li>Now considering that the expression has to hold for any variation <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20%20x%28t_%7Bf%7D%29" alt="\delta  x(t_{f})" title="\delta  x(t_{f})" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdelta%20x" alt="\delta x" title="\delta x" /> both of the terms have to independently equal zero
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%7C_%7Bt_%7Bf%7D%7D%20%3D%200" alt="\frac{\partial L}{\partial \dot{x}}|_{t_{f}} = 0" title="\frac{\partial L}{\partial \dot{x}}|_{t_{f}} = 0" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20-%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%3D%200" alt="\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) = 0" title="\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) = 0" /></li>
+</ul></li>
+<li>We now have optimality conditions for the case with a non-fixed end position <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29" alt="x(t_{f})" title="x(t_{f})" /></li>
 </ul>
 </blockquote>
+</blockquote>
+<blockquote>
+<ul>
+<li>Notice in both of the advanced calculus of variations examples making a boundary point free resulted in another optimality condition</li>
+</ul>
+</blockquote>
+<h2 id="dynamical_systems">Dynamical Systems</h2>
+<ul>
+<li>A given system can be defined in each point in time by its state <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bx%7D%28t%29%20%3D%20%5Cleft%5B%20x_%7B1%7D%28t%29%2C%20...%2C%20x_%7Bn%7D%28t%29%20%5Cright%5D%5E%7BT%7D" alt="\underline{x}(t) = \left[ x_{1}(t), ..., x_{n}(t) \right]^{T}" title="\underline{x}(t) = \left[ x_{1}(t), ..., x_{n}(t) \right]^{T}" /></li>
+<li>The state of the system is affected by the input control on the system <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D%28t%29%20%3D%20%5Cleft%5B%20u_%7B1%7D%2C%20...%2C%20u_%7Bm%7D%28t%29%20%5Cright%5D%5E%7BT%7D" alt="\underline{u}(t) = \left[ u_{1}, ..., u_{m}(t) \right]^{T}" title="\underline{u}(t) = \left[ u_{1}, ..., u_{m}(t) \right]^{T}" /></li>
+<li>Note that the components of the state and control are not refered to as the states or controls but rather the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=i%5E%7Bth%7D" alt="i^{th}" title="i^{th}" /> component of the state or control
+<ul>
+<li>The states or controls refers to the state or control at multiple time instances</li>
+</ul></li>
+<li>It is desired to control the motion of the system in a manner that optimizes some performance criteria</li>
+<li>The optimization of a performance criteria is going to be translated into minimizing a cost functional J</li>
+<li>The cost functional can be written as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5CPhi%28%5Cunderline%7Bx%7D%28t_%7B0%7D%29%2C%20t_%7B0%7D%2C%20%20%5Cunderline%7Bx%7D%28t_%7Bf%7D%29%2C%20t_%7Bf%7D%29%20%2B%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20L%20%5Cleft%5B%20%20%5Cunderline%7Bx%7D%28t%29%2C%20%5Cunderline%7Bu%7D%28t%29%2C%20t%20%5Cright%5D%20dt" alt="J = \Phi(\underline{x}(t_{0}), t_{0},  \underline{x}(t_{f}), t_{f}) + \int^{t_{f}}_{t_{0}} L \left[  \underline{x}(t), \underline{u}(t), t \right] dt" title="J = \Phi(\underline{x}(t_{0}), t_{0},  \underline{x}(t_{f}), t_{f}) + \int^{t_{f}}_{t_{0}} L \left[  \underline{x}(t), \underline{u}(t), t \right] dt" />
+<ul>
+<li>The first term of the cost functional is refered to as the Mayer cost or endpoint cost and it represents the constraints that are enforced at the start and terminus</li>
+<li>The second term of the cost functional is refered to as the Lagrange cost, running cost or integrated cost and it represents the constraints that are enforce along the path during motion</li>
+</ul></li>
+</ul>
 </body>
 </html>
