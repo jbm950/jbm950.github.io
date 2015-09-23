@@ -292,9 +292,27 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
     to decrease
 
 > - Corollary to descent direction
->       - If $f: R^{n} \rightarrow R$ is differentiable at $\bar{\mathbf{x}}$
-          and $\nabla f(\bar{\mathbf{x}}) = 0$ then $\bar{\mathbf{x}}$ is a
-          local minimum
+>       - If $f:$ &nbsp; $R^{n} \rightarrow R$ is differentiable at
+          $\bar{\mathbf{x}}$ and $\nabla f(\bar{\mathbf{x}}) = 0$ then
+          $\bar{\mathbf{x}}$ is a local minimum
 >           - The condition uses the gradient of $f$ which contains the first
               partials of the function $f$ and therefore it is an example of a
               _first-order condition_
+
+> __Second Order Necessary Condition__
+
+> - For function $f:$ &nbsp; $R^{n} \rightarrow R$ that is twice differentiable
+    at $\bar{\mathbf{x}}$, in order for $\bar{\mathbf{x}}$ to be a local
+    minimum the Hessian matrix at $\bar{\mathbf{x}}$,
+    $\mathbf{H}(\bar{\mathbf{x}})$, has to be positive semi-definite (have
+    non-negative eigen values)
+
+> __Sufficient Optimality Conditions__
+
+>> __Strict Local Minimum__
+
+>> - The sufficient optimality condition for a strict local minimum at point
+     $\bar{\mathbf{x}}$ is, given a function $f:$ &nbsp; $R^{n} \rightarrow R$
+     that is twice differentiable at $\bar{\mathbf{x}}$ if $\nabla
+     f(\bar{\mathbf{x}}) = 0$ and $\mathbf{H}(\bar{\mathbf{x}})$ is positive
+     definite then $\bar{\mathbf{x}}$ is a strict local minimum
