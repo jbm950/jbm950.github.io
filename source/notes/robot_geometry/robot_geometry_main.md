@@ -15,6 +15,7 @@
 - [Forward Analysis](#forward_analysis)
 - [Reverse Analysis](#reverse_analysis)
 - [Mobility](#mobility)
+- [Planar Representation](#planar_representation)
 - [Equivalent Spherical Mechanisms](#equivalent_spherical_mechanisms)
 
 ## Coordinate Systems {#coord_sys}
@@ -696,6 +697,25 @@ width="800" height="700"/>
   ($n-1 = j$) and the mobility expression simplifies to $M = \sum^{j}_{i=1}
   f_{i}$
 
+## Planar Representation {#planar_representation}
+
+- For convinence a 2D representation of a kinematic chain can be used instead
+  of the 3D model
+- When creating the planar representation simple lines will represent each link
+  and each joint will be denoted with its shorthand letter
+- In addition the grounded link can be denoted using the standard ground
+  notation and the input and output angles of the system can be marked
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Figure From Lecture</caption>
+<tr><td><img src="./img/planar_representation.png"
+alt="Example Planar Representation" title="Example Planar Representation"
+width="600" height="400"/> 
+</td></tr>
+</table>
+</div>
+
 ## Equivalent Spherical Mechanisms {#equivalent_spherical_mechanisms}
 
 - The equivalent spherical mechanism of a closed loop spatial mechanism will
@@ -705,6 +725,11 @@ width="800" height="700"/>
     - The result is that any relations for the $\alpha$ and $\theta$ angles
       found in the spherical mechanism will also be valid in the closed loop
       spatial mechanism
+- The $\underline{a}_{ij}$ vector is perpendicular to the plane formed by
+  vectors $\underline{S}_{i}$ and $\underline{S}_{j}$
+- The angle between the plane containing vectors $\underline{S}_{i}$ and
+  $\underline{S}_{j}$ and the plane containing $\underline{S}_{j}$ and
+  $\underline{S}_{k}$ is $\theta_{j}$
 
 > __Create Equivalent Spherical Mechanism__
 
@@ -715,11 +740,33 @@ width="800" height="700"/>
     twist angles ($\alpha$'s) constant and connect them using revolute joints
     irregardless of what the joint was on the original closed loop spatial
     mechanism
+>       - Prismatic joints become a revolute joint with a fixed joint angle
+          $\theta$
 
->> # Input figure from lecture
+<div align="center">
+<table class="image">
+<caption align="bottom">Figure From Lecture</caption>
+<tr><td><img src="./img/spatial_to_spherical.png"
+alt="Spatial Mechanism to Spherical Mechanism" title="Spatial Mechanism to
+Spherical Mechanism" width="800" height="400"/> 
+</td></tr>
+</table>
+</div>
 
-- The $\underline{a}_{ij}$ vector is perpendicular to the plane formed by
-  vectors $\underline{S}_{i}$ and $\underline{S}_{j}$
-- The angle between the plane containing vectors $\underline{S}_{i}$ and
-  $\underline{S}_{j}$ and the plane containing $\underline{S}_{j}$ and
-  $\underline{S}_{k}$ is $\theta_{j}$
+> __Spherical Mechanism Groups__
+
+> - The mobility of the spatial closed loop mechanism is 1 by definition and
+    there are different categories of spherical mechanisms depending on what is
+    their resultant mobility
+> - The mobility of spherical mechanisms can be defined as $M_{spatial} =
+    \sum^{j}_{i=1} f_{i} - 3$
+> - Spherical mechanism groups are defined by their mobility
+>       - Ex. Group 1 spherical mechanisms have $M = 1$
+>       - Only goes up to group 4 because you end up with limitations on the
+          ability to create a closed loop spatial mechanism with a mobility of
+          one
+>       - The spherical mechanism gets more difficult to solve for higher
+          mobility in the mechanism (larger group number)
+
+- The goal of the analysis now is to find all of the $\underline{a}$ and
+  $\underline{S}$ vectors in the first coordinate system

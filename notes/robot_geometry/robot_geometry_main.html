@@ -29,6 +29,7 @@ title: Robot Geometry
 <li><a href="#forward_analysis">Forward Analysis</a></li>
 <li><a href="#reverse_analysis">Reverse Analysis</a></li>
 <li><a href="#mobility">Mobility</a></li>
+<li><a href="#planar_representation">Planar Representation</a></li>
 <li><a href="#equivalent_spherical_mechanisms">Equivalent Spherical Mechanisms</a></li>
 </ul>
 <h2 id="coord_sys">Coordinate Systems</h2>
@@ -697,12 +698,34 @@ width="800" height="700"/>
 <li>For a closed loop system the number of bodies is equivalent to the number of joints (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=n%20%3D%20j" alt="n = j" title="n = j" />) and the mobility expression simplifies to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=M%20%3D%20%20%5Csum%5E%7Bn%7D_%7Bi%3D1%7D%20f_%7Bi%7D%20-%206" alt="M =  \sum^{n}_{i=1} f_{i} - 6" title="M =  \sum^{n}_{i=1} f_{i} - 6" /></li>
 <li>For an open loop robot there is one fewer joint than the number of bodies (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=n-1%20%3D%20j" alt="n-1 = j" title="n-1 = j" />) and the mobility expression simplifies to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=M%20%3D%20%5Csum%5E%7Bj%7D_%7Bi%3D1%7D%20%20f_%7Bi%7D" alt="M = \sum^{j}_{i=1}  f_{i}" title="M = \sum^{j}_{i=1}  f_{i}" /></li>
 </ul>
+<h2 id="planar_representation">Planar Representation</h2>
+<ul>
+<li>For convinence a 2D representation of a kinematic chain can be used instead of the 3D model</li>
+<li>When creating the planar representation simple lines will represent each link and each joint will be denoted with its shorthand letter</li>
+<li>In addition the grounded link can be denoted using the standard ground notation and the input and output angles of the system can be marked</li>
+</ul>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Figure From Lecture
+</caption>
+<tr>
+<td>
+<img src="./img/planar_representation.png"
+alt="Example Planar Representation" title="Example Planar Representation"
+width="600" height="400"/>
+</td>
+</tr>
+</table>
+</div>
 <h2 id="equivalent_spherical_mechanisms">Equivalent Spherical Mechanisms</h2>
 <ul>
 <li>The equivalent spherical mechanism of a closed loop spatial mechanism will hold all twist angles constant and the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D" alt="\underline{S}" title="\underline{S}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D" alt="\underline{a}" title="\underline{a}" /> vectors will remain parallel to their equivalents in the spatial mechanism, however translations will not be accounted for
 <ul>
 <li>The result is that any relations for the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha" alt="\alpha" title="\alpha" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /> angles found in the spherical mechanism will also be valid in the closed loop spatial mechanism</li>
 </ul></li>
+<li>The <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D_%7Bij%7D" alt="\underline{a}_{ij}" title="\underline{a}_{ij}" /> vector is perpendicular to the plane formed by vectors <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bi%7D" alt="\underline{S}_{i}" title="\underline{S}_{i}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" /></li>
+<li>The angle between the plane containing vectors <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bi%7D" alt="\underline{S}_{i}" title="\underline{S}_{i}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" /> and the plane containing <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bk%7D" alt="\underline{S}_{k}" title="\underline{S}_{k}" /> is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7Bj%7D" alt="\theta_{j}" title="\theta_{j}" /></li>
 </ul>
 <blockquote>
 <p><strong>Create Equivalent Spherical Mechanism</strong></p>
@@ -710,17 +733,43 @@ width="800" height="700"/>
 <blockquote>
 <ul>
 <li>The first step to creating an equivalent spherical mechanism from a closed loop spatial mechanism is to take all of the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D" alt="\underline{S}" title="\underline{S}" /> vectors and give them the same origin point</li>
-<li>Now simply draw links lying on a sphere centered at the origin to hold the twist angles (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha" alt="\alpha" title="\alpha" />'s) constant and connect them using revolute joints irregardless of what the joint was on the original closed loop spatial mechanism</li>
+<li>Now simply draw links lying on a sphere centered at the origin to hold the twist angles (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha" alt="\alpha" title="\alpha" />'s) constant and connect them using revolute joints irregardless of what the joint was on the original closed loop spatial mechanism
+<ul>
+<li>Prismatic joints become a revolute joint with a fixed joint angle <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /></li>
+</ul></li>
 </ul>
 </blockquote>
+<div align="center">
+<table class="image">
+<caption align="bottom">
+Figure From Lecture
+</caption>
+<tr>
+<td>
+<img src="./img/spatial_to_spherical.png"
+alt="Spatial Mechanism to Spherical Mechanism" title="Spatial Mechanism to
+Spherical Mechanism" width="800" height="400"/>
+</td>
+</tr>
+</table>
+</div>
 <blockquote>
-<blockquote>
-<h1 id="input-figure-from-lecture">Input figure from lecture</h1>
+<p><strong>Spherical Mechanism Groups</strong></p>
 </blockquote>
+<blockquote>
+<ul>
+<li>The mobility of the spatial closed loop mechanism is 1 by definition and there are different categories of spherical mechanisms depending on what is their resultant mobility</li>
+<li>The mobility of spherical mechanisms can be defined as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=M_%7Bspatial%7D%20%3D%20%5Csum%5E%7Bj%7D_%7Bi%3D1%7D%20f_%7Bi%7D%20-%203" alt="M_{spatial} = \sum^{j}_{i=1} f_{i} - 3" title="M_{spatial} = \sum^{j}_{i=1} f_{i} - 3" /></li>
+<li>Spherical mechanism groups are defined by their mobility
+<ul>
+<li>Ex. Group 1 spherical mechanisms have <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=M%20%3D%201" alt="M = 1" title="M = 1" /></li>
+<li>Only goes up to group 4 because you end up with limitations on the ability to create a closed loop spatial mechanism with a mobility of one</li>
+<li>The spherical mechanism gets more difficult to solve for higher mobility in the mechanism (larger group number)</li>
+</ul></li>
+</ul>
 </blockquote>
 <ul>
-<li>The <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D_%7Bij%7D" alt="\underline{a}_{ij}" title="\underline{a}_{ij}" /> vector is perpendicular to the plane formed by vectors <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bi%7D" alt="\underline{S}_{i}" title="\underline{S}_{i}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" /></li>
-<li>The angle between the plane containing vectors <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bi%7D" alt="\underline{S}_{i}" title="\underline{S}_{i}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" /> and the plane containing <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bj%7D" alt="\underline{S}_{j}" title="\underline{S}_{j}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7Bk%7D" alt="\underline{S}_{k}" title="\underline{S}_{k}" /> is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7Bj%7D" alt="\theta_{j}" title="\theta_{j}" /></li>
+<li>The goal of the analysis now is to find all of the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D" alt="\underline{a}" title="\underline{a}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D" alt="\underline{S}" title="\underline{S}" /> vectors in the first coordinate system</li>
 </ul>
 </body>
 </html>
