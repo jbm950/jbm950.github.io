@@ -771,7 +771,7 @@ System Example" width="300" height="300"/>
 <div align="center">
 <table class="image">
 <tr><td><img src="./img/spherical_coor_sys.png"
-alt="Cylindrical Coordinate System" title="Cylindrical Coordinate System"
+alt="Spherical Coordinate System" title="Spherical Coordinate System"
 width="300" height="300"/> 
 </td></tr>
 </table>
@@ -810,19 +810,51 @@ System Example" width="300" height="300"/>
 >       - $\underline{u}_{\phi} = \underline{u}_{\theta} \times
           \underline{u}_{r}$
 
->> # Add Figure
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_spherical_coor_sys.png"
+alt="Spherical Coordinate System" title="Spherical Coordinate System"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
 
-> - First note that the angular accelertation between reference frames A and C can be expressed as
+> - First note that the angular accelertation between reference frames A and C
+    can be expressed as
 >       - $^{A}\underline{\omega}^{C} = ^{A}\underline{\omega}^{B} +
           ^{B}\underline{\omega}^{C}  = \dot{\theta} \underline{e}_{z} +
           \dot{\phi} \underline{u}_{\theta}$
+> - Now we can find the velocity of point P in the A reference frame by making
+    use of the transport theorem and the following definition of
+    $\underline{r}$: $\underline{r}_{P} = p \underline{u}_{r}$
+>       - $^{A}\underline{V}_{P} = \frac{^{C}d\underline{r}_{P}}{dt} +
+          ^{A}\underline{\omega}^{C} \times \underline{r}_{P}$ $=
+          \frac{^{C}d}{dt} (p \underline{u}_{r}) +
+          (\dot{\theta}\underline{e}_{z} + \dot{\phi}\underline{u}_{\theta})
+          \times (p \underline{u}_{r})$
+>       - $^{A}\underline{V}_{P} = \dot{p} \underline{u}_{r} + (\dot{\theta}
+          (cos\phi \underline{u}_{r} - sin\phi \underline{u}_{\phi}) +
+          \dot{\phi} \underline{u}_{\theta}) \times p \underline{u}_{r}$
+>       - $^{A}\underline{V}_{P} = \dot{p} \underline{u}_{r} + \dot{\theta} p$
+          $sin\phi \underline{u}_{\theta} + \dot{\phi} p \underline{u}_{\phi}$
+> - The same process can be used to find the acceleration of point P in
+    reference frame A, however, the expression becomes very large and so it
+    will be omitted here for space
 
 > ### Intrinsic Coordinate System Example {#e_intrinsic_coor_sys}
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_intrinsic_coordinate_sys.png"
+alt="Intrinsic Coordinate System" title="Intrinsic Coordinate System"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
 
 > ### Rolling Motion {#e_rolling_motion}
 
 > - This example also includes examples on motion between two points fixed in
     the same rigid body
-
 
 > ### Basic Equation of Motion {#e_basic_equation_of_motion}

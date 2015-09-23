@@ -791,7 +791,7 @@ System Example" width="300" height="300"/>
 <tr>
 <td>
 <img src="./img/spherical_coor_sys.png"
-alt="Cylindrical Coordinate System" title="Cylindrical Coordinate System"
+alt="Spherical Coordinate System" title="Spherical Coordinate System"
 width="300" height="300"/>
 </td>
 </tr>
@@ -837,22 +837,46 @@ System Example" width="300" height="300"/>
 </ul></li>
 </ul>
 </blockquote>
-<blockquote>
-<blockquote>
-<h1 id="add-figure">Add Figure</h1>
-</blockquote>
-</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/e_spherical_coor_sys.png"
+alt="Spherical Coordinate System" title="Spherical Coordinate System"
+width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
 <blockquote>
 <ul>
 <li>First note that the angular accelertation between reference frames A and C can be expressed as
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BC%7D%20%3D%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BB%7D%20%2B%20%20%5E%7BB%7D%5Cunderline%7B%5Comega%7D%5E%7BC%7D%20%3D%20%5Cdot%7B%5Ctheta%7D%20%5Cunderline%7Be%7D_%7Bz%7D%20%2B%20%20%5Cdot%7B%5Cphi%7D%20%5Cunderline%7Bu%7D_%7B%5Ctheta%7D" alt="^{A}\underline{\omega}^{C} = ^{A}\underline{\omega}^{B} +  ^{B}\underline{\omega}^{C} = \dot{\theta} \underline{e}_{z} +  \dot{\phi} \underline{u}_{\theta}" title="^{A}\underline{\omega}^{C} = ^{A}\underline{\omega}^{B} +  ^{B}\underline{\omega}^{C} = \dot{\theta} \underline{e}_{z} +  \dot{\phi} \underline{u}_{\theta}" /></li>
 </ul></li>
+<li>Now we can find the velocity of point P in the A reference frame by making use of the transport theorem and the following definition of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D" alt="\underline{r}" title="\underline{r}" />: <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D_%7BP%7D%20%3D%20p%20%5Cunderline%7Bu%7D_%7Br%7D" alt="\underline{r}_{P} = p \underline{u}_{r}" title="\underline{r}_{P} = p \underline{u}_{r}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BC%7Dd%5Cunderline%7Br%7D_%7BP%7D%7D%7Bdt%7D%20%2B%20%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BC%7D%20%5Ctimes%20%5Cunderline%7Br%7D_%7BP%7D" alt="^{A}\underline{V}_{P} = \frac{^{C}d\underline{r}_{P}}{dt} +  ^{A}\underline{\omega}^{C} \times \underline{r}_{P}" title="^{A}\underline{V}_{P} = \frac{^{C}d\underline{r}_{P}}{dt} +  ^{A}\underline{\omega}^{C} \times \underline{r}_{P}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20%5Cfrac%7B%5E%7BC%7Dd%7D%7Bdt%7D%20%28p%20%5Cunderline%7Bu%7D_%7Br%7D%29%20%2B%20%20%28%5Cdot%7B%5Ctheta%7D%5Cunderline%7Be%7D_%7Bz%7D%20%2B%20%5Cdot%7B%5Cphi%7D%5Cunderline%7Bu%7D_%7B%5Ctheta%7D%29%20%20%5Ctimes%20%28p%20%5Cunderline%7Bu%7D_%7Br%7D%29" alt="=  \frac{^{C}d}{dt} (p \underline{u}_{r}) +  (\dot{\theta}\underline{e}_{z} + \dot{\phi}\underline{u}_{\theta})  \times (p \underline{u}_{r})" title="=  \frac{^{C}d}{dt} (p \underline{u}_{r}) +  (\dot{\theta}\underline{e}_{z} + \dot{\phi}\underline{u}_{\theta})  \times (p \underline{u}_{r})" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cdot%7Bp%7D%20%5Cunderline%7Bu%7D_%7Br%7D%20%2B%20%28%5Cdot%7B%5Ctheta%7D%20%20%28cos%5Cphi%20%5Cunderline%7Bu%7D_%7Br%7D%20-%20sin%5Cphi%20%5Cunderline%7Bu%7D_%7B%5Cphi%7D%29%20%2B%20%20%5Cdot%7B%5Cphi%7D%20%5Cunderline%7Bu%7D_%7B%5Ctheta%7D%29%20%5Ctimes%20p%20%5Cunderline%7Bu%7D_%7Br%7D" alt="^{A}\underline{V}_{P} = \dot{p} \underline{u}_{r} + (\dot{\theta}  (cos\phi \underline{u}_{r} - sin\phi \underline{u}_{\phi}) +  \dot{\phi} \underline{u}_{\theta}) \times p \underline{u}_{r}" title="^{A}\underline{V}_{P} = \dot{p} \underline{u}_{r} + (\dot{\theta}  (cos\phi \underline{u}_{r} - sin\phi \underline{u}_{\phi}) +  \dot{\phi} \underline{u}_{\theta}) \times p \underline{u}_{r}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cdot%7Bp%7D%20%5Cunderline%7Bu%7D_%7Br%7D%20%2B%20%5Cdot%7B%5Ctheta%7D%20p" alt="^{A}\underline{V}_{P} = \dot{p} \underline{u}_{r} + \dot{\theta} p" title="^{A}\underline{V}_{P} = \dot{p} \underline{u}_{r} + \dot{\theta} p" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=sin%5Cphi%20%5Cunderline%7Bu%7D_%7B%5Ctheta%7D%20%2B%20%5Cdot%7B%5Cphi%7D%20p%20%5Cunderline%7Bu%7D_%7B%5Cphi%7D" alt="sin\phi \underline{u}_{\theta} + \dot{\phi} p \underline{u}_{\phi}" title="sin\phi \underline{u}_{\theta} + \dot{\phi} p \underline{u}_{\phi}" /></li>
+</ul></li>
+<li>The same process can be used to find the acceleration of point P in reference frame A, however, the expression becomes very large and so it will be omitted here for space</li>
 </ul>
 </blockquote>
 <blockquote>
 <h3 id="e_intrinsic_coor_sys">Intrinsic Coordinate System Example</h3>
 </blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/e_intrinsic_coordinate_sys.png"
+alt="Intrinsic Coordinate System" title="Intrinsic Coordinate System"
+width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
 <blockquote>
 <h3 id="e_rolling_motion">Rolling Motion</h3>
 </blockquote>
