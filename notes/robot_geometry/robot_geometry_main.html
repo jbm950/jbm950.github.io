@@ -266,6 +266,7 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
 <ul>
 <li>This simplifies to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7Bji%7D%20-%20r_%7Bij%7D%20%3D%202m_%7Bk%7Dsin%28%5Ctheta%29" alt="r_{ji} - r_{ij} = 2m_{k}sin(\theta)" title="r_{ji} - r_{ij} = 2m_{k}sin(\theta)" /></li>
 <li>Example <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B21%7D%20-%20r_%7B12%7D%20%3D%202m_%7Bz%7Dsin%28%5Ctheta%29" alt="r_{21} - r_{12} = 2m_{z}sin(\theta)" title="r_{21} - r_{12} = 2m_{z}sin(\theta)" /></li>
+<li>Exception is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=r_%7B13%7D%20-%20r_%7B31%7D%20%3D%202m_%7By%7Dsin%5Ctheta" alt="r_{13} - r_{31} = 2m_{y}sin\theta" title="r_{13} - r_{31} = 2m_{y}sin\theta" /></li>
 </ul></li>
 </ul>
 </blockquote>
@@ -771,5 +772,34 @@ Spherical Mechanism" width="800" height="400"/>
 <ul>
 <li>The goal of the analysis now is to find all of the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D" alt="\underline{a}" title="\underline{a}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D" alt="\underline{S}" title="\underline{S}" /> vectors in the first coordinate system</li>
 </ul>
+<blockquote>
+<p><strong>Find <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5E%7B1%7D%5Cunderline%7BS%7D_%7B1%7D%7D" alt="\mathbf{^{1}\underline{S}_{1}}" title="\mathbf{^{1}\underline{S}_{1}}" /></strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>The first vector is already defined based on how we defined the standard coordinate systems
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D%5Cunderline%7BS%7D_%7B1%7D%20%3D%20%5Cleft%5B%200%20%5C%5C%200%20%5C%5C%201%20%5Cright%5D" alt="^{1}\underline{S}_{1} = \left[ 0 \\ 0 \\ 1 \right]" title="^{1}\underline{S}_{1} = \left[ 0 \\ 0 \\ 1 \right]" /></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Find <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5E%7B1%7D%5Cunderline%7BS%7D_%7B2%7D%7D" alt="\mathbf{^{1}\underline{S}_{2}}" title="\mathbf{^{1}\underline{S}_{2}}" /></strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>To find the direction of vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7B2%7D" alt="\underline{S}_{2}" title="\underline{S}_{2}" /> in the first coordinate system we will use the rotation matrix that can be pulled from the transformation matrix derived in the forward analysis section
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D_%7B2%7DR%20%3D" alt="^{1}_{2}R =" title="^{1}_{2}R =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20c_%7B2%7D%20%26%20-s_%7B2%7D%20%26%200%20%5C%5C%20s_%7B2%7Dc_%7B12%7D%20%20%26%20c_%7B2%7Dc_%7B12%7D%20%26%20-s_%7B12%7D%20%5C%5C%20s_%7B2%7Ds_%7B12%7D%20%26%20c_%7B2%7Ds_%7B12%7D%20%26%20c_%7B12%7D%20%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} c_{2} &amp; -s_{2} &amp; 0 \\ s_{2}c_{12}  &amp; c_{2}c_{12} &amp; -s_{12} \\ s_{2}s_{12} &amp; c_{2}s_{12} &amp; c_{12}  \end{array} \right]" title="\left[ \begin{array} c_{2} &amp; -s_{2} &amp; 0 \\ s_{2}c_{12}  &amp; c_{2}c_{12} &amp; -s_{12} \\ s_{2}s_{12} &amp; c_{2}s_{12} &amp; c_{12}  \end{array} \right]" /></li>
+</ul></li>
+<li>Using the rotation matrix the vecotr <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BS%7D_%7B2%7D" alt="\underline{S}_{2}" title="\underline{S}_{2}" /> can be found in the first coordinate system by the following expression
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D%5Cunderline%7BS%7D_%7B2%7D%20%3D%20%5E%7B1%7D_%7B2%7DR%20%5E%7B2%7D%5Cunderline%7BS%7D_%7B2%7D%20%3D" alt="^{1}\underline{S}_{2} = ^{1}_{2}R ^{2}\underline{S}_{2} =" title="^{1}\underline{S}_{2} = ^{1}_{2}R ^{2}\underline{S}_{2} =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%20%5Cbegin%7Barray%7D%20c_%7B2%7D%20%26%20-s_%7B2%7D%20%26%200%20%5C%5C%20s_%7B2%7Dc_%7B12%7D%20%26%20c_%7B2%7Dc_%7B12%7D%20%26%20%20-s_%7B12%7D%20%5C%5C%20s_%7B2%7Ds_%7B12%7D%20%26%20c_%7B2%7Ds_%7B12%7D%20%26%20c_%7B12%7D%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[  \begin{array} c_{2} &amp; -s_{2} &amp; 0 \\ s_{2}c_{12} &amp; c_{2}c_{12} &amp;  -s_{12} \\ s_{2}s_{12} &amp; c_{2}s_{12} &amp; c_{12} \end{array} \right]" title="\left[  \begin{array} c_{2} &amp; -s_{2} &amp; 0 \\ s_{2}c_{12} &amp; c_{2}c_{12} &amp;  -s_{12} \\ s_{2}s_{12} &amp; c_{2}s_{12} &amp; c_{12} \end{array} \right]" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%200%20%5C%5C%200%20%5C%5C%201%20%5Cright%5D" alt="\left[ 0 \\ 0 \\ 1 \right]" title="\left[ 0 \\ 0 \\ 1 \right]" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cleft%5B%20%5Cbegin%7Barray%7D%200%20%5C%5C%20-s_%7B12%7D%20%5C%5C%20%20c_%7B12%7D%20%5Cend%7Barray%7D%20%5Cright%5D" alt="= \left[ \begin{array} 0 \\ -s_{12} \\  c_{12} \end{array} \right]" title="= \left[ \begin{array} 0 \\ -s_{12} \\  c_{12} \end{array} \right]" /></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Find <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5E%7B1%7D%5Cunderline%7BS%7D_%7B3%7D%7D" alt="\mathbf{^{1}\underline{S}_{3}}" title="\mathbf{^{1}\underline{S}_{3}}" /></strong></p>
+</blockquote>
 </body>
 </html>

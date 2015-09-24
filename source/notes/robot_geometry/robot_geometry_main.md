@@ -269,6 +269,7 @@ Rotation Transformation Matrix Unsimplified" width="900" height="100"/>
      k$ and $i < j$
 >>      - This simplifies to $r_{ji} - r_{ij} = 2m_{k}sin(\theta)$
 >>      - Example $r_{21} - r_{12} = 2m_{z}sin(\theta)$
+>>      - Exception is $r_{13} - r_{31} = 2m_{y}sin\theta$
 
 
 ## Links {#links}
@@ -770,3 +771,27 @@ Spherical Mechanism" width="800" height="400"/>
 
 - The goal of the analysis now is to find all of the $\underline{a}$ and
   $\underline{S}$ vectors in the first coordinate system
+
+> __Find $\mathbf{^{1}\underline{S}_{1}}$__
+
+> - The first vector is already defined based on how we defined the standard
+    coordinate systems
+>       - $^{1}\underline{S}_{1} = \left[ 0 \\ 0 \\ 1 \right]$
+
+> __Find $\mathbf{^{1}\underline{S}_{2}}$__
+
+> - To find the direction of vector $\underline{S}_{2}$ in the first coordinate
+    system we will use the rotation matrix that can be pulled from the
+    transformation matrix derived in the forward analysis section
+>       - $^{1}_{2}R =$ $\left[ \begin{array} c_{2} & -s_{2} & 0 \\ s_{2}c_{12}
+          & c_{2}c_{12} & -s_{12} \\ s_{2}s_{12} & c_{2}s_{12} & c_{12}
+          \end{array} \right]$
+> - Using the rotation matrix the vecotr $\underline{S}_{2}$ can be found in
+    the first coordinate system by the following expression
+>       - $^{1}\underline{S}_{2} = ^{1}_{2}R ^{2}\underline{S}_{2} =$ $\left[
+          \begin{array} c_{2} & -s_{2} & 0 \\ s_{2}c_{12} & c_{2}c_{12} &
+          -s_{12} \\ s_{2}s_{12} & c_{2}s_{12} & c_{12} \end{array} \right]$
+          $\left[ 0 \\ 0 \\ 1 \right]$ $= \left[ \begin{array} 0 \\ -s_{12} \\
+          c_{12} \end{array} \right]$
+
+> __Find $\mathbf{^{1}\underline{S}_{3}}$__
