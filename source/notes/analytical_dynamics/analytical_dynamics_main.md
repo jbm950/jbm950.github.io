@@ -25,6 +25,7 @@
 
 > - [Inertial Reference Frame(s)](#inertial_ref_frames)
 > - [Three Laws of Mechanics](#three_laws_of_mechanics)
+> - [Angular Momentum](#angular_momentum)
 
 - [Examples](#examples)
 
@@ -475,6 +476,8 @@ width="300" height="300"/>
     - The weak form of the third law is when the resultant force and the
       initial force are not on the same line of action
 
+## Angular Momentum {#angular_momentum}
+
 ## Examples {#examples}
 
 > ### Examples Content
@@ -851,6 +854,28 @@ width="300" height="300"/>
 </td></tr>
 </table>
 </div>
+
+> - Given the above set up find the intrinsic coordinate system for point P
+> - To begin the velocity and acceleration of point P will be found in
+    reference frame A
+> - Two different reference frames will be used: the given reference frame (A)
+    and the reference frame using the plane containing vectors $\underline{OP}$
+    and $\underline{E}_{z}$
+> - Coordinate system fixed in reference frame A
+>       - Origin at O
+>       - $\underline{E}_{x} =$ to the right
+>       - $\underline{E}_{z} =$ out of the page
+>       - $\underline{E}_{y} = \underline{E}_{z} \times \underline{E}_{x}$
+
+> - Coordinate system fixed in reference frame B
+>       - Origin at O
+>       - $\underline{e}_{r} =$ along $\underline{OP}$
+>       - $\underline{e}_{z} = \underline{E}_{z}$
+>       - $\underline{e}_{\theta} = \underline{e}_{z} \times \underline{e}_{r}$
+
+> - Now we can find the velocity of point P in reference frame A using
+    $\underline{r} = sin\theta \underline{e}_{r}$
+>       - $^{A}\underline{V}_{P}$
 
 > ### Rolling Motion {#e_rolling_motion}
 
