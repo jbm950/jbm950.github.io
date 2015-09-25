@@ -1,5 +1,34 @@
 # Weekly Status Updates
 
+### Week 9/19/2015 - 9/25/2015
+
+This week I started off continuing notes in chapter 2 section 3 but I then
+jumped to chapter 4 which covers optimality conditions at the recommendation of
+Dr. Rao. I have read chapter 4 section 1 which deals with optimality conditions
+of unconstrained problems. I have spent the rest of the time this week going
+back through chapter 4 section 1 taking notes and trying to improve my
+understanding of its content. One problem that I have been encountering is that
+the chapter keeps refering back to chapter 3 theorems and material that I have
+not yet learned, however, I am making progress on understanding the optimality
+conditions and should be able to move forward to the next section soon.
+
+> #### Future Directions
+
+> - I plan to continue reading and taking notes over chapter 4 of _Nonlinear
+    Programming: Theory and Applications_
+
+> #### Articles/Books Mentioned in Status Update
+
+> - <a href="http://www.amazon.com/Nonlinear-Programming-Algorithms-Mokhtar-Bazaraa/dp/0471486000"
+    target="_blank">Nonlinear Programming: Theory and Algorithms Book</a>
+    (Mokhtar S. Bazaraa, Hanif D. Sherali and C.M. Shetty)
+
+> #### Notes Mentioned in Status Update
+
+> - [Nonlinear Programming: Theory and
+     Algorithms](./nonlinear_programming_theory_and_algorithms/nonlinear_programming_theory_and_algo_main.html)
+     (Mokhtar S.  Bazaraa, Hanif D, Sherali and C. M. Shetty)
+
 ### Week 9/12/2015 - 9/18/2015
 
 This week I continued making progress through the book _Nonlinear Programming:
@@ -17,7 +46,7 @@ chapter 2 section 3 material.
 
 > #### Future Directions
 
-> - I plan to continue reading and taking notes over  _Nonlinear Programming:
+> - I plan to continue reading and taking notes over _Nonlinear Programming:
     Theory and Applications_
 
 > #### Articles/Books Mentioned in Status Update
