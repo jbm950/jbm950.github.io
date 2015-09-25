@@ -315,4 +315,5 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
      $\bar{\mathbf{x}}$ is, given a function $f:$ &nbsp; $R^{n} \rightarrow R$
      that is twice differentiable at $\bar{\mathbf{x}}$ if $\nabla
      f(\bar{\mathbf{x}}) = 0$ and $\mathbf{H}(\bar{\mathbf{x}})$ is positive
-     definite then $\bar{\mathbf{x}}$ is a strict local minimum
+     definite (its eigenvalues > 0) then $\bar{\mathbf{x}}$ is a strict local
+     minimum
