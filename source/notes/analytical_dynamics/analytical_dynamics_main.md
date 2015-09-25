@@ -875,7 +875,36 @@ width="300" height="300"/>
 
 > - Now we can find the velocity of point P in reference frame A using
     $\underline{r} = sin\theta \underline{e}_{r}$
->       - $^{A}\underline{V}_{P}$
+>       - $^{A}\underline{V}_{P} = \frac{^{A}d}{dt}(sin\theta
+          \underline{e}_{r}) = \frac{^{B}d}{dt}(sin\theta \underline{e}_{r}) +
+          ^{A}\underline{\omega}^{B} \times (sin\theta \underline{e}_{r})$
+>       - $^{A}\underline{V}_{P} = \dot{\theta}cos\theta \underline{e}_{r} +
+          \dot{\theta}\underline{e}_{z} \times sin\theta \underline{e}_{r}$
+>       - $^{A}\underline{V}_{P} = \dot{\theta}\cos\theta \underline{e}_{r} +
+          \dot{\theta}sin\theta \underline{e}_{\theta}$
+> - Now the that the velocity has been found the acceleration of point P in
+    reference frame A can be found
+>       - $^{A}\underline{a}_{P} = \frac{^{A}d}{dt}(\dot{\theta}cos\theta
+          \underline{e}_{r} + \dot{\theta}sin\theta \underline{e}_{\theta})$ $=
+          \frac{^{B}d}{dt}(\dot{\theta}cos\theta \underline{e}_{r} +
+          \dot{\theta}sin\theta \underline{e}_{\theta})$ $+
+          ^{A}\underline{\omega}^{B} \times (\dot{\theta}cos\theta
+          \underline{e}_{r} + \dot{\theta}sin\theta \underline{e}_{\theta})$
+>       - $^{A}\underline{a}_{P} = (\ddot{\theta}cos\theta -
+          \dot{\theta}^{2}sin\theta) \underline{e}_{r} +
+          (\ddot{\theta}sin\theta + \dot{\theta}^{2}cos\theta)
+          \underline{e}_{\theta}$ $+ \dot{\theta} \underline{e}_{z} \times
+          (\dot{\theta}cos\theta \underline{e}_{r} + \dot{\theta}sin\theta
+          \underline{e}_{\theta})$
+>       - $^{A}\underline{a}_{P} = (\ddot{\theta}cos\theta -
+          \dot{\theta}^{2}sin\theta) \underline{e}_{r} +
+          (\ddot{\theta}sin\theta + \dot{\theta}^{2}cos\theta)
+          \underline{e}_{\theta}$ $+ \dot{\theta}^{2}cos\theta
+          \underline{e}_{\theta} - \dot{\theta}^{2}sin\theta \underline{e}_{r}$
+>       - $^{A}\underline{a}_{P} = (\ddot{\theta}cos\theta -
+          2\dot{\theta}^{2}sin\theta) \underline{e}_{r} +
+          (\ddot{\theta}sin\theta + 2\dot{\theta}^{2}cos\theta)
+          \underline{e}_{\theta}$
 
 > ### Rolling Motion {#e_rolling_motion}
 
