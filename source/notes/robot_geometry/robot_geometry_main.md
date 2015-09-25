@@ -746,10 +746,10 @@ width="600" height="400"/>
 
 <div align="center">
 <table class="image">
-<caption align="bottom">Figure From Lecture</caption>
+<caption align="bottom">figure from lecture</caption>
 <tr><td><img src="./img/spatial_to_spherical.png"
-alt="Spatial Mechanism to Spherical Mechanism" title="Spatial Mechanism to
-Spherical Mechanism" width="800" height="400"/> 
+alt="spatial mechanism to spherical mechanism" title="spatial mechanism to
+spherical mechanism" width="800" height="400"/> 
 </td></tr>
 </table>
 </div>
@@ -795,3 +795,32 @@ Spherical Mechanism" width="800" height="400"/>
           c_{12} \end{array} \right]$
 
 > __Find $\mathbf{^{1}\underline{S}_{3}}$__
+
+> - To find the orientation of the $\underline{S}_{3}$ vector in the first
+    coordinate system we can use the expression
+>       - $^{1}\underline{S}_{3} = ^{1}_{2}R^{2}_{3}R ^{3}\underline{S}_{3}$
+>       - Note however that $^{2}_{3}R^{3}\underline{S}_{3}$ should give the
+          same result vector as $^{1}\underline{S}_{2}$ with the indices
+          increased by one
+>       - $^{2}_{3}R^{3}\underline{S}_{3} =$ $\left[ \begin{array} 0 \\ -s_{23}
+          \\ c_{23} \end{array} \right]$
+> - When that vector is multiplied by $^{1}_{2}R$ matrix the following vector
+    is the result
+>       - $^{1}\underline{S}_{3} =$ $\left[ \begin{array} s_{23}s_{2} \\
+          -(s_{12}c_{23} + c_{12}s_{23}c_{2}) \\ c_{12}c_{23} -
+          s_{12}s_{23}c_{2} \end{array} \right]$
+
+>>  __Single Subscript Notation__
+
+>> - As can be imagined the result of the further vectors will become
+     increasingly complicated and so a short hand notation has been developed
+     to simplify the expressions
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/single_sub_notation.png"
+alt="Single Subscript Notation" title="Single Subscript Notation" width="400"
+height="400"/> 
+</td></tr>
+</table>
+</div>
