@@ -283,9 +283,61 @@ title: Optimal Control Dis
 <li>The optimization of a performance criteria is going to be translated into minimizing a cost functional J</li>
 <li>The cost functional can be written as <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5CPhi%28%5Cunderline%7Bx%7D%28t_%7B0%7D%29%2C%20t_%7B0%7D%2C%20%20%5Cunderline%7Bx%7D%28t_%7Bf%7D%29%2C%20t_%7Bf%7D%29%20%2B%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20L%20%5Cleft%5B%20%20%5Cunderline%7Bx%7D%28t%29%2C%20%5Cunderline%7Bu%7D%28t%29%2C%20t%20%5Cright%5D%20dt" alt="J = \Phi(\underline{x}(t_{0}), t_{0},  \underline{x}(t_{f}), t_{f}) + \int^{t_{f}}_{t_{0}} L \left[  \underline{x}(t), \underline{u}(t), t \right] dt" title="J = \Phi(\underline{x}(t_{0}), t_{0},  \underline{x}(t_{f}), t_{f}) + \int^{t_{f}}_{t_{0}} L \left[  \underline{x}(t), \underline{u}(t), t \right] dt" />
 <ul>
-<li>The first term of the cost functional is refered to as the Mayer cost or endpoint cost and it represents the constraints that are enforced at the start and terminus</li>
-<li>The second term of the cost functional is refered to as the Lagrange cost, running cost or integrated cost and it represents the constraints that are enforce along the path during motion</li>
+<li>The first term of the cost functional is refered to as the Mayer cost or endpoint cost and it represents the constraints that are enforced at the start and terminus
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5CPhi%28%5Cunderline%7Bx%7D%28t_%7B0%7D%29%2C%20t_%7B0%7D%2C%20%5Cunderline%7Bx%7D%28t_%7Bf%7D%29%2C%20t_%7Bf%7D%29%20%3D%20%20%5Cunderline%7B0%7D" alt="\Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}), t_{f}) =  \underline{0}" title="\Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}), t_{f}) =  \underline{0}" /></li>
+</ul></li>
+<li>The second term of the cost functional is refered to as the Lagrange cost, running cost or integrated cost and it represents the constraints that are enforce along the path during motion
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bc%7D_%7Bmin%7D%20%5Cleq%20%5Cunderline%7Bc%7D%28%5Cunderline%7Bx%7D%28t%29%2C%20%20%5Cunderline%7Bu%7D%28t%29%2C%20t%29%20%5Cleq%20%5Cunderline%7Bc%7D_%7Bmax%7D" alt="\underline{c}_{min} \leq \underline{c}(\underline{x}(t),  \underline{u}(t), t) \leq \underline{c}_{max}" title="\underline{c}_{min} \leq \underline{c}(\underline{x}(t),  \underline{u}(t), t) \leq \underline{c}_{max}" /></li>
+</ul></li>
+</ul></li>
+<li>The general form of the optimal control problem can then be stated as
+<ul>
+<li>Minimize <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5CPhi%28%5Cunderline%7Bx%7D%28t_%7B0%7D%29%2C%20t_%7B0%7D%2C%20%5Cunderline%7Bx%7D%28t_%7Bf%7D%29%2C%20%20t_%7Bf%7D%29%20%2B%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7Bt_%7B0%7D%7D%20L%20%5Cleft%5B%20%5Cunderline%7Bx%7D%28t%29%2C%20%20%5Cunderline%7Bu%7D%28t%29%2C%20t%20%5Cright%5D%20dt" alt="J = \Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}),  t_{f}) + \int^{t_{f}}_{t_{0}} L \left[ \underline{x}(t),  \underline{u}(t), t \right] dt" title="J = \Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}),  t_{f}) + \int^{t_{f}}_{t_{0}} L \left[ \underline{x}(t),  \underline{u}(t), t \right] dt" /></li>
+<li>Subject to:
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7B%5Cdot%7Bx%7D%7D%28t%29%20%3D%20f%28%5Cunderline%7Bx%7D%28t%29%2C%20%5Cunderline%7Bu%7D%28t%29%2C%20t%29" alt="\underline{\dot{x}}(t) = f(\underline{x}(t), \underline{u}(t), t)" title="\underline{\dot{x}}(t) = f(\underline{x}(t), \underline{u}(t), t)" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5CPhi%28%5Cunderline%7Bx%7D%28t_%7B0%7D%29%2C%20t_%7B0%7D%2C%20%5Cunderline%7Bx%7D%28t_%7Bf%7D%29%2C%20t_%7Bf%7D%29%20%3D%20%20%5Cunderline%7B0%7D" alt="\Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}), t_{f}) =  \underline{0}" title="\Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}), t_{f}) =  \underline{0}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bc%7D_%7Bmin%7D%20%5Cleq%20%5Cunderline%7Bc%7D%28%5Cunderline%7Bx%7D%28t%29%2C%20%20%5Cunderline%7Bu%7D%28t%29%2C%20t%29%20%5Cleq%20%5Cunderline%7Bc%7D_%7Bmax%7D" alt="\underline{c}_{min} \leq \underline{c}(\underline{x}(t),  \underline{u}(t), t) \leq \underline{c}_{max}" title="\underline{c}_{min} \leq \underline{c}(\underline{x}(t),  \underline{u}(t), t) \leq \underline{c}_{max}" /></li>
+</ul></li>
 </ul></li>
 </ul>
+<blockquote>
+<p><strong>Simple Example Problem</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Minimize <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7B0%7D%20%5Cleft%28x%5E%7B2%7D%20%2B%20u%5E%7B2%7D%20%5Cright%29%20dt" alt="J = \frac{1}{2} \int^{t_{f}}_{0} \left(x^{2} + u^{2} \right) dt" title="J = \frac{1}{2} \int^{t_{f}}_{0} \left(x^{2} + u^{2} \right) dt" />
+<ul>
+<li>Subject to:
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bx%7D%20%3D%20-x%20%2B%20u" alt="\dot{x} = -x + u" title="\dot{x} = -x + u" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%280%29%20%3D%20x_%7B0%7D%20%3D" alt="x(0) = x_{0} =" title="x(0) = x_{0} =" /> fixed</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%28t_%7Bf%7D%29%20%3D%20x_%7Bf%7D%20%3D" alt="x(t_{f}) = x_{f} =" title="x(t_{f}) = x_{f} =" /> fixed</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t_%7Bf%7D%20%3D" alt="t_{f} =" title="t_{f} =" /> fixed/given</li>
+</ul></li>
+</ul></li>
+<li>The first step will be to get the term in the integral in terms of only <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x" alt="x" title="x" />, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bx%7D" alt="\dot{x}" title="\dot{x}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=t" alt="t" title="t" /> so that we can use the calculus of variations results that have already been derived
+<ul>
+<li>From <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cdot%7Bx%7D%20%3D%20-x%20%2B%20u" alt="\dot{x} = -x + u" title="\dot{x} = -x + u" /> we find that <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=u%20%3D%20%5Cdot%7Bx%7D%20%2B%20x" alt="u = \dot{x} + x" title="u = \dot{x} + x" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=J%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7B0%7D%20%5Cleft%28x%5E%7B2%7D%20%2B%20%28%5Cdot%7Bx%7D%20%2B%20x%29%5E%7B2%7D%20%20%5Cright%29%20dt" alt="J = \frac{1}{2} \int^{t_{f}}_{0} \left(x^{2} + (\dot{x} + x)^{2}  \right) dt" title="J = \frac{1}{2} \int^{t_{f}}_{0} \left(x^{2} + (\dot{x} + x)^{2}  \right) dt" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cint%5E%7Bt_%7Bf%7D%7D_%7B0%7D%20%5Cleft%28%202x%5E%7B2%7D%20%2B%202%5Cdot%7Bx%7Dx%20%20%2B%20%5Cdot%7Bx%7D%5E%7B2%7D%20%5Cright%29%20dt" alt="= \frac{1}{2} \int^{t_{f}}_{0} \left( 2x^{2} + 2\dot{x}x  + \dot{x}^{2} \right) dt" title="= \frac{1}{2} \int^{t_{f}}_{0} \left( 2x^{2} + 2\dot{x}x  + \dot{x}^{2} \right) dt" /></li>
+</ul></li>
+<li>Now from calculus of variations we know the necessary condition for optimality is
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20-%20%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%3D%200" alt="\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) = 0" title="\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial  L}{\partial \dot{x}}) = 0" /></li>
+<li>Where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=L%20%3D%20%5Cfrac%7B1%7D%7B2%7D%282x%5E%7B2%7D%20%2B%202%5Cdot%7Bx%7Dx%20%2B%20%5Cdot%7Bx%7D%5E%7B2%7D%29" alt="L = \frac{1}{2}(2x^{2} + 2\dot{x}x + \dot{x}^{2})" title="L = \frac{1}{2}(2x^{2} + 2\dot{x}x + \dot{x}^{2})" /></li>
+</ul></li>
+<li>Solving for the components of the above expression individually yields
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20x%7D%20%3D%202x%20%2B%20%5Cdot%7Bx%7D" alt="\frac{\partial L}{\partial x} = 2x + \dot{x}" title="\frac{\partial L}{\partial x} = 2x + \dot{x}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bd%7D%7Bdt%7D%20%28%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20%5Cdot%7Bx%7D%7D%29%20%3D%20%5Cfrac%7Bd%7D%7Bdt%7D%20%20%28%5Cdot%7Bx%7D%20%2B%20x%29%20%3D%20%5Cddot%7Bx%7D%20%2B%20%5Cdot%7Bx%7D" alt="\frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) = \frac{d}{dt}  (\dot{x} + x) = \ddot{x} + \dot{x}" title="\frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) = \frac{d}{dt}  (\dot{x} + x) = \ddot{x} + \dot{x}" /></li>
+</ul></li>
+<li>Combining the two components back into the necessary condition for optimality gives the following expression for optimality for this example
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%282x%20%2B%20%5Cdot%7Bx%7D%29%20-%20%28%5Cddot%7Bx%7D%20%2B%20%5Cdot%7Bx%7D%29%20%3D%20%5Cddot%7Bx%7D%20%2B%202x%20%3D%200" alt="(2x + \dot{x}) - (\ddot{x} + \dot{x}) = \ddot{x} + 2x = 0" title="(2x + \dot{x}) - (\ddot{x} + \dot{x}) = \ddot{x} + 2x = 0" /></li>
+</ul></li>
+</ul>
+</blockquote>
 </body>
 </html>

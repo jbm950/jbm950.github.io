@@ -290,6 +290,48 @@
     - The first term of the cost functional is refered to as the Mayer cost or
       endpoint cost and it represents the constraints that are enforced at the
       start and terminus
+        - $\Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}), t_{f}) =
+          \underline{0}$
     - The second term of the cost functional is refered to as the Lagrange
       cost, running cost or integrated cost and it represents the constraints
       that are enforce along the path during motion
+        - $\underline{c}_{min} \leq \underline{c}(\underline{x}(t),
+          \underline{u}(t), t) \leq \underline{c}_{max}$
+- The general form of the optimal control problem can then be stated as
+    - Minimize $J = \Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}),
+      t_{f}) + \int^{t_{f}}_{t_{0}} L \left[ \underline{x}(t),
+      \underline{u}(t), t \right] dt$
+    - Subject to:
+        - $\underline{\dot{x}}(t) = f(\underline{x}(t), \underline{u}(t), t)$
+        - $\Phi(\underline{x}(t_{0}), t_{0}, \underline{x}(t_{f}), t_{f}) =
+          \underline{0}$
+        - $\underline{c}_{min} \leq \underline{c}(\underline{x}(t),
+          \underline{u}(t), t) \leq \underline{c}_{max}$
+
+> __Simple Example Problem__
+
+> - Minimize $J = \frac{1}{2} \int^{t_{f}}_{0} \left(x^{2} + u^{2} \right) dt$
+>       - Subject to:
+>           - $\dot{x} = -x + u$
+>           - $x(0) = x_{0} =$ fixed
+>           - $x(t_{f}) = x_{f} =$ fixed
+>           - $t_{f} =$ fixed/given
+> - The first step will be to get the term in the integral in terms of only
+    $x$, $\dot{x}$ and $t$ so that we can use the calculus of variations
+    results that have already been derived
+>       - From $\dot{x} = -x + u$ we find that $u = \dot{x} + x$
+>       - $J = \frac{1}{2} \int^{t_{f}}_{0} \left(x^{2} + (\dot{x} + x)^{2}
+          \right) dt$ $= \frac{1}{2} \int^{t_{f}}_{0} \left( 2x^{2} + 2\dot{x}x
+          + \dot{x}^{2} \right) dt$
+> - Now from calculus of variations we know the necessary condition for
+    optimality is
+>       - $\frac{\partial L}{\partial x} - \frac{d}{dt} (\frac{\partial
+          L}{\partial \dot{x}}) = 0$
+>       - Where $L = \frac{1}{2}(2x^{2} + 2\dot{x}x + \dot{x}^{2})$
+> - Solving for the components of the above expression individually yields
+>       - $\frac{\partial L}{\partial x} = 2x + \dot{x}$
+>       - $\frac{d}{dt} (\frac{\partial L}{\partial \dot{x}}) = \frac{d}{dt}
+          (\dot{x} + x) = \ddot{x} + \dot{x}$
+> - Combining the two components back into the necessary condition for
+    optimality gives the following expression for optimality for this example
+>       - $(2x + \dot{x}) - (\ddot{x} + \dot{x}) = \ddot{x} + 2x = 0$
