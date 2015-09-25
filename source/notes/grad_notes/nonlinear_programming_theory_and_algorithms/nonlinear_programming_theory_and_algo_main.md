@@ -317,3 +317,13 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
      f(\bar{\mathbf{x}}) = 0$ and $\mathbf{H}(\bar{\mathbf{x}})$ is positive
      definite (its eigenvalues > 0) then $\bar{\mathbf{x}}$ is a strict local
      minimum
+
+>> __Pseudoconvex Global Minimum__
+
+>> - For $f:$ &nbsp; $R^{n} \rightarrow R$ that is pseudoconvex at
+     $\mathbf{\bar{x}}$ then $\mathbf{\bar{x}}$ is a global minimum if and only
+     if $\nabla f(\mathbf{\bar{x}}) = 0$
+
+>> __Infinitely Differentially Univariate Function__
+
+>> - 
