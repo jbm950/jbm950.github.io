@@ -4,6 +4,8 @@
 import numpy as np
 import math as m
 
+# Coordinate Transformations
+
 
 def rotation_about_x(theta):
     """This function will return the rotation matrix for a rotation theta about
@@ -84,7 +86,7 @@ def rev_gen_vec_rotation_matrix(R_1_2):
     theta = m.acos((R_1_2[0, 0] + R_1_2[1, 1] + R_1_2[2, 2] - 1) / 2)
 
     mx = (R_1_2[2, 1] - R_1_2[1, 2]) / (2 * m.sin(theta))
-    my = (R_1_2[2, 0] - R_1_2[0, 2]) / (2 * m.sin(theta))
+    my = (R_1_2[0, 2] - R_1_2[2, 0]) / (2 * m.sin(theta))
     mz = (R_1_2[1, 0] - R_1_2[0, 1]) / (2 * m.sin(theta))
 
     m_v = np.matrix([[mx], [my], [mz]])
@@ -123,3 +125,30 @@ def inv_trans_matrix(trans_matrix):
                                   [nrm[2, 0], nrm[2, 1], nrm[2, 2], nPo[2, 0]],
                                   [0,         0,         0,         1]])
     return new_trans_matrix
+
+
+# Forward Analysis
+
+
+def forward_analysis(inputs):
+    """This function will take in the different robot parameters and joint
+    angles and determine the location of the tool point in the fixed coordinate
+    system"""
+    pass
+
+
+# 6 Link Robot Base Class
+
+class Robot_6link:
+    def __init__(self, link_lengths, twist_angles):
+        """This will be the standard base class for 6 link robots
+        Inputs:
+            link_lengths - This is a list of all the link lengths in the order
+                [a12, a23, a34, a45, a56]
+            twist_angles - This is a list of all the twist angles in the order
+                [alp12, alp23, alp34, alp45, alp56] all angles in degrees"""
+        self.link_lengths = np.array(link_lengths)
+        self.twist_angles = np.array(twist_angles)
+
+        # Convert the twist angles to radians
+        self.twist_angles = np.radians(self.twist_angles)
