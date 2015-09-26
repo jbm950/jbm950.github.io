@@ -326,4 +326,24 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
 
 >> __Infinitely Differentially Univariate Function__
 
->> - 
+>> - For a function $f:$ &nbsp; $R^{n} \rightarrow R$ that is infinitely
+     differentiable, a sufficient condition for a local minimum for
+     $\mathbf{\bar{x}} \in R$ is either $f^{(j)}(\mathbf{\bar{x}}) = 0$ for all
+     $j = 1, 2, 3, ...$ or there is an $f^{(n)}(\mathbf{\bar{x}}) > 0$ for n is
+     even and $n \geq 2$ while the derivatives up to $f^{(n)}$ are equal to
+     zero ($f^{(j)}(\mathbf{\bar{x}}) = 0$ for $1 \leq j \leq n$)
+
+### 4.2 Problems Having Inequality Constraints
+
+> __Cone of Feasible Directions__
+
+> - The cone of feasible directions ($D$) for point $\mathbf{\bar{x}} \in S$ is
+    the collection of all of the direction vectors $\mathbf{d}$ such that a
+    small variation from $\mathbf{\bar{x}}$ in the direction $\mathbf{d}$ is
+    still in the set S
+> - This can be stated mathematically as:
+>       - $D = \left{ \mathbf{d}: \; \mathbf{d} \neq 0,\; and \;
+          \mathbf{\bar{x}} + \lambda \mathbf{d} \in S \; for \; all \; \lambda
+          \in (0, \delta) \; for \; some \; \delta > 0 \right}$
+
+> __Cone of Improving Directions__
