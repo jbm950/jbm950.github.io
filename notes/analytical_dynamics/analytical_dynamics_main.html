@@ -46,6 +46,8 @@ title: Analytical Dynamics
 <li><a href="#inertial_ref_frames">Inertial Reference Frame(s)</a></li>
 <li><a href="#three_laws_of_mechanics">Three Laws of Mechanics</a></li>
 <li><a href="#angular_momentum">Angular Momentum</a></li>
+<li><a href="#relative_velocity">Relative Velocity</a></li>
+<li><a href="#friction_force_models">Friction Force Models</a></li>
 </ul>
 </blockquote>
 <ul>
@@ -400,6 +402,34 @@ width="300" height="300"/>
 </ul></li>
 </ol>
 <h2 id="angular_momentum">Angular Momentum</h2>
+<ul>
+<li>Some problems are easier to solve by using the concept of angular momentum where the definition of angular momentum for a particle P about point Q is given as
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BN%7D%5Cunderline%7BH%7D_%7BQ%7D%20%3D%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20m%20%20%28%5E%7BN%7D%5Cunderline%7BV%7D_%7BP%7D%20-%20%5E%7BN%7D%5Cunderline%7BV%7D_%7BQ%7D%29" alt="^{N}\underline{H}_{Q} =(\underline{r}_{P} - \underline{r}_{Q}) \times m  (^{N}\underline{V}_{P} - ^{N}\underline{V}_{Q})" title="^{N}\underline{H}_{Q} =(\underline{r}_{P} - \underline{r}_{Q}) \times m  (^{N}\underline{V}_{P} - ^{N}\underline{V}_{Q})" /> where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BP%7D" alt="\underline{P}" title="\underline{P}" /> and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BQ%7D" alt="\underline{Q}" title="\underline{Q}" /> are measured relative to the origin of N and m is the mass of particle P</li>
+</ul></li>
+<li>Another useful relation from the angular momentum is the time rate of change of the angular momentum
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bd%7D%7Bdt%7D%28%5E%7BN%7D%5Cunderline%7BH%7D_%7BQ%7D%29%20%3D%20%28%5E%7BN%7D%5Cunderline%7BV%7D_%7BP%7D%20-%20%20%5E%7BN%7D%5Cunderline%7BV%7D_%7BQ%7D%29%20%5Ctimes%20m%28%5E%7BN%7D%5Cunderline%7BV%7D_%7BP%7D%20-%20%20%5E%7BN%7D%5Cunderline%7BV%7D_%7BQ%7D%29" alt="\frac{d}{dt}(^{N}\underline{H}_{Q}) = (^{N}\underline{V}_{P} -  ^{N}\underline{V}_{Q}) \times m(^{N}\underline{V}_{P} -  ^{N}\underline{V}_{Q})" title="\frac{d}{dt}(^{N}\underline{H}_{Q}) = (^{N}\underline{V}_{P} -  ^{N}\underline{V}_{Q}) \times m(^{N}\underline{V}_{P} -  ^{N}\underline{V}_{Q})" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%2B%20%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20%20m%28%5E%7BN%7D%5Cunderline%7Ba%7D_%7BP%7D%20-%20%5E%7BN%7D%5Cunderline%7Ba%7D_%7BQ%7D%29" alt="+ (\underline{r}_{P} - \underline{r}_{Q}) \times  m(^{N}\underline{a}_{P} - ^{N}\underline{a}_{Q})" title="+ (\underline{r}_{P} - \underline{r}_{Q}) \times  m(^{N}\underline{a}_{P} - ^{N}\underline{a}_{Q})" /></li>
+<li>Note that the first term involves taking the cross product of a vector with the same vector and is therefore zero and so the expression can be rewritten as
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bd%7D%7Bdt%7D%28%5E%7BN%7D%5Cunderline%7BH%7D_%7BQ%7D%29%20%3D" alt="\frac{d}{dt}(^{N}\underline{H}_{Q}) =" title="\frac{d}{dt}(^{N}\underline{H}_{Q}) =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20m%28%5E%7BN%7D%5Cunderline%7Ba%7D_%7BP%7D%20-%20%20%5E%7BN%7D%5Cunderline%7Ba%7D_%7BQ%7D%29" alt="(\underline{r}_{P} -  \underline{r}_{Q}) \times m(^{N}\underline{a}_{P} -  ^{N}\underline{a}_{Q})" title="(\underline{r}_{P} -  \underline{r}_{Q}) \times m(^{N}\underline{a}_{P} -  ^{N}\underline{a}_{Q})" /></li>
+</ul></li>
+</ul></li>
+<li>The above expression can as the cross product of the distance between the two points with each acceleration individually
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bd%7D%7Bdt%7D%28%5E%7BN%7D%5Cunderline%7BH%7D_%7BQ%7D%29%20%3D%20%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20m%20%5E%7BN%7D%5Cunderline%7Ba%7D_%7BP%7D%20-%20%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20m%20%5E%7BN%7D%5Cunderline%7Ba%7D_%7BQ%7D" alt="\frac{d}{dt}(^{N}\underline{H}_{Q}) = (\underline{r}_{P} -  \underline{r}_{Q}) \times m ^{N}\underline{a}_{P} - (\underline{r}_{P} -  \underline{r}_{Q}) \times m ^{N}\underline{a}_{Q}" title="\frac{d}{dt}(^{N}\underline{H}_{Q}) = (\underline{r}_{P} -  \underline{r}_{Q}) \times m ^{N}\underline{a}_{P} - (\underline{r}_{P} -  \underline{r}_{Q}) \times m ^{N}\underline{a}_{Q}" /></li>
+<li>Since m is the mass of particle P the term <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=m%20%5E%7BN%7D%5Cunderline%7Ba%7D_%7BP%7D" alt="m ^{N}\underline{a}_{P}" title="m ^{N}\underline{a}_{P}" /> is the sum of forces <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BN%7D%5Cunderline%7BF%7D" alt="^{N}\underline{F}" title="^{N}\underline{F}" /> acting on point P by Newton's third law of mechanics
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bd%7D%7Bdt%7D%28%5E%7BN%7D%5Cunderline%7BH%7D_%7BQ%7D%29%20%3D%20%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20%5E%7BN%7D%5Cunderline%7BF%7D%20-%20%20%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20m%20%20%5E%7BN%7D%5Cunderline%7Ba%7D_%7BQ%7D" alt="\frac{d}{dt}(^{N}\underline{H}_{Q}) = (\underline{r}_{P} -  \underline{r}_{Q}) \times ^{N}\underline{F} -  (\underline{r}_{P} - \underline{r}_{Q}) \times m  ^{N}\underline{a}_{Q}" title="\frac{d}{dt}(^{N}\underline{H}_{Q}) = (\underline{r}_{P} -  \underline{r}_{Q}) \times ^{N}\underline{F} -  (\underline{r}_{P} - \underline{r}_{Q}) \times m  ^{N}\underline{a}_{Q}" /></li>
+</ul></li>
+</ul></li>
+<li>The term <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20%5E%7BN%7D%5Cunderline%7BF%7D" alt="(\underline{r}_{P} - \underline{r}_{Q}) \times ^{N}\underline{F}" title="(\underline{r}_{P} - \underline{r}_{Q}) \times ^{N}\underline{F}" /> is the moment of all of the forces acting on particle P with respect to point Q and so the expression can be rewritten one more time as the following
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bd%7D%7Bdt%7D%28%5E%7BN%7D%5Cunderline%7BH%7D_%7BQ%7D%29%20%3D%20%5Cunderline%7BM%7D_%7BQ%7D%20-%20%20%28%5Cunderline%7Br%7D_%7BP%7D%20-%20%5Cunderline%7Br%7D_%7BQ%7D%29%20%5Ctimes%20m%20%5E%7BN%7D%5Cunderline%7Ba%7D_%7BQ%7D" alt="\frac{d}{dt}(^{N}\underline{H}_{Q}) = \underline{M}_{Q} -  (\underline{r}_{P} - \underline{r}_{Q}) \times m ^{N}\underline{a}_{Q}" title="\frac{d}{dt}(^{N}\underline{H}_{Q}) = \underline{M}_{Q} -  (\underline{r}_{P} - \underline{r}_{Q}) \times m ^{N}\underline{a}_{Q}" /></li>
+</ul></li>
+</ul>
+<h2 id="relative_velocity">Relative Velocity</h2>
+<h2 id="friction_force_models">Friction Force Models</h2>
 <h2 id="examples">Examples</h2>
 <blockquote>
 <h3 id="examples-content">Examples Content</h3>

@@ -26,6 +26,8 @@
 > - [Inertial Reference Frame(s)](#inertial_ref_frames)
 > - [Three Laws of Mechanics](#three_laws_of_mechanics)
 > - [Angular Momentum](#angular_momentum)
+> - [Relative Velocity](#relative_velocity)
+> - [Friction Force Models](#friction_force_models)
 
 - [Examples](#examples)
 
@@ -477,6 +479,47 @@ width="300" height="300"/>
       initial force are not on the same line of action
 
 ## Angular Momentum {#angular_momentum}
+
+- Some problems are easier to solve by using the concept of angular momentum
+  where the definition of angular momentum for a particle P about point Q is
+  given as
+    - $^{N}\underline{H}_{Q} =(\underline{r}_{P} - \underline{r}_{Q}) \times m
+      (^{N}\underline{V}_{P} - ^{N}\underline{V}_{Q})$ where $\underline{P}$
+      and $\underline{Q}$ are measured relative to the origin of N and m is the
+      mass of particle P
+- Another useful relation from the angular momentum is the time rate of change
+  of the angular momentum
+    - $\frac{d}{dt}(^{N}\underline{H}_{Q}) = (^{N}\underline{V}_{P} -
+      ^{N}\underline{V}_{Q}) \times m(^{N}\underline{V}_{P} -
+      ^{N}\underline{V}_{Q})$ $+ (\underline{r}_{P} - \underline{r}_{Q}) \times
+      m(^{N}\underline{a}_{P} - ^{N}\underline{a}_{Q})$
+    - Note that the first term involves taking the cross product of a vector
+      with the same vector and is therefore zero and so the expression can be
+      rewritten as 
+        - $\frac{d}{dt}(^{N}\underline{H}_{Q}) =$ $(\underline{r}_{P} -
+          \underline{r}_{Q}) \times m(^{N}\underline{a}_{P} -
+          ^{N}\underline{a}_{Q})$
+- The above expression can as the cross product of the distance between the two
+  points with each acceleration individually
+    - $\frac{d}{dt}(^{N}\underline{H}_{Q}) = (\underline{r}_{P} -
+      \underline{r}_{Q}) \times m ^{N}\underline{a}_{P} - (\underline{r}_{P} -
+      \underline{r}_{Q}) \times m ^{N}\underline{a}_{Q}$
+    - Since m is the mass of particle P the term $m ^{N}\underline{a}_{P}$ is
+      the sum of forces $^{N}\underline{F}$ acting on point P by Newton's third
+      law of mechanics
+        - $\frac{d}{dt}(^{N}\underline{H}_{Q}) = (\underline{r}_{P} -
+          \underline{r}_{Q}) \times ^{N}\underline{F} -
+          (\underline{r}_{P} - \underline{r}_{Q}) \times m
+          ^{N}\underline{a}_{Q}$
+- The term $(\underline{r}_{P} - \underline{r}_{Q}) \times ^{N}\underline{F}$
+  is the moment of all of the forces acting on particle P with respect to point
+  Q and so the expression can be rewritten one more time as the following
+    - $\frac{d}{dt}(^{N}\underline{H}_{Q}) = \underline{M}_{Q} -
+      (\underline{r}_{P} - \underline{r}_{Q}) \times m ^{N}\underline{a}_{Q}$
+
+## Relative Velocity {#relative_velocity}
+
+## Friction Force Models {#friction_force_models}
 
 ## Examples {#examples}
 
