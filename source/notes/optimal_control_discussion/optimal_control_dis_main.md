@@ -335,3 +335,36 @@
 > - Combining the two components back into the necessary condition for
     optimality gives the following expression for optimality for this example
 >       - $(2x + \dot{x}) - (\ddot{x} + \dot{x}) = \ddot{x} + 2x = 0$
+> - This linear, second-order, constant coefficient, homogeneous differential
+    equation can be solved by making a guess at the solution and solving
+    forward
+>       - Guess for solution x: $x = e^{\alpha t}$
+>       - $\dot{x} = \alpha e^{\alpha t}$
+>       - $\ddot{x} = \alpha^{2} e^{\alpha t}$
+> - Now substituing the guessed solution back into the original expression and
+    solving for $\alpha$ yeilds:
+>       - $\ddot{x} - 2x = (\alpha^{2} e^{\alpha t}) - 2 (e^{\alpha t}) = 0$
+>       - $(\alpha^{2} - 2) e^{\alpha t} = 0$
+> - Keeping in mind that $e^{\alpha t}$ will never equal zero for any value of
+    t the first term must equal zero
+>       - $\alpha^{2} - 2 = 0$
+>       - $\alpha = \pm \sqrt{2}$
+> - Therefore the general solution of the differential equation is the
+    following expression
+>       - $x = c_{1} e^{\sqrt{2}t} + c_{2} e^{- \sqrt{2} t}$ where $c_{1}$ and
+          $c_{2}$ are constant coefficients
+> - Now we will use the boundary conditions given in the problem to solve for
+    the coefficients $c_{1}$ and $c_{2}$
+>       - $x(0) = x_{0} = c_{1} + c_{2}$
+>       - $x(t_{f}) = x_{f} = c_{1} e^{\sqrt{2} t_{f}} + c_{2} e^{- \sqrt{2} t_{f}}$
+>       - $\left[ \begin{array} x_{0} \\ x_{f} \end{array} \right] =$ $\left[
+          \begin{array} 1 & 1 \\ e^{\sqrt{2} t_{f}} & e^{- \sqrt{2} t_{f}}
+          \end{array} \right]$ $\left[ \begin{array} c_{1} \\ c_{2} \end{array}
+          \right]$
+>       - $\left[ \begin{array} c_{1} \\ c_{2} \end{array} \right]$ $=
+          \frac{1}{e^{- \sqrt{2} t_{f}} - e^{\sqrt{2} t_{f}}}$ $\left[
+          \begin{array} e^{- \sqrt{2} t_{f}} & -1 \\ -e^{\sqrt{2} t_{f}} & 1
+          \end{array} \right]$ $\left[ \begin{array} x_{0} \\ x_{f} \end{array}
+          \right]$
+
+>> __Alternative Differential Equation Solving Method__
