@@ -519,7 +519,30 @@ width="300" height="300"/>
 
 ## Relative Velocity {#relative_velocity}
 
+- Relative velocity is the vector that represents the motion of one point
+  compared to another
+- For two points P and Q the relative velocity can be expressed as follows
+    - $\underline{V}_{rel} = ^{A}\underline{V}_{P} - ^{A}\underline{V}_{Q}$
+    - Note that the relative velocity is reference frame independent
+        - $^{A}\underline{V}_{P} - ^{A}\underline{V}_{Q} =
+          ^{B}\underline{V}_{P} - ^{B}\underline{V}_{Q}$
+
 ## Friction Force Models {#friction_force_models}
+
+- Irregardless of the model the friction force $\underline{F}_{f}$ will oppose
+  the relative motion between two surfaces
+    - Caution as it may not oppose the direction of overall motion of the
+      object
+
+> __Coulomb Friction__
+
+> - $\underline{F}_{f} = -\mu \| \underline{R} \| \frac{\underline{V}_{rel}}{\|
+    \underline{V}_{rel} \|}$ where $\underline{R}$ is the resultant force
+    normal to the point of contact
+
+> __Viscous Friction__
+
+> - $\underline{F}_{f} = -c\underline{V}_{rel}$
 
 ## Examples {#examples}
 
@@ -536,6 +559,8 @@ width="300" height="300"/>
 >> #### Kinetics
 
 >> - [Basic Equation of Motion](#e_basic_equation_of_motion)
+>> - [Angular Momentum](#e_angular_momentum)
+>> - [Friction Force Models](#e_friction_force_models)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
@@ -949,9 +974,19 @@ width="300" height="300"/>
           (\ddot{\theta}sin\theta + 2\dot{\theta}^{2}cos\theta)
           \underline{e}_{\theta}$
 
+> - Let us now find the vectors of the intrinsic coordinate system attached to
+    point P
+> - Start with the tangential vector $\underline{e}_{t}
+>       - $\| ^{A}\underline{V}_{P} \| =$
+>       - $\underline{e}_{t} =$ 
+
 > ### Rolling Motion {#e_rolling_motion}
 
 > - This example also includes examples on motion between two points fixed in
     the same rigid body
 
 > ### Basic Equation of Motion {#e_basic_equation_of_motion}
+
+> ### Angular Momentum {#e_angular_momentum}
+
+> ### Friction Force Models {#e_friction_force_models}
