@@ -824,3 +824,46 @@ height="400"/>
 </td></tr>
 </table>
 </div>
+
+>> - For single subscript notation three different terms are created ($X$, $Y$,
+     $Z$) and will have different meanings based on their subscript and whether
+     or not they have a bar
+>>      - $X = ss_{\theta}$
+>>      - $Y = -(sc + csc_{\theta})$
+>>      - $Z = cc - ssc_{\theta}$
+>> - For $S_{j}$, $\theta_{j}$ the single subscript notation will involve
+     $\alpha_{ij}$ and $\alpha_{jk}$ and the order of the $\alpha$ angles
+     depends on whether or not the $X$, $Y$, $Z$ terms have overbars
+>>      - For no bar $\alpha_{ij}$ will be placed next to the $\theta_{j}$
+          terms (the right side terms) and the angle $\alpha_{jk}$ will fill in
+          the remaining terms
+>>          - Notice $\alpha_{ij}$ is the first $\alpha$ term encountered in
+              the figure when traveling in the no bar direction
+>>      - With bar $\alpha_{jk}$ will be placed next to the $\theta_{j}$
+          terms (the right side terms) and the angle $\alpha_{ij}$ will fill in
+          the remaining terms
+>>          - Notice $\alpha_{jk}$ is the first $\alpha$ term encountered in
+              the figure when traveling in the bar direction
+>> - The subscript in single subscript notation indicates which theta is
+     included in its terms
+
+> __Rewrite $\mathbf{^{1}\underline{S}_{3}}$__
+
+> - With the formation of single subscript notation notice that the vector
+    $^{1}\underline{S}_{3}$ can be rewritten as the following
+>       - $^{1}\underline{S}_{3} =$ $\left[ \begin{array} \bar{X}_{2} \\
+          \bar{Y}_{2} \\ \bar{Z}_{2} \end{array} \right]$
+
+> __Find $\mathbf{^{1}\underline{S}_{4}}$__
+
+> - The dirction of the vector $\underline{S}_{4}$ in the first coordinate
+    system can be found by the multiplication of the series of rotation
+    matrices
+>       - $^{1}\underline{S}_{4} = ^{1}_{2}R^{2}_{3}R^{3}_{4}R
+          ^{4}\underline{S}_{4}$
+>       - Note that by similarity the expression for $\underline{S}_{4}$ in the
+          second coordinate system is the same as the expression for
+          $\underline{3}$ in the first coordinate system with subscripts
+          increased by one
+>           - $^{2}\underline{S}_{4} =$ $\left[ \begin{array} \bar{X}_{3} \\
+          \bar{Y}_{3} \\ \bar{Z}_{3} \end{array} \right]$
