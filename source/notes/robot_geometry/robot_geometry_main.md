@@ -828,9 +828,9 @@ height="400"/>
 >> - For single subscript notation three different terms are created ($X$, $Y$,
      $Z$) and will have different meanings based on their subscript and whether
      or not they have a bar
->>      - $X = ss_{\theta}$
->>      - $Y = -(sc + csc_{\theta})$
->>      - $Z = cc - ssc_{\theta}$
+>>      - $X \equiv ss_{\theta}$
+>>      - $Y \equiv -(sc + csc_{\theta})$
+>>      - $Z \equiv cc - ssc_{\theta}$
 >> - For $S_{j}$, $\theta_{j}$ the single subscript notation will involve
      $\alpha_{ij}$ and $\alpha_{jk}$ and the order of the $\alpha$ angles
      depends on whether or not the $X$, $Y$, $Z$ terms have overbars
@@ -867,3 +867,17 @@ height="400"/>
           increased by one
 >           - $^{2}\underline{S}_{4} =$ $\left[ \begin{array} \bar{X}_{3} \\
           \bar{Y}_{3} \\ \bar{Z}_{3} \end{array} \right]$
+> - When $^{2}\underline{S}_{4}$ is multiplied by the rotation matrix to
+    transition to the first coordinate system the following expression emerges
+>       - $^{1}\underline{S}_{4} = ^{1}_{2}R^{2}\underline{S}_{4} =$ $\left[
+          \begin{array} \bar{X} c_{2} - \bar{Y} s_{2} \\ c_{12}(\bar{X} s_{2} +
+          \bar{Y}c_{2}) - s_{12}\bar{Z} \\ s_{12}(\bar{X}s_{2} + \bar{Y}c_{2})
+          + c_{12} \bar{Z} \end{array} \right]$
+
+>> __Multi-Subscript Notation__
+
+>> - Just like before a new notation is going to be introduced in order to make
+     keeping track of the multitude of terms easier
+>> - The general form for multiple notation is presented below
+>>      - $X_{ab} = X_{a} c_{b} - Y_{a} s_{b}$
+>>      - $Y_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) - s_{b,b \rightarrow 1}Z_{a}$
