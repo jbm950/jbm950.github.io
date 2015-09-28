@@ -347,3 +347,26 @@ alt="Convex Sets" title="Convex Sets" width="400" height="250"/>
           \in (0, \delta) \; for \; some \; \delta > 0 \right}$
 
 > __Cone of Improving Directions__
+
+> - The cone of improving directions for a point $\mathbf{\bar{x}}$ is the
+    collection of all of the descent directions of $f$ at $\mathbf{\bar{x}}$
+    (all the vectors $\mathbf{d}$ that represent a decrease in the value of
+    function $f$ for non-zero variation in the direction of the vector)
+> - This can be stated mathematically as:
+>       - $F = \left{ \mathbf{d}: \; f(\mathbf{\bar{x}} + \lambda \mathbf{d})
+          \; < \; f(\mathbf{\bar{x}}) \; for \; all \; \lambda \in (0, \delta)
+          \; for \; some \; \delta>0 \right}$
+> - A similar mathematical expression of improving directions that appears is:
+>       - $F_{0} \equiv \left{ \mathbf{d}: \; \nabla f(\mathbf{\bar{x}})^{t}
+          \mathbf{d} < 0 \right}$
+>       - $F_{0} \subseteq F$
+
+> __Necessary Condition for Optimality Involving Above Cone Definitions__
+
+> - A necessary condition for local optimality resulting from the above
+    definition of the cone of feasible directions and cone of improving
+    directions is that the intersection between the two cones must be the null
+    set
+>       - $F_{0} \cap D = \emptyset$
+>       - In words this simply means that there are no improving directions at
+          the point that are feasible for the function $f$
