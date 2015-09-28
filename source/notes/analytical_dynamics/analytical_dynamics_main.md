@@ -976,9 +976,31 @@ width="300" height="300"/>
 
 > - Let us now find the vectors of the intrinsic coordinate system attached to
     point P
-> - Start with the tangential vector $\underline{e}_{t}
->       - $\| ^{A}\underline{V}_{P} \| =$
->       - $\underline{e}_{t} =$ 
+> - Start with the tangential vector $\underline{e}_{t}$
+>       - $\| ^{A}\underline{V}_{P} \| = \sqrt{(\dot{\theta} cos\theta)^{2} +
+          (\dot{\theta} sin\theta})^{2}}$ $= \sqrt{\dot{\theta} (cos\theta^{2}
+          + sin\theta^{2})} = \dot{\theta}$
+>       - $\underline{e}_{t} = \frac{^{A}\underline{V}_{P}}{\|
+          ^{A}\underline{V}_{P} \|}$ $= \frac{\dot{\theta}cos\theta
+          \underline{e}_{r} + \dot{\theta}sin\theta
+          \underline{e}_{\theta}}{\dot{\theta}} = cos\theta \underline{e}_{r} +
+          sin\theta \underline{e}_{\theta}$
+> - Now that the tangential vector has been found the principle normal to the
+    trajectory can be found
+>       - $\frac{^{A}d}{dt}\underline{e}_{t} = \frac{^{B}d}{dt} (cos\theta
+          \underline{e}_{r} +$ $sin\theta \underline{e}_{\theta}) +
+          ^{A}\underline{\omega}^{B} \times (cos\theta \underline{e}_{r} +
+          sin\theta \underline{e}_{\theta})$
+>       - $\frac{^{A}d}{dt}\underline{e}_{t} = -\dot{\theta}sin\theta
+          \underline{e}_{r} + \dot{\theta}cos\theta$ $\underline{e}_{\theta} +
+          \dot{\theta} \underline{e}_{z} \times (cos\theta \underline{e}_{r} +
+          sin\theta \underline{e}_{\theta})$
+>       - $\frac{^{A}d}{dt}\underline{e}_{t} = -\dot{\theta}sin\theta
+          \underline{e}_{r} + \dot{\theta}cos\theta$ $\underline{e}_{\theta} +
+          \dot{\theta} cos\theta \underline{e}_{\theta} -
+          \dot{\theta} sin\theta \underline{e}_{r}$ $= -2 \dot{\theta}
+          sin\theta \underline{e}_{r} + 2 \dot{\theta} cos\theta
+          \underline{e}_{\theta}$
 
 > ### Rolling Motion {#e_rolling_motion}
 
