@@ -28,6 +28,7 @@
 > - [Angular Momentum](#angular_momentum)
 > - [Relative Velocity](#relative_velocity)
 > - [Friction Force Models](#friction_force_models)
+> - [Linear Spring Force Model](#linear_spring_force_model)
 
 - [Examples](#examples)
 
@@ -537,12 +538,25 @@ width="300" height="300"/>
 > __Coulomb Friction__
 
 > - $\underline{F}_{f} = -\mu \| \underline{R} \| \frac{\underline{V}_{rel}}{\|
-    \underline{V}_{rel} \|}$ where $\underline{R}$ is the resultant force
-    normal to the point of contact
+    \underline{V}_{rel} \|}$ 
+>       - $\underline{R}$ is the resultant force normal to the point of contact
+>       - $\mu =$ coefficient of friction
 
 > __Viscous Friction__
 
 > - $\underline{F}_{f} = -c\underline{V}_{rel}$
+>       - $c =$ coefficient of vicsous friction
+
+## Linear Spring Force Model {#linear_spring_force_model}
+
+- For particle $P$ with mass $m$ and point $Q$ being connected by a linear
+  spring the force model can be written as follows
+    - $\underline{F}_{s} = -k(\el - \el_{0})\underline{u}_{s}$
+        - $\el = \| \underline{r} - \underline{Q} \|$
+        - $\el_{0} =$ the spring length when it is unstreched/uncompressed
+        - $k =$ the spring constant
+        - $\underline{u}_{s} = \frac{\underline{r}_{P} - \underline{r}_{Q}}{\|
+          \underline{r}_{P} - \underline{r}_{Q} \|}$
 
 ## Examples {#examples}
 
@@ -561,6 +575,7 @@ width="300" height="300"/>
 >> - [Basic Equation of Motion](#e_basic_equation_of_motion)
 >> - [Angular Momentum](#e_angular_momentum)
 >> - [Friction Force Models](#e_friction_force_models)
+>> - [Linear Spring Force Models](#e_linear_spring_force_models)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
@@ -978,8 +993,8 @@ width="300" height="300"/>
     point P
 > - Start with the tangential vector $\underline{e}_{t}$
 >       - $\| ^{A}\underline{V}_{P} \| = \sqrt{(\dot{\theta} cos\theta)^{2} +
-          (\dot{\theta} sin\theta})^{2}}$ $= \sqrt{\dot{\theta} (cos\theta^{2}
-          + sin\theta^{2})} = \dot{\theta}$
+          (\dot{\theta} sin\theta})^{2}}$ $= \sqrt{\dot{\theta}^{2}
+          (cos^{2}\theta + sin^{2}\theta)} = \dot{\theta}$
 >       - $\underline{e}_{t} = \frac{^{A}\underline{V}_{P}}{\|
           ^{A}\underline{V}_{P} \|}$ $= \frac{\dot{\theta}cos\theta
           \underline{e}_{r} + \dot{\theta}sin\theta
@@ -1001,6 +1016,18 @@ width="300" height="300"/>
           \dot{\theta} sin\theta \underline{e}_{r}$ $= -2 \dot{\theta}
           sin\theta \underline{e}_{r} + 2 \dot{\theta} cos\theta
           \underline{e}_{\theta}$
+>       - $\| \frac{^{A}d}{dt}\underline{e}_{t} \| = \| -2 \dot{\theta}
+          sin\theta \underline{e}_{r} + 2 \dot{\theta} cos\theta
+          \underline{e}_{\theta} \|$ $= \sqrt{(2 \dot{\theta} sin\theta)^{2} +
+          (2 \dot{\theta} cos\theta)}$
+>       - $\| \frac{^{A}d}{dt}\underline{e}_{t} \| = \sqrt{4 \dot{\theta}^{2}
+          (sin^{2}\theta + cos^{2}\theta)}$ $= 2 \dot{\theta}$
+>       - $\underline{e}_{n} = \frac{\frac{^{A}d}{dt}\underline{e}_{t}}{\|
+          \frac{^{A}d}{dt}\underline{e}_{t} \|}$ $= \frac{-2\dot{\theta}
+          sin\theta \underline{e}_{r} + 2\dot{\theta} cos\theta
+          \underline{e}_{\theta}}{2 \dot{\theta}}$ $= -sin\theta
+          \underline{e}_{r} + cos\theta \underline{e}_{\theta}$
+> - Finally the princible binormal to the trajectory can be determined
 
 > ### Rolling Motion {#e_rolling_motion}
 
@@ -1012,3 +1039,5 @@ width="300" height="300"/>
 > ### Angular Momentum {#e_angular_momentum}
 
 > ### Friction Force Models {#e_friction_force_models}
+
+> ### Linear Spring Force Models {#e_linear_spring_force_models}

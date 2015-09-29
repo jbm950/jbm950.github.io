@@ -48,6 +48,7 @@ title: Analytical Dynamics
 <li><a href="#angular_momentum">Angular Momentum</a></li>
 <li><a href="#relative_velocity">Relative Velocity</a></li>
 <li><a href="#friction_force_models">Friction Force Models</a></li>
+<li><a href="#linear_spring_force_model">Linear Spring Force Model</a></li>
 </ul>
 </blockquote>
 <ul>
@@ -452,7 +453,11 @@ width="300" height="300"/>
 </blockquote>
 <blockquote>
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BF%7D_%7Bf%7D%20%3D%20-%5Cmu%20%5C%7C%20%5Cunderline%7BR%7D%20%5C%7C%20%5Cfrac%7B%5Cunderline%7BV%7D_%7Brel%7D%7D%7B%5C%7C%20%5Cunderline%7BV%7D_%7Brel%7D%20%5C%7C%7D" alt="\underline{F}_{f} = -\mu \| \underline{R} \| \frac{\underline{V}_{rel}}{\| \underline{V}_{rel} \|}" title="\underline{F}_{f} = -\mu \| \underline{R} \| \frac{\underline{V}_{rel}}{\| \underline{V}_{rel} \|}" /> where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BR%7D" alt="\underline{R}" title="\underline{R}" /> is the resultant force normal to the point of contact</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BF%7D_%7Bf%7D%20%3D%20-%5Cmu%20%5C%7C%20%5Cunderline%7BR%7D%20%5C%7C%20%5Cfrac%7B%5Cunderline%7BV%7D_%7Brel%7D%7D%7B%5C%7C%20%5Cunderline%7BV%7D_%7Brel%7D%20%5C%7C%7D" alt="\underline{F}_{f} = -\mu \| \underline{R} \| \frac{\underline{V}_{rel}}{\| \underline{V}_{rel} \|}" title="\underline{F}_{f} = -\mu \| \underline{R} \| \frac{\underline{V}_{rel}}{\| \underline{V}_{rel} \|}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BR%7D" alt="\underline{R}" title="\underline{R}" /> is the resultant force normal to the point of contact</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmu%20%3D" alt="\mu =" title="\mu =" /> coefficient of friction</li>
+</ul></li>
 </ul>
 </blockquote>
 <blockquote>
@@ -460,9 +465,25 @@ width="300" height="300"/>
 </blockquote>
 <blockquote>
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BF%7D_%7Bf%7D%20%3D%20-c%5Cunderline%7BV%7D_%7Brel%7D" alt="\underline{F}_{f} = -c\underline{V}_{rel}" title="\underline{F}_{f} = -c\underline{V}_{rel}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BF%7D_%7Bf%7D%20%3D%20-c%5Cunderline%7BV%7D_%7Brel%7D" alt="\underline{F}_{f} = -c\underline{V}_{rel}" title="\underline{F}_{f} = -c\underline{V}_{rel}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=c%20%3D" alt="c =" title="c =" /> coefficient of vicsous friction</li>
+</ul></li>
 </ul>
 </blockquote>
+<h2 id="linear_spring_force_model">Linear Spring Force Model</h2>
+<ul>
+<li>For particle <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=P" alt="P" title="P" /> with mass <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=m" alt="m" title="m" /> and point <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=Q" alt="Q" title="Q" /> being connected by a linear spring the force model can be written as follows
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BF%7D_%7Bs%7D%20%3D%20-k%28%5Cel%20-%20%5Cel_%7B0%7D%29%5Cunderline%7Bu%7D_%7Bs%7D" alt="\underline{F}_{s} = -k(\el - \el_{0})\underline{u}_{s}" title="\underline{F}_{s} = -k(\el - \el_{0})\underline{u}_{s}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cel%20%3D%20%5C%7C%20%5Cunderline%7Br%7D%20-%20%5Cunderline%7BQ%7D%20%5C%7C" alt="\el = \| \underline{r} - \underline{Q} \|" title="\el = \| \underline{r} - \underline{Q} \|" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cel_%7B0%7D%20%3D" alt="\el_{0} =" title="\el_{0} =" /> the spring length when it is unstreched/uncompressed</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=k%20%3D" alt="k =" title="k =" /> the spring constant</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bu%7D_%7Bs%7D%20%3D%20%5Cfrac%7B%5Cunderline%7Br%7D_%7BP%7D%20-%20%5Cunderline%7Br%7D_%7BQ%7D%7D%7B%5C%7C%20%20%5Cunderline%7Br%7D_%7BP%7D%20-%20%5Cunderline%7Br%7D_%7BQ%7D%20%5C%7C%7D" alt="\underline{u}_{s} = \frac{\underline{r}_{P} - \underline{r}_{Q}}{\|  \underline{r}_{P} - \underline{r}_{Q} \|}" title="\underline{u}_{s} = \frac{\underline{r}_{P} - \underline{r}_{Q}}{\|  \underline{r}_{P} - \underline{r}_{Q} \|}" /></li>
+</ul></li>
+</ul></li>
+</ul>
 <h2 id="examples">Examples</h2>
 <blockquote>
 <h3 id="examples-content">Examples Content</h3>
@@ -494,6 +515,7 @@ width="300" height="300"/>
 <li><a href="#e_basic_equation_of_motion">Basic Equation of Motion</a></li>
 <li><a href="#e_angular_momentum">Angular Momentum</a></li>
 <li><a href="#e_friction_force_models">Friction Force Models</a></li>
+<li><a href="#e_linear_spring_force_models">Linear Spring Force Models</a></li>
 </ul>
 </blockquote>
 </blockquote>
@@ -991,7 +1013,7 @@ width="300" height="300"/>
 <li>Let us now find the vectors of the intrinsic coordinate system attached to point P</li>
 <li>Start with the tangential vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bt%7D" alt="\underline{e}_{t}" title="\underline{e}_{t}" />
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%5C%7C%20%3D%20%5Csqrt%7B%28%5Cdot%7B%5Ctheta%7D%20cos%5Ctheta%29%5E%7B2%7D%20%2B%20%20%28%5Cdot%7B%5Ctheta%7D%20sin%5Ctheta%7D%29%5E%7B2%7D%7D" alt="\| ^{A}\underline{V}_{P} \| = \sqrt{(\dot{\theta} cos\theta)^{2} +  (\dot{\theta} sin\theta})^{2}}" title="\| ^{A}\underline{V}_{P} \| = \sqrt{(\dot{\theta} cos\theta)^{2} +  (\dot{\theta} sin\theta})^{2}}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Csqrt%7B%5Cdot%7B%5Ctheta%7D%20%28cos%5Ctheta%5E%7B2%7D%20%20%2B%20sin%5Ctheta%5E%7B2%7D%29%7D%20%3D%20%5Cdot%7B%5Ctheta%7D" alt="= \sqrt{\dot{\theta} (cos\theta^{2}  + sin\theta^{2})} = \dot{\theta}" title="= \sqrt{\dot{\theta} (cos\theta^{2}  + sin\theta^{2})} = \dot{\theta}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%5C%7C%20%3D%20%5Csqrt%7B%28%5Cdot%7B%5Ctheta%7D%20cos%5Ctheta%29%5E%7B2%7D%20%2B%20%20%28%5Cdot%7B%5Ctheta%7D%20sin%5Ctheta%7D%29%5E%7B2%7D%7D" alt="\| ^{A}\underline{V}_{P} \| = \sqrt{(\dot{\theta} cos\theta)^{2} +  (\dot{\theta} sin\theta})^{2}}" title="\| ^{A}\underline{V}_{P} \| = \sqrt{(\dot{\theta} cos\theta)^{2} +  (\dot{\theta} sin\theta})^{2}}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Csqrt%7B%5Cdot%7B%5Ctheta%7D%5E%7B2%7D%20%20%28cos%5E%7B2%7D%5Ctheta%20%2B%20sin%5E%7B2%7D%5Ctheta%29%7D%20%3D%20%5Cdot%7B%5Ctheta%7D" alt="= \sqrt{\dot{\theta}^{2}  (cos^{2}\theta + sin^{2}\theta)} = \dot{\theta}" title="= \sqrt{\dot{\theta}^{2}  (cos^{2}\theta + sin^{2}\theta)} = \dot{\theta}" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bt%7D%20%3D%20%5Cfrac%7B%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%7D%7B%5C%7C%20%20%5E%7BA%7D%5Cunderline%7BV%7D_%7BP%7D%20%5C%7C%7D" alt="\underline{e}_{t} = \frac{^{A}\underline{V}_{P}}{\|  ^{A}\underline{V}_{P} \|}" title="\underline{e}_{t} = \frac{^{A}\underline{V}_{P}}{\|  ^{A}\underline{V}_{P} \|}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cfrac%7B%5Cdot%7B%5Ctheta%7Dcos%5Ctheta%20%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%5Cdot%7B%5Ctheta%7Dsin%5Ctheta%20%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%7D%7B%5Cdot%7B%5Ctheta%7D%7D%20%3D%20cos%5Ctheta%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%20sin%5Ctheta%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="= \frac{\dot{\theta}cos\theta  \underline{e}_{r} + \dot{\theta}sin\theta  \underline{e}_{\theta}}{\dot{\theta}} = cos\theta \underline{e}_{r} +  sin\theta \underline{e}_{\theta}" title="= \frac{\dot{\theta}cos\theta  \underline{e}_{r} + \dot{\theta}sin\theta  \underline{e}_{\theta}}{\dot{\theta}} = cos\theta \underline{e}_{r} +  sin\theta \underline{e}_{\theta}" /></li>
 </ul></li>
 <li>Now that the tangential vector has been found the principle normal to the trajectory can be found
@@ -999,7 +1021,11 @@ width="300" height="300"/>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%5Cunderline%7Be%7D_%7Bt%7D%20%3D%20%5Cfrac%7B%5E%7BB%7Dd%7D%7Bdt%7D%20%28cos%5Ctheta%20%20%5Cunderline%7Be%7D_%7Br%7D%20%2B" alt="\frac{^{A}d}{dt}\underline{e}_{t} = \frac{^{B}d}{dt} (cos\theta  \underline{e}_{r} +" title="\frac{^{A}d}{dt}\underline{e}_{t} = \frac{^{B}d}{dt} (cos\theta  \underline{e}_{r} +" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=sin%5Ctheta%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%29%20%2B%20%20%5E%7BA%7D%5Cunderline%7B%5Comega%7D%5E%7BB%7D%20%5Ctimes%20%28cos%5Ctheta%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%20sin%5Ctheta%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%29" alt="sin\theta \underline{e}_{\theta}) +  ^{A}\underline{\omega}^{B} \times (cos\theta \underline{e}_{r} +  sin\theta \underline{e}_{\theta})" title="sin\theta \underline{e}_{\theta}) +  ^{A}\underline{\omega}^{B} \times (cos\theta \underline{e}_{r} +  sin\theta \underline{e}_{\theta})" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%5Cunderline%7Be%7D_%7Bt%7D%20%3D%20-%5Cdot%7B%5Ctheta%7Dsin%5Ctheta%20%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%5Cdot%7B%5Ctheta%7Dcos%5Ctheta" alt="\frac{^{A}d}{dt}\underline{e}_{t} = -\dot{\theta}sin\theta  \underline{e}_{r} + \dot{\theta}cos\theta" title="\frac{^{A}d}{dt}\underline{e}_{t} = -\dot{\theta}sin\theta  \underline{e}_{r} + \dot{\theta}cos\theta" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%2B%20%20%5Cdot%7B%5Ctheta%7D%20%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%28cos%5Ctheta%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%20sin%5Ctheta%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%29" alt="\underline{e}_{\theta} +  \dot{\theta} \underline{e}_{z} \times (cos\theta \underline{e}_{r} +  sin\theta \underline{e}_{\theta})" title="\underline{e}_{\theta} +  \dot{\theta} \underline{e}_{z} \times (cos\theta \underline{e}_{r} +  sin\theta \underline{e}_{\theta})" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%5Cunderline%7Be%7D_%7Bt%7D%20%3D%20-%5Cdot%7B%5Ctheta%7Dsin%5Ctheta%20%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%20%5Cdot%7B%5Ctheta%7Dcos%5Ctheta" alt="\frac{^{A}d}{dt}\underline{e}_{t} = -\dot{\theta}sin\theta  \underline{e}_{r} + \dot{\theta}cos\theta" title="\frac{^{A}d}{dt}\underline{e}_{t} = -\dot{\theta}sin\theta  \underline{e}_{r} + \dot{\theta}cos\theta" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%2B%20%20%5Cdot%7B%5Ctheta%7D%20cos%5Ctheta%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20-%20%20%5Cdot%7B%5Ctheta%7D%20sin%5Ctheta%20%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{\theta} +  \dot{\theta} cos\theta \underline{e}_{\theta} -  \dot{\theta} sin\theta \underline{e}_{r}" title="\underline{e}_{\theta} +  \dot{\theta} cos\theta \underline{e}_{\theta} -  \dot{\theta} sin\theta \underline{e}_{r}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20-2%20%5Cdot%7B%5Ctheta%7D%20%20sin%5Ctheta%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%202%20%5Cdot%7B%5Ctheta%7D%20cos%5Ctheta%20%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="= -2 \dot{\theta}  sin\theta \underline{e}_{r} + 2 \dot{\theta} cos\theta  \underline{e}_{\theta}" title="= -2 \dot{\theta}  sin\theta \underline{e}_{r} + 2 \dot{\theta} cos\theta  \underline{e}_{\theta}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%5Cunderline%7Be%7D_%7Bt%7D%20%5C%7C%20%3D%20%5C%7C%20-2%20%5Cdot%7B%5Ctheta%7D%20%20sin%5Ctheta%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%202%20%5Cdot%7B%5Ctheta%7D%20cos%5Ctheta%20%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%5C%7C" alt="\| \frac{^{A}d}{dt}\underline{e}_{t} \| = \| -2 \dot{\theta}  sin\theta \underline{e}_{r} + 2 \dot{\theta} cos\theta  \underline{e}_{\theta} \|" title="\| \frac{^{A}d}{dt}\underline{e}_{t} \| = \| -2 \dot{\theta}  sin\theta \underline{e}_{r} + 2 \dot{\theta} cos\theta  \underline{e}_{\theta} \|" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Csqrt%7B%282%20%5Cdot%7B%5Ctheta%7D%20sin%5Ctheta%29%5E%7B2%7D%20%2B%20%20%282%20%5Cdot%7B%5Ctheta%7D%20cos%5Ctheta%29%7D" alt="= \sqrt{(2 \dot{\theta} sin\theta)^{2} +  (2 \dot{\theta} cos\theta)}" title="= \sqrt{(2 \dot{\theta} sin\theta)^{2} +  (2 \dot{\theta} cos\theta)}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%5Cunderline%7Be%7D_%7Bt%7D%20%5C%7C%20%3D%20%5Csqrt%7B4%20%5Cdot%7B%5Ctheta%7D%5E%7B2%7D%20%20%28sin%5E%7B2%7D%5Ctheta%20%2B%20cos%5E%7B2%7D%5Ctheta%29%7D" alt="\| \frac{^{A}d}{dt}\underline{e}_{t} \| = \sqrt{4 \dot{\theta}^{2}  (sin^{2}\theta + cos^{2}\theta)}" title="\| \frac{^{A}d}{dt}\underline{e}_{t} \| = \sqrt{4 \dot{\theta}^{2}  (sin^{2}\theta + cos^{2}\theta)}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%202%20%5Cdot%7B%5Ctheta%7D" alt="= 2 \dot{\theta}" title="= 2 \dot{\theta}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bn%7D%20%3D%20%5Cfrac%7B%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%5Cunderline%7Be%7D_%7Bt%7D%7D%7B%5C%7C%20%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%5Cunderline%7Be%7D_%7Bt%7D%20%5C%7C%7D" alt="\underline{e}_{n} = \frac{\frac{^{A}d}{dt}\underline{e}_{t}}{\|  \frac{^{A}d}{dt}\underline{e}_{t} \|}" title="\underline{e}_{n} = \frac{\frac{^{A}d}{dt}\underline{e}_{t}}{\|  \frac{^{A}d}{dt}\underline{e}_{t} \|}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cfrac%7B-2%5Cdot%7B%5Ctheta%7D%20%20sin%5Ctheta%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%202%5Cdot%7B%5Ctheta%7D%20cos%5Ctheta%20%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%7D%7B2%20%5Cdot%7B%5Ctheta%7D%7D" alt="= \frac{-2\dot{\theta}  sin\theta \underline{e}_{r} + 2\dot{\theta} cos\theta  \underline{e}_{\theta}}{2 \dot{\theta}}" title="= \frac{-2\dot{\theta}  sin\theta \underline{e}_{r} + 2\dot{\theta} cos\theta  \underline{e}_{\theta}}{2 \dot{\theta}}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20-sin%5Ctheta%20%20%5Cunderline%7Be%7D_%7Br%7D%20%2B%20cos%5Ctheta%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="= -sin\theta  \underline{e}_{r} + cos\theta \underline{e}_{\theta}" title="= -sin\theta  \underline{e}_{r} + cos\theta \underline{e}_{\theta}" /></li>
 </ul></li>
+<li>Finally the princible binormal to the trajectory can be determined</li>
 </ul>
 </blockquote>
 <blockquote>
@@ -1018,6 +1044,9 @@ width="300" height="300"/>
 </blockquote>
 <blockquote>
 <h3 id="e_friction_force_models">Friction Force Models</h3>
+</blockquote>
+<blockquote>
+<h3 id="e_linear_spring_force_models">Linear Spring Force Models</h3>
 </blockquote>
 </body>
 </html>
