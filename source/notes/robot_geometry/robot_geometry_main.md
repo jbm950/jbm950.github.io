@@ -786,7 +786,7 @@ spherical mechanism" width="800" height="400"/>
 >       - $^{1}_{2}R =$ $\left[ \begin{array} c_{2} & -s_{2} & 0 \\ s_{2}c_{12}
           & c_{2}c_{12} & -s_{12} \\ s_{2}s_{12} & c_{2}s_{12} & c_{12}
           \end{array} \right]$
-> - Using the rotation matrix the vecotr $\underline{S}_{2}$ can be found in
+> - Using the rotation matrix the vector $\underline{S}_{2}$ can be found in
     the first coordinate system by the following expression
 >       - $^{1}\underline{S}_{2} = ^{1}_{2}R ^{2}\underline{S}_{2} =$ $\left[
           \begin{array} c_{2} & -s_{2} & 0 \\ s_{2}c_{12} & c_{2}c_{12} &
@@ -880,4 +880,47 @@ height="400"/>
      keeping track of the multitude of terms easier
 >> - The general form for multiple notation is presented below
 >>      - $X_{ab} = X_{a} c_{b} - Y_{a} s_{b}$
->>      - $Y_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) - s_{b,b \rightarrow 1}Z_{a}$
+>>      - $Y_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) - s_{b,b
+          \rightarrow 1}Z_{a}$
+>>      - $Z_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) + s_{b,b
+          \rightarrow 1}Z_{a}$
+>> - In the above expressions the subscript a represents all but the last of
+     the subscripts for that variable and b represents the last subscript
+>>      - Ex. $X_{432} \rightarrow$ a = 43, b = 2
+>>      - Ex. 2. $Z_{2345} \rightarrow$ a = 234, b = 5
+>> - The subscript $b, b \rightarrow 1$ means that the subscript will be $b$
+     and what ever the next number will be in the order of the subscripts
+     whether that be ascending or descending
+>>      - Ex. $X_{432} \rightarrow (b,b \rightarrow 1) = 21$
+>>      - Ex. 2. $Z_{2345} \rightarrow (b,b \rightarrow 1) = 56$
+>> - For double subscript notation the order $ij$ means the $X$, $Y$, $Z$ terms
+     will not have bars and the order $ji$ means that they will have bars,
+     where $i < j$
+
+> __Rewrite $\mathbf{^{1}\underline{S}_{4}}$__
+
+> - The term $^{1}\underline{S}_{4}$ can be simplified with the newly defined
+    multisubscript notation to the following
+>       - $^{1}\underline{S}_{4} =$ $\left[ \begin{array} X_{32} \\ Y_{32} \\
+          Z_{32} \end{array} \right]$
+
+> __Find $\mathbf{^{1}\underline{S}_{5}}$, $\mathbf{^{1}\underline{S}_{6}}$ and
+  $\mathbf{^{1}\underline{S}_{7}}$__
+
+> - Now that multi-subscript notation has been developed it is simple to
+    represent the rest of the $S$ vectors in the first coordinate system
+>       - $^{1}\underline{S}_{5} =$ $\left[ \begin{array} X_{432} \\ Y_{432} \\
+          Z_{432} \end{array} \right]$
+>       - $^{1}\underline{S}_{6} =$ $\left[ \begin{array} X_{5432} \\ Y_{5432}
+          \\ Z_{5432} \end{array} \right]$
+>       - $^{1}\underline{S}_{7} =$ $\left[ \begin{array} X_{65432} \\
+          Y_{65432} \\ Z_{65432} \end{array} \right]$
+
+> __Find $\mathbf{^{1}\underline{a}_{12}}$__
+
+> - The vector $^{1}\underline{a}_{12}$ is already defined by how we set up the
+    standard coordinate systems
+>       - $^{1}\underline{a}_{12} =$ $\left[ \begin{array} 1 \\ 0 \\ 0
+          \end{array} \right]$
+
+> __Find $\mathbf{^{1}\underline{a}_{23}}$__
