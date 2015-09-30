@@ -127,16 +127,6 @@ def inv_trans_matrix(trans_matrix):
     return new_trans_matrix
 
 
-# Forward Analysis
-
-
-def forward_analysis(inputs):
-    """This function will take in the different robot parameters and joint
-    angles and determine the location of the tool point in the fixed coordinate
-    system"""
-    pass
-
-
 # 6 Link Robot Base Class
 
 class Robot_6link:
@@ -147,8 +137,79 @@ class Robot_6link:
                 [a12, a23, a34, a45, a56]
             twist_angles - This is a list of all the twist angles in the order
                 [alp12, alp23, alp34, alp45, alp56] all angles in degrees"""
+
+        # Make the inputs into numpy arrays
         self.link_lengths = np.array(link_lengths)
         self.twist_angles = np.array(twist_angles)
 
         # Convert the twist angles to radians
         self.twist_angles = np.radians(self.twist_angles)
+
+    def forward_analysis(self, joint_offsets, joint_angles, Ptool6):
+        """This function will take in the different robot parameters and joint
+        angles and determine the location of the tool point in the fixed
+        coordinate system
+        Inputs:
+            joint_offsets - This is a list containing all of the joint offsets
+                [S2, S3, S4, S5, S6]
+            joint_angles - This is a list containing all of the joint angles
+                [phi1, the2, the3, the4, the5, the6] all angles in degrees
+            Ptool6 - This is the location of the tool point in the 6th
+                coordinate system"""
+
+        # Make the inputs into numpy arrays
+        joint_offsets = np.array(joint_offsets)
+        joint_angles = np.array(joint_angles)
+        Ptool6 = np.matrix(Ptool6 + [0]).transpose()
+
+        # Convert the joint angles to radians
+        joint_angles = np.radians(joint_angles)
+
+        # Set up the first transformation matrix
+        R_F_1 = rotation_about_z(joint_angles[0])
+        P_1o = np.matrix([[0], [0], [0]])
+        T_F_1 = trans_matrix_form(R_F_1, P_1o)
+
+        # Isolate the calculation because it does some extra variable
+        # definitions
+        def trans_F_6_find(joint_angles, joint_offsets, T_F_1):
+            # Short hand notation of previous variables for ease in calculations
+            T_F_6 = T_F_1
+            ja = joint_angles
+            jo = joint_offsets
+            ta = self.twist_angles
+            ll = self.link_lengths
+            c = m.cos
+            s = m.sin
+
+            for i in range(0, 5):
+                print("joint angle\n", m.degrees(ja[i+1]))
+                print("joint offset\n", jo[i])
+                print("twist angle\n", m.degrees(ta[i]), "\n")
+                R_inter = np.matrix([
+                    [c(ja[i+1]),         -s(ja[i+1]),           0],
+                    [s(ja[i+1])*c(ta[i]), c(ja[i+1])*c(ta[i]), -s(ta[i])],
+                    [s(ja[i+1])*s(ta[i]), c(ja[i+1])*s(ta[i]),  c(ta[i])]])
+                P_inter = np.matrix([[ll[i]],
+                                     [-s(ta[i])*jo[i]],
+                                     [c(ta[i])*jo[i]]])
+                T_inter = trans_matrix_form(R_inter, P_inter)
+                T_F_6 *= T_inter
+
+            return T_F_6
+
+        # Find the transformation matrix from the 6th to the fixed coordinate
+        # system
+        T_F_6 = trans_F_6_find(joint_angles, joint_offsets, T_F_1)
+
+        # Use the transformation matrix to return PtoolF, S6 in the F and a67 in
+        # the F
+        R_F_6 = np.matrix(T_F_6[0:3, 0:3])
+        a67_F = np.matrix(R_F_6[0:3, 0])
+        S6_F = np.matrix(R_F_6[0:3, 2])
+        PtoolF = T_F_6 * Ptool6
+
+        # Change PtoolF back to cartesian coordinates
+        PtoolF = np.matrix(PtoolF[0:3])
+
+        return a67_F, S6_F, PtoolF
