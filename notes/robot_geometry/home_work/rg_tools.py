@@ -160,13 +160,13 @@ class Robot_6link:
         # Make the inputs into numpy arrays
         joint_offsets = np.array(joint_offsets)
         joint_angles = np.array(joint_angles)
-        Ptool6 = np.matrix(Ptool6 + [0]).transpose()
+        Ptool6 = np.matrix(Ptool6 + [1]).transpose()
 
         # Convert the joint angles to radians
         joint_angles = np.radians(joint_angles)
 
         # Set up the first transformation matrix
-        R_F_1 = rotation_about_z(joint_angles[0])
+        R_F_1 = rotation_about_z(m.degrees(joint_angles[0]))
         P_1o = np.matrix([[0], [0], [0]])
         T_F_1 = trans_matrix_form(R_F_1, P_1o)
 
@@ -183,9 +183,9 @@ class Robot_6link:
             s = m.sin
 
             for i in range(0, 5):
-                print("joint angle\n", m.degrees(ja[i+1]))
-                print("joint offset\n", jo[i])
-                print("twist angle\n", m.degrees(ta[i]), "\n")
+                # print("joint angle\n", m.degrees(ja[i+1]))
+                # print("joint offset\n", jo[i])
+                # print("twist angle\n", m.degrees(ta[i]), "\n")
                 R_inter = np.matrix([
                     [c(ja[i+1]),         -s(ja[i+1]),           0],
                     [s(ja[i+1])*c(ta[i]), c(ja[i+1])*c(ta[i]), -s(ta[i])],
@@ -213,3 +213,21 @@ class Robot_6link:
         PtoolF = np.matrix(PtoolF[0:3])
 
         return a67_F, S6_F, PtoolF
+
+
+# Specific 6 Link Robots
+
+class T3_776(Robot_6link):
+    def __init__(self):
+        link_lengths = [0, 44, 0, 0, 0]
+        twist_angles = [90, 0, 90, 61, 61]
+
+        Robot_6link.__init__(self, link_lengths, twist_angles)
+
+
+class GE_P60(Robot_6link):
+    def __init__(self):
+        link_lengths = [0, 70, 90, 0, 0]
+        twist_angles = [270, 0, 0, 270, 90]
+
+        Robot_6link.__init__(self, link_lengths, twist_angles)
