@@ -127,6 +127,112 @@ def inv_trans_matrix(trans_matrix):
     return new_trans_matrix
 
 
+# Reverse Analysis
+
+def close_the_loop(S6_F, a67_F, Ptool_F, Ptool_6):
+    """This function will provide 3 distances (S7, a71 and S1) and three
+    angles (theta7, alpha71 and gamma1)
+    Inputs:
+        S6_F - This is the orientation of the unit vector S6 in the fixed
+            coordinate system
+        a67_F - This is the orientation of the unit vector a67 in the fixed
+            coordinate system
+        Ptool_F - This is the location of the tool point in the fixed
+            coordinate system
+        Ptool_6 - This is the location of the tool point in the 6th
+            coordinate system"""
+
+    # Function to take care of special case 1
+    def special_case_1():
+        pass
+
+    # Function to take care of special case 2
+    def special_case_2():
+        pass
+
+    # Define some constants and create numpy arrays of the inputs.
+    S1_F = np.matrix([[0], [0], [1]])
+    x1_F = np.matrix([[1], [0], [0]])
+    S6_F = np.matrix(S6_F)
+    a67_F = np.matrix(a67_F)
+    Ptool_F = np.matrix(Ptool_F)
+    Ptool_6 = np.matrix(Ptool_6)
+
+    # Find the origin of the 6th coordinate system in the fixed coordinate
+    # system
+    def find_P6orig_F(Ptool_6, Ptool_F, a67_F, S6_F):
+        x = np.array([1, 0, 0])
+        y = np.array([0, 1, 0])
+        z = np.array([0, 0, 1])
+        Pt6 = Ptool_6.transpose()
+        Pt6 = np.array(Pt6)
+
+        P6orig_F = (Ptool_F - np.dot(Pt6, x)[0] * a67_F - np.dot(Pt6, y)[0]
+                    * np.cross(S6_F.transpose(), a67_F.transpose()).transpose()
+                    - np.dot(Pt6, z)[0] * S6_F)
+
+        return P6orig_F
+
+    P6orig_F = find_P6orig_F(Ptool_6, Ptool_F, a67_F, S6_F)
+
+    # Make free choice about length a67 and angle alpha67
+    # a67 = 0
+    # alp67 = m.radians(90)
+
+    # Find the orientation of vector S7 in the fixed coordinate system
+    S7_F = np.cross(a67_F.transpose(), S6_F.transpose())
+
+    # Fist determine is there will be any problems and a special case needed
+    if is_near(m.fabs(np.dot(S7_F, S1_F)), 1, 0.001):
+        special_case_1()
+    else:
+
+        # Find the vector a71_F
+        interval = np.cross(S7_F, S1_F.transpose())
+        a71_F = interval/(np.linalg.norm(interval))
+
+        # Find the cosine and sine components of alpha 71 and use arctan2 to
+        # find the angle
+        c71 = np.dot(S7_F, S1_F)
+        s71 = np.dot(np.cross(S7_F, S1_F.transpose()), a71_F.transpose())
+        alp71 = np.arctan2(s71, c71)
+
+        # Find the cosine and sine components of gamma 1 and use arctan2 to
+        # find the angle
+        c7 = np.dot(a67_F.transpose(), a71_F.transpose())
+        s7 = np.dot(np.cross(a67_F.transpose(), a71_F), S7_F.transpose())
+        theta7 = np.arctan2(s7, c7)
+
+        # Find the cosine and sine components of gamma 1 and use arctan2 to
+        # find the angle
+        c_gamma_1 = np.dot(a71_F, x1_F)
+        s_gamma_1 = np.dot(np.cross(a71_F, x1_F.transpose()),
+                           S1_F)
+        gamma1 = np.arctan2(s_gamma_1, c_gamma_1)
+
+        # Now find the length S7
+        S7 = (np.dot(np.cross(S1_F.transpose(), P6orig_F.transpose()),
+                     a71_F.transpose()))/m.sin(alp71)
+
+        # Now find the length a71
+        a71 = (np.dot(np.cross(P6orig_F.transpose(), S1_F.transpose()),
+                      S7_F.transpose()))/m.sin(alp71)
+
+        # Lastly find the length S1
+        S1 = (np.dot(np.cross(P6orig_F.transpose(), S7_F),
+                     a71_F.transpose()))/m.sin(alp71)
+
+    # Prepare the returned variables
+    S7 = S7[0][0]
+    a71 = a71[0][0]
+    S1 = S1[0][0]
+    theta7 = m.degrees(theta7[0][0])
+    alp71 = m.degrees(alp71[0][0])
+    gamma1 = m.degrees(gamma1[0][0])
+
+    return S7, a71, S1, theta7, alp71, gamma1
+
+
 # 6 Link Robot Base Class
 
 class Robot_6link:
@@ -213,85 +319,6 @@ class Robot_6link:
         PtoolF = np.matrix(PtoolF[0:3])
 
         return a67_F, S6_F, PtoolF
-
-    def close_the_loop(self, S6_F, a67_F, Ptool_F, Ptool_6):
-        """This function will provide 3 distances (S7, a71 and S1) and three
-        angles (theta7, alpha71 and gamma1)
-        Inputs:
-            S6_F - This is the orientation of the unit vector S6 in the fixed
-                coordinate system
-            a67_F - This is the orientation of the unit vector a67 in the fixed
-                coordinate system
-            Ptool_F - This is the location of the tool point in the fixed
-                coordinate system
-            Ptool_6 - This is the location of the tool point in the 6th
-                coordinate system"""
-
-        # Function to take care of special case 1
-        def special_case_1():
-            pass
-
-        # Function to take care of special case 2
-        def special_case_2():
-            pass
-
-        # Define some constants and create numpy arrays of the inputs.
-        S1_F = np.matrix([[0], [0], [1]])
-        x1_F = np.matrix([[1], [0], [0]])
-        S6_F = np.matrix(S6_F)
-        a67_F = np.matrix(a67_F)
-        Ptool_F = np.matrix(Ptool_F)
-        Ptool_6 = np.matrix(Ptool_6)
-
-        # Find the origin of the 6th coordinate system in the fixed coordinate
-        # system
-        def find_P6orig_F(Ptool_6, Ptool_F, a67_F, S6_F):
-            x = np.array([1, 0, 0])
-            y = np.array([0, 1, 0])
-            z = np.array([0, 0, 1])
-            Pt6 = Ptool_6.transpose()
-            Pt6 = np.array(Pt6)
-
-            P6orig_F = (Ptool_F - np.dot(Pt6, x)[0] * a67_F - np.dot(Pt6, y)[0]
-                        * np.cross(S6_F.transpose(), a67_F.transpose()) -
-                        np.dot(Pt6, z)[0] * S6_F)
-
-            return P6orig_F
-
-        P6orig_F = find_P6orig_F(Ptool_6, Ptool_F, a67_F, S6_F)
-
-        # Make free choice about length a67 and angle alpha67
-        # a67 = 0
-        # alp67 = m.radians(90)
-
-        # Find the orientation of vector S7 in the fixed coordinate system
-        S7_F = np.cross(a67_F.transpose(), S6_F.transpose())
-
-        # Fist determine is there will be any problems and a special case needed
-        if is_near(m.fabs(np.dot(S7_F, S1_F)), 1, 0.001):
-            special_case_1()
-        else:
-
-            # Find the vector a71_F
-            interval = np.cross(S7_F, S1_F.transpose())
-            a71_F = interval/(np.linalg.norm(interval))
-
-            # Find the cosine and sine components of alpha 71 and use arctan2 to
-            # find the angle
-            c71 = np.dot(S7_F, S1_F)
-            s71 = np.dot(np.cross(S7_F, S1_F.transpose()), a71_F.transpose())
-            alp71 = np.arctan2(s71, c71)
-
-            # Find the cosine and sine components of gamma 1 and use arctan2 to
-            # find the angle
-            c_gamma_1 = np.dot(a71_F, x1_F)
-            s_gamma_1 = np.dot(np.cross(a67_F.transpose(), a71_F),
-                               S7_F.transpose())
-            gamma1 = np.arctan2(s_gamma_1, c_gamma_1)
-
-            # Now find the length S7
-            S7 = (np.dot(np.cross(S1_F.transpose(), P6orig_F.transpose()),
-                         a71_F.transpose()))/m.sin(alp71)
 
 
 # Specific 6 Link Robots
