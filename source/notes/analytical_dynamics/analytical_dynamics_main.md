@@ -29,6 +29,7 @@
 > - [Relative Velocity](#relative_velocity)
 > - [Friction Force Models](#friction_force_models)
 > - [Linear Spring Force Model](#linear_spring_force_model)
+> - [Systems of Particles](#systems_of_particles)
 
 - [Examples](#examples)
 
@@ -558,6 +559,8 @@ width="300" height="300"/>
         - $\underline{u}_{s} = \frac{\underline{r}_{P} - \underline{r}_{Q}}{\|
           \underline{r}_{P} - \underline{r}_{Q} \|}$
 
+## Systems of Particles {#systems_of_particles}
+
 ## Examples {#examples}
 
 > ### Examples Content
@@ -1028,11 +1031,35 @@ width="300" height="300"/>
           \underline{e}_{\theta}}{2 \dot{\theta}}$ $= -sin\theta
           \underline{e}_{r} + cos\theta \underline{e}_{\theta}$
 > - Finally the princible binormal to the trajectory can be determined
+>       - $\underline{e}_{b} = \underline{e}_{t} \times \underline{e}_{n} =
+          (cos\theta \underline{e}_{r} +$ $sin\theta \underline{e}_{\theta})
+          \times (-sin\theta \underline{e}_{r} + cos\theta
+          \underline{e}_{\theta})$
+>       - $\underline{e}_{b} = (cos^{2}\theta + sin^{2}\theta)
+          \underline{e}_{z}$
+>       - $\underline{e}_{b} = \underline{e}_{z}$
 
 > ### Rolling Motion {#e_rolling_motion}
 
 > - This example also includes examples on motion between two points fixed in
     the same rigid body
+> - The diagram for the problem is given as follows
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_rollandslip.png"
+alt="Roll and Slip Example" title="Roll and Slip Example"
+width="400" height="400"/> 
+</td></tr>
+</table>
+</div>
+
+> - It is desired to find the velocity and acceleration of point O and point P
+    given that there is roll without slip between the disk and the wedge
+> - To begin we will define two different reference frames, the disk (D) and
+    the ground (G)
+> - Coordinate system fixed in the ground reference frame  (G)
+>       - Origin at point O at time = 0
 
 > ### Basic Equation of Motion {#e_basic_equation_of_motion}
 
