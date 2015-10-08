@@ -959,5 +959,59 @@ height="400"/>
 <blockquote>
 <p><strong>Find <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5E%7B1%7D%5Cunderline%7Ba%7D_%7B23%7D%7D" alt="\mathbf{^{1}\underline{a}_{23}}" title="\mathbf{^{1}\underline{a}_{23}}" /></strong></p>
 </blockquote>
+<blockquote>
+<ul>
+<li>To find the orientation of the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D_%7B23%7D" alt="\underline{a}_{23}" title="\underline{a}_{23}" /> in the first coordinate system we will use a the rotation matrix <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D_%7B2%7DR" alt="^{1}_{2}R" title="^{1}_{2}R" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D_%7B2%7DR%20%3D" alt="^{1}_{2}R =" title="^{1}_{2}R =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20c_%7B2%7D%20%26%20-s_%7B2%7D%20%26%200%20%5C%5C%20s_%7B2%7Dc_%7B12%7D%20%20%26%20c_%7B2%7Dc_%7B12%7D%20%26%20-s_%7B12%7D%20%5C%5C%20s_%7B2%7Ds_%7B12%7D%20%26%20c_%7B2%7Ds_%7B12%7D%20%26%20c_%7B12%7D%20%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} c_{2} &amp; -s_{2} &amp; 0 \\ s_{2}c_{12}  &amp; c_{2}c_{12} &amp; -s_{12} \\ s_{2}s_{12} &amp; c_{2}s_{12} &amp; c_{12}  \end{array} \right]" title="\left[ \begin{array} c_{2} &amp; -s_{2} &amp; 0 \\ s_{2}c_{12}  &amp; c_{2}c_{12} &amp; -s_{12} \\ s_{2}s_{12} &amp; c_{2}s_{12} &amp; c_{12}  \end{array} \right]" /></li>
+</ul></li>
+<li>We can now find the desired vector in the first coordinate system
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D%5Cunderline%7Ba%7D_%7B23%7D%20%3D%20%5E%7B1%7D_%7B2%7DR%5E%7B2%7D%5Cunderline%7Ba%7D_%7B23%7D%20%3D" alt="^{1}\underline{a}_{23} = ^{1}_{2}R^{2}\underline{a}_{23} =" title="^{1}\underline{a}_{23} = ^{1}_{2}R^{2}\underline{a}_{23} =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%20%5Cbegin%7Barray%7D%20c_%7B2%7D%20%5C%5C%20s_%7B2%7Dc_%7B12%7D%20%5C%5C%20s_%7B2%7Ds_%7B12%7D%20%5Cend%7Barray%7D%20%20%5Cright%5D" alt="\left[  \begin{array} c_{2} \\ s_{2}c_{12} \\ s_{2}s_{12} \end{array}  \right]" title="\left[  \begin{array} c_{2} \\ s_{2}c_{12} \\ s_{2}s_{12} \end{array}  \right]" /></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Find <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5E%7B1%7D%5Cunderline%7Ba%7D_%7B34%7D%7D" alt="\mathbf{^{1}\underline{a}_{34}}" title="\mathbf{^{1}\underline{a}_{34}}" /></strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>For the next a vector we can begin by noticing that rotating the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B3%7D%5Cunderline%7Ba%7D_%7B34%7D" alt="^{3}\underline{a}_{34}" title="^{3}\underline{a}_{34}" /> vector to the second coordinate system will have the same result as the last vector with all of the subscripts increased by one
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B2%7D%5Cunderline%7Ba%7D_%7B34%7D%20%3D" alt="^{2}\underline{a}_{34} =" title="^{2}\underline{a}_{34} =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20c_%7B3%7D%20%5C%5C%20s_%7B3%7Dc_%7B23%7D%20%20%5C%5C%20s_%7B3%7Ds_%7B23%7D%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} c_{3} \\ s_{3}c_{23}  \\ s_{3}s_{23} \end{array} \right]" title="\left[ \begin{array} c_{3} \\ s_{3}c_{23}  \\ s_{3}s_{23} \end{array} \right]" /></li>
+</ul></li>
+<li>Now the rotation matrix will be used to find the orientation of the vector in the first coordinate system just like in the pervious case
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D%5Cunderline%7Ba%7D_%7B34%7D%20%3D%20%28%5E%7B1%7D_%7B2%7DR%29%5E%7B2%7D%5Cunderline%7Ba%7D_%7B34%7D%20%3D" alt="^{1}\underline{a}_{34} = (^{1}_{2}R)^{2}\underline{a}_{34} =" title="^{1}\underline{a}_{34} = (^{1}_{2}R)^{2}\underline{a}_{34} =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20c_%7B2%7Dc_%7B3%7D%20-%20s_%7B2%7Ds_%7B3%7Dc_%7B23%7D%20%5C%5C%20%20-s_%7B12%7D%28s_%7B3%7Ds_%7B23%7D%29%20%2B%20c_%7B12%7D%28s_%7B2%7Dc_%7B3%7D%20%2B%20c_%7B2%7Ds_%7B3%7Dc_%7B23%7D%29%20%5C%5C%20%20c_%7B12%7D%28s_%7B3%7Ds_%7B23%7D%29%20%2B%20s_%7B12%7D%28s_%7B2%7Dc_%7B3%7D%20%2B%20c_%7B2%7Ds_%7B3%7Dc_%7B23%7D%29%20%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} c_{2}c_{3} - s_{2}s_{3}c_{23} \\  -s_{12}(s_{3}s_{23}) + c_{12}(s_{2}c_{3} + c_{2}s_{3}c_{23}) \\  c_{12}(s_{3}s_{23}) + s_{12}(s_{2}c_{3} + c_{2}s_{3}c_{23})  \end{array} \right]" title="\left[ \begin{array} c_{2}c_{3} - s_{2}s_{3}c_{23} \\  -s_{12}(s_{3}s_{23}) + c_{12}(s_{2}c_{3} + c_{2}s_{3}c_{23}) \\  c_{12}(s_{3}s_{23}) + s_{12}(s_{2}c_{3} + c_{2}s_{3}c_{23})  \end{array} \right]" /></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Double Subscript Notation for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5Calpha%7D" alt="\mathbf{\alpha}" title="\mathbf{\alpha}" /> Terms</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Looking at the result vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D%5Cunderline%7Ba%7D_%7B34%7D" alt="^{1}\underline{a}_{34}" title="^{1}\underline{a}_{34}" /> one would notice a similarity between it and the short hand notation used for the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=S" alt="S" title="S" /> vectors, however, there are now thetas in the place of the alphas and vice versa and so we will now define a new set of notation</li>
+<li>We will begin with the definitions for the new notation
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=U_%7Bij%7D%20%3D%20s_%7Bi%7Ds_%7Bij%7D" alt="U_{ij} = s_{i}s_{ij}" title="U_{ij} = s_{i}s_{ij}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=V_%7Bij%7D%20%3D%20-%28s_%7Bj%7Dc_%7Bi%7D%20%2B%20c_%7Bj%7Ds_%7Bi%7Dc_%7Bij%7D%29" alt="V_{ij} = -(s_{j}c_{i} + c_{j}s_{i}c_{ij})" title="V_{ij} = -(s_{j}c_{i} + c_{j}s_{i}c_{ij})" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=W_%7Bij%7D%20%3D%20c_%7Bj%7Dc_%7Bi%7D%20-%20s_%7Bj%7Ds_%7Bi%7Dc_%7Bij%7D" alt="W_{ij} = c_{j}c_{i} - s_{j}s_{i}c_{ij}" title="W_{ij} = c_{j}c_{i} - s_{j}s_{i}c_{ij}" /></li>
+</ul></li>
+<li>Where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=i" alt="i" title="i" /> does not have to be smaller than <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=j" alt="j" title="j" />, it just represents the order of the subscripts</li>
+<li>The subscripts now represent the alpha contained by the notation instead of the theta like the previous notation</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Rewrite <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5E%7B1%7D%5Cunderline%7Ba%7D_%7B34%7D%7D" alt="\mathbf{^{1}\underline{a}_{34}}" title="\mathbf{^{1}\underline{a}_{34}}" /></strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Using the newly defined notation the vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D%5Cunderline%7Ba%7D_%7B34%7D" alt="^{1}\underline{a}_{34}" title="^{1}\underline{a}_{34}" /> can be rewritten
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D%5Cunderline%7Ba%7D_%7B34%7D%20%3D" alt="^{1}\underline{a}_{34} =" title="^{1}\underline{a}_{34} =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20W_%7B32%7D%20%5C%5C%20-%28U_%7B32%7Ds_%7B12%7D%20%2B%20V_%7B32%7Dc_%7B12%7D%29%20%5C%5C%20U_%7B32%7Dc_%7B12%7D%20-%20V_%7B32%7Ds_%7B12%7D%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} W_{32} \\ -(U_{32}s_{12} + V_{32}c_{12}) \\ U_{32}c_{12} - V_{32}s_{12} \end{array} \right]" title="\left[ \begin{array} W_{32} \\ -(U_{32}s_{12} + V_{32}c_{12}) \\ U_{32}c_{12} - V_{32}s_{12} \end{array} \right]" /></li>
+</ul></li>
+</ul>
+</blockquote>
 </body>
 </html>

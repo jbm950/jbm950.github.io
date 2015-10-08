@@ -924,3 +924,52 @@ height="400"/>
           \end{array} \right]$
 
 > __Find $\mathbf{^{1}\underline{a}_{23}}$__
+
+> - To find the orientation of the $\underline{a}_{23}$ in the first coordinate
+    system we will use a the rotation matrix $^{1}_{2}R$
+>       - $^{1}_{2}R =$ $\left[ \begin{array} c_{2} & -s_{2} & 0 \\ s_{2}c_{12}
+          & c_{2}c_{12} & -s_{12} \\ s_{2}s_{12} & c_{2}s_{12} & c_{12}
+          \end{array} \right]$
+> - We can now find the desired vector in the first coordinate system
+>       - $^{1}\underline{a}_{23} = ^{1}_{2}R^{2}\underline{a}_{23} =$ $\left[
+          \begin{array} c_{2} \\ s_{2}c_{12} \\ s_{2}s_{12} \end{array}
+          \right]$
+
+> __Find $\mathbf{^{1}\underline{a}_{34}}$__
+
+> - For the next a vector we can begin by noticing that rotating the
+    $^{3}\underline{a}_{34}$ vector to the second coordinate system will have
+    the same result as the last vector with all of the subscripts increased by
+    one
+>       - $^{2}\underline{a}_{34} =$ $\left[ \begin{array} c_{3} \\ s_{3}c_{23}
+          \\ s_{3}s_{23} \end{array} \right]$
+> - Now the rotation matrix will be used to find the orientation of the vector
+    in the first coordinate system just like in the pervious case
+>       - $^{1}\underline{a}_{34} = (^{1}_{2}R)^{2}\underline{a}_{34} =$
+          $\left[ \begin{array} c_{2}c_{3} - s_{2}s_{3}c_{23} \\
+          -s_{12}(s_{3}s_{23}) + c_{12}(s_{2}c_{3} + c_{2}s_{3}c_{23}) \\
+          c_{12}(s_{3}s_{23}) + s_{12}(s_{2}c_{3} + c_{2}s_{3}c_{23})
+          \end{array} \right]$
+
+> __Double Subscript Notation for $\mathbf{\alpha}$ Terms__
+
+> - Looking at the result vector $^{1}\underline{a}_{34}$ one would notice a
+    similarity between it and the short hand notation used for the $S$ vectors,
+    however, there are now thetas in the place of the alphas and vice versa and
+    so we will now define a new set of notation
+> - We will begin with the definitions for the new notation
+>       - $U_{ij} = s_{i}s_{ij}$
+>       - $V_{ij} = -(s_{j}c_{i} + c_{j}s_{i}c_{ij})$
+>       - $W_{ij} = c_{j}c_{i} - s_{j}s_{i}c_{ij}$
+> - Where $i$ does not have to be smaller than $j$, it just represents
+    the order of the subscripts
+> - The subscripts now represent the alpha contained by the notation instead of
+    the theta like the previous notation
+
+> __Rewrite $\mathbf{^{1}\underline{a}_{34}}$__
+
+> - Using the newly defined notation the vector $^{1}\underline{a}_{34}$ can be
+    rewritten
+>       - $^{1}\underline{a}_{34} =$ $\left[ \begin{array} W_{32} \\
+          -(U_{32}s_{12} + V_{32}c_{12}) \\ U_{32}c_{12} - V_{32}s_{12}
+          \end{array} \right]$
