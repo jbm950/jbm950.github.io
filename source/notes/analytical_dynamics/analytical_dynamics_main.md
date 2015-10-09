@@ -1060,6 +1060,52 @@ width="400" height="400"/>
     the ground (G)
 > - Coordinate system fixed in the ground reference frame  (G)
 >       - Origin at point O at time = 0
+>       - $\underline{E}_{z}$ = into the page
+>       - $\underline{E}_{x}$ = along $\underline{OC}$
+>       - $\underline{E}_{y}$ = $\underline{E}_{z} \times \underline{E}_{x}$
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_rollandslip_ground.png"
+alt="Roll and Slip Example Ground Reference Frame" title="Roll and Slip Example
+Ground Reference Frame" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - Coordinate system fixed in the disk reference frame (D)
+>       - Origin at point O
+>       - $\underline{e}_{r}$ = along $\underline{OP}$
+>       - $\underline{e}_{z}$ = $\underline{E}_{z}$
+>       - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times
+          \underline{e}_{r}$
+
+> - We will begin by stating the condition for rolling without slip
+>       - $(^{A}\underline{V}^{G}_{C}) = (^{A}\underline{V}^{D}_{C})$
+>       - In this case we will use the condition in the ground reference frame
+          (A = G)
+>       - Now we can note that point C in the ground reference frame is fixed
+          and therefore its velocity is zero and as a consequence the point C
+          in the disk reference frame also has zero velocity
+>           - $(^{G}\underline{V}^{G}_{C}) = 0 \Right
+              (^{G}\underline{V}^{D}_{C}) = 0$
+> - Now we will make use of the velocity relations for two points fixed in the
+    same rigid body to relate the velocity between points C and O
+>       - $^{G}\underline{V}_{O} - ^{G}\underline{V}_{C} =
+          (^{G}\underline{\omega}^{D}) \times (\underline{r}_{O} -
+          \underline{r}_{C})$
+>       - $^{G}\underline{V}_{O} = \dot{\theta} \underline{E}_{z} \times (-R
+          \underline{E}_{x})$
+>           - From $^{G}\underline{V}_{C} = \underline{r}_{O} = 0$
+>       - $^{G}\underline{V}_{O} = -R \dot{\theta} \underline{E}_{y}$
+> - We can use the same relation between two points fixed in a rigid body to
+    now relate the velocities of point O and point P
+>       - $^{G}\underline{V}_{P} - ^{G}\underline{V}_{O} =
+          (^{G}\underline{\omega}^{D}) \times (\underline{r}_{P} -
+          \underline{r}_{O})$
+>       - $^{G}\underline{V}_{P} = (^{G}\underline{V}_{O}) +
+          ^{G}\underline{\omega}^{D} \times \underline{r}_{P}$
+>       - $^{G}\underline{V}_{P} = -R \dot{\theta} \underline{E}_{y} + \dot{\theta} \underline{e}_{z} \times R \underline{e}_{r}$
 
 > ### Basic Equation of Motion {#e_basic_equation_of_motion}
 
