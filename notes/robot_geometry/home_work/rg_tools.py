@@ -233,6 +233,63 @@ def close_the_loop(S6_F, a67_F, Ptool_F, Ptool_6):
     return S7, a71, S1, theta7, alp71, gamma1
 
 
+def trig_solution(A, B, D):
+    """This function will solve equations of the following form
+            Acos(1) + Bsin(1) + D = 0
+    Inputs:
+        A - This is the coefficient of the cos term
+        B - This is the coefficient of the sin term
+        D - This is the constant term in the equation"""
+
+    # Begin by finding the imaginary angle gamma
+    c_gam = A/m.sqrt(A**2 + B**2)
+    s_gam = B/m.sqrt(A**2 + B**2)
+    gamma = np.arctan2(s_gam, c_gam)
+
+    # Now find the intermediate term cos(1 - gamma) and test whether or not
+    # real angles will be produced
+    interval = -D/m.sqrt(A**2 + B**2)
+    if m.fabs(interval) > 1:
+        return 0, 0, 0
+
+    # Given that the theta value must exist at this point find the theta values
+    thetaA = np.arccos(interval) + gamma
+    thetaB = -np.arccos(interval) + gamma
+
+    # Format the return values to degrees
+    thetaA = m.degrees(thetaA)
+    thetaB = m.degrees(thetaB)
+
+    return 1, thetaA, thetaB
+
+
+# Short Hand Notation
+
+def single_sub(alphas, subscript, theta, bar):
+    """This function will find the X, Y and Z values for single subscript
+    notation.
+    Inputs:
+        alphas - This is a list of the twist angles for the spherical mechanism
+            with n links in degrees and listed as follows.
+            [alp12, alp23, ..., alpn1]
+        subscript - This is the specific subscript that is desired to be found
+        theta - This is the theta value that corresponds to the subscript in
+            degrees
+        bar - This indicates whether or not a bar is included over the terms
+            bars -> bar  = 1 otherwise bar = 0"""
+
+    # Change appropriate inputs to numpy arrays and convert degree inputs to
+    # radians
+    alphas = np.array(alphas)
+
+    alphas = np.radians(alphas)
+    theta = np.radians(theta)
+
+    # Begin by finding X_subscript
+    if bar:
+        X = m.sin(alphas[subscript - 1]) * m.sin(theta)
+
+
 # 6 Link Robot Base Class
 
 class Robot_6link:
