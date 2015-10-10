@@ -1105,7 +1105,43 @@ Ground Reference Frame" width="300" height="300"/>
           \underline{r}_{O})$
 >       - $^{G}\underline{V}_{P} = (^{G}\underline{V}_{O}) +
           ^{G}\underline{\omega}^{D} \times \underline{r}_{P}$
->       - $^{G}\underline{V}_{P} = -R \dot{\theta} \underline{E}_{y} + \dot{\theta} \underline{e}_{z} \times R \underline{e}_{r}$
+>       - $^{G}\underline{V}_{P} = -R \dot{\theta} \underline{E}_{y} +
+          \dot{\theta} \underline{e}_{z} \times R \underline{e}_{r}$
+>       - $^{G}\underline{V}_{P} = - R \dot{\theta} \underline{E}_{y} + R
+          \dot{\theta} \underline{e}_{\theta}$
+> - With both of the desired velocities found we can now find the desired
+    accelerations. We will be begin with the acceleration of point O
+>       - $^{G}\underline{a}_{O} = \frac{^{G}d}{dt}(^{G}\underline{V}_{O}) =
+          \frac{^{G}d}{dt}(-R \dot{\theta} \underline{E}_{y})$
+>       - $^{G}\underline{a}_{O} = -R \ddot{\theta} \underline{E}_{y}$
+> - In order to find the acceleration of point P we are going to use the
+    relation between the accelerations of point P and point O
+>       - $^{G}\underline{a}_{P} - ^{G}\underline{a}_{O} =
+          (^{G}\underline{\alpha}^{D}) \times (\underline{r}_{P} -
+          \underline{r}_{O}) +$ $^{G}\underline{\omega}^{D} \times \left[
+          ^{G}\underline{\omega}^{D} \times (\underline{r}_{P} -
+          \underline{r}_{O}) \right]$
+>       - $^{G}\underline{a}_{P} + R \ddot{\theta} \underline{E}_{y} =
+          \ddot{\theta}\underline{e}_{z} \times (R \underline{e}_{r}) +
+          \dot{\theta}\underline{e}_{z}$ $\times \left[ \dot{\theta}
+          \underline{e}_{z} \times (R \underline{e}_{r}) \right]$
+>       - $^{G}\underline{a}_{P} = - R \ddot{\theta} \underline{E}_{y} + R
+          \ddot{\theta} \underline{e}_{\theta} - R \dot{\theta}^{2}
+          \underline{e}_{r}$
+> - As a bonus the acceleration of point C on the disk will be found. It should
+    be noted that the rolling condition is strictly for velocities and not the
+    velocities ($(^{G}\underline{a}^{D}_{C}) \neq (^{G}\underline{a}^{G}_{C})$)
+>       - $^{G}\underline{a}_{C} - ^{G}\underline{a}_{O} =
+          (^{G}\underline{\alpha}^{D}) \times (\underline{r}_{P} -
+          \underline{r}_{O}) +$ $^{G}\underline{\omega}^{D} \times \left[
+          ^{G}\underline{\omega}^{D} \times (\underline{r}_{P} -
+          \underline{r}_{O}) \right]$
+>       - $^{G}\underline{a}_{C} + R \ddot{\theta} \underline{E}_{y} =
+          \ddot{\theta}\underline{E}_{z} \times (R \underline{E}_{x}) +
+          \dot{\theta}\underline{E}_{z}$ $\times \left[ \dot{\theta}
+          \underline{E}_{z} \times (R \underline{E}_{x}) \right]$
+>       - $^{G}\underline{a}_{C} = - R \dot{\theta}^{2}
+          \underline{E}_{x}$
 
 > ### Basic Equation of Motion {#e_basic_equation_of_motion}
 
