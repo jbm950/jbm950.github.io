@@ -23,7 +23,11 @@ print("\nProblem 6.3\n\n")
 
 alphas = [75, 110, 60, 80]
 theta1 = 120
-rgt.single_sub(alphas, 1, theta1, 1)
+[X1, Y1, Z1] = rgt.single_sub(alphas, 1, theta1, 1)
+
+print("X1:\n", X1, "\n")
+print("Y1:\n", Y1, "\n")
+print("Z1:\n", Z1, "\n")
 
 # ---
 # Problem 6.5

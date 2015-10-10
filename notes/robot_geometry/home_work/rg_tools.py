@@ -285,9 +285,26 @@ def single_sub(alphas, subscript, theta, bar):
     alphas = np.radians(alphas)
     theta = np.radians(theta)
 
-    # Begin by finding X_subscript
+    # Define the order of the alphas based on the presence of a bar
     if bar:
-        X = m.sin(alphas[subscript - 1]) * m.sin(theta)
+        alpha1 = subscript - 1
+        alpha2 = subscript - 2
+    else:
+        alpha1 = subscript - 2
+        alpha2 = subscript - 1
+
+    # Find the X, Y and Z terms
+    X = m.sin(alphas[alpha1]) * m.sin(theta)
+    Y = -(m.sin(alphas[alpha2]) * m.cos(alphas[alpha1]) + m.cos(alphas[alpha2])
+          * m.sin(alphas[alpha1]) * m.cos(theta))
+    Z = (m.cos(alphas[alpha2]) * m.cos(alphas[alpha1]) - m.sin(alphas[alpha2]) *
+         m.sin(alphas[alpha1]) * m.cos(theta))
+
+    return X, Y, Z
+
+
+def multi_sub_S(alphas):
+    pass
 
 
 # 6 Link Robot Base Class
