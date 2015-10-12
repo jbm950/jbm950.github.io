@@ -1,5 +1,47 @@
 # Weekly Status Updates
 
+### Week 10/3/2015 - 10/9/2015
+
+This week I have had another change in direction of research. My project is now
+looking to be implementiing the lab's GPOPS II software in a compilable
+language such as C or C++ for portability and cost reasons. Due to this shift I
+have started watching tutorials over programming in C. I also invested time
+into getting IPOPT on my computer. IPOPT is a nonlinear programming problem
+solver and will eventually be needed for the project. Lastly I have set up a
+git repo to contain my graduate work and have started practicing programming in
+C.
+
+> #### Future Directions
+
+> - I will continue expanding my knowledge of C programming
+
+### Week 9/26/2015 - 10/2/2015
+
+This week started off by finishing the notes I was taking on chapter 4 section
+1 of _Nonlinear Programming: Theory and Algorithms_. I have begun taking notes
+over the next section which starts to introduce the optimalitiy conditions of
+constrained problems. Most of my note taking time in this section so far is
+translating the math notation into words so that I can understand what it is
+that they are presenting. I have yet to finish this section and looking at the
+size of this section it will take a lot of time to complete.
+
+> #### Future Directions
+
+> - I plan to continue reading and taking notes over chapter 4 of _Nonlinear
+    Programming: Theory and Applications_
+
+> #### Articles/Books Mentioned in Status Update
+
+> - <a href="http://www.amazon.com/Nonlinear-Programming-Algorithms-Mokhtar-Bazaraa/dp/0471486000"
+    target="_blank">Nonlinear Programming: Theory and Algorithms Book</a>
+    (Mokhtar S. Bazaraa, Hanif D. Sherali and C.M. Shetty)
+
+> #### Notes Mentioned in Status Update
+
+> - [Nonlinear Programming: Theory and
+     Algorithms](./nonlinear_programming_theory_and_algorithms/nonlinear_programming_theory_and_algo_main.html)
+     (Mokhtar S.  Bazaraa, Hanif D, Sherali and C. M. Shetty)
+
 ### Week 9/19/2015 - 9/25/2015
 
 This week I started off continuing notes in chapter 2 section 3 but I then
