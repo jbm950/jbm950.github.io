@@ -1145,6 +1145,79 @@ Ground Reference Frame" width="300" height="300"/>
 
 > ### Basic Equation of Motion {#e_basic_equation_of_motion}
 
+> - The problem is to determine the equations of motion for mass $m$ located at
+    point P which is attached by a rod to point O which is fixed in the ground
+    and the ground reference frame can be considered intertial
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_basic_motion.png"
+alt="Basic Equations of Motion Example" title="Basic Equations of Motion
+Example" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - Only one equation of motion is expected due to the mass being constrained
+    to a trajectory that lies on a single line
+> - We will begin by defining our reference frames. For this problem two frames
+    will be used due to the presence of a rotation
+>       - Ground reference frame (G)
+>       - Plane perpendicular to the page containing $\underline{OP}$ (A)
+> - Coordinate system fixed in the ground reference frame (G)
+>       - Origin fixed at O
+>       - $\underline{E}_{z}$ = out of the page
+>       - $\underline{E}_{x}$ = along $\underline{OP}$ at $\theta$ = 0
+>       - $\underline{E}_{y}$ = $\underline{E}_{z} \times \underline{E}_{x}$
+> - Coordinate system fixed in reference frame A
+>       - Origin fixed at point O
+>       - $\underline{e}_{r}$ = along $\underline{OP}$
+>       - $\underline{e}_{r}$ = $\underline{E}_{z}$
+>       - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times
+          \underline{e}_{r}$
+> - Now we will begin by finding the position velocity and acceleration of
+    point P in the ground reference frame
+>       - $\underline{r}_{P} = \el \underline{e}_{r}$
+>       - $^{G}\underline{V}_{P} = \frac{^{A}d}{dt}(\el \underline{e}_{r}) +
+          \dot{\theta} \underline{e}_{z} \times \el \underline{e}_{r}$ $=
+          \dot{\theta} \el \underline{e}_{\theta}$
+>       - $^{G}\underline{a}_{P} = \frac{^{A}d}{dt}(\dot{\theta} \el
+          \underline{e}_{\theta}) + \dot{\theta} \underline{e}_{z} \times
+          \dot{\theta} \el \underline{e}_{\theta}$ $= \ddot{\theta} \el
+          \underline{e}_{\theta} - \dot{\theta}^{2} \el \underline{e}_{r}$
+> - With the acceleration of point P in the ground reference frame found we can
+    now move on to the kinetics portion of the problem
+> - We will begin this portion with a free body diagram to determine what
+    forces are present
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_basic_motion_FBD.png"
+alt="Basic Equations of Motion Example Free Body Diagram" title="Basic
+Equations of Motion Example Free Body Diagram" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - The sum of forces is therefore as follows
+>       - $\underline{F} = m\underline{g} + \underline{R} = mg\underline{E}_{x}
+          + R\underline{e}_{r}$
+> - With the sum of forces found we can now express all fo the terms in
+    Newton's Second Law
+>       - $\underline{F} = m ^{G}\underline{a}_{P}$
+>       - $mg \underline{E}_{x} + R \underline{e}_{r} = m (\ddot{\theta} \el
+          \underline{e}_{\theta} - \dot{\theta}^{2} \el \underline{e}_{r})$
+> - In the above expression the only unknown value is $R$, therefore we can
+    find the desired equation of motion by taking the dot product of each term
+    by $\underline{e}_{\theta}$
+>       - $mg (cos\theta \underline{e}_{r} - sin\theta \underline{e}_{\theta})
+          \cdot \underline{e}_{\theta} + R \underline{e}_{r} \cdot$
+          $\underline{e}_{\theta} = m(\ddot{\theta} \el \underline{e}_{\theta}
+          - \dot{\theta}^{2} \el \underline{e}_{r}) \cdot
+          \underline{e}_{\theta}$
+>       - $-mg sin\theta = m \ddot{\theta} \el$
+>       - $\ddot{\theta} = - \frac{g}{\el}sin\theta$ 
+
 > ### Angular Momentum {#e_angular_momentum}
 
 > ### Friction Force Models {#e_friction_force_models}
