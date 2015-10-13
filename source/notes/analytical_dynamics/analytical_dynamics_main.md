@@ -1220,6 +1220,33 @@ Equations of Motion Example Free Body Diagram" width="300" height="300"/>
 
 > ### Angular Momentum {#e_angular_momentum}
 
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_angular_momentum.png"
+alt="Angular Momentum Example" title="Angular Momentum Example" width="300"
+height="300"/> 
+</td></tr>
+</table>
+</div>
+
 > ### Friction Force Models {#e_friction_force_models}
 
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_friction_models.png"
+alt="Friction Force Models Example" title="Friction Force Models Example"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
 > ### Linear Spring Force Models {#e_linear_spring_force_models}
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_spring_model.png"
+alt="Linear Spring Model Example" title="Linear Spring Model Example"
+width="300" height="300"/> 
+</td></tr>
+</table>
+</div>

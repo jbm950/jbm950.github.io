@@ -1140,13 +1140,124 @@ Ground Reference Frame" width="300" height="300"/>
 <h3 id="e_basic_equation_of_motion">Basic Equation of Motion</h3>
 </blockquote>
 <blockquote>
+<ul>
+<li>The problem is to determine the equations of motion for mass <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=m" alt="m" title="m" /> located at point P which is attached by a rod to point O which is fixed in the ground and the ground reference frame can be considered intertial</li>
+</ul>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/e_basic_motion.png"
+alt="Basic Equations of Motion Example" title="Basic Equations of Motion
+Example" width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<ul>
+<li>Only one equation of motion is expected due to the mass being constrained to a trajectory that lies on a single line</li>
+<li>We will begin by defining our reference frames. For this problem two frames will be used due to the presence of a rotation
+<ul>
+<li>Ground reference frame (G)</li>
+<li>Plane perpendicular to the page containing <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /> (A)</li>
+</ul></li>
+<li>Coordinate system fixed in the ground reference frame (G)
+<ul>
+<li>Origin fixed at O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D" alt="\underline{E}_{z}" title="\underline{E}_{z}" /> = out of the page</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bx%7D" alt="\underline{E}_{x}" title="\underline{E}_{x}" /> = along <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /> at <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /> = 0</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7By%7D" alt="\underline{E}_{y}" title="\underline{E}_{y}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D%20%5Ctimes%20%5Cunderline%7BE%7D_%7Bx%7D" alt="\underline{E}_{z} \times \underline{E}_{x}" title="\underline{E}_{z} \times \underline{E}_{x}" /></li>
+</ul></li>
+<li>Coordinate system fixed in reference frame A
+<ul>
+<li>Origin fixed at point O</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{r}" title="\underline{e}_{r}" /> = along <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BOP%7D" alt="\underline{OP}" title="\underline{OP}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{r}" title="\underline{e}_{r}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BE%7D_%7Bz%7D" alt="\underline{E}_{z}" title="\underline{E}_{z}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="\underline{e}_{\theta}" title="\underline{e}_{\theta}" /> = <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%20%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{e}_{z} \times  \underline{e}_{r}" title="\underline{e}_{z} \times  \underline{e}_{r}" /></li>
+</ul></li>
+<li>Now we will begin by finding the position velocity and acceleration of point P in the ground reference frame
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Br%7D_%7BP%7D%20%3D%20%5Cel%20%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{r}_{P} = \el \underline{e}_{r}" title="\underline{r}_{P} = \el \underline{e}_{r}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7BV%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%28%5Cel%20%5Cunderline%7Be%7D_%7Br%7D%29%20%2B%20%20%5Cdot%7B%5Ctheta%7D%20%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%5Cel%20%5Cunderline%7Be%7D_%7Br%7D" alt="^{G}\underline{V}_{P} = \frac{^{A}d}{dt}(\el \underline{e}_{r}) +  \dot{\theta} \underline{e}_{z} \times \el \underline{e}_{r}" title="^{G}\underline{V}_{P} = \frac{^{A}d}{dt}(\el \underline{e}_{r}) +  \dot{\theta} \underline{e}_{z} \times \el \underline{e}_{r}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%20%5Cdot%7B%5Ctheta%7D%20%5Cel%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="=  \dot{\theta} \el \underline{e}_{\theta}" title="=  \dot{\theta} \el \underline{e}_{\theta}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BG%7D%5Cunderline%7Ba%7D_%7BP%7D%20%3D%20%5Cfrac%7B%5E%7BA%7Dd%7D%7Bdt%7D%28%5Cdot%7B%5Ctheta%7D%20%5Cel%20%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%29%20%2B%20%5Cdot%7B%5Ctheta%7D%20%5Cunderline%7Be%7D_%7Bz%7D%20%5Ctimes%20%20%5Cdot%7B%5Ctheta%7D%20%5Cel%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="^{G}\underline{a}_{P} = \frac{^{A}d}{dt}(\dot{\theta} \el  \underline{e}_{\theta}) + \dot{\theta} \underline{e}_{z} \times  \dot{\theta} \el \underline{e}_{\theta}" title="^{G}\underline{a}_{P} = \frac{^{A}d}{dt}(\dot{\theta} \el  \underline{e}_{\theta}) + \dot{\theta} \underline{e}_{z} \times  \dot{\theta} \el \underline{e}_{\theta}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cddot%7B%5Ctheta%7D%20%5Cel%20%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20-%20%5Cdot%7B%5Ctheta%7D%5E%7B2%7D%20%5Cel%20%5Cunderline%7Be%7D_%7Br%7D" alt="= \ddot{\theta} \el  \underline{e}_{\theta} - \dot{\theta}^{2} \el \underline{e}_{r}" title="= \ddot{\theta} \el  \underline{e}_{\theta} - \dot{\theta}^{2} \el \underline{e}_{r}" /></li>
+</ul></li>
+<li>With the acceleration of point P in the ground reference frame found we can now move on to the kinetics portion of the problem</li>
+<li>We will begin this portion with a free body diagram to determine what forces are present</li>
+</ul>
+</blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/e_basic_motion_FBD.png"
+alt="Basic Equations of Motion Example Free Body Diagram" title="Basic
+Equations of Motion Example Free Body Diagram" width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
+<blockquote>
+<ul>
+<li>The sum of forces is therefore as follows
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BF%7D%20%3D%20m%5Cunderline%7Bg%7D%20%2B%20%5Cunderline%7BR%7D%20%3D%20mg%5Cunderline%7BE%7D_%7Bx%7D%20%20%2B%20R%5Cunderline%7Be%7D_%7Br%7D" alt="\underline{F} = m\underline{g} + \underline{R} = mg\underline{E}_{x}  + R\underline{e}_{r}" title="\underline{F} = m\underline{g} + \underline{R} = mg\underline{E}_{x}  + R\underline{e}_{r}" /></li>
+</ul></li>
+<li>With the sum of forces found we can now express all fo the terms in Newton's Second Law
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7BF%7D%20%3D%20m%20%5E%7BG%7D%5Cunderline%7Ba%7D_%7BP%7D" alt="\underline{F} = m ^{G}\underline{a}_{P}" title="\underline{F} = m ^{G}\underline{a}_{P}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=mg%20%5Cunderline%7BE%7D_%7Bx%7D%20%2B%20R%20%5Cunderline%7Be%7D_%7Br%7D%20%3D%20m%20%28%5Cddot%7B%5Ctheta%7D%20%5Cel%20%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20-%20%5Cdot%7B%5Ctheta%7D%5E%7B2%7D%20%5Cel%20%5Cunderline%7Be%7D_%7Br%7D%29" alt="mg \underline{E}_{x} + R \underline{e}_{r} = m (\ddot{\theta} \el  \underline{e}_{\theta} - \dot{\theta}^{2} \el \underline{e}_{r})" title="mg \underline{E}_{x} + R \underline{e}_{r} = m (\ddot{\theta} \el  \underline{e}_{\theta} - \dot{\theta}^{2} \el \underline{e}_{r})" /></li>
+</ul></li>
+<li>In the above expression the only unknown value is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=R" alt="R" title="R" />, therefore we can find the desired equation of motion by taking the dot product of each term by <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="\underline{e}_{\theta}" title="\underline{e}_{\theta}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=mg%20%28cos%5Ctheta%20%5Cunderline%7Be%7D_%7Br%7D%20-%20sin%5Ctheta%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%29%20%20%5Ccdot%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%2B%20R%20%5Cunderline%7Be%7D_%7Br%7D%20%5Ccdot" alt="mg (cos\theta \underline{e}_{r} - sin\theta \underline{e}_{\theta})  \cdot \underline{e}_{\theta} + R \underline{e}_{r} \cdot" title="mg (cos\theta \underline{e}_{r} - sin\theta \underline{e}_{\theta})  \cdot \underline{e}_{\theta} + R \underline{e}_{r} \cdot" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%3D%20m%28%5Cddot%7B%5Ctheta%7D%20%5Cel%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D%20%20-%20%5Cdot%7B%5Ctheta%7D%5E%7B2%7D%20%5Cel%20%5Cunderline%7Be%7D_%7Br%7D%29%20%5Ccdot%20%20%5Cunderline%7Be%7D_%7B%5Ctheta%7D" alt="\underline{e}_{\theta} = m(\ddot{\theta} \el \underline{e}_{\theta}  - \dot{\theta}^{2} \el \underline{e}_{r}) \cdot  \underline{e}_{\theta}" title="\underline{e}_{\theta} = m(\ddot{\theta} \el \underline{e}_{\theta}  - \dot{\theta}^{2} \el \underline{e}_{r}) \cdot  \underline{e}_{\theta}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=-mg%20sin%5Ctheta%20%3D%20m%20%5Cddot%7B%5Ctheta%7D%20%5Cel" alt="-mg sin\theta = m \ddot{\theta} \el" title="-mg sin\theta = m \ddot{\theta} \el" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cddot%7B%5Ctheta%7D%20%3D%20-%20%5Cfrac%7Bg%7D%7B%5Cel%7Dsin%5Ctheta" alt="\ddot{\theta} = - \frac{g}{\el}sin\theta" title="\ddot{\theta} = - \frac{g}{\el}sin\theta" /></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
 <h3 id="e_angular_momentum">Angular Momentum</h3>
 </blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/e_angular_momentum.png"
+alt="Angular Momentum Example" title="Angular Momentum Example" width="300"
+height="300"/>
+</td>
+</tr>
+</table>
+</div>
 <blockquote>
 <h3 id="e_friction_force_models">Friction Force Models</h3>
 </blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/e_friction_models.png"
+alt="Friction Force Models Example" title="Friction Force Models Example"
+width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
 <blockquote>
 <h3 id="e_linear_spring_force_models">Linear Spring Force Models</h3>
 </blockquote>
+<div align="center">
+<table class="image">
+<tr>
+<td>
+<img src="./img/e_spring_model.png"
+alt="Linear Spring Model Example" title="Linear Spring Model Example"
+width="300" height="300"/>
+</td>
+</tr>
+</table>
+</div>
 </body>
 </html>
