@@ -1220,6 +1220,10 @@ Equations of Motion Example Free Body Diagram" width="300" height="300"/>
 
 > ### Angular Momentum {#e_angular_momentum}
 
+> - The problem in this example is to find the equations of motion for the
+    point P in the folling figure where point Q slides around the circle at
+    given speed $\alpha (t)$
+
 <div align="center">
 <table class="image">
 <tr><td><img src="./img/e_angular_momentum.png"
@@ -1228,6 +1232,33 @@ height="300"/>
 </td></tr>
 </table>
 </div>
+
+> - For this problem two different reference frames will be use
+>       - Ground (G), treated as inertial
+>       - Frame attached to rod along $\underline{QP}$ (A)
+> - Coordinate system fixed in Ground reference frame (G)
+>       - Origin at point O
+>       - $\underline{E}_{x}, \underline{E}_{y}, \underline{E}_{z}$ given in
+          the figure
+> - Coordinate system fixed in reference frame (A)
+>       - Origin at point Q
+>       - $\underline{e}_{r}$ = along $\underline{QP}$
+>       - $\underline{e}_{z}$ = $\underline{E}_{z}$
+>       - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times
+          \underline{e}_{r}$
+> - The first thing that will need to be done will be to solve for the
+    kinematics of point P in the inertial reference frame (G)
+>       - $\underline{r}_{P} = \underline{OQ} + \underline{QP}$ $= \el_{1}
+          cos\alpha \underline{E}_{x} + \el_{1} sin\alpha \underline{E}_{y} +
+          \el_{2} \underline{e}_{r}$
+>       - $^{G}\underline{V}_{P} = \frac{^{G}d}{dt}(\el_{1} cos\alpha
+          \underline{E}_{x} + \el_{1} sin\alpha$ $\underline{E}_{y}) +
+          \frac{^{A}d}{dt}(\el_{2} \underline{e}_{r}) +
+          ^{G}\underline{\omega}^{A} \underline{e}_{z} \times \el_{2}
+          \underline{e}_{r}$
+>       - $^{G}\underline{V}_{P} = - \el_{1} \dot{\alpha} sin\alpha
+          \underline{E}_{x} + \el_{1} \dot{\alpha} cos\alpha \underline{E}_{y}
+          + \el_{2} \dot{\theta} \underline{e}_{\theta}$
 
 > ### Friction Force Models {#e_friction_force_models}
 
