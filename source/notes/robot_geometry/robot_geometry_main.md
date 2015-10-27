@@ -17,6 +17,8 @@
 - [Mobility](#mobility)
 - [Planar Representation](#planar_representation)
 - [Equivalent Spherical Mechanisms](#equivalent_spherical_mechanisms)
+- [Group One Solution Process](#group_one_sol)
+- [Group Two Solution Process](#group_two_sol)
 
 ## Coordinate Systems {#coord_sys}
 
@@ -882,7 +884,7 @@ height="400"/>
 >>      - $X_{ab} = X_{a} c_{b} - Y_{a} s_{b}$
 >>      - $Y_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) - s_{b,b
           \rightarrow 1}Z_{a}$
->>      - $Z_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) + s_{b,b
+>>      - $Z_{ab} = s_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) + c_{b,b
           \rightarrow 1}Z_{a}$
 >> - In the above expressions the subscript a represents all but the last of
      the subscripts for that variable and b represents the last subscript
@@ -973,3 +975,41 @@ height="400"/>
 >       - $^{1}\underline{a}_{34} =$ $\left[ \begin{array} W_{32} \\
           -(U_{32}s_{12} + V_{32}c_{12}) \\ U_{32}c_{12} - V_{32}s_{12}
           \end{array} \right]$
+
+> __Rewrite $\mathbf{^{1}\underline{a}_{45}}$ Through
+  $\mathbf{^{1}\underline{a}_{67}$__
+
+> __Spherical Mechanism Equation Toolkit__
+
+> __Solve $\mathbf{Ac_{\theta} + Bs_{\theta} + D = 0}$__
+
+>>  Tan-Half Angle Method
+
+>> Trig Solution Method
+
+> __Spherical Pentagon Example__
+
+## Group One Solution Process {#group_one_sol}
+
+## Group Two Solution Process {#group_two_sol}
+
+> __Form System of Two Equations__
+
+>> Projection of Vector Loop Equation
+
+>> Self-Scalar Product of Vector Loop Equation
+
+>> Secondary Cosine Laws
+
+>>> Dual Numbers
+
+>>> Dual Angles
+
+> __Solve $\mathbf{x^{2}_{3} \left( a_{i}x^{2}_{1} + b_{i}x_{1} + d_{i}
+  \right)}$ $\mathbf{+ x_{3} \left( e_{i}x^{2}_{1} + f_{i}x_{1} + g_{i}
+  \right)}$ $\mathbf{+ \left( h_{i}x^{2}_{1} + i_{i}x_{1} + j_{i} \right) = 0,
+  \;\; i = 1,2}$__
+
+>> Sylvester's Method
+
+>> Bezout's Method

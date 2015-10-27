@@ -31,6 +31,8 @@ title: Robot Geometry
 <li><a href="#mobility">Mobility</a></li>
 <li><a href="#planar_representation">Planar Representation</a></li>
 <li><a href="#equivalent_spherical_mechanisms">Equivalent Spherical Mechanisms</a></li>
+<li><a href="#group_one_sol">Group One Solution Process</a></li>
+<li><a href="#group_two_sol">Group Two Solution Process</a></li>
 </ul>
 <h2 id="coord_sys">Coordinate Systems</h2>
 <ul>
@@ -905,7 +907,7 @@ height="400"/>
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=X_%7Bab%7D%20%3D%20X_%7Ba%7D%20c_%7Bb%7D%20-%20Y_%7Ba%7D%20s_%7Bb%7D" alt="X_{ab} = X_{a} c_{b} - Y_{a} s_{b}" title="X_{ab} = X_{a} c_{b} - Y_{a} s_{b}" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=Y_%7Bab%7D%20%3D%20c_%7Bb%2Cb%20%5Crightarrow%201%7D%20%28X_%7Ba%7D%20s_%7Bb%7D%20%2B%20Y_%7Ba%7D%20c_%7Bb%7D%29%20-%20s_%7Bb%2Cb%20%20%5Crightarrow%201%7DZ_%7Ba%7D" alt="Y_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) - s_{b,b  \rightarrow 1}Z_{a}" title="Y_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) - s_{b,b  \rightarrow 1}Z_{a}" /></li>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=Z_%7Bab%7D%20%3D%20c_%7Bb%2Cb%20%5Crightarrow%201%7D%20%28X_%7Ba%7D%20s_%7Bb%7D%20%2B%20Y_%7Ba%7D%20c_%7Bb%7D%29%20%2B%20s_%7Bb%2Cb%20%20%5Crightarrow%201%7DZ_%7Ba%7D" alt="Z_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) + s_{b,b  \rightarrow 1}Z_{a}" title="Z_{ab} = c_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) + s_{b,b  \rightarrow 1}Z_{a}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=Z_%7Bab%7D%20%3D%20s_%7Bb%2Cb%20%5Crightarrow%201%7D%20%28X_%7Ba%7D%20s_%7Bb%7D%20%2B%20Y_%7Ba%7D%20c_%7Bb%7D%29%20%2B%20c_%7Bb%2Cb%20%20%5Crightarrow%201%7DZ_%7Ba%7D" alt="Z_{ab} = s_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) + c_{b,b  \rightarrow 1}Z_{a}" title="Z_{ab} = s_{b,b \rightarrow 1} (X_{a} s_{b} + Y_{a} c_{b}) + c_{b,b  \rightarrow 1}Z_{a}" /></li>
 </ul></li>
 <li>In the above expressions the subscript a represents all but the last of the subscripts for that variable and b represents the last subscript
 <ul>
@@ -1012,6 +1014,75 @@ height="400"/>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7B1%7D%5Cunderline%7Ba%7D_%7B34%7D%20%3D" alt="^{1}\underline{a}_{34} =" title="^{1}\underline{a}_{34} =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20W_%7B32%7D%20%5C%5C%20%20-%28U_%7B32%7Ds_%7B12%7D%20%2B%20V_%7B32%7Dc_%7B12%7D%29%20%5C%5C%20U_%7B32%7Dc_%7B12%7D%20-%20V_%7B32%7Ds_%7B12%7D%20%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} W_{32} \\  -(U_{32}s_{12} + V_{32}c_{12}) \\ U_{32}c_{12} - V_{32}s_{12}  \end{array} \right]" title="\left[ \begin{array} W_{32} \\  -(U_{32}s_{12} + V_{32}c_{12}) \\ U_{32}c_{12} - V_{32}s_{12}  \end{array} \right]" /></li>
 </ul></li>
 </ul>
+</blockquote>
+<blockquote>
+<p><strong>Rewrite <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5E%7B1%7D%5Cunderline%7Ba%7D_%7B45%7D%7D" alt="\mathbf{^{1}\underline{a}_{45}}" title="\mathbf{^{1}\underline{a}_{45}}" /> Through <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%5E%7B1%7D%5Cunderline%7Ba%7D_%7B67%7D" alt="\mathbf{^{1}\underline{a}_{67}" title="\mathbf{^{1}\underline{a}_{67}" /></strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Spherical Mechanism Equation Toolkit</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Solve <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7BAc_%7B%5Ctheta%7D%20%2B%20Bs_%7B%5Ctheta%7D%20%2B%20D%20%3D%200%7D" alt="\mathbf{Ac_{\theta} + Bs_{\theta} + D = 0}" title="\mathbf{Ac_{\theta} + Bs_{\theta} + D = 0}" /></strong></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Tan-Half Angle Method</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Trig Solution Method</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Spherical Pentagon Example</strong></p>
+</blockquote>
+<h2 id="group_one_sol">Group One Solution Process</h2>
+<h2 id="group_two_sol">Group Two Solution Process</h2>
+<blockquote>
+<p><strong>Form System of Two Equations</strong></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Projection of Vector Loop Equation</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Self-Scalar Product of Vector Loop Equation</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Secondary Cosine Laws</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Dual Numbers</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Dual Angles</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Solve <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7Bx%5E%7B2%7D_%7B3%7D%20%5Cleft%28%20a_%7Bi%7Dx%5E%7B2%7D_%7B1%7D%20%2B%20b_%7Bi%7Dx_%7B1%7D%20%2B%20d_%7Bi%7D%20%20%5Cright%29%7D" alt="\mathbf{x^{2}_{3} \left( a_{i}x^{2}_{1} + b_{i}x_{1} + d_{i}  \right)}" title="\mathbf{x^{2}_{3} \left( a_{i}x^{2}_{1} + b_{i}x_{1} + d_{i}  \right)}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%2B%20x_%7B3%7D%20%5Cleft%28%20e_%7Bi%7Dx%5E%7B2%7D_%7B1%7D%20%2B%20f_%7Bi%7Dx_%7B1%7D%20%2B%20g_%7Bi%7D%20%20%5Cright%29%7D" alt="\mathbf{+ x_{3} \left( e_{i}x^{2}_{1} + f_{i}x_{1} + g_{i}  \right)}" title="\mathbf{+ x_{3} \left( e_{i}x^{2}_{1} + f_{i}x_{1} + g_{i}  \right)}" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7B%2B%20%5Cleft%28%20h_%7Bi%7Dx%5E%7B2%7D_%7B1%7D%20%2B%20i_%7Bi%7Dx_%7B1%7D%20%2B%20j_%7Bi%7D%20%5Cright%29%20%3D%200%2C%20%20%5C%3B%5C%3B%20i%20%3D%201%2C2%7D" alt="\mathbf{+ \left( h_{i}x^{2}_{1} + i_{i}x_{1} + j_{i} \right) = 0,  \;\; i = 1,2}" title="\mathbf{+ \left( h_{i}x^{2}_{1} + i_{i}x_{1} + j_{i} \right) = 0,  \;\; i = 1,2}" /></strong></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Sylvester's Method</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Bezout's Method</p>
+</blockquote>
 </blockquote>
 </body>
 </html>
