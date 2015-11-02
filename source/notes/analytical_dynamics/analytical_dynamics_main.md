@@ -21,7 +21,7 @@
 > - [Motion Between Two Points in the Same Reference Frame](#motion_two_points)
 > - [Rolling and Slipping](#rolling_and_slipping)
 
-> ### Kinetics
+> ### Kinetics of Particles
 
 > - [Inertial Reference Frame(s)](#inertial_ref_frames)
 > - [Three Laws of Mechanics](#three_laws_of_mechanics)
@@ -29,7 +29,19 @@
 > - [Relative Velocity](#relative_velocity)
 > - [Friction Force Models](#friction_force_models)
 > - [Linear Spring Force Model](#linear_spring_force_model)
-> - [Systems of Particles](#systems_of_particles)
+
+> ### Kinematics and Kinetics of Rigid Bodies/Systems of Particles
+
+> - [Center of Mass](#center_of_mass)
+> - [Tensors](#tensors)
+> - [Angular Momentum](#angular_momentum2)
+> - [Pure Torque](#pure_torque)
+> - [Euler's Laws](#eulers_laws)
+
+> ### Analytical Dynamics
+
+> - [Parameterize a Problem](#parameterize_prob)
+> - [Lagrange Equations](#lagrange_equations)
 
 - [Examples](#examples)
 
@@ -559,7 +571,20 @@ width="300" height="300"/>
         - $\underline{u}_{s} = \frac{\underline{r}_{P} - \underline{r}_{Q}}{\|
           \underline{r}_{P} - \underline{r}_{Q} \|}$
 
-## Systems of Particles {#systems_of_particles}
+
+## Center of Mass {#center_of_mass}
+
+## Tensors {#tensors}
+
+## Angular Momentum of Rigid Bodies/Systems of Particles {#angular_momentum2}
+
+## Pure Torque {#pure_torque}
+
+## Euler's Laws {#eulers_laws}
+
+## Parameterize a Problem {#parameterize_prob}
+
+## Lagrange Equations {#lagrange_equations}
 
 ## Examples {#examples}
 
@@ -579,6 +604,17 @@ width="300" height="300"/>
 >> - [Angular Momentum](#e_angular_momentum)
 >> - [Friction Force Models](#e_friction_force_models)
 >> - [Linear Spring Force Models](#e_linear_spring_force_models)
+
+>> #### Kinetics for a System of Particles
+
+>> - [Basic System of Particles](#basic_sys_of_particles)
+>> - [Angular Momentum](#sys_of_particles_angular_momentum)
+
+>> #### Kinetics for Rigid Bodies
+
+>> - [Basic Rigid Body Problem](#basic_rigid_body)
+>> - [Gyroscope Example](#gyroscope)
+>> - [Pendulum Example](#pendulum)
 
 > ### Transport Theorem Examples {#e_transport_theorem}
 
