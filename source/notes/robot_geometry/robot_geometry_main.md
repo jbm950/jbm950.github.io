@@ -974,16 +974,70 @@ height="400"/>
     rewritten
 >       - $^{1}\underline{a}_{34} =$ $\left[ \begin{array} W_{32} \\
           -(U_{32}s_{12} + V_{32}c_{12}) \\ U_{32}c_{12} - V_{32}s_{12}
-          \end{array} \right]$
+          \end{array} \right]$ $= \left[ \begin{array} W_{32} \\ -U_{321}^{*}
+          \\ U_{321} \end{array} \right]$
 
 > __Rewrite $\mathbf{^{1}\underline{a}_{45}}$ Through
   $\mathbf{^{1}\underline{a}_{67}$__
 
+> - Rather than go through the process of defining the rest of the
+    $\underline{a}$ vectors individually we note that they all follow the
+    format of the above $\underline{a}$ vector and simply add a subscript for
+    each successive vector
+>       - $^{1}\underline{a}_{45} =$ $\left[ \begin{array} W_{432} \\
+          -U_{4321}^{*} \\ U_{4321} \end{array} \right]$
+>       - $^{1}\underline{a}_{56} =$ $\left[ \begin{array} W_{5432} \\
+          -U_{54321}^{*} \\ U_{54321} \end{array} \right]$
+>       - $^{1}\underline{a}_{67} =$ $\left[ \begin{array} W_{65432} \\
+          -U_{654321}^{*} \\ U_{654321} \end{array} \right]$
+
 > __Spherical Mechanism Equation Toolkit__
+
+> - The next thing to do is to find expressions for each of the $\underline{S}$
+    and $\underline{a}$ vectors for different spherical mechanism
+    configurations. The process starts by looking at a spherical triangle and
+    adds a link for analysis until a spherical heptagon is reached.
+> - For each configuration the $\underline{S}$ vectors are rotated into
+    different coordinate systems and these representations are equated with the
+    $\underline{S}$ vectors found previously to create a "toolbox" of equations
+    to use when solving problems.
+>       - Note that each of these equations will be different for each
+          spherical mechanism configuration (spherical quadralateral tools
+          $\neq$ spherical hexagon tools)
+
+>> Example results
+
+>> - For a spherical triangle
+>>      - $\bar{X}_{2} = s_{31}s_{1}$
+>>      - $\bar{Y}_{2} = s_{32}c_{1}$
+>>      - $\bar{Z}_{2} = c_{31}$
+
+> - This process results in lots of equations and for brevity sake they will
+    not be listed here. If needing the equations they are listed out in full in
+    the appendix of the textbook
 
 > __Solve $\mathbf{Ac_{\theta} + Bs_{\theta} + D = 0}$__
 
+> - Problems of this form develop when attempting to solve group 1 spherical
+    mechanisms
+> - Two different methods were discussed in class where one is the "better"
+    method
+
 >>  Tan-Half Angle Method
+
+>> - This method begins using the tangent half angle trig identity
+>>      - $x_{1} = tan \left( \frac{\theta}{2} \right)$
+>>      - $s_{\theta} = \frac{2x_{1}}{1+x_{1}^{2}}$
+>>      - $c_{\theta} = \frac{1-x_{1}^{2}}{1+x_{1}^{2}}$
+>> - Substituting these values into the original problem results in the
+     following expression
+>>      - $A \left( \frac{1-x_{1}^{2}}{1+x_{1}^{2}} \right) + B$ $\left(
+          \frac{2x_{1}}{1+x_{1}^{2}} \right) + D = 0$
+>> - After multiplying through by $\left( 1 + x_{1}^{2} \right)$ and regrouping
+     by the x terms the following quadratic equation emerges
+>>      - $x_{1}^{2} (D-A) + x_{1} (2B) + (D+A) = 0$
+>>      - The quadratic formula can now be used to solve for x which can in
+          turn be used to solve for $\theta$
 
 >> Trig Solution Method
 
