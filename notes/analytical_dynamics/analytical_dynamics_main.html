@@ -506,7 +506,59 @@ width="300" height="300"/>
 </ul></li>
 </ul>
 <h2 id="center_of_mass">Center of Mass</h2>
+<ul>
+<li>Whether working with a system of particles or a rigid body the center of mass is an important point to know the position of while trying to solve problems</li>
+<li>For a system of particles the center of mass is found by taking the sum of the mass of individual particles multiplied by their position vectors and dividing by the overall mass of the system
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7B%5Cbar%7Br%7D%7D%20%3D%20%5Cfrac%7B%5Csum%20m_%7Bi%7D%5Cunderline%7Br%7D_%7Bi%7D%7D%7B%5Csum%20m_%7Bi%7D%7D" alt="\underline{\bar{r}} = \frac{\sum m_{i}\underline{r}_{i}}{\sum m_{i}}" title="\underline{\bar{r}} = \frac{\sum m_{i}\underline{r}_{i}}{\sum m_{i}}" /></li>
+</ul></li>
+<li>Finding the center of mass of a rigid body is practically the same process but due to the rigid body having potentially infinite points with mass the sum in the above expression naturally turns into an integral
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7B%5Cbar%7Br%7D%7D%20%3D%20%5Cfrac%7B%5Cint_%7BR%7D%20%5Cunderline%7Br%7D%20dm%7D%7B%5Cint_%7BR%7D%20dm%7D" alt="\underline{\bar{r}} = \frac{\int_{R} \underline{r} dm}{\int_{R} dm}" title="\underline{\bar{r}} = \frac{\int_{R} \underline{r} dm}{\int_{R} dm}" /></li>
+</ul></li>
+<li>Additional quantities that are useful are the velocity and acceleration of the center of mass and these quantities are easy to find when considering that the mass of the system/rigid body is not time dependent
+<ul>
+<li>For a system of particles
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BN%7D%5Cunderline%7B%5Cbar%7BV%7D%7D%20%3D%20%5Cfrac%7B%5Csum%20%20m_%7Bi%7D%5E%7BN%7D%5Cunderline%7BV%7D_%7Bi%7D%7D%7B%5Csum%20m_%7Bi%7D%7D" alt="^{N}\underline{\bar{V}} = \frac{\sum  m_{i}^{N}\underline{V}_{i}}{\sum m_{i}}" title="^{N}\underline{\bar{V}} = \frac{\sum  m_{i}^{N}\underline{V}_{i}}{\sum m_{i}}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BN%7D%5Cunderline%7B%5Cbar%7Ba%7D%7D%20%3D%20%5Cfrac%7B%5Csum%20%20m_%7Bi%7D%5E%7BN%7D%5Cunderline%7Ba%7D_%7Bi%7D%7D%7B%5Csum%20m_%7Bi%7D%7D" alt="^{N}\underline{\bar{a}} = \frac{\sum  m_{i}^{N}\underline{a}_{i}}{\sum m_{i}}" title="^{N}\underline{\bar{a}} = \frac{\sum  m_{i}^{N}\underline{a}_{i}}{\sum m_{i}}" /></li>
+</ul></li>
+<li>For a rigid body
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BN%7D%5Cunderline%7B%5Cbar%7BV%7D%7D%20%3D%20%5Cfrac%7B%5Cint_%7BR%7D%20%28%5E%7BN%7D%5Cunderline%7BV%7D%29%20%20dm%7D%7B%5Cint_%7BR%7D%20dm%7D" alt="^{N}\underline{\bar{V}} = \frac{\int_{R} (^{N}\underline{V})  dm}{\int_{R} dm}" title="^{N}\underline{\bar{V}} = \frac{\int_{R} (^{N}\underline{V})  dm}{\int_{R} dm}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5E%7BN%7D%5Cunderline%7B%5Cbar%7Ba%7D%7D%20%3D%20%5Cfrac%7B%5Cint_%7BR%7D%20%28%5E%7BN%7D%5Cunderline%7Ba%7D%29%20%20dm%7D%7B%5Cint_%7BR%7D%20dm%7D" alt="^{N}\underline{\bar{a}} = \frac{\int_{R} (^{N}\underline{a})  dm}{\int_{R} dm}" title="^{N}\underline{\bar{a}} = \frac{\int_{R} (^{N}\underline{a})  dm}{\int_{R} dm}" /></li>
+</ul></li>
+</ul></li>
+</ul>
 <h2 id="tensors">Tensors</h2>
+<ul>
+<li>Tensors are geometrical objects similar to vectors</li>
+<li>Tensors are reference frame independent</li>
+<li>Letting <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D" alt="\underline{b}" title="\underline{b}" /> be a vector in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=E%5E%7B3%7D" alt="E^{3}" title="E^{3}" />, we define a tensor <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7B%5Cunderline%7BT%7D%7D" alt="\underline{\underline{T}}" title="\underline{\underline{T}}" /> as a linear operator which takes vectors as inputs and returns vectors
+<ul>
+<li>An example of a tensor that has been used often in this class already is the cross product</li>
+</ul></li>
+<li>If a tensor is represented by a matrix it must include a basis or it is not a tensor just a matrix</li>
+<li>A tensor is represented as operating on a vector by a large dot
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7B%5Cunderline%7BT%7D%7D%20%5Cbullet%20%5Cunderline%7Bb%7D" alt="\underline{\underline{T}} \bullet \underline{b}" title="\underline{\underline{T}} \bullet \underline{b}" /></li>
+<li>Tensor <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7B%5Cunderline%7BT%7D%7D" alt="\underline{\underline{T}}" title="\underline{\underline{T}}" /> operating on vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Bb%7D" alt="\underline{b}" title="\underline{b}" /></li>
+</ul></li>
+</ul>
+<blockquote>
+<p><strong>Tensor Product</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>One common operation that will need to be defined is that of the tensor product
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%28%20%5Cunderline%7Ba%7D%20%5Cotimes%20%5Cunderline%7Bb%7D%20%5Cright%29%20%5Cbullet%20%20%5Cunderline%7Bc%7D%20%3D" alt="\left( \underline{a} \otimes \underline{b} \right) \bullet  \underline{c} =" title="\left( \underline{a} \otimes \underline{b} \right) \bullet  \underline{c} =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%28%20%5Cunderline%7Bc%7D%20%5Ccdot%20%5Cunderline%7Bb%7D%29%20%20%5Cunderline%7Ba%7D" alt="\left( \underline{c} \cdot \underline{b})  \underline{a}" title="\left( \underline{c} \cdot \underline{b})  \underline{a}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D%20%5Cotimes%20%5Cunderline%7Bb%7D" alt="\underline{a} \otimes \underline{b}" title="\underline{a} \otimes \underline{b}" /> is the tensor</li>
+<li>The dot on the right hand side is a dot product not an &quot;operates on&quot; operator therefore the result is a scalar multiplied by the <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D" alt="\underline{a}" title="\underline{a}" /> vector</li>
+</ul></li>
+<li>Example of the tensor created by <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cunderline%7Ba%7D%20%5Cotimes%20%5Cunderline%7Bb%7D" alt="\underline{a} \otimes \underline{b}" title="\underline{a} \otimes \underline{b}" /></li>
+</ul>
+</blockquote>
 <h2 id="angular_momentum2">Angular Momentum of Rigid Bodies/Systems of Particles</h2>
 <h2 id="pure_torque">Pure Torque</h2>
 <h2 id="eulers_laws">Euler's Laws</h2>

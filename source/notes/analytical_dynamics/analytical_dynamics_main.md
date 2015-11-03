@@ -574,7 +574,57 @@ width="300" height="300"/>
 
 ## Center of Mass {#center_of_mass}
 
+- Whether working with a system of particles or a rigid body the center of mass
+  is an important point to know the position of while trying to solve problems
+- For a system of particles the center of mass is found by taking the sum of
+  the mass of individual particles multiplied by their position vectors and
+  dividing by the overall mass of the system
+    - $\underline{\bar{r}} = \frac{\sum m_{i}\underline{r}_{i}}{\sum m_{i}}$
+- Finding the center of mass of a rigid body is practically the same process
+  but due to the rigid body having potentially infinite points with mass the
+  sum in the above expression naturally turns into an integral
+    - $\underline{\bar{r}} = \frac{\int_{R} \underline{r} dm}{\int_{R} dm}$
+- Additional quantities that are useful are the velocity and acceleration of
+  the center of mass and these quantities are easy to find when considering
+  that the mass of the system/rigid body is not time dependent
+    - For a system of particles
+        - $^{N}\underline{\bar{V}} = \frac{\sum
+          m_{i}^{N}\underline{V}_{i}}{\sum m_{i}}$
+        - $^{N}\underline{\bar{a}} = \frac{\sum
+          m_{i}^{N}\underline{a}_{i}}{\sum m_{i}}$
+    - For a rigid body
+        - $^{N}\underline{\bar{V}} = \frac{\int_{R} (^{N}\underline{V})
+          dm}{\int_{R} dm}$
+        - $^{N}\underline{\bar{a}} = \frac{\int_{R} (^{N}\underline{a})
+          dm}{\int_{R} dm}$
+
 ## Tensors {#tensors}
+
+- Tensors are geometrical objects similar to vectors
+- Tensors are reference frame independent
+- Letting $\underline{b}$ be a vector in $E^{3}$, we define a tensor
+  $\underline{\underline{T}}$ as a linear operator which takes vectors as
+  inputs and returns vectors
+    - An example of a tensor that has been used often in this class already is
+      the cross product
+- If a tensor is represented by a matrix it must include a basis or it is not a
+  tensor just a matrix
+- A tensor is represented as operating on a vector by a large dot 
+    - $\underline{\underline{T}} \bullet \underline{b}$
+    - Tensor $\underline{\underline{T}}$ operating on vector $\underline{b}$
+
+> __Tensor Product__
+
+> - One common operation that will need to be defined is that of the tensor
+    product
+>       - $\left( \underline{a} \otimes \underline{b} \right) \bullet
+          \underline{c} =$ $\left( \underline{c} \cdot \underline{b})
+          \underline{a}$
+>       - $\underline{a} \otimes \underline{b}$ is the tensor
+>       - The dot on the right hand side is a dot product not an "operates on"
+          operator therefore the result is a scalar multiplied by the
+          $\underline{a}$ vector
+> - Example of the tensor created by $\underline{a} \otimes \underline{b}$
 
 ## Angular Momentum of Rigid Bodies/Systems of Particles {#angular_momentum2}
 
