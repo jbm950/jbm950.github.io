@@ -1038,8 +1038,47 @@ height="400"/>
 >>      - $x_{1}^{2} (D-A) + x_{1} (2B) + (D+A) = 0$
 >>      - The quadratic formula can now be used to solve for x which can in
           turn be used to solve for $\theta$
+>> - Potential problem points for this solution process are as follows:
+>>      - The term under the radical can be negative leading to non-real
+          solutions
+>>          - This is a symptom of not having a feasible link configuration and
+              not necessarily a problem with the solution method itself
+>>      - There could be a divide by zero error if $D = A$
+>>           - This is an issue with the solution method and not the mechanism
+               itself
 
 >> Trig Solution Method
+
+>> - The second solution approach involves a few trig identities in its
+     derivation
+>> - The first step in the process is to divide each term in the equation by
+     the root of $A^{2} + B^{2}$
+>>      - $\frac{A}{\sqrt{A^{2}+B^{2}}} c_{\theta} +
+          \frac{B}{\sqrt{A^{2}+B^{2}}} s_{\theta} +
+          \frac{D}{\sqrt{A^{2}+B^{2}}} = 0$
+>> - Now we note that the sum of the first two coefficients squared is
+     equivalent to one due to the fact that it is adding together the
+     components of the denominator
+>>      - $\frac{A^{2}}{A^{2}+B^{2}} + \frac{B^{2}}{A^{2}+B^{2}} = 1$
+>> - The next step is to turn the above fractions into sine and cosine by
+     keeping in mind the following trig identity
+>>      - $(s_{\gamma})^{2} + (c_{\gamma})^{2} = 1$
+>> - We can therefore rewrite the fractions as follows
+>>      - $\frac{A^{2}}{A^{2}+B^{2}} = (c_{\gamma})^{2}$
+>>      - $\frac{B^{2}}{A^{2}+B^{2}} = (s_{\gamma})^{2}$
+>>      - These definitions are used to determine the value of angle $\gamma$
+>> - Using these new terms the original equation can be rewritten as follows
+>>      - $c_{\gamma}c_{\theta} + s_{\gamma}s_{\theta} +
+          \frac{D}{\sqrt{A^{2}+B^{2}}} = 0$
+>>      - Note that the angle $\gamma$ has not much of a physical meaning but
+          is just a term used in the solution process
+>> - By moving the non-trig term to the other side of the equation the
+     remaining trig terms form the difference between two angles identity
+>>      - $c_{\gamma}c_{\theta} + s_{\gamma}s_{\theta} = -
+          \frac{D}{\sqrt{A^{2}+B^{2}}} = cos(\theta - \gamma)$
+>> - Now arccosine can be used to determine what the difference in the two
+     angles are
+>>      - $\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}} \right)$
 
 > __Spherical Pentagon Example__
 

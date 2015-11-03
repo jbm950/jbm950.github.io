@@ -1094,12 +1094,61 @@ height="400"/>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B1%7D%5E%7B2%7D%20%28D-A%29%20%2B%20x_%7B1%7D%20%282B%29%20%2B%20%28D%2BA%29%20%3D%200" alt="x_{1}^{2} (D-A) + x_{1} (2B) + (D+A) = 0" title="x_{1}^{2} (D-A) + x_{1} (2B) + (D+A) = 0" /></li>
 <li>The quadratic formula can now be used to solve for x which can in turn be used to solve for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /></li>
 </ul></li>
+<li>Potential problem points for this solution process are as follows:
+<ul>
+<li>The term under the radical can be negative leading to non-real solutions
+<ul>
+<li>This is a symptom of not having a feasible link configuration and not necessarily a problem with the solution method itself</li>
+</ul></li>
+<li>There could be a divide by zero error if <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=D%20%3D%20A" alt="D = A" title="D = A" />
+<ul>
+<li>This is an issue with the solution method and not the mechanism itself</li>
+</ul></li>
+</ul></li>
 </ul>
 </blockquote>
 </blockquote>
 <blockquote>
 <blockquote>
 <p>Trig Solution Method</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>The second solution approach involves a few trig identities in its derivation</li>
+<li>The first step in the process is to divide each term in the equation by the root of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=A%5E%7B2%7D%20%2B%20B%5E%7B2%7D" alt="A^{2} + B^{2}" title="A^{2} + B^{2}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BA%7D%7B%5Csqrt%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%7D%20c_%7B%5Ctheta%7D%20%2B%20%20%5Cfrac%7BB%7D%7B%5Csqrt%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%7D%20s_%7B%5Ctheta%7D%20%2B%20%20%5Cfrac%7BD%7D%7B%5Csqrt%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%7D%20%3D%200" alt="\frac{A}{\sqrt{A^{2}+B^{2}}} c_{\theta} +  \frac{B}{\sqrt{A^{2}+B^{2}}} s_{\theta} +  \frac{D}{\sqrt{A^{2}+B^{2}}} = 0" title="\frac{A}{\sqrt{A^{2}+B^{2}}} c_{\theta} +  \frac{B}{\sqrt{A^{2}+B^{2}}} s_{\theta} +  \frac{D}{\sqrt{A^{2}+B^{2}}} = 0" /></li>
+</ul></li>
+<li>Now we note that the sum of the first two coefficients squared is equivalent to one due to the fact that it is adding together the components of the denominator
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BA%5E%7B2%7D%7D%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%20%2B%20%5Cfrac%7BB%5E%7B2%7D%7D%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%20%3D%201" alt="\frac{A^{2}}{A^{2}+B^{2}} + \frac{B^{2}}{A^{2}+B^{2}} = 1" title="\frac{A^{2}}{A^{2}+B^{2}} + \frac{B^{2}}{A^{2}+B^{2}} = 1" /></li>
+</ul></li>
+<li>The next step is to turn the above fractions into sine and cosine by keeping in mind the following trig identity
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%28s_%7B%5Cgamma%7D%29%5E%7B2%7D%20%2B%20%28c_%7B%5Cgamma%7D%29%5E%7B2%7D%20%3D%201" alt="(s_{\gamma})^{2} + (c_{\gamma})^{2} = 1" title="(s_{\gamma})^{2} + (c_{\gamma})^{2} = 1" /></li>
+</ul></li>
+<li>We can therefore rewrite the fractions as follows
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BA%5E%7B2%7D%7D%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%20%3D%20%28c_%7B%5Cgamma%7D%29%5E%7B2%7D" alt="\frac{A^{2}}{A^{2}+B^{2}} = (c_{\gamma})^{2}" title="\frac{A^{2}}{A^{2}+B^{2}} = (c_{\gamma})^{2}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7BB%5E%7B2%7D%7D%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%20%3D%20%28s_%7B%5Cgamma%7D%29%5E%7B2%7D" alt="\frac{B^{2}}{A^{2}+B^{2}} = (s_{\gamma})^{2}" title="\frac{B^{2}}{A^{2}+B^{2}} = (s_{\gamma})^{2}" /></li>
+<li>These definitions are used to determine the value of angle <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cgamma" alt="\gamma" title="\gamma" /></li>
+</ul></li>
+<li>Using these new terms the original equation can be rewritten as follows
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=c_%7B%5Cgamma%7Dc_%7B%5Ctheta%7D%20%2B%20s_%7B%5Cgamma%7Ds_%7B%5Ctheta%7D%20%2B%20%20%5Cfrac%7BD%7D%7B%5Csqrt%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%7D%20%3D%200" alt="c_{\gamma}c_{\theta} + s_{\gamma}s_{\theta} +  \frac{D}{\sqrt{A^{2}+B^{2}}} = 0" title="c_{\gamma}c_{\theta} + s_{\gamma}s_{\theta} +  \frac{D}{\sqrt{A^{2}+B^{2}}} = 0" /></li>
+<li>Note that the angle <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cgamma" alt="\gamma" title="\gamma" /> has not much of a physical meaning but is just a term used in the solution process</li>
+</ul></li>
+<li>By moving the non-trig term to the other side of the equation the remaining trig terms form the difference between two angles identity
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=c_%7B%5Cgamma%7Dc_%7B%5Ctheta%7D%20%2B%20s_%7B%5Cgamma%7Ds_%7B%5Ctheta%7D%20%3D%20-%20%20%5Cfrac%7BD%7D%7B%5Csqrt%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%7D%20%3D%20cos%28%5Ctheta%20-%20%5Cgamma%29" alt="c_{\gamma}c_{\theta} + s_{\gamma}s_{\theta} = -  \frac{D}{\sqrt{A^{2}+B^{2}}} = cos(\theta - \gamma)" title="c_{\gamma}c_{\theta} + s_{\gamma}s_{\theta} = -  \frac{D}{\sqrt{A^{2}+B^{2}}} = cos(\theta - \gamma)" /></li>
+</ul></li>
+<li>Now arccosine can be used to determine what the difference in the two angles are
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20-%20%5Cgamma%20%3D%20cos%5E%7B-1%7D%20%5Cleft%28%20-%20%5Cfrac%7BD%7D%7B%5Csqrt%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%7D%20%5Cright%29" alt="\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}} \right)" title="\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}} \right)" /></li>
+</ul></li>
+</ul>
 </blockquote>
 </blockquote>
 <blockquote>
