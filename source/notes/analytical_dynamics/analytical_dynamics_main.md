@@ -625,8 +625,35 @@ width="300" height="300"/>
           operator therefore the result is a scalar multiplied by the
           $\underline{a}$ vector
 > - Example of the tensor created by $\underline{a} \otimes \underline{b}$
+>       - $\underline{a} = a_{1} \underline{e}_{1} + a_{2} \underline{e}_{2} +
+          a_{3} \underline{e}_{3}$
+>       - $\underline{b} = b_{1} \underline{e}_{1} + b_{2} \underline{e}_{2} +
+          b_{3} \underline{e}_{3}$
+>       - $\underline{a} \otimes \underline{b} = a_{1} b_{1} (e_{1} \otimes
+          e_{1}) + a_{1} b_{2} (e_{1} \otimes e_{2}) + a_{1} b_{3} (e_{1}
+          \otimes e_{3}) +$ $a_{2} b_{1} (e_{2} \otimes e_{1}) + a_{2} b_{2}
+          (e_{2} \otimes e_{2}) + a_{2} b_{3} (e_{2} \otimes e_{3}) +$ $a_{3}
+          b_{1} (e_{3} \otimes e_{1}) + a_{3} b_{2} (e_{3} \otimes e_{2}) +
+          a_{3} b_{3} (e_{3} \otimes e_{3})$
 
 ## Angular Momentum of Rigid Bodies/Systems of Particles {#angular_momentum2}
+
+- For a system of particles the angular momentum about point Q is given by the
+  following expression. The first time derivative of the angluar momentum for a
+  system of particles is also presented
+    - $^{N}\underline{H}_{Q} = \sum_{i = 1}^{n} (\underline{r}_{i} -
+      \underline{r}_{Q}) \times m_{i}(^{N}\underline{V}_{i} -
+      ^{N}\underline{V}_{Q})$
+    - $\frac{^{N}d}{dt} (^{N}\underline{H}_{Q}) = \underline{M}_{Q} -
+      (\underline{\bar{r}} - \underline{r}_{Q}) \times m ^{N}\underline{a}_{Q}$
+        - Where $\underline{M}_{Q}$ is the real moment given by
+          $\sum_{i=1}^{n}(\underline{r}_{i} - \underline{r}_{Q}) \times
+          \underline{F}_{i}$
+- For a rigid body the angular momentum about point Q is given by the following
+  expression. The first time derivative of the angular momentum expression is
+  also provided
+    - $^{N}\underline{\bar{H}} = (^{N}\underline{\underline{\bar{I}}}) \cdot
+      (^{N}\underline{\omega}^{R})$
 
 ## Pure Torque {#pure_torque}
 
