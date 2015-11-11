@@ -652,12 +652,53 @@ width="300" height="300"/>
 - For a rigid body the angular momentum about point Q is given by the following
   expression. The first time derivative of the angular momentum expression is
   also provided
-    - $^{N}\underline{\bar{H}} = (^{N}\underline{\underline{\bar{I}}}) \cdot
-      (^{N}\underline{\omega}^{R})$
+    - $^{N}\underline{H}_{Q} = \int_{R} \left[ (\underline{r} -
+      \underline{r}_{Q}) \times (^{N}\underline{V} - ^{N}\underline{V}_{Q})
+      \right] dm$ for generic point $Q$
+    - $^{N}\underline{H}_{B} = (^{N}\underline{\underline{I}}_{B}^{R})
+      \bullet (^{N}\underline{\omega}^{R})$ where $B$ is on rigid body $R$
+    - $^{N}\underline{\bar{H}} = (^{N}\underline{\underline{\bar{I}}}) \bullet
+      (^{N}\underline{\omega}^{R})$ if $B$ is the center of mass
+        - $(^{N}\underline{\underline{\bar{I}}})$ can be found in tables in
+          text books for general shapes/configurations
+    - The generic expression of angular momentum of a rigid body about generic
+      point Q can be found from the angular momentum about its center of mass
+      from the following expression
+        - $^{N}\underline{H}_{Q}  -  ^{N}\underline{\bar{H}} =
+          (\underline{r}_{Q} - \underline{\bar{r}}) \times m
+          (^{N}\underline{V}_{Q} - ^{N}\underline{\bar{V}})$
+            - The parallel axis theorem can be found from this expression but
+              this is a stronger expression and as such should stick to this
+              one instead
 
 ## Pure Torque {#pure_torque}
 
+- Pure torque is a moment on a rigid body that is independent of the point on
+  the body for which the moment is being determined
+- Can be represented by a force couple which creates a moment with zero net
+  force
+- Symbolically represented as $\tau$
+- Including pure torque in the expression for the sum of moments for a system
+  of particles about generic point Q yields the following expression
+    - $\underline{M}_{Q} = \sum_{i = 1}^{n} (\underline{r}_{i} -
+      \underline{r}_{Q}) \times \underline{F}_{i} + \tau$
+
 ## Euler's Laws {#eulers_laws}
+
+> __First Law__
+
+> - $\underline{F} = m ^{N}\underline{\bar{a}}$
+>       - Where N is inertial
+
+> __Second Law__
+
+> - $\underline{M}_{O} = \frac{^{N}d}{dt} (^{N}\underline{H}_{O})$
+>       - Where O is a point that is inertially fixed
+> - When moved to a generic point that does not have to be inertially fixed the
+    second law becomes the following
+>       - $\frac{^{N}d}{dt} (^{N}\underline{H}_{Q}) = \underline{M}_{Q} +
+          (\underline{r}_{Q} - \underline{\bar{r}}) \times m
+          ^{N}\underline{a}_{Q}$
 
 ## Parameterize a Problem {#parameterize_prob}
 
