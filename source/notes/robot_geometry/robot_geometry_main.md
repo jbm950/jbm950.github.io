@@ -1078,9 +1078,35 @@ height="400"/>
           \frac{D}{\sqrt{A^{2}+B^{2}}} = cos(\theta - \gamma)$
 >> - Now arccosine can be used to determine what the difference in the two
      angles are
->>      - $\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}} \right)$
+>>      - $\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}}
+          \right)$
+>>      - If the link lengths are unfeasible then this is the step that will
+          encounter problems as the argument in $cos^{-1}$ will not be between
+          -1 and 1
+>> - This will provide an A case and a B case and the corresponding $\theta$
+     values can be found by the following
+>>      - $\theta_{A} = (\theta - \gamma)_{A} + \gamma$
+>>      - $\theta_{B} = (\theta - \gamma)_{B} + \gamma$
+>> - This is considered the better solution approach as it only encounters
+     problems for infeasible link lengths rather than also having a problem
+     inherent to the solution approach
 
 > __Spherical Pentagon Example__
+
+> - For the example the following values are given
+>       - $\alpha_{12}, \alpha_{23}, \alpha_{34}, \alpha_{45}, \alpha_{51}$
+>       - $\theta_{4}, \theta_{5}$
+> - The goal to solve for the following angles
+>       - $\theta_{1}, \theta_{2}, \theta_{3}$
+> - Any of the desired angles can be the first found angle and in this example
+    we will start with finding $\theta_{2}$
+> - When looking in the spherical equation "toolkit", the following expression
+    is found that can be used to solve for $\theta_{2}$
+>       - $Z_{45} = Z_{2}$
+>       - The only unknown $\theta$ value in the above expression is the
+          desired $\theta_{2}$
+> - Only a single cosine expression was found for $\theta_{2}$ meaning that
+    there will be A case and B case possibilities
 
 ## Group One Solution Process {#group_one_sol}
 

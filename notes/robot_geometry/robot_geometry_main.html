@@ -1146,13 +1146,40 @@ height="400"/>
 </ul></li>
 <li>Now arccosine can be used to determine what the difference in the two angles are
 <ul>
-<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20-%20%5Cgamma%20%3D%20cos%5E%7B-1%7D%20%5Cleft%28%20-%20%5Cfrac%7BD%7D%7B%5Csqrt%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%7D%20%5Cright%29" alt="\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}} \right)" title="\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}} \right)" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta%20-%20%5Cgamma%20%3D%20cos%5E%7B-1%7D%20%5Cleft%28%20-%20%5Cfrac%7BD%7D%7B%5Csqrt%7BA%5E%7B2%7D%2BB%5E%7B2%7D%7D%7D%20%20%5Cright%29" alt="\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}}  \right)" title="\theta - \gamma = cos^{-1} \left( - \frac{D}{\sqrt{A^{2}+B^{2}}}  \right)" /></li>
+<li>If the link lengths are unfeasible then this is the step that will encounter problems as the argument in <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=cos%5E%7B-1%7D" alt="cos^{-1}" title="cos^{-1}" /> will not be between -1 and 1</li>
 </ul></li>
+<li>This will provide an A case and a B case and the corresponding <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /> values can be found by the following
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7BA%7D%20%3D%20%28%5Ctheta%20-%20%5Cgamma%29_%7BA%7D%20%2B%20%5Cgamma" alt="\theta_{A} = (\theta - \gamma)_{A} + \gamma" title="\theta_{A} = (\theta - \gamma)_{A} + \gamma" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7BB%7D%20%3D%20%28%5Ctheta%20-%20%5Cgamma%29_%7BB%7D%20%2B%20%5Cgamma" alt="\theta_{B} = (\theta - \gamma)_{B} + \gamma" title="\theta_{B} = (\theta - \gamma)_{B} + \gamma" /></li>
+</ul></li>
+<li>This is considered the better solution approach as it only encounters problems for infeasible link lengths rather than also having a problem inherent to the solution approach</li>
 </ul>
 </blockquote>
 </blockquote>
 <blockquote>
 <p><strong>Spherical Pentagon Example</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>For the example the following values are given
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Calpha_%7B12%7D%2C%20%5Calpha_%7B23%7D%2C%20%5Calpha_%7B34%7D%2C%20%5Calpha_%7B45%7D%2C%20%5Calpha_%7B51%7D" alt="\alpha_{12}, \alpha_{23}, \alpha_{34}, \alpha_{45}, \alpha_{51}" title="\alpha_{12}, \alpha_{23}, \alpha_{34}, \alpha_{45}, \alpha_{51}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7B4%7D%2C%20%5Ctheta_%7B5%7D" alt="\theta_{4}, \theta_{5}" title="\theta_{4}, \theta_{5}" /></li>
+</ul></li>
+<li>The goal to solve for the following angles
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7B1%7D%2C%20%5Ctheta_%7B2%7D%2C%20%5Ctheta_%7B3%7D" alt="\theta_{1}, \theta_{2}, \theta_{3}" title="\theta_{1}, \theta_{2}, \theta_{3}" /></li>
+</ul></li>
+<li>Any of the desired angles can be the first found angle and in this example we will start with finding <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7B2%7D" alt="\theta_{2}" title="\theta_{2}" /></li>
+<li>When looking in the spherical equation &quot;toolkit&quot;, the following expression is found that can be used to solve for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7B2%7D" alt="\theta_{2}" title="\theta_{2}" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=Z_%7B45%7D%20%3D%20Z_%7B2%7D" alt="Z_{45} = Z_{2}" title="Z_{45} = Z_{2}" /></li>
+<li>The only unknown <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta" alt="\theta" title="\theta" /> value in the above expression is the desired <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7B2%7D" alt="\theta_{2}" title="\theta_{2}" /></li>
+</ul></li>
+<li>Only a single cosine expression was found for <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Ctheta_%7B2%7D" alt="\theta_{2}" title="\theta_{2}" /> meaning that there will be A case and B case possibilities</li>
+</ul>
 </blockquote>
 <h2 id="group_one_sol">Group One Solution Process</h2>
 <h2 id="group_two_sol">Group Two Solution Process</h2>
