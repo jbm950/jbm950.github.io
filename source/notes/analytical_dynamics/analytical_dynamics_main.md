@@ -702,7 +702,25 @@ width="300" height="300"/>
 
 ## Parameterize a Problem {#parameterize_prob}
 
+- When looking at how to parameterize a problem we first must consider the
+  degrees of freedom (M) the system has and how many of those degrees are
+  constrained (P)
+
 ## Lagrange Equations {#lagrange_equations}
+
+- Lagrange equations provide a means of formulating problems without forces
+  caused by constraints on the system
+- Lagrange equations are derived from Newton's Second Law ($\underline{F} = m
+  ^{N}\underline{a}$)
+- We will need the different expressions for kinetic energy when working with
+  Lagrange Equations
+
+> __Kinetic Energy of a Particle__
+
+- The _Fundamental Form of Lagrange's Equations_ is the following expression
+    - $\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_{i}} \right) -
+      \frac{\partial T}{\partial q_{i}} = \underline{F} \cdot \frac{\partial
+      \underline{r}}{\partial q_{i}}$
 
 ## Examples {#examples}
 
