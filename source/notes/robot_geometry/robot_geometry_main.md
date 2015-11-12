@@ -1093,6 +1093,15 @@ height="400"/>
 
 > __Spherical Pentagon Example__
 
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/sphere_pent_example.png"
+alt="Spherical Pentagon Example" title="Spherical Pentagon Example" width="400"
+height="400"/> 
+</td></tr>
+</table>
+</div>
+
 > - For the example the following values are given
 >       - $\alpha_{12}, \alpha_{23}, \alpha_{34}, \alpha_{45}, \alpha_{51}$
 >       - $\theta_{4}, \theta_{5}$
@@ -1107,6 +1116,21 @@ height="400"/>
           desired $\theta_{2}$
 > - Only a single cosine expression was found for $\theta_{2}$ meaning that
     there will be A case and B case possibilities
+> - With $\theta_{2}$ found the remaining $\theta$ values will be easy to obtain
+> - To find the remaining unknown angles we can use the "buddy" equations or
+    the $X$ and $Y$ terms with the same subscripts as the left hand side term
+    in the expression finding the original theta
+> - To find $\theta_{1}$ the following two equations will be used which will
+    lead to only one result for the input numbers thereby not increasing the
+    number of solution "cases"
+>       - $X_{45} = X_{21}$
+>       - $Y_{45} = - X_{21}^{*}$
+>       - This will lead to A case and B case values for $\theta_{1}$
+> - The same "buddy" equations can be used to find $\theta_{3}$ when the left
+    hand side subscripts are reversed
+>       - $X_{54} = X_{23}$
+>       - $Y_{54} = - X_{23}^{*}$
+>       - This will lead to A case and B case values for $\theta_{3}$
 
 ## Group One Solution Process {#group_one_sol}
 
