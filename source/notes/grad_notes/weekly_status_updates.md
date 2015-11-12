@@ -1,5 +1,62 @@
 # Weekly Status Updates
 
+### Week 10/31/2015 - 11/6/2015
+
+I have not spent time with Ipopt this week but have instead began reading from
+the book _Introduction to Numerical Analysis_ by Stoer and Bulirsch. I am
+looking into numerical integrations techniques which is the content of Chapter
+3. I found that the first integration technique discussed (Newton-Cotes
+formulas) refered back to lagrange interpolation which is the first topic in
+chapter 2 and so I backtracked and read through this section. I then coded up a
+function in Python that uses the lagrange interpolation and tested it on the
+normal bell curve function. (The normal distribution/bell curve is used as the
+example function for the other coded examples as I learn numerical integration
+due to it being a more complex function than a simple polynomial but still
+having very widely known integral values for standard deviations.) After I
+coded up the interpolation function I returned to Chapter 3 where I re-read and
+took hand written notes. I finished the week by coding Sampson's Rule for
+integration in Python and doing a quick reading over the sections in chapter 3
+that deal with error estimates. I have not taken any electronic notes over
+these sections.
+
+> #### Future Directions
+
+> - I will keep progressing through Chapter 3 of _Introduction to Numerical
+    Analysis_
+
+> #### Articles/Books Mentioned in Status Update
+
+> - <a href="http://it-feel.com/e-Library/Mathematics/Analysis/Introduction%20to%20Numerical%20Analysis%202%20ed%20-%20J.Stoer,R.Bulirsch.pdf"
+    target="_blank">Introduction to Numerical Analysis</a>
+    (J. Stoer and R. Bulirsch)
+
+### Week 10/24/2015 - 10/30/2015
+
+This week was spent finishing the C tutorial series that I had found on youtube
+(<a
+href="https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAKIXv8Yr6nhGJ9Vlcjyymq"
+target="_blank">link</a>).
+After finishing the tutorial series I began looking at the Ipopt example for C
+programming. Still having a bit of trouble figuring out how to get the ipopt
+library to link to the example code. I also attempted getting Ipopt installed
+on my Mac laptop to uncertain success.
+
+> #### Future Directions
+
+> - My plan is to continue trying to get the Ipopt example to work on my
+    computer
+
+### Week 10/10/2015 - 10/16/2015
+
+During this week I continued watching tutorials on programming in C. I also
+continued doing some practice with programming in C alongside the tutorials. In
+additiona I took some time to look at the differences between C and C++. Lastly
+I spent some time this week to catch up on writing weekly status reports.
+
+> #### Future Directions
+
+> - I will make an attempt to finish watching the C programming tutorials
+
 ### Week 10/3/2015 - 10/9/2015
 
 This week I have had another change in direction of research. My project is now
