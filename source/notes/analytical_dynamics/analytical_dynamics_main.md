@@ -641,7 +641,7 @@ width="300" height="300"/>
 - For a system of particles the angular momentum about point Q is given by the
   following expression. The first time derivative of the angluar momentum for a
   system of particles is also presented
-    - $^{N}\underline{H}_{Q} = \sum_{i = 1}^{n} (\underline{r}_{i} -
+    - $^{N}\underline{H}_{Q} = \sum_{i=1}^{n} (\underline{r}_{i} -
       \underline{r}_{Q}) \times m_{i}(^{N}\underline{V}_{i} -
       ^{N}\underline{V}_{Q})$
     - $\frac{^{N}d}{dt} (^{N}\underline{H}_{Q}) = \underline{M}_{Q} -
@@ -680,7 +680,7 @@ width="300" height="300"/>
 - Symbolically represented as $\tau$
 - Including pure torque in the expression for the sum of moments for a system
   of particles about generic point Q yields the following expression
-    - $\underline{M}_{Q} = \sum_{i = 1}^{n} (\underline{r}_{i} -
+    - $\underline{M}_{Q} = \sum_{i=1}^{n} (\underline{r}_{i} -
       \underline{r}_{Q}) \times \underline{F}_{i} + \tau$
 
 ## Euler's Laws {#eulers_laws}
@@ -716,6 +716,17 @@ width="300" height="300"/>
   Lagrange Equations
 
 > __Kinetic Energy of a Particle__
+
+> - $T = \frac{1}{2} m (^{N}\underline{V}) \cdot (^{N}\underline{V})$
+
+> __Kinetic Energy for a System of Particles__
+
+> - $T = \sum_{J=1}^{n} (\frac{1}{2} m_{J}) (^{N}\underline{V}_{J}) \cdot
+    (^{N}\underline{V}_{J})$ 
+
+> __Kinetic Energy for a Rigid Body (Koenig Decomposition)__
+
+> - $T = \frac{1}{2} m \underline{\bar{V}} \cdot \underline{\bar{V}} + \frac{1}{2} \underline{\bar{H}} \cdot (^{N}\underline{\omega}^{R})$
 
 - The _Fundamental Form of Lagrange's Equations_ is the following expression
     - $\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_{i}} \right) -
