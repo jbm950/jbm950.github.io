@@ -303,8 +303,53 @@ def single_sub(alphas, subscript, theta, bar):
     return X, Y, Z
 
 
-def multi_sub_S(alphas):
-    pass
+def multi_sub_S(alphas, thetas):
+    """This function will find the X, Y and Z values for multi-subscript
+    notation.
+    Inputs:
+        alphas - This is a list of the twist angles for the spherical mechanism
+            with n links in degrees and listed as follows.
+            [alp12, alp23, ..., alpn1]
+        thetas - This will be a list with nested subscript/theta value pairs
+            where the theta values are measured in degrees
+            [[1, the1], [2, the2]] for X_12, Y_12 and Z_12"""
+
+    # First remove the last theta from the list
+    the = thetas.pop()
+
+    # Now determine the X, Y and Z values for all of the smaller subscripts
+    # Test to see if the next set of subscript values are single subscripts
+    if len(thetas) == 2:
+        if thetas[0][0] < the[0]:
+            bar = 0
+        else:
+            bar = 1
+
+        [X_prev, Y_prev, Z_prev] = single_sub(alphas, thetas[0][0],
+                                              thetas[0][1], bar)
+    else:
+        [X_prev, Y_prev, Z_prev] = multi_sub_S(alphas, thetas)
+
+    # Convert the remaining degree values to radians for calculation
+    alphas = np.array(alphas)
+
+    alphas = np.radians(alphas)
+    theta = np.radians(the[1])
+
+    # Determine the actual alpha value to be used in calculations
+    if thetas[-1][0] < the[0]:
+        alpha = alphas[the[0] - 1]
+    else:
+        alpha = alphas[the[0] - 2]
+
+    # Now finally calculate and return the desired multi-subscript values
+    X = X_prev * m.cos(theta) - Y_prev * m.sin(theta)
+    Y = (m.cos(alpha) * (X_prev * m.sin(theta) + Y_prev * m.cos(theta)) -
+         m.sin(alpha) * Z_prev)
+    Z = (m.sin(alpha) * (X_prev * m.sin(theta) + Y_prev * m.cos(theta)) +
+         m.cos(alpha) * Z_prev)
+
+    return X, Y, Z
 
 
 # 6 Link Robot Base Class
