@@ -319,11 +319,18 @@ def multi_sub_S(alphas, thetas):
 
     # Now determine the X, Y and Z values for all of the smaller subscripts
     # Test to see if the next set of subscript values are single subscripts
-    if len(thetas) == 2:
-        if thetas[0][0] < the[0]:
-            bar = 0
+    if len(thetas) == 1:
+        if thetas[-1][0] == len(alphas) or (the[0] == len(alphas) and
+                                            thetas[-1][0] == 1):
+            if thetas[0][0] > the[0]:
+                bar = 0
+            else:
+                bar = 1
         else:
-            bar = 1
+            if thetas[0][0] < the[0]:
+                bar = 0
+            else:
+                bar = 1
 
         [X_prev, Y_prev, Z_prev] = single_sub(alphas, thetas[0][0],
                                               thetas[0][1], bar)
@@ -337,10 +344,17 @@ def multi_sub_S(alphas, thetas):
     theta = np.radians(the[1])
 
     # Determine the actual alpha value to be used in calculations
-    if thetas[-1][0] < the[0]:
-        alpha = alphas[the[0] - 1]
+    if thetas[-1][0] == len(alphas) or (the[0] == len(alphas) and thetas[-1][0]
+                                        == 1):
+        if thetas[-1][0] > the[0]:
+            alpha = alphas[the[0] - 1]
+        else:
+            alpha = alphas[the[0] - 2]
     else:
-        alpha = alphas[the[0] - 2]
+        if thetas[-1][0] < the[0]:
+            alpha = alphas[the[0] - 1]
+        else:
+            alpha = alphas[the[0] - 2]
 
     # Now finally calculate and return the desired multi-subscript values
     X = X_prev * m.cos(theta) - Y_prev * m.sin(theta)
