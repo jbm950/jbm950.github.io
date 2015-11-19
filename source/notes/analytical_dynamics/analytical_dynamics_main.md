@@ -726,12 +726,25 @@ width="300" height="300"/>
 
 > __Kinetic Energy for a Rigid Body (Koenig Decomposition)__
 
-> - $T = \frac{1}{2} m \underline{\bar{V}} \cdot \underline{\bar{V}} + \frac{1}{2} \underline{\bar{H}} \cdot (^{N}\underline{\omega}^{R})$
+> - $T = \frac{1}{2} m \underline{\bar{V}} \cdot \underline{\bar{V}} +
+    \frac{1}{2} \underline{\bar{H}} \cdot (^{N}\underline{\omega}^{R})$
 
 - The _Fundamental Form of Lagrange's Equations_ is the following expression
     - $\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_{i}} \right) -
       \frac{\partial T}{\partial q_{i}} = \underline{F} \cdot \frac{\partial
       \underline{r}}{\partial q_{i}}$
+<br></br>
+
+- Lagrange's Equation for a rigid body is given by the following expression
+    - $\frac{d}{dt} \left(\frac{\partial T}{\partial \dot{q}_{i}} \right)$ $-
+      \frac{\partial T}{\partial q_{i}} = Q_{i}$
+    - where
+        - $Q_{i} = \underline{F} \cdot \frac{\partial
+          \underline{\dot{\bar{r}}}}{\partial \dot{q}_{i}} +
+          \underline{\bar{M}} \cdot \frac{\partial
+          ^{N}\underline{\omega}^{R}}{\partial \dot{q}_{i}}$ for i = 1, ..., 6
+        - $\underline{F} = \sum_{J=1}^{k} \underline{F}_{J}$
+        - $\underline{M} = \sum_{J=1}^{m} \underline{M}_{J}$
 
 ## Examples {#examples}
 
