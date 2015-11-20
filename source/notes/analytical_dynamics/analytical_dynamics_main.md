@@ -1450,11 +1450,46 @@ height="300"/>
 >       - $^{G}\underline{V}_{P} = \frac{^{G}d}{dt}(\el_{1} cos\alpha
           \underline{E}_{x} + \el_{1} sin\alpha$ $\underline{E}_{y}) +
           \frac{^{A}d}{dt}(\el_{2} \underline{e}_{r}) +
-          ^{G}\underline{\omega}^{A} \underline{e}_{z} \times \el_{2}
+          \dot{\theta} \underline{e}_{z} \times \el_{2}
           \underline{e}_{r}$
 >       - $^{G}\underline{V}_{P} = - \el_{1} \dot{\alpha} sin\alpha
           \underline{E}_{x} + \el_{1} \dot{\alpha} cos\alpha \underline{E}_{y}
           + \el_{2} \dot{\theta} \underline{e}_{\theta}$
+>       - $^{G}\underline{a}_{P} = \frac{^{G}d}{dt} (- \el_{1} \dot{\alpha}
+          sin\alpha \underline{E}_{x} + \el_{1} \dot{\alpha} cos\alpha
+          \underline{E}_{y}) + \frac{^{A}d}{dt} (\el_{2} \dot{\theta}$
+          $\underline{e}_{\theta}) + \dot{\theta} \underline{e}_{z} \times
+          (\el_{2} \dot{\theta} \underline{e}_{\theta})$
+>       - $^{G}\underline{a}_{P} = (-\el_{1} \ddot{\alpha} sin\alpha  - \el_{1}
+          \dot{\alpha}^{2} cos\alpha) \underline{E}_{x}$ $+ (\el_{1}
+          \ddot{\alpha} cos\alpha - \el_{1} \dot{\alpha}^{2} sin\alpha)
+          \underline{E}_{y}$ $+ \el_{2} \ddot{\theta} \underline{e}_{\theta} -
+          \el_{2} \dot{\theta}^{2} \underline{e}_{r}$
+
+> - Next a free body diagram will be used so that the equations of motion can
+    be found
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_angular_momentum_FBD.png"
+alt="Angular Momentum Example Free Body Diagram" title="Angular Momentum
+Example Free Body Diagram" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - The equations of motion will be found using two different methods. The
+    first will use Newton's second law for reference when the angular momentum
+    approach is used.
+> - Using Newton's second law will lead to the following result
+>       - $\underline{F} = m ^{G}\underline{a}$
+>       - $-mg \underline{E}_{y} + R \underline{e}_{r} = m$ $[ (-\el_{1}
+>         \ddot{\alpha} sin\alpha  - \el_{1} \dot{\alpha}^{2} cos\alpha)
+>         \underline{E}_{x}$ $+ (\el_{1} \ddot{\alpha} cos\alpha - \el_{1}
+>         \dot{\alpha}^{2} sin\alpha) \underline{E}_{y}$ $+ \el_{2}
+>         \ddot{\theta} \underline{e}_{\theta} - \el_{2} \dot{\theta}^{2}
+>         \underline{e}_{r}]$
+
 
 > ### Friction Force Models {#e_friction_force_models}
 
