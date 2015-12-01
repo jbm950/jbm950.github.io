@@ -1490,6 +1490,7 @@ Example Free Body Diagram" width="300" height="300"/>
 >         \ddot{\theta} \underline{e}_{\theta} - \el_{2} \dot{\theta}^{2}
 >         \underline{e}_{r}]$
 
+>> __Incomplete__
 
 > ### Friction Force Models {#e_friction_force_models}
 
@@ -1502,6 +1503,8 @@ width="300" height="300"/>
 </table>
 </div>
 
+>> __Incomplete__
+
 > ### Linear Spring Force Models {#e_linear_spring_force_models}
 
 <div align="center">
@@ -1512,3 +1515,45 @@ width="300" height="300"/>
 </td></tr>
 </table>
 </div>
+
+>> __Incomplete__
+
+> ### Basic System of Particles {#basic_sys_of_particles}
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_basic_particle_system.png"
+alt="Basic System of Particles Example" title="Basic System of Particles
+Example" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - For the above diagram it is desired to obtain the equations of motion for
+    both the wedge (W) and the block (B)
+>       - This should lead to two equations of motion as both objects are
+          constrained to a single degree of freedom
+> - To begin solving the problem 2 reference frames will be used and then
+    coordinate systems will be defined in each reference frame
+>       - Ground (G)
+>       - Wedge (W)
+> - Coordinate system in Ground reference frame (G)
+>       - Origin at O
+>       - $\underline{E}_{x}$ = to the right
+>       - $\underline{E}_{y}$ = $- \underline{g}$
+>       - $\underline{E}_{z}$ = $\underline{E}_{x} \times \underline{E}_{y}$
+> - Coordinate system in Wedge reference frame (W)
+>       - Origin at O'
+>       - $\underline{e}_{x}$ = along the slant away from O'
+>       - $\underline{e}_{z}$ = $\underline{E}_{z}$
+>       - $\underline{e}_{y}$ = $\underline{e}_{z} \times \underline{e}_{x}$
+> - Next the kinematics need to be solved for the Wedge
+>       - $\underline{r}_{w} =$
+
+> ### Angular Momentum {#sys_of_particles_angular_momentum}
+
+> ### Basic Rigid Body Problem {#basic_rigid_body}
+
+> ### Gyroscope Example {#gyroscope}
+
+> ### Pendulum Example {#pendulum}
