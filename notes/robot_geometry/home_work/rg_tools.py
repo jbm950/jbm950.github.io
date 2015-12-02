@@ -466,10 +466,20 @@ class T3_776(Robot_6link):
 
 class GE_P60(Robot_6link):
     def __init__(self):
+        """The joint offsets will be defined for this specific robot"""
         link_lengths = [0, 70, 90, 0, 0]
         twist_angles = [270, 0, 0, 270, 90]
 
         Robot_6link.__init__(self, link_lengths, twist_angles)
+
+        # joint_offsets = [S1, S2, S3, S4, S5, S6, S7] where S1 and S7 will be
+        # determined during reverse analysis while performing the close the loop
+        # step. The value for S6 will be an input for the reverse analysis step
+
+        joint_offsets = [0, 0, 0, 9.8, 14.5, 0, 0]
+        self.joint_offsets = np.array(joint_offsets)
+
+    def reverse_analysis(self, Ptool_6, Ptool_F, S6_F, a67_F
 
 
 # Other functions
