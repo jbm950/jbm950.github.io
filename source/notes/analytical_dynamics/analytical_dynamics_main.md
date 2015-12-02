@@ -1548,7 +1548,42 @@ Example" width="300" height="300"/>
 >       - $\underline{e}_{z}$ = $\underline{E}_{z}$
 >       - $\underline{e}_{y}$ = $\underline{e}_{z} \times \underline{e}_{x}$
 > - Next the kinematics need to be solved for the Wedge
->       - $\underline{r}_{w} =$
+>       - $\underline{r}_{w} = x_{1} \underline{E}_{x}$
+>       - $^{G}\underline{V}_{w} = \dot{x}_{1} \underline{E}_{x}$
+>       - $^{G}\underline{a}_{w} = \ddot{x}_{1} \underline{E}_{x}$
+> - Now the kinematics for the block will be determined
+>       - $\underline{r}_{b} = x_{1} \underline{E}_{x} + h \underline{E}_{y} +
+          x_{2} \underline{e}_{x}$
+>           - h is the height of the wedge
+>       - $^{G}\underline{V}_{b} = \dot{x}_{1} \underline{E}_{x} + \dot{x}_{2}
+          \underline{e}_{x}$
+>       - $^{G}\underline{a}_{b} = \ddot{x}_{1} \underline{E}_{x} +
+          \ddot{x}_{2} \underline{e}_{x}$
+> - The relative velocity between the block and the wedge will also be needed
+    when determining the friction force
+>       - $\underline{V}_{rel} = ^{G}\underline{V}_{w} - ^{G}\underline{V}_{b}$
+> - Last bit of kinematics will be for the wedge block system
+>       - $\bar{\underline{r}} = \frac{m_{w} (x_{1} \underline{E}_{x}) + m_{b}
+          (x_{1} \underline{E}_{x} + h \underline{E}_{y} + x_{2}
+          \underline{e}_{x})}{m_{w} + m_{b}}$
+>       - $^{G}\bar{\underline{V}} = \frac{m_{w} (\dot{x}_{1}
+          \underline{E}_{x}) + m_{b} (\dot{x}_{1} \underline{E}_{x} +
+          \dot{x}_{2} \underline{e}_{x})}{m_{w} + m_{b}}$
+>       - $^{G}\bar{\underline{a}} = \frac{m_{w} (\ddot{x}_{1}
+          \underline{E}_{x}) + m_{b} (\ddot{x}_{1} \underline{E}_{x} +
+          \ddot{x}_{2} \underline{e}_{x})}{m_{w} + m_{b}}$
+> - The next step towards obtaining the equations of motion will be to
+    determine the forces acting on each part of the system and the system as a
+    whole
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/e_basic_particle_system_FBDW.png"
+alt="Basic System of Particles Wedge FBD" title="Basic System of Particles
+Wedge FBD" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
 
 > ### Angular Momentum {#sys_of_particles_angular_momentum}
 
