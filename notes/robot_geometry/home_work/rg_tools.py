@@ -479,7 +479,8 @@ class GE_P60(Robot_6link):
         joint_offsets = [0, 0, 0, 9.8, 14.5, 0, 0]
         self.joint_offsets = np.array(joint_offsets)
 
-    def reverse_analysis(self, Ptool_6, Ptool_F, S6_F, a67_F
+    def reverse_analysis(self, Ptool_6, Ptool_F, S6_F, a67_F):
+        pass
 
 
 # Other functions
