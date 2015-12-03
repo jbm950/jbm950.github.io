@@ -1608,6 +1608,42 @@ System FBD" width="300" height="300"/>
 
 > - Now we can start to apply Newton's Second Law and its derived result on the
     wedge, block and system
+> - Newton's Second Law for the wedge results in the following expression
+>       - $m_{w} (^{G}\underline{a}_{w}) = \sum \underline{F}$
+>       - $m_{w} \ddot{x}_{1} \underline{E}_{x} = (N - g) \underline{E}_{y} + R
+          \underline{e}_{y} - c \underline{V}_{rel}$
+>       - $m_{w} \ddot{x}_{1} \underline{E}_{x} = (N - g) \underline{E}_{y} + R
+          \underline{e}_{y} + c \dot{x}_{2} \underline{e}_{x}$
+> - Newton's Second Law for the block results in the following expression
+>       - $m_{b} (^{G}\underline{a}_{b}) = \sum \underline{F}$
+>       - $m_{b} (\ddot{x}_{1} \underline{E}_{x} + \ddot{x}_{2}
+          \underline{e}_{x}) = - m_{b} g \underline{E}_{y} - R
+          \underline{e}_{y} - c \dot{x}_{2} \underline{e}_{x}$
+> - The derived result of Newton's Second Law will now be used on the system of
+    particles
+>       - $(m_{b} + m_{w}) ^{G}\bar{\underline{a}} = \sum \underline{F}$
+>       - $(m_{b} + m_{w}) \left( \frac{m_{b} (\ddot{x}_{1} \underline{E}_{x} +
+          \ddot{x}_{2} \underline{e}_{x}) + m_{w} (\ddot{x}_{1}
+          \underline{E}_{x})}{m_{b} + m_{w}} \right)$ $= (N - (m_{b} + m_{w}) g)
+          \underline{E}_{y}$
+>       - $m_{b} (\ddot{x}_{1} \underline{E}_{x} + \ddot{x}_{2}
+          \underline{e}_{x}) + m_{w} (\ddot{x}_{1} \underline{E}_{x}) = (N -
+          (m_{b} + m_{w}) g) \underline{E}_{y}$
+> - The first equation of motion can be found by using the equation for the
+    system and taking the dot product of each individual term with
+    $\underline{E}_{x}$
+>       - $m_{b} (\ddot{x}_{1} \underline{E}_{x} \cdot \underline{E}_{x} +
+          \ddot{x}_{2} \underline{e}_{x} \cdot \underline{E}_{x}) + m_{w}
+          (\ddot{x}_{1} \underline{E}_{x} \cdot \underline{E}_{x})$ $= (N -
+          (m_{b} + m_{w}) g) \underline{E}_{y} \cdot \underline{E}_{x}$
+>           - Where $\underline{e}_{x} = cos\beta \underline{E}_{x} - sin\beta
+              \underline{E}_{y}$ therefore $\underline{e}_{x} \cdot
+              \underline{E}_{x} = cos\beta$
+>       - $m_{b} (\ddot{x}_{1} + cos\beta \ddot{x}_{2}) + m_{w} \ddot{x}_{1} =
+          0$
+> - For the second and final equation of motion take the result of Newtons
+    Second Law from the block and take the dot product of each term with
+    $\underline{e}_{x}$
 
 > ### Angular Momentum {#sys_of_particles_angular_momentum}
 
