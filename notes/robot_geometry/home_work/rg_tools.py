@@ -491,14 +491,19 @@ class GE_P60(Robot_6link):
         self.joint_offsets[0] = S1
         self.joint_offsets[6] = S7
 
-        self.link_lengths.append(0)
-        self.link_lengths.append(a71)
+        np.append(self.link_lengths, 0)
+        np.append(self.link_lengths, a71)
 
-        self.twist_angles.append(m.radians(90))
-        self.twist_angles.append(m.radians(alp71))
+        np.append(self.twist_angles, m.radians(90))
+        np.append(self.twist_angles, m.radians(alp71))
+        twist_anglesd = np.degrees(self.twist_angles)
 
         # The next step will be to obtain theta1
-        [X7, Y7, Z7] = single_sub(m.degrees(self.twist_angles), 7, theta7, 0)
+        [X7, Y7, Z7] = single_sub(twist_anglesd, 7, theta7, 0)
+        # A, B and D from eqn 11.55 in the book
+        A = (- self.joint_offsets[5] * Y7 + self.joint_offsets[6] *
+             m.sin(self.twist_angles[6]))
+        B = (- self.joint_offsets[5] * X7 - self.link_lengths[6])
 
 
 # Other functions
