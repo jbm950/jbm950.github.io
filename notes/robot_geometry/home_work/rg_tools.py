@@ -504,6 +504,20 @@ class GE_P60(Robot_6link):
         A = (- self.joint_offsets[5] * Y7 + self.joint_offsets[6] *
              m.sin(self.twist_angles[6]))
         B = (- self.joint_offsets[5] * X7 - self.link_lengths[6])
+        D = self.joint_offsets[3]
+        [worked, theta1A, theta1B] = trig_solution(A, B, D)
+
+        # The next angle to be obtained will be theta5 and eqn 11.58 from the
+        # book will be used
+        [X17A, Y17A, Z17A] = multi_sub_S(twist_anglesd, [[1, theta1A],
+                                                         [7, theta7]])
+        theta5AA = np.arccos(Z17A)
+        theta5AB = - theta5AA
+
+        [X17B, Y17B, Z17B] = multi_sub_S(twist_anglesd, [[1, theta1B],
+                                                         [7, theta7]])
+        theta5BA = np.arccos(Z17B)
+        theta5BB = - theta5BA
 
 
 # Other functions
