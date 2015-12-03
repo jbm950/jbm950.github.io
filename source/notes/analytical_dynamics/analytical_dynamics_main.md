@@ -1578,12 +1578,36 @@ Example" width="300" height="300"/>
 
 <div align="center">
 <table class="image">
+<caption align="bottom">Wedge FBD</caption>
 <tr><td><img src="./img/e_basic_particle_system_FBDW.png"
 alt="Basic System of Particles Wedge FBD" title="Basic System of Particles
 Wedge FBD" width="300" height="300"/> 
 </td></tr>
 </table>
 </div>
+
+<div align="center">
+<table class="image">
+<caption align="bottom">Block FBD</caption>
+<tr><td><img src="./img/e_basic_particle_system_FBDB.png"
+alt="Basic System of Particles Block FBD" title="Basic System of Particles
+Block FBD" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+<div align="center">
+<table class="image">
+<caption align="bottom">System FBD</caption>
+<tr><td><img src="./img/e_basic_particle_system_FBDsys.png"
+alt="Basic System of Particles System FBD" title="Basic System of Particles
+System FBD" width="300" height="300"/> 
+</td></tr>
+</table>
+</div>
+
+> - Now we can start to apply Newton's Second Law and its derived result on the
+    wedge, block and system
 
 > ### Angular Momentum {#sys_of_particles_angular_momentum}
 
