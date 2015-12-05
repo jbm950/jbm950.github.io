@@ -1644,6 +1644,18 @@ System FBD" width="300" height="300"/>
 > - For the second and final equation of motion take the result of Newtons
     Second Law from the block and take the dot product of each term with
     $\underline{e}_{x}$
+>       - $m_{b} (\ddot{x}_{1} \underline{E}_{x} \cdot \underline{e}_{x} +
+          \ddot{x}_{2} \underline{e}_{x} \cdot \underline{e}_{x}) = -m_{b} g
+          \underline{E}_{y}$ $\cdot \underline{e}_{x} - R \underline{e}_{y}
+          \cdot \underline{e}_{x} - c \dot{x}_{2} \underline{e}_{x} \cdot
+          \underline{e}_{x}$
+>       - $m_{b} (\ddot{x}_{1} cos\beta + \ddot{x}_{2}) = m_{b} g sin\beta - c
+          \dot{x}_{2}$
+> - The two equations of motion for the system are therefore as follows
+>       - $m_{b} (\ddot{x}_{1} + cos\beta \ddot{x}_{2}) + m_{w} \ddot{x}_{1} =
+          0$
+>       - $m_{b} (\ddot{x}_{1} cos\beta + \ddot{x}_{2}) = m_{b} g sin\beta - c
+          \dot{x}_{2}$
 
 > ### Angular Momentum {#sys_of_particles_angular_momentum}
 
