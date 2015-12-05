@@ -491,11 +491,11 @@ class GE_P60(Robot_6link):
         self.joint_offsets[0] = S1
         self.joint_offsets[6] = S7
 
-        np.append(self.link_lengths, 0)
-        np.append(self.link_lengths, a71)
+        self.link_lengths = np.append(self.link_lengths, 0)
+        self.link_lengths = np.append(self.link_lengths, a71)
 
-        np.append(self.twist_angles, m.radians(90))
-        np.append(self.twist_angles, m.radians(alp71))
+        self.twist_angles = np.append(self.twist_angles, m.radians(90))
+        self.twist_angles = np.append(self.twist_angles, m.radians(alp71))
         twist_anglesd = np.degrees(self.twist_angles)
 
         # The next step will be to obtain theta1
@@ -518,6 +518,24 @@ class GE_P60(Robot_6link):
                                                          [7, theta7]])
         theta5BA = np.arccos(Z17B)
         theta5BB = - theta5BA
+
+        # The next angle to be obtained will be theta6 and eqns 11.67 and 11.68
+        # will be used for this purpose along with the 4 quadrant arctan
+        c_6AA = - X17A / m.sin(m.radians(theta5AA))
+        s_6AA = Y17A / m.sin(m.radians(theta5AA))
+        theta6AA = np.arctan2(s_6AA, c_6AA)
+
+        c_6AB = - X17A / m.sin(m.radians(theta5AB))
+        s_6AB = Y17A / m.sin(m.radians(theta5AB))
+        theta6AB = np.arctan2(s_6AB, c_6AB)
+
+        c_6BA = - X17B / m.sin(m.radians(theta5BA))
+        s_6BA = Y17B / m.sin(m.radians(theta5BA))
+        theta6BA = np.arctan2(s_6BA, c_6BA)
+
+        c_6BB = - X17B / m.sin(m.radians(theta5BB))
+        s_6BB = Y17B / m.sin(m.radians(theta5BB))
+        theta6BB = np.arctan2(s_6BB, c_6BB)
 
 
 # Other functions
