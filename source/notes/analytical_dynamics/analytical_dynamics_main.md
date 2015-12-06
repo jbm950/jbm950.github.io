@@ -733,6 +733,8 @@ width="300" height="300"/>
     - $\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_{i}} \right) -
       \frac{\partial T}{\partial q_{i}} = \underline{F} \cdot \frac{\partial
       \underline{r}}{\partial q_{i}}$
+    - Where $Q_{i} = \underline{F} \cdot \frac{\partial
+      \underline{r}}{\partial q_{i}}$
 <br></br>
 
 - Lagrange's Equation for a rigid body is given by the following expression
