@@ -167,9 +167,9 @@ def close_the_loop(S6_F, a67_F, Ptool_F, Ptool_6):
         Pt6 = Ptool_6.transpose()
         Pt6 = np.array(Pt6)
 
-        P6orig_F = (Ptool_F - np.dot(Pt6, x)[0] * a67_F - np.dot(Pt6, y)[0]
-                    * np.cross(S6_F.transpose(), a67_F.transpose()).transpose()
-                    - np.dot(Pt6, z)[0] * S6_F)
+        P6orig_F = (Ptool_F - np.dot(Pt6, x)[0] * a67_F - np.dot(Pt6, y)[0] *
+                    np.cross(S6_F.transpose(), a67_F.transpose()).transpose() -
+                    np.dot(Pt6, z)[0] * S6_F)
 
         return P6orig_F
 
@@ -295,8 +295,8 @@ def single_sub(alphas, subscript, theta, bar):
 
     # Find the X, Y and Z terms
     X = m.sin(alphas[alpha1]) * m.sin(theta)
-    Y = -(m.sin(alphas[alpha2]) * m.cos(alphas[alpha1]) + m.cos(alphas[alpha2])
-          * m.sin(alphas[alpha1]) * m.cos(theta))
+    Y = -(m.sin(alphas[alpha2]) * m.cos(alphas[alpha1]) +
+          m.cos(alphas[alpha2]) * m.sin(alphas[alpha1]) * m.cos(theta))
     Z = (m.cos(alphas[alpha2]) * m.cos(alphas[alpha1]) - m.sin(alphas[alpha2]) *
          m.sin(alphas[alpha1]) * m.cos(theta))
 
@@ -335,7 +335,7 @@ def multi_sub_S(alphas, thetas):
         [X_prev, Y_prev, Z_prev] = single_sub(alphas, thetas[0][0],
                                               thetas[0][1], bar)
     else:
-        [X_prev, Y_prev, Z_prev] = multi_sub_S(alphas, thetas)
+        [X_prev, Y_prev, Z_prev] = multi_sub_S(alphas, thetas[:])
 
     # Convert the remaining degree values to radians for calculation
     alphas = np.array(alphas)
@@ -344,8 +344,8 @@ def multi_sub_S(alphas, thetas):
     theta = np.radians(the[1])
 
     # Determine the actual alpha value to be used in calculations
-    if thetas[-1][0] == len(alphas) or (the[0] == len(alphas) and thetas[-1][0]
-                                        == 1):
+    if thetas[-1][0] == len(alphas) or (the[0] == len(alphas) and
+                                        thetas[-1][0] == 1):
         if thetas[-1][0] > the[0]:
             alpha = alphas[the[0] - 1]
         else:
@@ -519,6 +519,12 @@ class GE_P60(Robot_6link):
         theta5BA = np.arccos(Z17B)
         theta5BB = - theta5BA
 
+        # Convert theta5 to degrees
+        theta5AA = m.degrees(theta5AA)
+        theta5AB = m.degrees(theta5AB)
+        theta5BA = m.degrees(theta5BA)
+        theta5BB = m.degrees(theta5BB)
+
         # The next angle to be obtained will be theta6 and eqns 11.67 and 11.68
         # will be used for this purpose along with the 4 quadrant arctan
         c_6AA = - X17A / m.sin(m.radians(theta5AA))
@@ -536,6 +542,270 @@ class GE_P60(Robot_6link):
         c_6BB = - X17B / m.sin(m.radians(theta5BB))
         s_6BB = Y17B / m.sin(m.radians(theta5BB))
         theta6BB = np.arctan2(s_6BB, c_6BB)
+
+        # Convert theta6 to degrees
+        theta6AA = m.degrees(theta6AA)
+        theta6AB = m.degrees(theta6AB)
+        theta6BA = m.degrees(theta6BA)
+        theta6BB = m.degrees(theta6BB)
+
+        # Next angle to be found is theta3 and first the K1 and K2 values from
+        # eqns 11.76 and 11.77 will be determined and will be used in eqn 11.89
+        [X671AA, Y671AA, Z671AA] = multi_sub_S(twist_anglesd, [[6, theta6AA],
+                                                               [7, theta7],
+                                                               [1, theta1A]])
+        [X671AB, Y671AB, Z671AB] = multi_sub_S(twist_anglesd, [[6, theta6AB],
+                                                               [7, theta7],
+                                                               [1, theta1A]])
+        [X671BA, Y671BA, Z671BA] = multi_sub_S(twist_anglesd, [[6, theta6BA],
+                                                               [7, theta7],
+                                                               [1, theta1B]])
+        [X671BB, Y671BB, Z671BB] = multi_sub_S(twist_anglesd, [[6, theta6BB],
+                                                               [7, theta7],
+                                                               [1, theta1B]])
+        [X71A, Y71A, Z71A] = multi_sub_S(twist_anglesd, [[7, theta7],
+                                                         [1, theta1A]])
+        [X71B, Y71B, Z71B] = multi_sub_S(twist_anglesd, [[7, theta7],
+                                                         [1, theta1B]])
+        [X1A, Y1A, Z1A] = single_sub(twist_anglesd, 1, theta1A, 0)
+        [X1B, Y1B, Z1B] = single_sub(twist_anglesd, 1, theta1B, 0)
+
+        K1AA = (-self.joint_offsets[4] * X671AA - self.joint_offsets[5] * X71A -
+                self.joint_offsets[6] * X1A - self.link_lengths[6] *
+                m.cos(m.radians(theta1A)))
+        K1AB = (-self.joint_offsets[4] * X671AB - self.joint_offsets[5] * X71A -
+                self.joint_offsets[6] * X1A - self.link_lengths[6] *
+                m.cos(m.radians(theta1A)))
+        K1BA = (-self.joint_offsets[4] * X671BA - self.joint_offsets[5] * X71B -
+                self.joint_offsets[6] * X1B - self.link_lengths[6] *
+                m.cos(m.radians(theta1B)))
+        K1BB = (-self.joint_offsets[4] * X671BB - self.joint_offsets[5] * X71B -
+                self.joint_offsets[6] * X1B - self.link_lengths[6] *
+                m.cos(m.radians(theta1B)))
+
+        K2AA = (-self.joint_offsets[0] - self.joint_offsets[4] * Y671AA -
+                self.joint_offsets[5] * Y71A - self.joint_offsets[6] * Y1A)
+        K2AB = (-self.joint_offsets[0] - self.joint_offsets[4] * Y671AB -
+                self.joint_offsets[5] * Y71A - self.joint_offsets[6] * Y1A)
+        K2BA = (-self.joint_offsets[0] - self.joint_offsets[4] * Y671BA -
+                self.joint_offsets[5] * Y71B - self.joint_offsets[6] * Y1B)
+        K2BB = (-self.joint_offsets[0] - self.joint_offsets[4] * Y671BB -
+                self.joint_offsets[5] * Y71B - self.joint_offsets[6] * Y1B)
+
+        theta3AAA = np.arccos((K1AA**2 + K2AA**2 - self.link_lengths[1]**2 -
+                               self.link_lengths[2]**2) /
+                              (2 * self.link_lengths[1] * self.link_lengths[2]))
+        theta3AAB = - theta3AAA
+
+        theta3ABA = np.arccos((K1AB**2 + K2AB**2 - self.link_lengths[1]**2 -
+                               self.link_lengths[2]**2) /
+                              (2 * self.link_lengths[1] * self.link_lengths[2]))
+        theta3ABB = - theta3ABA
+
+        theta3BAA = np.arccos((K1BA**2 + K2BA**2 - self.link_lengths[1]**2 -
+                               self.link_lengths[2]**2) /
+                              (2 * self.link_lengths[1] * self.link_lengths[2]))
+        theta3BAB = - theta3BAA
+
+        theta3BBA = np.arccos((K1BB**2 + K2BB**2 - self.link_lengths[1]**2 -
+                               self.link_lengths[2]**2) /
+                              (2 * self.link_lengths[1] * self.link_lengths[2]))
+        theta3BBB = - theta3BBA
+
+        # Convert theta3 to degrees
+        theta3AAA = m.degrees(theta3AAA)
+        theta3AAB = m.degrees(theta3AAB)
+        theta3ABA = m.degrees(theta3ABA)
+        theta3ABB = m.degrees(theta3ABB)
+        theta3BAA = m.degrees(theta3BAA)
+        theta3BAB = m.degrees(theta3BAB)
+        theta3BBA = m.degrees(theta3BBA)
+        theta3BBB = m.degrees(theta3BBB)
+
+        # The second to last angle to find will be theta2. The system of
+        # equations Ax = b will be used using eqns 11.90 and 11.91
+        A_AAA = np.matrix([[self.link_lengths[1] + self.link_lengths[2] *
+                            m.cos(m.radians(theta3AAA)), -self.link_lengths[2] *
+                            m.sin(m.radians(theta3AAA))],
+                           [-self.link_lengths[2] * m.sin(m.radians(theta3AAA)),
+                            -self.link_lengths[1] - self.link_lengths[2] *
+                            m.cos(m.radians(theta3AAA))]])
+        A_AAB = np.matrix([[self.link_lengths[1] + self.link_lengths[2] *
+                            m.cos(m.radians(theta3AAB)), -self.link_lengths[2] *
+                            m.sin(m.radians(theta3AAB))],
+                           [-self.link_lengths[2] * m.sin(m.radians(theta3AAB)),
+                            -self.link_lengths[1] - self.link_lengths[2] *
+                            m.cos(m.radians(theta3AAB))]])
+        b_AA = np.matrix([[K1AA], [K2AA]])
+
+        A_ABA = np.matrix([[self.link_lengths[1] + self.link_lengths[2] *
+                            m.cos(m.radians(theta3ABA)), -self.link_lengths[2] *
+                            m.sin(m.radians(theta3ABA))],
+                           [-self.link_lengths[2] * m.sin(m.radians(theta3ABA)),
+                            -self.link_lengths[1] - self.link_lengths[2] *
+                            m.cos(m.radians(theta3ABA))]])
+        A_ABB = np.matrix([[self.link_lengths[1] + self.link_lengths[2] *
+                            m.cos(m.radians(theta3ABB)), -self.link_lengths[2] *
+                            m.sin(m.radians(theta3ABB))],
+                           [-self.link_lengths[2] * m.sin(m.radians(theta3ABB)),
+                            -self.link_lengths[1] - self.link_lengths[2] *
+                            m.cos(m.radians(theta3ABB))]])
+        b_AB = np.matrix([[K1AB], [K2AB]])
+
+        A_BAA = np.matrix([[self.link_lengths[1] + self.link_lengths[2] *
+                            m.cos(m.radians(theta3BAA)), -self.link_lengths[2] *
+                            m.sin(m.radians(theta3BAA))],
+                           [-self.link_lengths[2] * m.sin(m.radians(theta3BAA)),
+                            -self.link_lengths[1] - self.link_lengths[2] *
+                            m.cos(m.radians(theta3BAA))]])
+        A_BAB = np.matrix([[self.link_lengths[1] + self.link_lengths[2] *
+                            m.cos(m.radians(theta3BAB)), -self.link_lengths[2] *
+                            m.sin(m.radians(theta3BAB))],
+                           [-self.link_lengths[2] * m.sin(m.radians(theta3BAB)),
+                            -self.link_lengths[1] - self.link_lengths[2] *
+                            m.cos(m.radians(theta3BAB))]])
+        b_BA = np.matrix([[K1BA], [K2BA]])
+
+        A_BBA = np.matrix([[self.link_lengths[1] + self.link_lengths[2] *
+                            m.cos(m.radians(theta3BBA)), -self.link_lengths[2] *
+                            m.sin(m.radians(theta3BBA))],
+                           [-self.link_lengths[2] * m.sin(m.radians(theta3BBA)),
+                            -self.link_lengths[1] - self.link_lengths[2] *
+                            m.cos(m.radians(theta3BBA))]])
+        A_BBB = np.matrix([[self.link_lengths[1] + self.link_lengths[2] *
+                            m.cos(m.radians(theta3BBB)), -self.link_lengths[2] *
+                            m.sin(m.radians(theta3BBB))],
+                           [-self.link_lengths[2] * m.sin(m.radians(theta3BBB)),
+                            -self.link_lengths[1] - self.link_lengths[2] *
+                            m.cos(m.radians(theta3BBB))]])
+        b_BB = np.matrix([[K1BB], [K2BB]])
+
+        [c2_AAA, s2_AAA] = np.linalg.solve(A_AAA, b_AA)
+        theta2AAA = m.degrees(np.arctan2(s2_AAA, c2_AAA))
+
+        [c2_AAB, s2_AAB] = np.linalg.solve(A_AAB, b_AA)
+        theta2AAB = m.degrees(np.arctan2(s2_AAB, c2_AAB))
+
+        [c2_ABA, s2_ABA] = np.linalg.solve(A_ABA, b_AB)
+        theta2ABA = m.degrees(np.arctan2(s2_ABA, c2_ABA))
+
+        [c2_ABB, s2_ABB] = np.linalg.solve(A_ABB, b_AB)
+        theta2ABB = m.degrees(np.arctan2(s2_ABB, c2_ABB))
+
+        [c2_BAA, s2_BAA] = np.linalg.solve(A_BAA, b_BA)
+        theta2BAA = m.degrees(np.arctan2(s2_BAA, c2_BAA))
+
+        [c2_BAB, s2_BAB] = np.linalg.solve(A_BAB, b_BA)
+        theta2BAB = m.degrees(np.arctan2(s2_BAB, c2_BAB))
+
+        [c2_BBA, s2_BBA] = np.linalg.solve(A_BBA, b_BB)
+        theta2BBA = m.degrees(np.arctan2(s2_BBA, c2_BBA))
+
+        [c2_BBB, s2_BBB] = np.linalg.solve(A_BBB, b_BB)
+        theta2BBB = m.degrees(np.arctan2(s2_BBB, c2_BBB))
+
+        # The final angle to find will be theta4 and eqns 11.94 and 11.95 will
+        # be used for this purpose
+        [X67123AAA, Y67123AAA, Z67123AAA] = multi_sub_S(twist_anglesd,
+                                                        [[6, theta6AA],
+                                                         [7, theta7],
+                                                         [1, theta1A],
+                                                         [2, theta2AAA],
+                                                         [3, theta3AAA]])
+        s4_AAA = - X67123AAA
+        c4_AAA = - Y67123AAA
+        theta4AAA = m.degrees(np.arctan2(s4_AAA, c4_AAA))
+
+        [X67123AAB, Y67123AAB, Z67123AAB] = multi_sub_S(twist_anglesd,
+                                                        [[6, theta6AA],
+                                                         [7, theta7],
+                                                         [1, theta1A],
+                                                         [2, theta2AAB],
+                                                         [3, theta3AAB]])
+        s4_AAB = - X67123AAB
+        c4_AAB = - Y67123AAB
+        theta4AAB = m.degrees(np.arctan2(s4_AAB, c4_AAB))
+
+        [X67123ABA, Y67123ABA, Z67123ABA] = multi_sub_S(twist_anglesd,
+                                                        [[6, theta6AB],
+                                                         [7, theta7],
+                                                         [1, theta1A],
+                                                         [2, theta2ABA],
+                                                         [3, theta3ABA]])
+        s4_ABA = - X67123ABA
+        c4_ABA = - Y67123ABA
+        theta4ABA = m.degrees(np.arctan2(s4_ABA, c4_ABA))
+
+        [X67123ABB, Y67123ABB, Z67123ABB] = multi_sub_S(twist_anglesd,
+                                                        [[6, theta6AB],
+                                                         [7, theta7],
+                                                         [1, theta1A],
+                                                         [2, theta2ABB],
+                                                         [3, theta3ABB]])
+        s4_ABB = - X67123ABB
+        c4_ABB = - Y67123ABB
+        theta4ABB = m.degrees(np.arctan2(s4_ABB, c4_ABB))
+
+        [X67123BAA, Y67123BAA, Z67123BAA] = multi_sub_S(twist_anglesd,
+                                                        [[6, theta6BA],
+                                                         [7, theta7],
+                                                         [1, theta1B],
+                                                         [2, theta2BAA],
+                                                         [3, theta3BAA]])
+        s4_BAA = - X67123BAA
+        c4_BAA = - Y67123BAA
+        theta4BAA = m.degrees(np.arctan2(s4_BAA, c4_BAA))
+
+        [X67123BAB, Y67123BAB, Z67123BAB] = multi_sub_S(twist_anglesd,
+                                                        [[6, theta6BA],
+                                                         [7, theta7],
+                                                         [1, theta1B],
+                                                         [2, theta2BAB],
+                                                         [3, theta3BAB]])
+        s4_BAB = - X67123BAB
+        c4_BAB = - Y67123BAB
+        theta4BAB = m.degrees(np.arctan2(s4_BAB, c4_BAB))
+
+        [X67123BBA, Y67123BBA, Z67123BBA] = multi_sub_S(twist_anglesd,
+                                                        [[6, theta6BB],
+                                                         [7, theta7],
+                                                         [1, theta1B],
+                                                         [2, theta2BBA],
+                                                         [3, theta3BBA]])
+        s4_BBA = - X67123BBA
+        c4_BBA = - Y67123BBA
+        theta4BBA = m.degrees(np.arctan2(s4_BBA, c4_BBA))
+
+        [X67123BBB, Y67123BBB, Z67123BBB] = multi_sub_S(twist_anglesd,
+                                                        [[6, theta6BB],
+                                                         [7, theta7],
+                                                         [1, theta1B],
+                                                         [2, theta2BBB],
+                                                         [3, theta3BBB]])
+        s4_BBB = - X67123BBB
+        c4_BBB = - Y67123BBB
+        theta4BBB = m.degrees(np.arctan2(s4_BBB, c4_BBB))
+
+        # Find phi1 values before returning all the solved for values
+        phi1A = theta1A - gamma1
+        phi1B = 360 + theta1B - gamma1
+
+        # Form a solutions matrix of the different theta values
+        phi1s = [phi1A, phi1A, phi1A, phi1A, phi1B, phi1B, phi1B, phi1B]
+        theta2s = [theta2AAA, theta2AAB, theta2ABA, theta2ABB,
+                   theta2BAA, theta2BAB, theta2BBA, theta2BBB]
+        theta3s = [theta3AAA, theta3AAB, theta3ABA, theta3ABB,
+                   theta3BAA, theta3BAB, theta3BBA, theta3BBB]
+        theta4s = [theta4AAA, theta4AAB, theta4ABA, theta4ABB,
+                   theta4BAA, theta4BAB, theta4BBA, theta4BBB]
+        theta5s = [theta5AA, theta5AA, theta5AB, theta5AB,
+                   theta5BA, theta5BA, theta5BB, theta5BB]
+        theta6s = [theta6AA, theta6AA, theta6AB, theta6AB,
+                   theta6BA, theta6BA, theta6BB, theta6BB]
+        sol = np.array((phi1s, theta2s, theta3s, theta4s, theta5s, theta6s))
+        sol = sol.transpose()
+
+        return sol
 
 
 # Other functions
