@@ -476,12 +476,15 @@ class GE_P60(Robot_6link):
         # determined during reverse analysis while performing the close the loop
         # step. The value for S6 is decided to be 15.24 cm
 
-        joint_offsets = [0, 0, 0, 9.8, 14.5, 15.24, 0]
+        joint_offsets = [0, 0, 0, 9.8, 14.5, 0, 0]
         self.joint_offsets = np.array(joint_offsets)
 
-    def reverse_analysis(self, Ptool_6, Ptool_F, S6_F, a67_F):
+    def reverse_analysis(self, Ptool_6, Ptool_F, S6_F, a67_F, S6):
         """This function will perform the reverse analysis for this mechanism
         and provide the joint angles for each joint of the robot"""
+
+        # Input the S6 value into the joint offsets array
+        self.joint_offsets[5] = S6
 
         # First determine the close the loop values
         [S7, a71, S1, theta7, alp71, gamma1] = close_the_loop(S6_F, a67_F,
