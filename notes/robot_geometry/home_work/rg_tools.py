@@ -811,6 +811,112 @@ class GE_P60(Robot_6link):
         return sol
 
 
+# Quaternions
+
+class Quaternion:
+    def __init__(self, vector):
+        """This class will handle quaternion functionalities.
+        Inputs:
+            vector - the 4 numbers that make up a quaternion
+                [1, 1, 1, 1]"""
+
+        self.numbers = np.array(vector)
+
+    def compose(m_vec, theta):
+        """This function will compose the unit quaternion given a vector, m, and
+        the rotation around the vector, theta
+        Inputs:
+            m - This is a vector about a rotation is to take place
+                [sx, sy, sz]
+            theta - This is the rotation given in degrees"""
+
+        # First convert theta to radians
+        theta = m.radians(theta) / 2
+
+        # Normalize the m vector if it isnt already a unit vector
+        denominator = m.sqrt(m_vec[0]**2 + m_vec[1]**2 + m_vec[2]**2)
+        m_vec = np.array(m_vec)/denominator
+
+        # Now find the elements of the quaternion
+        one = m.cos(theta)
+        coef = m.sin(theta)
+
+        i = m_vec[0] * coef
+        j = m_vec[1] * coef
+        k = m_vec[2] * coef
+
+        return Quaternion([one, i, j, k])
+
+    def decompose(self):
+        """This function will return the vector and angle that the quaternion
+        represents. The vector will be unitized"""
+
+        self.numbers = self.numbers / m.sqrt(self.norm())
+
+        theta = np.arccos(self.numbers[0])
+        coef = m.sin(theta)
+
+        m_x = self.numbers[1] / coef
+        m_y = self.numbers[2] / coef
+        m_z = self.numbers[3] / coef
+
+        theta = 2 * m.degrees(theta)
+        m_vec = [m_x, m_y, m_z]
+
+        return m_vec, theta
+
+    def inv(self):
+        """This function will return the inverse of a quaternion"""
+        conjugate = [self.numbers[0]] + list(self.numbers[1:4] * -1)
+        selfnorm = self.norm()
+        return Quaternion(conjugate/selfnorm)
+
+    def norm(self):
+        """This will return the norm of the quaternion"""
+        result = (self.numbers[0]**2 + self.numbers[1]**2 + self.numbers[2]**2
+                  + self.numbers[3]**2)
+        return result
+
+    # Operator overloaded functions
+    def __getitem__(self, index):
+        return self.numbers[index]
+
+    def __add__(self, item):
+        temp_quat = Quaternion(self.numbers+item.numbers)
+        return temp_quat
+
+    def __sub__(self, item):
+        temp_quat = Quaternion(self.numbers-item.numbers)
+        return temp_quat
+
+    def __mul__(self, item):
+        # Quaternion specific multiplication
+        if type(item) == Quaternion:
+            d1 = self.numbers[0]
+            a1 = self.numbers[1]
+            b1 = self.numbers[2]
+            c1 = self.numbers[3]
+
+            d2 = item[0]
+            a2 = item[1]
+            b2 = item[2]
+            c2 = item[3]
+
+            one = d1*d2 - a1*a2 - b1*b2 - c1*c2
+            i = d1*a2 + d2*a1 + b1*c2 - b2*c1
+            j = d1*b2 + d2*b1 - a1*c2 + a2*c1
+            k = d1*c2 + d2*c1 + a1*b2 - a2*b1
+
+            temp_quat = Quaternion([one, i, j, k])
+
+        # Scalar multiplication
+        else:
+            temp_quat = Quaternion(item * self.numbers)
+        return temp_quat
+
+    __rmul__ = __mul__
+
+
 # Other functions
 
 def is_near(value, goal, tolerance):
