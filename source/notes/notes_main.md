@@ -8,7 +8,7 @@
 
 ### College Courses Notes
 
-> ####Undergrad courses (Engineering Related)
+> #### Undergrad courses (Engineering Related)
 >> The following list is a somewhat complete listing of courses, however,
 >> there are no guarantees that all of the notes for these courses are going
 >> to be transcribed into a format for online.
@@ -33,11 +33,21 @@
 > - Strength of Materials
 > - Thermodynamics
 
-> ####Grad courses
+> #### Grad courses
 
 > - [Analytical Dynamics](/notes/analytical_dynamics/analytical_dynamics_main.html)
 > - [Optimal Control Discussion](/notes/optimal_control_discussion/optimal_control_dis_main.html)
 > - [Robot Geometry](/notes/robot_geometry/robot_geometry_main.html)
+
+> #### Online Open-Courses
+
+### Books
+
+> #### Engineering
+
+> - [Numerical Methods in Engineering With Python
+     3](numerical_methods_engineering_py3/num_methods_py3_main.html)
+     (Jaan Kiusalaas)
 
 ### Research
 
