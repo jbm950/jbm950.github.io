@@ -53,7 +53,66 @@ width="400" height="400"/>
 <p><strong>Uniqueness of Solution</strong></p>
 </blockquote>
 <blockquote>
+<ul>
+<li>A unique solution will result if the determinant of the A matrix is non-singular (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20A%20%5C%7C%20%5Cneq%200" alt="\| A \| \neq 0" title="\| A \| \neq 0" />)
+<ul>
+<li>Means that the rows and columns are linearly independent</li>
+<li>Example
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%20y%20%3D%203" alt="2x + y = 3" title="2x + y = 3" />   (1)</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=4x%20%2B%202y%20%3D%206" alt="4x + 2y = 6" title="4x + 2y = 6" />   (2)</li>
+<li>eqn (1) * 2 = eqn (2) therefore the equations are not linearly independent</li>
+<li>(example taken from book)</li>
+</ul></li>
+</ul></li>
+<li>A singular coefficient matrix results in infinite solutions or no solution</li>
+</ul>
+</blockquote>
+<blockquote>
 <p><strong>Ill Conditioning</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Ill conditioning occurs when the coefficient matrix is almost singular (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20A%20%5C%7C" alt="\| A \|" title="\| A \|" /> is very small)</li>
+<li>When the coefficient matrix is ill conditioned small changes in the coefficients result in large changes in the solutions
+<ul>
+<li>This means that round off errors that coincide with numerical computation can have very large effects on the solution</li>
+<li>Example
+<ul>
+<li>Case 1</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%20y%20%3D%203" alt="2x + y = 3" title="2x + y = 3" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%201.001y%20%3D%200" alt="2x + 1.001y = 0" title="2x + 1.001y = 0" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%20%3D%201501.5" alt="x = 1501.5" title="x = 1501.5" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y%20%3D%20-3000" alt="y = -3000" title="y = -3000" /></li>
+</ul></li>
+<li>Case 2</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%20y%20%3D%203" alt="2x + y = 3" title="2x + y = 3" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%201.002y%20%3D%200" alt="2x + 1.002y = 0" title="2x + 1.002y = 0" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%20%3D%20751.5" alt="x = 751.5" title="x = 751.5" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y%20%3D%20-1500" alt="y = -1500" title="y = -1500" /></li>
+</ul></li>
+<li>A small change in the y coefficient in the second equation resulted in a large change in the solution</li>
+<li>(example taken from book)</li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Euclidan Norm</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Infinity Norm/Row-Sum Norm</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Matrix Condition Number</strong></p>
+</blockquote>
 </blockquote>
 </body>
 </html>
