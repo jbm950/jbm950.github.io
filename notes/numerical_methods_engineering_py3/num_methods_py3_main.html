@@ -79,24 +79,37 @@ width="400" height="400"/>
 <li>This means that round off errors that coincide with numerical computation can have very large effects on the solution</li>
 <li>Example
 <ul>
-<li>Case 1</li>
+<li>Case 1
+<ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%20y%20%3D%203" alt="2x + y = 3" title="2x + y = 3" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%201.001y%20%3D%200" alt="2x + 1.001y = 0" title="2x + 1.001y = 0" />
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%20%3D%201501.5" alt="x = 1501.5" title="x = 1501.5" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y%20%3D%20-3000" alt="y = -3000" title="y = -3000" /></li>
 </ul></li>
-<li>Case 2</li>
+</ul></li>
+<li>Case 2
+<ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%20y%20%3D%203" alt="2x + y = 3" title="2x + y = 3" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=2x%20%2B%201.002y%20%3D%200" alt="2x + 1.002y = 0" title="2x + 1.002y = 0" />
 <ul>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x%20%3D%20751.5" alt="x = 751.5" title="x = 751.5" /></li>
 <li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=y%20%3D%20-1500" alt="y = -1500" title="y = -1500" /></li>
 </ul></li>
+</ul></li>
 <li>A small change in the y coefficient in the second equation resulted in a large change in the solution</li>
 <li>(example taken from book)</li>
 </ul></li>
 </ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>The comparison for &quot;smallness&quot; of the determinant of the coefficient matrix will be the matrix norm (<img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%7C%7CA%7C%7C" alt="||A||" title="||A||" />)
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20A%20%5C%7C%20%5C%2C%20%3C%3C%20%5C%2C%20%7C%7C%20A%20%7C%7C" alt="\| A \| \, &lt;&lt; \, || A ||" title="\| A \| \, &lt;&lt; \, || A ||" /> means that the determinant of A is small</li>
+</ul></li>
+<li>There are different matrix norms that can be used for this purpose</li>
 </ul>
 </blockquote>
 <blockquote>
@@ -106,12 +119,44 @@ width="400" height="400"/>
 </blockquote>
 <blockquote>
 <blockquote>
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%7C%7C%20A%20%7C%7C_%7Be%7D%20%3D%20%5Csqrt%7B%5Csum%5E%7Bn%7D_%7Bi%3D1%7D%20%5Csum%5E%7Bn%7D_%7Bj%3D1%7D%20%28A_%7Bij%7D%29%5E%7B2%7D%7D" alt="|| A ||_{e} = \sqrt{\sum^{n}_{i=1} \sum^{n}_{j=1} (A_{ij})^{2}}" title="|| A ||_{e} = \sqrt{\sum^{n}_{i=1} \sum^{n}_{j=1} (A_{ij})^{2}}" /></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
 <p><strong>Infinity Norm/Row-Sum Norm</strong></p>
 </blockquote>
 </blockquote>
 <blockquote>
 <blockquote>
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%7C%7C%20A%20%7C%7C_%7B%5Cinfty%7D%20%3D%20max_%7B1%20%5Cleq%20i%20%5Cleq%20n%7D%20%5Csum%5E%7Bn%7D_%7Bj%3D1%7D%20%5C%7C%20A_%7Bij%7D%20%5C%7C" alt="|| A ||_{\infty} = max_{1 \leq i \leq n} \sum^{n}_{j=1} \| A_{ij} \|" title="|| A ||_{\infty} = max_{1 \leq i \leq n} \sum^{n}_{j=1} \| A_{ij} \|" /></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
 <p><strong>Matrix Condition Number</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>The matrix condition number is a formal measuring of the condition of a matrix and can be found as follows
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=cond%28A%29%20%3D%20%7C%7C%20A%20%7C%7C%20%5C%2C%20%7C%7C%20A%5E%7B-1%7D%20%7C%7C" alt="cond(A) = || A || \, || A^{-1} ||" title="cond(A) = || A || \, || A^{-1} ||" /></li>
+</ul></li>
+<li>A matrix condition number around one means that the matrix is well conditioned, condition number is <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cinfty" alt="\infty" title="\infty" /> for a singular matrix, and in general a larger condition number means the matrix is less well conditioned
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=cond%28A%29%20%3D%201" alt="cond(A) = 1" title="cond(A) = 1" /> (Well conditioned)</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=cond%28A%29%20%3D%20%5Cinfty" alt="cond(A) = \infty" title="cond(A) = \infty" /> (Singular Matrix)</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=cond%28A%29%20%5Cuparrow" alt="cond(A) \uparrow" title="cond(A) \uparrow" /> (Matrix is less well conditioned)</li>
+</ul></li>
+<li>The matrix condition number is not a unique value but rather depends on which matrix norm is used</li>
+<li>The matrix condition number can be computationally expensive to calculate for large matrices and so the magnitude of the determinant is compared to the magnitude of the elements of the coefficient matrix and similar magnitude signifies a well conditioned matrix</li>
+</ul>
 </blockquote>
 </blockquote>
 </body>

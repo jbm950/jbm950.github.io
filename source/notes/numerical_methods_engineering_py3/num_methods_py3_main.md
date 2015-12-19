@@ -55,21 +55,47 @@ width="400" height="400"/>
           computation can have very large effects on the solution
 >       - Example
 >           - Case 1
->           - $2x + y = 3$
->           - $2x + 1.001y = 0$
->                - $x = 1501.5$
->                - $y = -3000$
+>              - $2x + y = 3$
+>              - $2x + 1.001y = 0$
+>                   - $x = 1501.5$
+>                   - $y = -3000$
 >           - Case 2
->           - $2x + y = 3$
->           - $2x + 1.002y = 0$
->                - $x = 751.5$
->                - $y = -1500$
+>              - $2x + y = 3$
+>              - $2x + 1.002y = 0$
+>                   - $x = 751.5$
+>                   - $y = -1500$
 >           - A small change in the y coefficient in the second equation
               resulted in a large change in the solution 
 >           - (example taken from book)
 
+> - The comparison for "smallness" of the determinant of the coefficient matrix
+    will be the matrix norm ($||A||$)
+>       - $\| A \| \, << \, || A ||$ means that the determinant of A is small
+> - There are different matrix norms that can be used for this purpose
+
 >> __Euclidan Norm__
+
+>> - $|| A ||_{e} = \sqrt{\sum^{n}_{i=1} \sum^{n}_{j=1} (A_{ij})^{2}}$
 
 >> __Infinity Norm/Row-Sum Norm__
 
+>> - $|| A ||_{\infty} = max_{1 \leq i \leq n} \sum^{n}_{j=1} \| A_{ij} \|$
+
 >> __Matrix Condition Number__
+
+>> - The matrix condition number is a formal measuring of the condition of a
+     matrix and can be found as follows
+>>      - $cond(A) = || A || \, || A^{-1} ||$
+>> - A matrix condition number around one means that the matrix is well
+     conditioned, condition number is $\infty$ for a singular matrix, and in
+     general a larger condition number means the matrix is less well
+     conditioned
+>>      - $cond(A) = 1$ (Well conditioned)
+>>      - $cond(A) = \infty$ (Singular Matrix)
+>>      - $cond(A) \uparrow$ (Matrix is less well conditioned)
+>> - The matrix condition number is not a unique value but rather depends on
+     which matrix norm is used
+>> - The matrix condition number can be computationally expensive to calculate
+     for large matrices and so the magnitude of the determinant is compared to
+     the magnitude of the elements of the coefficient matrix and similar
+     magnitude signifies a well conditioned matrix
