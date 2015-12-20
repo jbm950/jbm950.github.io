@@ -34,6 +34,13 @@ def bell_curve_one(inp):
     return coef * m.exp(exponent)
 
 
+# +----------------------------------------------------------------------------+
+# Newton-Cotes Fomula                                                          |
+# +----------------------------------------------------------------------------+
+
+# Simpsons Formula
+# ----------------
+
 # This function will use simpsons rule to integrate a function
 def simpsons(func, a, b, subintervals, args):
     """This function will implement simpsons rule for determining an integral.
@@ -56,7 +63,8 @@ def simpsons(func, a, b, subintervals, args):
     return total
 
 
-# This function will use simpsons rule to integrate a function
+# This function will use simpsons rule to integrate a function to a specified
+# error tolerance using multiprocessing for the subintervals
 def simpsons_err(func, a, b, err, args):
     """This function will implement simpsons rule for determining an integral.
     The args input are the extra inputs that will be needed to run the generic
@@ -66,6 +74,20 @@ def simpsons_err(func, a, b, err, args):
     subintervals = 2
     x = np.linspace(a, b, subintervals)
 
+    # Function to calculate the value for a subinterval
+    def subinter(rans, total, x, func):
+        """ran - [a, b] range of the sub interval"""
+        h = (rans[0][1] - rans[0][0])/2
+        args = [0, 1]
+        subtotal = 0
+        for i in rans:
+            f0 = func(i[0], *args)
+            f1 = func(i[0] + h, *args)
+            f2 = func(i[1], *args)
+            subtotal += h/3*(f0 + 4*f1 + f2)
+
+        total[x] = subtotal
+
     # For each subinterval find the approximate integrated value and add it to a
     # total sum
     prev_total = 0
@@ -73,6 +95,7 @@ def simpsons_err(func, a, b, err, args):
     ranges = [[x[i], x[i+1]] for i in range(len(x) - 1)]
     subinter([ranges[0]], total, 0, func)
     total = sum(total)
+    cores = mp.cpu_count()
 
     while m.fabs(prev_total - total) > err:
         prev_total = total
@@ -81,21 +104,21 @@ def simpsons_err(func, a, b, err, args):
 
         ranges = [[x[i], x[i+1]] for i in range(len(x) - 1)]
         workers = []
-        if len(ranges) > 4:
-            total = mp.Array('f', range(4))
-            dist = m.floor(len(ranges)/4)
-            for i in range(4):
-                if i == 3:
+        if len(ranges) > cores:
+            total = mp.Array('f', range(cores))
+            dist = m.floor(len(ranges)/cores)
+            for i in range(cores):
+                if i == cores - 1:
                     workers += [mp.Process(target=subinter,
-                                           args=(ranges[dist*i-1:len(ranges)], total, i,
-                                                 func))]
+                                           args=(ranges[dist*i:len(ranges)],
+                                                 total, i, func))]
                 elif i == 0:
                     workers += [mp.Process(target=subinter,
-                                           args=(ranges[dist*i:dist*i+dist-1],
+                                           args=(ranges[dist*i:dist*i+dist],
                                                  total, i, func))]
                 else:
                     workers += [mp.Process(target=subinter,
-                                           args=(ranges[dist*i-1:dist*i+dist-1],
+                                           args=(ranges[dist*i:dist*i+dist],
                                                  total, i, func))]
         else:
             total = mp.Array('f', range(len(ranges)))
@@ -117,7 +140,8 @@ def simpsons_err(func, a, b, err, args):
     return total
 
 
-# This function will use simpsons rule to integrate a function
+# This function will use simpsons rule to integrate a function to a specified
+# error tolerance
 def simpsons_err2(func, a, b, err, args):
     """This function will implement simpsons rule for determining an integral.
     The args input are the extra inputs that will be needed to run the generic
@@ -157,23 +181,12 @@ def simpsons_err2(func, a, b, err, args):
     return total
 
 
-# Function to calculate the value for a subinterval
-def subinter(rans, total, x, func):
-    """ran - [a, b] range of the sub interval"""
-    try:
-        h = (rans[0][1] - rans[0][0])/2
-    except IndexError:
-        pass
-    args = [0, 1]
-    subtotal = 0
-    for i in rans:
-        f0 = func(i[0], *args)
-        f1 = func(i[0] + h, *args)
-        f2 = func(i[1], *args)
-        subtotal += h/3*(f0 + 4*f1 + f2)
+# +----------------------------------------------------------------------------+
+# Gauss Quadrature                                                             |
+# +----------------------------------------------------------------------------+
 
-    total[x] = subtotal
-
+# Three Point Gauss Quadrature
+# ----------------------------
 
 # This function will perform 3 point gaussian quadrature for a user specified
 # number of subintervals
@@ -253,7 +266,12 @@ def three_gauss_err(func, a, b, err, args):
     return total
 
 
-# Testing function
+# +----------------------------------------------------------------------------+
+# Testing Functions                                                            |
+# +----------------------------------------------------------------------------+
+
+# Testing function for ranges (-1, 1), (-2, 2), (-3, 3) of the bell curve for
+# the functions with user specified subintervals
 def tester1(method):
     """This function will test a given integration method with the bell curve
     function for 3 ranges and multiple intervals
@@ -304,12 +322,15 @@ if __name__ == "__main__":
 
     # timer.timer(three_gauss, [bell_curve, -1, 1, 100, [0, 1]], 500)
     # timer.timer(simpsons, [bell_curve, -1, 1, 500, [0, 1]], 500)
+    print(three_gauss_err(bell_curve, -1, 1, 1E-10, [0, 1]))
+    print(simpsons_err(bell_curve, -3, 3, 1E-10, [0, 1]))
+    print(simpsons_err2(bell_curve, -3, 3, 1E-10, [0, 1]))
 
     print("\n3-pt Gaussian Quadrature\n")
-    timer.timer(three_gauss_err, [bell_curve, -1, 1, 1E-25, [0, 1]], 50)
+    timer.timer(three_gauss_err, [bell_curve, -1, 1, 1E-9, [0, 1]], 50)
 
     print("\nSimpson's rule\n")
     print("\tParallel Processing\n\t\t", end="")
-    timer.timer(simpsons_err, [bell_curve, -1, 1, 1E-25, [0, 1]], 50)
+    timer.timer(simpsons_err, [bell_curve, -1, 1, 1E-9, [0, 1]], 50)
     print("\tOriginal\n\t\t", end="")
-    timer.timer(simpsons_err2, [bell_curve, -1, 1, 1E-25, [0, 1]], 50)
+    timer.timer(simpsons_err2, [bell_curve, -1, 1, 1E-9, [0, 1]], 50)
