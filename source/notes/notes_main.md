@@ -41,6 +41,8 @@
 
 > #### Online Open-Courses
 
+> - [Optimization](/notes/optimization_online/optimization_main.html)
+
 ### Books
 
 > #### Engineering
