@@ -164,7 +164,8 @@ width="400" height="400"/>
 
 >> __Back Substitution__
 
->> - In back substitution the solution process begins with the last row of the matrices
+>> - In back substitution the solution process begins with the last row of the
+     matrices
 >> - Example
 >>      - $\left[ \begin{array} U_{11} & U_{12} \\ 0 & U_{22} \end{array}
           \right]$ $\left[ x_{1} \\ x_{2} \right]$ $= \left[ c_{1} \\ c_{2}
@@ -173,3 +174,11 @@ width="400" height="400"/>
 >>      - $x_{1} = (c_{1} - U_{12} x_{2}) / U_{11}$
 
 ### 2.2 Gauss Elimination Method {#gauss_elim}
+
+> __Elimination Phase__
+
+> __Back Substitution Phase__
+
+> __Operation Count__
+
+> __Multiple Sets of Equations__
