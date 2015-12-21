@@ -13,8 +13,8 @@ title: Num Methods Py3
   <style type="text/css">code{white-space: pre;}</style>
 </head>
 <body>
-<p><strong>Numerical Methods in Engineering With Python 3</strong><br />
-<strong>Written by Jaan Kiusalaas</strong><br />
+<p><strong>Numerical Methods in Engineering With Python 3</strong></p>
+<p><strong>Written by Jaan Kiusalaas</strong><br />
 <strong>Book Published: 2013</strong><br />
 <a href="http://www.amazon.com/Numerical-Methods-Engineering-Python-3/dp/1107033853"
 target="_blank">Physical Book (Amazon Link)</a></p>
@@ -23,7 +23,11 @@ target="_blank">Physical Book (Amazon Link)</a></p>
 <li><a href="#systems_linear_eqns">2. Systems of Linear Algebraic Equations</a></li>
 </ul>
 <h2 id="systems_linear_eqns">2. Systems of Linear Algebraic Equations</h2>
-<h3 id="introduction">2.1 Introduction</h3>
+<ul>
+<li><a href="#intro2">2.1 Introduction</a></li>
+<li><a href="#gauss_elim">2.2 Gauss Elimination Method</a></li>
+</ul>
+<h3 id="intro2">2.1 Introduction</h3>
 <ul>
 <li>This section deals with solving equations of the form <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cmathbf%7BA%7D%5Cunderline%7Bx%7D%20%3D%20%5Cunderline%7Bb%7D" alt="\mathbf{A}\underline{x} = \underline{b}" title="\mathbf{A}\underline{x} = \underline{b}" />
 <ul>
@@ -159,5 +163,125 @@ width="400" height="400"/>
 </ul>
 </blockquote>
 </blockquote>
+<blockquote>
+<p><strong>Methods of Solution</strong></p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Direct Methods</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>Change the original equations into equivalent equations that are easier to solve and yield the same solution
+<ul>
+<li>Can change <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20A%20%5C%7C" alt="\| A \|" title="\| A \|" /></li>
+</ul></li>
+<li>Achieved by performing &quot;elementary operations&quot;
+<ol style="list-style-type: decimal">
+<li>Exchange 2 equations (changes sign of <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20A%20%5C%7C" alt="\| A \|" title="\| A \|" />)</li>
+<li>Multiply an equation by a non-zero constant (multiplies <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20A%20%5C%7C" alt="\| A \|" title="\| A \|" /> by the same constant)</li>
+<li>Multiply an equation by a non-zero constant and subtract it from another equation (no change to <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5C%7C%20A%20%5C%7C" alt="\| A \|" title="\| A \|" />)</li>
+</ol></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Indirect Methods</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>Start with a guess for a solution to the system and then iterate until the solution converges</li>
+<li>Generally less efficient than direct methods due to large number of iterations, however, can have computational advantages if the coefficient matrix is large and sparse</li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Triangular Matrices</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Triangular matrices consist of zeros below or above the leading diagonal</li>
+</ul>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Upper Triangular Matrix</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>An upper triangular matrix, U, consists entirely of zeros below the leading diagonal and numbers with no restrictions above the leading diagonal
+<ul>
+<li>Example <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=U%20%3D" alt="U =" title="U =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20U_%7B11%7D%20%26%20U_%7B12%7D%20%5C%5C%200%20%26%20U_%7B22%7D%20%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} U_{11} &amp; U_{12} \\ 0 &amp; U_{22}  \end{array} \right]" title="\left[ \begin{array} U_{11} &amp; U_{12} \\ 0 &amp; U_{22}  \end{array} \right]" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Lower Triangular Matrix</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>A lower triangular matrix, L, consists entirely of zeros above the leading diagonal and numbers with no restrictions below the leading diagonal
+<ul>
+<li>Example <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=L%20%3D" alt="L =" title="L =" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20L_%7B11%7D%20%26%200%20%5C%5C%20L_%7B21%7D%20%26%20L_%7B22%7D%20%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} L_{11} &amp; 0 \\ L_{21} &amp; L_{22}  \end{array} \right]" title="\left[ \begin{array} L_{11} &amp; 0 \\ L_{21} &amp; L_{22}  \end{array} \right]" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Forward/Back Substitution</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>When the coefficient matrix is a triangular matrix the solution can be obtained easily by solving each equation individually for one unknown at a time</li>
+</ul>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Forward Substitution</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>In forward substitution the solution process begins at the first row of the matrices</li>
+<li>Example
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20L_%7B11%7D%20%26%200%20%5C%5C%20L_%7B21%7D%20%26%20L_%7B22%7D%20%5Cend%7Barray%7D%20%20%5Cright%5D" alt="\left[ \begin{array} L_{11} &amp; 0 \\ L_{21} &amp; L_{22} \end{array}  \right]" title="\left[ \begin{array} L_{11} &amp; 0 \\ L_{21} &amp; L_{22} \end{array}  \right]" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20x_%7B1%7D%20%5C%5C%20x_%7B2%7D%20%5Cright%5D" alt="\left[ x_{1} \\ x_{2} \right]" title="\left[ x_{1} \\ x_{2} \right]" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cleft%5B%20c_%7B1%7D%20%5C%5C%20c_%7B2%7D%20%20%5Cright%5D" alt="= \left[ c_{1} \\ c_{2}  \right]" title="= \left[ c_{1} \\ c_{2}  \right]" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B1%7D%20%3D%20c_%7B1%7D%20%2F%20L_%7B11%7D" alt="x_{1} = c_{1} / L_{11}" title="x_{1} = c_{1} / L_{11}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B2%7D%20%3D%20%28c_%7B2%7D%20-%20L_%7B21%7D%20x_%7B1%7D%29%20%2F%20L_%7B22%7D" alt="x_{2} = (c_{2} - L_{21} x_{1}) / L_{22}" title="x_{2} = (c_{2} - L_{21} x_{1}) / L_{22}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Back Substitution</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>In back substitution the solution process begins with the last row of the matrices</li>
+<li>Example
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%20U_%7B11%7D%20%26%20U_%7B12%7D%20%5C%5C%200%20%26%20U_%7B22%7D%20%5Cend%7Barray%7D%20%20%5Cright%5D" alt="\left[ \begin{array} U_{11} &amp; U_{12} \\ 0 &amp; U_{22} \end{array}  \right]" title="\left[ \begin{array} U_{11} &amp; U_{12} \\ 0 &amp; U_{22} \end{array}  \right]" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20x_%7B1%7D%20%5C%5C%20x_%7B2%7D%20%5Cright%5D" alt="\left[ x_{1} \\ x_{2} \right]" title="\left[ x_{1} \\ x_{2} \right]" /> <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%3D%20%5Cleft%5B%20c_%7B1%7D%20%5C%5C%20c_%7B2%7D%20%20%5Cright%5D" alt="= \left[ c_{1} \\ c_{2}  \right]" title="= \left[ c_{1} \\ c_{2}  \right]" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B2%7D%20%3D%20c_%7B2%7D%20%2F%20U_%7B22%7D" alt="x_{2} = c_{2} / U_{22}" title="x_{2} = c_{2} / U_{22}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B1%7D%20%3D%20%28c_%7B1%7D%20-%20U_%7B12%7D%20x_%7B2%7D%29%20%2F%20U_%7B11%7D" alt="x_{1} = (c_{1} - U_{12} x_{2}) / U_{11}" title="x_{1} = (c_{1} - U_{12} x_{2}) / U_{11}" /></li>
+</ul></li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="gauss_elim">2.2 Gauss Elimination Method</h3>
 </body>
 </html>

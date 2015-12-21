@@ -1,4 +1,5 @@
 __Numerical Methods in Engineering With Python 3__  
+
 __Written by Jaan Kiusalaas__  
 __Book Published: 2013__  
 <a href="http://www.amazon.com/Numerical-Methods-Engineering-Python-3/dp/1107033853"
@@ -10,7 +11,10 @@ target="_blank">Physical Book (Amazon Link)</a>
 
 ## 2. Systems of Linear Algebraic Equations {#systems_linear_eqns}
 
-### 2.1 Introduction
+- [2.1 Introduction](#intro2)
+- [2.2 Gauss Elimination Method](#gauss_elim)
+
+### 2.1 Introduction {#intro2}
 
 - This section deals with solving equations of the form
   $\mathbf{A}\underline{x} = \underline{b}$
@@ -99,3 +103,73 @@ width="400" height="400"/>
      for large matrices and so the magnitude of the determinant is compared to
      the magnitude of the elements of the coefficient matrix and similar
      magnitude signifies a well conditioned matrix
+
+> __Methods of Solution__
+
+>> __Direct Methods__
+
+>> - Change the original equations into equivalent equations that are easier to
+     solve and yield the same solution
+>>      - Can change $\| A \|$
+>> - Achieved by performing "elementary operations"
+>>      1. Exchange 2 equations (changes sign of $\| A \|$)
+>>      2. Multiply an equation by a non-zero constant (multiplies $\| A \|$ by
+           the same constant)
+>>      3. Multiply an equation by a non-zero constant and subtract it from
+           another equation (no change to $\| A \|$)
+
+>> __Indirect Methods__
+
+>> - Start with a guess for a solution to the system and then iterate until the
+     solution converges
+>> - Generally less efficient than direct methods due to large number of
+     iterations, however, can have computational advantages if the coefficient
+     matrix is large and sparse
+
+> __Triangular Matrices__
+
+> - Triangular matrices consist of zeros below or above the leading diagonal
+
+>> __Upper Triangular Matrix__
+
+>> - An upper triangular matrix, U, consists entirely of zeros below the
+     leading diagonal and numbers with no restrictions above the leading
+     diagonal
+>>      - Example $U =$ $\left[ \begin{array} U_{11} & U_{12} \\ 0 & U_{22}
+          \end{array} \right]$
+
+>> __Lower Triangular Matrix__
+
+>> - A lower triangular matrix, L, consists entirely of zeros above the leading
+     diagonal and numbers with no restrictions below the leading diagonal
+>>      - Example $L =$ $\left[ \begin{array} L_{11} & 0 \\ L_{21} & L_{22}
+          \end{array} \right]$
+
+> __Forward/Back Substitution__
+
+> - When the coefficient matrix is a triangular matrix the solution can be
+    obtained easily by solving each equation individually for one unknown at a
+    time
+
+>> __Forward Substitution__
+
+>> - In forward substitution the solution process begins at the first row of
+     the matrices
+>> - Example
+>>      - $\left[ \begin{array} L_{11} & 0 \\ L_{21} & L_{22} \end{array}
+          \right]$ $\left[ x_{1} \\ x_{2} \right]$ $= \left[ c_{1} \\ c_{2}
+          \right]$
+>>      - $x_{1} = c_{1} / L_{11}$
+>>      - $x_{2} = (c_{2} - L_{21} x_{1}) / L_{22}$
+
+>> __Back Substitution__
+
+>> - In back substitution the solution process begins with the last row of the matrices
+>> - Example
+>>      - $\left[ \begin{array} U_{11} & U_{12} \\ 0 & U_{22} \end{array}
+          \right]$ $\left[ x_{1} \\ x_{2} \right]$ $= \left[ c_{1} \\ c_{2}
+          \right]$
+>>      - $x_{2} = c_{2} / U_{22}$
+>>      - $x_{1} = (c_{1} - U_{12} x_{2}) / U_{11}$
+
+### 2.2 Gauss Elimination Method {#gauss_elim}
