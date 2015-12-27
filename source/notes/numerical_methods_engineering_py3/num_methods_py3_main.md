@@ -175,10 +175,63 @@ width="400" height="400"/>
 
 ### 2.2 Gauss Elimination Method {#gauss_elim}
 
+- The goal of the gauss elimination method is to get the equation $Ax = b$ into
+  the form $Ux = c$ and solving for the unknowns using the back substitution
+  method mentioned above
+- Gauss elimination is a direct solution method
+
 > __Elimination Phase__
+
+> - During the elimination phase the third elementary operation is used to
+    eliminate the an unknown at a time from the equations (multiply by a
+    constant and subtract from other equations)
+>       - The equation being multiplied by a constant is refered to as the
+          "pivot" equation
+>       - The determinant will remain unchanged
+> - The multiplication is don to eliminate successive unknowns from equations
+>       - Ex. Remove unknown $x_{1}$ from all remainin equations
+>           - $(2') = (2) - A_{21}/A{11} * (1)$
+>           - Where $(2')$ represents new equation 2, $(2)$ represents
+              equation 2 and $(1)$ represents equation 1
+> - This elimination process is used to remove $x_{1}$ from all equations
+    excluding the first then $x_{2}$ from all equations excluding the first and
+    second and continue until the new A matrix is an upper diagonal matrix
+> - This can be generalized as the following algorithm
+>       - $(j') = (j) - A_{ji}/A_{ii} * (i)$ 
+>           - to remove unknown $x_{i}$ from equation $j$
+> - Do not forget to use the process with the constant vector $b$ during the
+    elimination process
+>       - If the augmented coefficient matrix is used, A and b can be altered
+          simultaneously
+> - An example of what a partially eliminated matrix looks like is given below
+>       - $\left[ \begin{array} 3 & 2 & 8 & 9 \\ 0 & 3.2 & 5.3 & 9.7 \\ 0 & 0 &
+          4.3 & 5.2 \\ 0 & 0 & 2.7 & 4.5 \end{array} \right]$
+>       - The remaining step would be to remove $x_{3}$ from equation 4
 
 > __Back Substitution Phase__
 
+> - Now that the coefficient matrix is an upper triangular matrix, U, the back
+    substitution method can be used to solve for the unknowns
+> - The following algorithm can be used to solve during this process
+>       - $x_{n} = c_{n}$
+>       - $x_{k} = (c_{k} - \sum^{n}_{j=k} A_{kj}x_{j})\frac{1}{A_{kk}}$, k =
+          n-1, n-2, ..., 1
+
 > __Operation Count__
 
+> - The run time of the solution method is directly proportional to the number
+    of long operations that will need to be performed (ie.
+    multiplications/divisions)
+> - During elimination approximately $\frac{n^{3}}{3}$ operations are performed
+> - During back substitution approximately $\frac{n^{2}}{2}$ operations are
+    performed
+> - It can be seen that most of the computation time is used during the
+    elimination phase and computation time rapidly increase with an increase in
+    the number of equations
+
 > __Multiple Sets of Equations__
+
+> - Multiple sets of constant vectors $b$ can be solved simulatneously by
+    appending them on the end of the augmented coefficient matrix
+> - This method is not often used because LU decomposition methods handle
+    multiple coefficient matrices better

@@ -283,17 +283,79 @@ width="400" height="400"/>
 </blockquote>
 </blockquote>
 <h3 id="gauss_elim">2.2 Gauss Elimination Method</h3>
+<ul>
+<li>The goal of the gauss elimination method is to get the equation <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=Ax%20%3D%20b" alt="Ax = b" title="Ax = b" /> into the form <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=Ux%20%3D%20c" alt="Ux = c" title="Ux = c" /> and solving for the unknowns using the back substitution method mentioned above</li>
+<li>Gauss elimination is a direct solution method</li>
+</ul>
 <blockquote>
 <p><strong>Elimination Phase</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>During the elimination phase the third elementary operation is used to eliminate the an unknown at a time from the equations (multiply by a constant and subtract from other equations)
+<ul>
+<li>The equation being multiplied by a constant is refered to as the &quot;pivot&quot; equation</li>
+<li>The determinant will remain unchanged</li>
+</ul></li>
+<li>The multiplication is don to eliminate successive unknowns from equations
+<ul>
+<li>Ex. Remove unknown <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B1%7D" alt="x_{1}" title="x_{1}" /> from all remainin equations
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%282%27%29%20%3D%20%282%29%20-%20A_%7B21%7D%2FA%7B11%7D%20%2A%20%281%29" alt="(2&#39;) = (2) - A_{21}/A{11} * (1)" title="(2&#39;) = (2) - A_{21}/A{11} * (1)" /></li>
+<li>Where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%282%27%29" alt="(2&#39;)" title="(2&#39;)" /> represents new equation 2, <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%282%29" alt="(2)" title="(2)" /> represents equation 2 and <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%281%29" alt="(1)" title="(1)" /> represents equation 1</li>
+</ul></li>
+</ul></li>
+<li>This elimination process is used to remove <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B1%7D" alt="x_{1}" title="x_{1}" /> from all equations excluding the first then <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B2%7D" alt="x_{2}" title="x_{2}" /> from all equations excluding the first and second and continue until the new A matrix is an upper diagonal matrix</li>
+<li>This can be generalized as the following algorithm
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%28j%27%29%20%3D%20%28j%29%20-%20A_%7Bji%7D%2FA_%7Bii%7D%20%2A%20%28i%29" alt="(j&#39;) = (j) - A_{ji}/A_{ii} * (i)" title="(j&#39;) = (j) - A_{ji}/A_{ii} * (i)" />
+<ul>
+<li>to remove unknown <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7Bi%7D" alt="x_{i}" title="x_{i}" /> from equation <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=j" alt="j" title="j" /></li>
+</ul></li>
+</ul></li>
+<li>Do not forget to use the process with the constant vector <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=b" alt="b" title="b" /> during the elimination process
+<ul>
+<li>If the augmented coefficient matrix is used, A and b can be altered simultaneously</li>
+</ul></li>
+<li>An example of what a partially eliminated matrix looks like is given below
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cleft%5B%20%5Cbegin%7Barray%7D%203%20%26%202%20%26%208%20%26%209%20%5C%5C%200%20%26%203.2%20%26%205.3%20%26%209.7%20%5C%5C%200%20%26%200%20%26%20%204.3%20%26%205.2%20%5C%5C%200%20%26%200%20%26%202.7%20%26%204.5%20%5Cend%7Barray%7D%20%5Cright%5D" alt="\left[ \begin{array} 3 &amp; 2 &amp; 8 &amp; 9 \\ 0 &amp; 3.2 &amp; 5.3 &amp; 9.7 \\ 0 &amp; 0 &amp;  4.3 &amp; 5.2 \\ 0 &amp; 0 &amp; 2.7 &amp; 4.5 \end{array} \right]" title="\left[ \begin{array} 3 &amp; 2 &amp; 8 &amp; 9 \\ 0 &amp; 3.2 &amp; 5.3 &amp; 9.7 \\ 0 &amp; 0 &amp;  4.3 &amp; 5.2 \\ 0 &amp; 0 &amp; 2.7 &amp; 4.5 \end{array} \right]" /></li>
+<li>The remaining step would be to remove <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B3%7D" alt="x_{3}" title="x_{3}" /> from equation 4</li>
+</ul></li>
+</ul>
 </blockquote>
 <blockquote>
 <p><strong>Back Substitution Phase</strong></p>
 </blockquote>
 <blockquote>
+<ul>
+<li>Now that the coefficient matrix is an upper triangular matrix, U, the back substitution method can be used to solve for the unknowns</li>
+<li>The following algorithm can be used to solve during this process
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7Bn%7D%20%3D%20c_%7Bn%7D" alt="x_{n} = c_{n}" title="x_{n} = c_{n}" /></li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7Bk%7D%20%3D%20%28c_%7Bk%7D%20-%20%5Csum%5E%7Bn%7D_%7Bj%3Dk%7D%20A_%7Bkj%7Dx_%7Bj%7D%29%5Cfrac%7B1%7D%7BA_%7Bkk%7D%7D" alt="x_{k} = (c_{k} - \sum^{n}_{j=k} A_{kj}x_{j})\frac{1}{A_{kk}}" title="x_{k} = (c_{k} - \sum^{n}_{j=k} A_{kj}x_{j})\frac{1}{A_{kk}}" />, k = n-1, n-2, ..., 1</li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
 <p><strong>Operation Count</strong></p>
 </blockquote>
 <blockquote>
+<ul>
+<li>The run time of the solution method is directly proportional to the number of long operations that will need to be performed (ie. multiplications/divisions)</li>
+<li>During elimination approximately <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bn%5E%7B3%7D%7D%7B3%7D" alt="\frac{n^{3}}{3}" title="\frac{n^{3}}{3}" /> operations are performed</li>
+<li>During back substitution approximately <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bn%5E%7B2%7D%7D%7B2%7D" alt="\frac{n^{2}}{2}" title="\frac{n^{2}}{2}" /> operations are performed</li>
+<li>It can be seen that most of the computation time is used during the elimination phase and computation time rapidly increase with an increase in the number of equations</li>
+</ul>
+</blockquote>
+<blockquote>
 <p><strong>Multiple Sets of Equations</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>Multiple sets of constant vectors <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=b" alt="b" title="b" /> can be solved simulatneously by appending them on the end of the augmented coefficient matrix</li>
+<li>This method is not often used because LU decomposition methods handle multiple coefficient matrices better</li>
+</ul>
 </blockquote>
 </body>
 </html>
