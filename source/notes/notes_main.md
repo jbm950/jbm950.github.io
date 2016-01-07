@@ -36,6 +36,7 @@
 > #### Grad courses
 
 > - [Analytical Dynamics](/notes/analytical_dynamics/analytical_dynamics_main.html)
+> - [Control Theory](/notes/control_theory/control_theory_main.html)
 > - [Optimal Control Discussion](/notes/optimal_control_discussion/optimal_control_dis_main.html)
 > - [Robot Geometry](/notes/robot_geometry/robot_geometry_main.html)
 
