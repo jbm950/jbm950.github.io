@@ -32,12 +32,14 @@
 > - Statics
 > - Strength of Materials
 > - Thermodynamics
+> - [Vibrations](/notes/vibrations/vibrations.html) (TA)
 
 > #### Grad courses
 
 > - [Analytical Dynamics](/notes/analytical_dynamics/analytical_dynamics_main.html)
 > - [Control Theory](/notes/control_theory/control_theory_main.html)
 > - [Energy Conversion](/notes/energy_conversion/energy_conversion_main.html)
+> - [Numerical Methods](/notes/num_methods/numerical_methods_main.html)
 > - [Numerical Optimization](/notes/num_optimization/num_optimization_main.html)
 > - [Optimal Control Discussion](/notes/optimal_control_discussion/optimal_control_dis_main.html)
 > - [Robot Geometry](/notes/robot_geometry/robot_geometry_main.html)
