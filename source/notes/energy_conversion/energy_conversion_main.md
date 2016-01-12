@@ -35,7 +35,39 @@
 >       - (Where R is the reference frame fixed on the ball)
 >       - $KE_{atom} = \frac{1}{2} m_{atom} | ^{R}\underline{V}_{atom} | \,
           \cdot \, | ^{R}\underline{V}_{atom} |$
+
 > - For $n$ atoms in the ball
->       - $v_{rms} = \left(\sum^{N}_{i=1} | ^{R}\underline{V}_{atom} |^{2} / N\right)^{\frac{1}{2}}$
+>       - $v_{rms} = \left(\sum^{N}_{i=1} | ^{R}\underline{V}_{atom} |^{2} /
+          N\right)^{\frac{1}{2}}$
+>           - Represents average speed of the atoms in the ball
+>       - $\frac{3}{2} k T_{ball} = \frac{1}{2} m_{atom} v_{rms}^{2}$
+>           - Where the left hand side represents the thermal energy of the
+              system
 
 > __Definition of Potential Energy__
+
+> - Macroscale - Must have a force field present. A suspended ball of mass
+    $m_{ball}$ a distance $x$ above the ground in a gravity field
+>       - $PE_{ball} = m_{ball}gx$ where $g= | \underline{g} |$
+
+>> - If the force field is conservative (in a vacuum) the energy is conserved
+>>      - $PE + KE = const$
+>>      - $\Delta PE + \Delta KE = 0$
+
+> - Microscale - For a molecule, $O_{2}$, ($O=O$) there is energy stored as an
+    attractive force in the double bond (acts like a spring)
+>       - $PE = \frac{1}{2} k x^{2}$ where $x$ is the displacement from a zero
+          spring force position (modeling the bond as a spring)
+>       - Breaking the bonds releases the potential energy as kinetic energy ($PE \right KE$)
+
+#### Total Energy and Break Down of Internal Energy
+
+> - Total energy in a system with mass $M_{0}$ and volume $V$ is represented as
+    follows
+>       - Total Energy (E) = Internal Energy (IE) + Kinetic Energy (KE) +
+          Potential Energy (PE)
+>       - Generally:
+>           - KE = macroscopic kinetic energy
+>           - PE = macroscopic potential energy
+>           - IE = sum of the microscopic forms of energy carried by its
+              elementary constituents (atoms and molecules)
