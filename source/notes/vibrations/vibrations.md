@@ -26,3 +26,6 @@ __Modeling__
       F_{eq}$
     - Rotational System: $I_{eq} \ddot{\theta} + c_{T, eq} \dot{\theta} + k_{T,
       eq} \theta = M_{eq}$
+- Assumptions:
+    - Small displacements about the equilibrium position
+        - Equilibrium position - position when the system goes to rest
