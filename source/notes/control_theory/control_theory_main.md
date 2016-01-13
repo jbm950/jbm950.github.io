@@ -20,6 +20,9 @@ implementing more complex control logic
 
 > __Mechanical Systems__
 
+> - For translational motion : $\underline{F} = m ^{N}\underline{a}$
+> - Example given the following diagram
+
 <div align="center">
 <table class="image">
 <tr><td><img src="./img/dynamicalsys_mech.png"
@@ -27,6 +30,9 @@ alt="Mechanical System" title="Mechanical System"/>
 </td></tr>
 </table>
 </div>
+
+> - Sum of forces for block 1:
+>       - $\sum \underline{F} = b (\dot{x}_{2} - \dot{x}_{1}) \hat{x} + k$ INCOMPLETE
 
 > __Electrical Systems__
 
