@@ -58,7 +58,8 @@
     attractive force in the double bond (acts like a spring)
 >       - $PE = \frac{1}{2} k x^{2}$ where $x$ is the displacement from a zero
           spring force position (modeling the bond as a spring)
->       - Breaking the bonds releases the potential energy as kinetic energy ($PE \right KE$)
+>       - Breaking the bonds releases the potential energy as kinetic energy
+          ($PE \right KE$)
 
 #### Total Energy and Break Down of Internal Energy
 
@@ -71,3 +72,21 @@
 >           - PE = macroscopic potential energy
 >           - IE = sum of the microscopic forms of energy carried by its
               elementary constituents (atoms and molecules)
+> - Internal Energy = Thermal Energy (TE) + Chemical Energy (ChE) + Nuclear
+    Energy (NE) + Electical Energy (EE)
+>       - TE = Sensible heat + Latent heat
+>           - Sensible heat = sum of KE of all atoms and molecules measured by
+              absolute temperature
+>           - Latent heat = sum of the potential energy established by the
+              forces among atoms and molecules
+>       - ChE = Bonding energy between atoms in a molecule
+>           - The energy to break a bond is equal to the amount of energy to
+              re-establish the bond
+>           - Bond energy between two elements is unique to those two elements
+>       - NE = Binding energy among protons and neutrons
+>       - EE = Energy of electrons (bound or free)
+>           - Closer to the nucleus = more force
+>           - shell $0 \right 1$ have to add energy
+>           - shell $1 \right 0$ release energy (electromagnetic waves)
+>       - Other forms:
+>           - Electromagnetic Waves (Thermal Radiation/Solar Radiation)
