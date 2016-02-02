@@ -1,0 +1,43 @@
+>> cst_hw1_prob9
+
+Part a
+
+H =
+ 
+                  s^3 + s^2 + 5 s - 50
+  ----------------------------------------------------
+  s^5 + 26 s^4 + 614 s^3 + 4369 s^2 + 39380 s + 356000
+ 
+Continuous-time transfer function.
+
+Part b
+
+Zeros:
+	-1.9867+3.5872i
+	-1.9867-3.5872i
+	2.9735
+
+Poles:
+	-10.1863+18.5422i
+	-10.1863-18.5422i
+	-9.2816
+
+Gain: 1
+
+Part c
+
+Graph attached
+
+Part d
+
+1s^5+58s^4+50s^3+236s^2+4705s-6030
+
+Part e
+
+h =
+ 
+     5 (s-1) (s+56)
+  --------------------
+  (s+1) (s^2 + 2s + 5)
+ 
+Continuous-time zero/pole/gain model.
