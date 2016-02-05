@@ -1,0 +1,38 @@
+First section of Class
+    Intermediate Value Theorem
+    Mean Value Theorem
+    Integral Mean Value Theorem
+    Taylor Series Expansion
+        Approximate + Residual
+    Floating Point Single Precision
+        Normalized Representation
+        Unnormalized Representation
+        Biased Exponent
+    Machine Epsilon
+    Significant Digits
+        Error Bound Theory
+    Error Propagation
+    Induced Error in Evaluating Functions
+
+Root Finding
+    Bisection Method
+    Rate/Order of Convergence
+    Newton's Method
+    Secant Method
+    False Position Method?
+    Fixed Point Iteration
+        Convergence Theorem
+    Repeated Roots (Modify Newton's Method)
+    Muller's Method
+    Dekker's Method
+    Brent's Method
+        Inverse Quadratic Interpolation
+
+Solve System of Linear Equations
+    Eigenvalues Calculation
+    Cramer's Rule
+    Vector Norm
+    Matrix Norm
+    Gaussian Elimination
+        Forward Elimination
+        Back Substitution
