@@ -1,0 +1,49 @@
+Useful Energy
+
+Macroscale Kinetic Energy
+Microscale Kinetic Energy
+Macroscale Potential Energy
+Microscale Potential Energy
+
+Energy Balance
+    Internal Energy
+        Thermal Energy
+        Chemical Energy
+        Nuclear Energy
+        Electric Energy
+
+Chemical Formula/Bond Energy -> Energy Released
+
+Chemical Energy -> Themal Energy -> Mechanical Energy
+    Carnot Cycle
+    Ideal Rankine Cycle
+        Improve through altering values
+        Reheating
+        Regeneration
+        Cogeneration
+            Process Heat
+        Trigeneration
+            Absorbtion Refridgeration
+        Open-Feed Water Heater vs Closed Feed Water Heater
+    Ideal Brayton Cycle
+        Air Standard Assumptions
+        Cold Air Standard Assumptions
+        Intercooling and Reheating
+        Regeneration
+        Optimization by Altering Compression Ratio
+    Combined Brayton + Rankine
+
+(Important Value of Above Cycles:
+    Thermal Efficiency
+    System Utilization Factor
+    Coefficient of Performance
+    CO2 produced
+)
+
+Nuclear Energy
+    Binding Energy
+    Mass Defect
+    Electron Volt
+    Chemical Formula/Mass Change -> Energy Released
+    Fission
+    Fusion
