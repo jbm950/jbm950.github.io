@@ -34,6 +34,40 @@ Solve System of Linear Equations
     Cramer's Rule
     Vector Norm
     Matrix Norm
-    Gaussian Elimination
-        Forward Elimination
-        Back Substitution
+    Direct Methods
+        Gaussian Elimination
+            Forward Elimination
+            Back Substitution
+            Scaled Pivoting
+        Gauss-Jordan Elimination
+        Tri-Diagonal Algorithm
+        LU Decomposition
+            Crout Reduction
+            Doolittle Reduction
+            Cholesky Decomposition
+            Evaluate Determinant
+            Evaluate Inverse
+        Matrix Conditioning
+    Iterative Methods
+        Jacobi Method
+        Gauss Siedel Method
+        Relaxation Method
+
+Interpolation
+    Undetermined Coefficient
+    Lagrangian Interpolation
+    Newton Divided Differences
+    Finite Differences
+        Detecting Noise/Error
+    Interpolation Error
+        Runge Phenomenon
+    Hermite Interpolation
+    Cubic Splines
+        End Conditions
+    Least Squares Method
+
+Approximating Functions
+
+Numerical Differentiation
+
+Numerical Integration
