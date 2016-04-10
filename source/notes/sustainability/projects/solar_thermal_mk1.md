@@ -2,7 +2,20 @@
 
 ### Objective
 
-### Assumptions
+The goal of this project is to get me started with building actual energy
+collection devices. Ideally this project should take the water source and
+achieve elevated temperatures.
+
+### Assumptions/Design
+
+A simple design was decided upon for my first solar thermal project. A hot
+water pump will take water from a source (bucket) and pump it through rubber
+tubing that goes through empty/cleaned 2L bottles and deposit the water back in
+the source. 
+
+After deciding on using 8 2L bottles the length was determined to be around 30
+feet. This allows ~2 feet per bottle, a foot between each bottle and ~2-3 feet
+between the bottle array and the water source (bucket)
 
 ### Parts list/Budget
 
