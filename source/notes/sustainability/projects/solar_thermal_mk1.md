@@ -44,8 +44,18 @@ th, td {
   </tr>
 
   <tr>
+  <td style="text-align:left"> <a href="http://www.amazon.com/AmazonBasics-Performance-Alkaline-Batteries-48-Pack/dp/B00MNV8E0C/ref=sr_1_1_a_it?ie=UTF8&qid=1460245484&sr=8-1&keywords=aa+batterys+amazon+48+pack" target="_blank">48 Count AA Batteries</a> </td>
+  <td style="text-align:center"> $12.09 </td>		
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> 8 Recycled 2L Bottles </td>
+  <td style="text-align:center"> $--.-- </td>		
+  </tr>
+
+  <tr>
   <td style="text-align:left"> Total Cost </td>
-  <td style="text-align:center"> $70.31 </td>		
+  <td style="text-align:center"> $82.40 </td>		
   </tr>
 
 </table>
@@ -76,5 +86,12 @@ th, td {
 >>      - Hopefully the tube will stretch over the hot water pump opening
 >>      - Would be cheaper to buy new brass couplers instead of new tubing if
           it doesn't fit
+
+>> __Power Supply__
+
+>> - Decided it'd be cheapest to just use the 8 AA battery holder to supply the
+     12 volts required by the heat pump
+>> - Might long run end up being more expensive if the batteries do not last
+     for long periods of time
 
 ### Implementation
