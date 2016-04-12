@@ -1,4 +1,4 @@
-# Solar Thermal Collector Mk1
+# Solar Thermal Collector Mk1 General Notes Page
 
 ### Objective
 
