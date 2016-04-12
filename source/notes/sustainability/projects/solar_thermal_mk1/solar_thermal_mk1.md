@@ -17,6 +17,15 @@ After deciding on using 8 2L bottles the length was determined to be around 30
 feet. This allows ~2 feet per bottle, a foot between each bottle and ~2-3 feet
 between the bottle array and the water source (bucket)
 
+<div align="center">
+<table class="image">
+<caption align="bottom">Top View of Whole System</caption>
+<tr><td><img src="./img/top_view.svg"
+alt="Top View of Whole System" title="Top View of Whole System"/>
+</td></tr>
+</table>
+</div>
+
 ### Parts list/Budget
 
 <style>

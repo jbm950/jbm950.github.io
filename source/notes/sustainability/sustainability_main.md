@@ -7,6 +7,7 @@ Collection of notes on green energy and living a sustainable lifestyle
 
 - DIY Solar Thermal Collector Mk1
     - [Notes Page](./projects/solar_thermal_mk1/solar_thermal_mk1.html)
+    - [Experiment 1](./projects/solar_thermal_mk1/solar_therm_mk1_experiment1.html)
 
 ## Articles/Journals Links
 
