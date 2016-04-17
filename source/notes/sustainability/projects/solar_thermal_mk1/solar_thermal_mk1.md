@@ -117,3 +117,5 @@ th, td {
      for long periods of time
 
 ### Implementation
+
+__The hose doesnt fit the brass couplers that came with the pump__
