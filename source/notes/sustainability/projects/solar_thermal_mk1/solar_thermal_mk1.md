@@ -118,4 +118,15 @@ th, td {
 
 ### Implementation
 
-__The hose doesnt fit the brass couplers that came with the pump__
+> __The hose doesnt fit the brass couplers that came with the pump__
+
+> - The hose did not end up fitting the couplers that came with the hot water
+    pump and so a method of attaching them had to be determined
+> - I was able to get a 1/2" to 1/4" adapter + 1/4" to 1/4" brass coupler to
+    work to attach the hose to the pump
+>       - This was ~$18 for two adapter/coupler sets
+> - Future Considerations:
+>       - Should try to find a hose with a larger inner diameter to fit the
+          couplers that came with the pump
+>       - Other option would be to find a pump that comes with a smaller
+          diameter coupler to begin with
