@@ -1,0 +1,137 @@
+================================================================================
+
+Code for Problem 4
+
+================================================================================
+
+import numpy as np
+
+################################################################################
+#
+# Part A
+#
+################################################################################
+
+A = np.matrix([[-1,  0, -1],
+               [ 1,  0,  0],
+               [ 2, 10, -1]])
+B = np.matrix([[6],
+               [0],
+               [10]])
+
+AB = A*B
+AAB = A*A*B
+
+C = np.matrix([[B[0, 0], AB[0, 0], AAB[0, 0]],
+               [B[1, 0], AB[1, 0], AAB[1, 0]],
+               [B[2, 0], AB[2, 0], AAB[2, 0]]])
+
+print("Part A\n------\n")
+print("The controllability matrix is: ", end="")
+print("\t[%.1f  %.1f %.1f]" % (C[0, 0], C[0, 1], C[0, 2]))
+print("\t\t\t[%.1f  %.1f %.1f]" % (C[1, 0], C[1, 1], C[1, 2]))
+print("\t\t\t[%.1f %.1f %.1f]" % (C[2, 0], C[2, 1], C[2, 2]))
+
+rankC = np.linalg.matrix_rank(C)
+
+print("\nThe rank of the controllability matrix, C, is: %d\n" % rankC)
+
+################################################################################
+#
+# Part B
+#
+################################################################################
+
+from sympy import *
+
+lam = symbols("lambda")
+
+Delta_C = (lam + 2)*(lam + 1 - I)*(lam + 1 + I)
+
+print("Part B\n------\n")
+print("The desired characteristic equation is:")
+pprint(Delta_C.expand())
+
+f1, f2, f3 = symbols("f1 f2 f3")
+A = Matrix([[-1,  0, -1],
+            [ 1,  0,  0],
+            [ 2, 10, -1]])
+B = Matrix([[6],
+            [0],
+            [10]])
+F = Matrix([f1, f2, f3]).transpose()
+
+Delta = lam*eye(3) - (A - B*F)
+Delta = Delta.det()
+print("\nThe characteristic equation from state feedback is:")
+pprint(collect(Delta.expand(), lam))
+
+E = np.matrix([[ 6,  0, 10],
+               [-4,  6, 22],
+               [ 0, -4, 60]])
+g = np.matrix([[2],
+               [3],
+               [-6]])
+Fsolved = np.linalg.solve(E, g)
+
+print("\nThe gain matrix F = [%.3f, %.3f, %.3f]" % (Fsolved[0], Fsolved[1],
+                                                    Fsolved[2]))
+print("\nThis makes the characteristic polynomial the following:\n")
+
+pprint(Delta.subs([(f1, Fsolved[0]), (f2, Fsolved[1]), (f3, Fsolved[2])]))
+
+
+################################################################################
+#
+# Part C
+#
+################################################################################
+
+C = Matrix([0, 0, 1]).transpose()
+k = symbols("k")
+
+Delta = lam*eye(3) - (A - B*k*C)
+Delta = Delta.det()
+print("\nPart C\n------\n")
+print("The characteristic equation from state feedback is:")
+pprint(collect(Delta.expand(), lam))
+
+================================================================================
+
+Output for Problem 4
+
+================================================================================
+
+Part A
+------
+
+The controllability matrix is: 	[6.0  -16.0 14.0]
+			[0.0  6.0 -16.0]
+			[10.0 2.0 26.0]
+
+The rank of the controllability matrix, C, is: 3
+
+Part B
+------
+
+The desired characteristic equation is:
+ 3      2          
+λ  + 4⋅λ  + 6⋅λ + 4
+
+The characteristic equation from state feedback is:
+                 3    2                                                       
+-4⋅f₂ + 60⋅f₃ + λ  + λ ⋅(6⋅f₁ + 10⋅f₃ + 2) + λ⋅(-4⋅f₁ + 6⋅f₂ + 22⋅f₃ + 3) + 10
+
+The gain matrix F = [0.399, 0.910, -0.039]
+
+This makes the characteristic polynomial the following:
+
+ 3        2              
+λ  + 4.0⋅λ  + 6.0⋅λ + 4.0
+
+Part C
+------
+
+The characteristic equation from state feedback is:
+        3    2                               
+60⋅k + λ  + λ ⋅(10⋅k + 2) + λ⋅(22⋅k + 3) + 10
