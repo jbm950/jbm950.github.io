@@ -130,3 +130,7 @@ th, td {
           couplers that came with the pump
 >       - Other option would be to find a pump that comes with a smaller
           diameter coupler to begin with
+
+> __Putting holes in the bottle caps__
+
+> - Initially tried scissors but that turned out to be infeasible

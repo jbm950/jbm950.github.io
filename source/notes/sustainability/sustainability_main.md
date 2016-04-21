@@ -5,13 +5,14 @@ Collection of notes on green energy and living a sustainable lifestyle
 
 ## Projects
 
-- DIY Solar Thermal Collector Mk1
-    - [Notes Page](./projects/solar_thermal_mk1/solar_thermal_mk1.html)
-    - [Experiment 1](./projects/solar_thermal_mk1/solar_therm_mk1_experiment1.html)
+Sustainability projects can be found [here](../../projects/projects_main.html#sustainability)
 
 ## Articles/Journals Links
 
 __Articles__
+
+> - <a href="https://eva.fing.edu.uy/pluginfile.php/55828/mod_resource/content/1/kalogiru.pdf"
+    target="_blank">Solar Thermal Collectors and Applications</a> (Soteris A. Kalogirou)
 
 __Journals__
 
