@@ -1,5 +1,9 @@
 # Solar Thermal Collector Mk1 General Notes Page
 
+### Other Associated Pages
+
+[Solar Thermal Collector Mk1 Experiment 1](solar_therm_mk1_experiment1.html)
+
 ### Objective
 
 The goal of this project is to get me started with building actual energy
