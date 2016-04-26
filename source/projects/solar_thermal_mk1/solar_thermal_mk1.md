@@ -138,3 +138,9 @@ th, td {
 > __Putting holes in the bottle caps__
 
 > - Initially tried scissors but that turned out to be infeasible
+> - Borrowed a drill from a friend that that seems to be doing the trick really
+    well
+>       - Bought a drill bit set for ~$13
+>       - Using a 1/8" bit to make the guide hole and a 3/8" bit to drill the
+          actual hole
+>           - Hose fits well in this hole
