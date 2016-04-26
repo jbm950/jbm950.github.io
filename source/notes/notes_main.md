@@ -6,6 +6,10 @@
 - [Money Management](/notes/money_management/money_management_main.html)
 - [Sustainability](/notes/sustainability/sustainability_main.html)
 
+> #### Engineering/Science
+
+> - [Dynamics](./dynamics/dynamics_main.html)
+
 ### College Courses Notes
 
 > #### Undergrad courses (Engineering Related)
