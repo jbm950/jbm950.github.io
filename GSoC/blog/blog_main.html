@@ -13,6 +13,7 @@ title: Blog
   <style type="text/css">code{white-space: pre;}</style>
 </head>
 <body>
-
+<p>{% for post in site.posts %}<br />
+ <a href="{{ post.url }}">{{ post.title }}</a> {% endfor %}</p>
 </body>
 </html>
