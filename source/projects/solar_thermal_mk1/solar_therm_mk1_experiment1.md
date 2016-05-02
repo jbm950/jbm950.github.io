@@ -10,6 +10,13 @@ learning
 
 ### Applicable Theory
 
+(Collection of equations)
+
+(Energy Harvested) => $\dot{Q}_{c} = \dot{m}c_{p}(T_{f,o} - T_{f,i})$ 
+
+Need to do energy balances for control volumes to come up with some applicable
+theory
+
 ### Procedure
 
 ### Data
