@@ -13,7 +13,11 @@ title: Blog
   <style type="text/css">code{white-space: pre;}</style>
 </head>
 <body>
+<h1 id="google-summer-of-code-blog-posts">Google Summer of Code Blog Posts</h1>
 <p>{% for post in site.posts %}<br />
- <a href="{{ post.url }}">{{ post.title }}</a> {% endfor %}</p>
+ <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a><br />
+ {{ post.date | date_to_long_string }}</p>
+<pre><code>{{ post.excerpt }}</code></pre>
+<p>{% endfor %}</p>
 </body>
 </html>
