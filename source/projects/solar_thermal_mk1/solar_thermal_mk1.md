@@ -144,3 +144,120 @@ th, td {
 >       - Using a 1/8" bit to make the guide hole and a 3/8" bit to drill the
           actual hole
 >           - Hose fits well in this hole
+
+> __First Run__
+
+> - The tubing ended up being two ~25 ft (I'm guessing they were about equal in
+    length) tubes instead of one 50 ft tube
+>       - Only able to fit 6 bottles instead of 8
+> - The pump worked properly and was able to move the water all the way through
+    the tube
+> - There appeared to be no leaks in the system
+> - I did not account for the space that the bottle would occupy inside the
+    bottle caps and thus the tubing may have been slightly pinched in the
+    opening for the cap
+> - The temperature of the water did increase over the course of the hour but I
+    do not know to what extent it was from the solar thermal collector or if it
+    was just heating up to ambient temperature from whatever temperature the
+    pipes were underground
+
+>> __Temp change chart__
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+</style>
+<div align="center">
+<table>
+
+  <tr>
+  <th> Time (min) </th>
+  <th> Temperature (deg C) </th>		
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> ~0 </td>
+  <td style="text-align:center"> 25.8 </td>		
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> ~15 </td>
+  <td style="text-align:center"> 28.2 </td>		
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> ~30 </td>
+  <td style="text-align:center"> 29.8 </td>		
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> ~45 </td>
+  <td style="text-align:center"> 31.2 </td>		
+  </tr>
+
+  <tr>
+  <td style="text-align:left"> ~60 </td>
+  <td style="text-align:center"> 32.5 </td>		
+  </tr>
+
+</table>
+</div>
+
+>> __Photos__
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/bucketarray_2.jpg"
+alt="Bucket Array" title="Bucket Array" height="400" width="600"/>
+</td></tr>
+</table>
+</div>
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/bottlearray.jpg"
+alt="Bottle Array" title="Bottle Array" height="400" width="600"/>
+</td></tr>
+</table>
+</div>
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/bottle_closeup.jpg"
+alt="Bottle Close Up" title="Bottle Close Up" height="400" width="600"/>
+</td></tr>
+</table>
+</div>
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/hot_water_pump.jpg"
+alt="Hot Water Pump" title="Hot Water Pump" height="400" width="600"/>
+</td></tr>
+</table>
+</div>
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/battery_pic.jpg"
+alt="Battery Pic" title="Battery Pic" height="400" width="600"/>
+</td></tr>
+</table>
+</div>
+
+> __Ideas for Improvement__
+
+> - Add foil under the bottles
+> - Get a lid for the 5 gal bucket
+> - Automate the temperature collection process
+> - Insulate the bucket
+> - Use a splitter for the tubing so that both 25 ft segments can be used
+> - Wrap electrical tape or some equivalent around the tubing at the bottle
+    caps to better insulate the bottles
+> - Run the pump off of a rechargable battery and use a solar panel to charge
+    the battery

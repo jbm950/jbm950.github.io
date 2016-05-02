@@ -19,6 +19,7 @@ else:
 def fmbuild(layout, title):
     return "---\nlayout: " + layout + "\ntitle: " + title + "\n---\n\n"
 
+
 # Find the current and final directory paths
 sourcedir = os.path.dirname(os.path.abspath(__file__)) + filesep
 parentdir = sourcedir.replace("source" + filesep, "")
