@@ -139,3 +139,26 @@ target="_blank">Full Article</a>
 >       - Employ two main types of absorbers
 >           - fin type with pipe
 >           - tubular
+>       - Some practical design consideration
+>           - Choice of reciever type
+>           - Method to introduce gap between reciever and reflector
+>           - Effect of glass envelope around reciever
+
+> - ETC (Evacuated Tube Collectors)
+>       - Conventional flat plate collectors lose benefits in cold, cloudy and
+          windy days and are succeptible to weather influences
+>       - Vacuum envelope reduces convection and conduction heat loss
+>       - ETC efficiency higher than FPC at low incident angles
+>           - ETC advantage in day long performance
+>       - Has a heat pipe in a vacuum sealed tube
+>       - Utilizeds an evaporation-condensation cycle
+>       - No evaporation or condensation possible above the phase change
+          temperature
+>           - Protection from freezing and overheating
+>           - Built in self limiting temperature control unique compared to the
+              other two methods
+>       - Dewar tubes
+>           - Two concentric glass tubes with a vacuum space between them
+>       - Integrated Compound Parabolic Collector (ICPC)
+>           - Combination of CPC and ETC where the ETC is used as the reciever
+              for a CPC system
