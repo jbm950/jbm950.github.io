@@ -52,13 +52,16 @@
 
 > - [Optimization](/notes/optimization_online/optimization_main.html)
 
-### Books
+### Books/Articles
 
 > #### Engineering
 
 > - [Numerical Methods in Engineering With Python
      3](numerical_methods_engineering_py3/num_methods_py3_main.html)
      (Jaan Kiusalaas)
+> - [Solar Thermal Collectors and
+    Applications](./solar_thermal_collectors_and_applications/solar_thermal_collectors_and_applications.html)
+    (Soteris A. Kalogirou)
 
 ### Research
 

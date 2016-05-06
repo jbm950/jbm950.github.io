@@ -11,8 +11,7 @@ Sustainability projects can be found [here](../../projects/projects_main.html#su
 
 __Articles__
 
-> - [Solar Thermal Collectors and
-    Applications](./articles/solar_thermal_collectors_and_applications/solar_thermal_collectors_and_applications.html)
+Look for articles on the general notes page
 
 __Journals__
 
