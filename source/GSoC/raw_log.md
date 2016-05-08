@@ -3,6 +3,10 @@
 ## Pre-Week 1
 <hr>
 
+### 5/7/2016
+
+- Edited permissions and changed name of google drive shared folder
+
 ### 5/6/2016
 
 - Added blog to Planet Sympy
