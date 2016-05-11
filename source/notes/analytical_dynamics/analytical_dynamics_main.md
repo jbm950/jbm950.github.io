@@ -1370,7 +1370,7 @@ Example" width="300" height="300"/>
 > - Coordinate system fixed in reference frame A
 >       - Origin fixed at point O
 >       - $\underline{e}_{r}$ = along $\underline{OP}$
->       - $\underline{e}_{r}$ = $\underline{E}_{z}$
+>       - $\underline{e}_{z}$ = $\underline{E}_{z}$
 >       - $\underline{e}_{\theta}$ = $\underline{e}_{z} \times
           \underline{e}_{r}$
 > - Now we will begin by finding the position velocity and acceleration of
