@@ -1,0 +1,83 @@
+---
+layout: default
+title: Timeline
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="timeline">Timeline</h1>
+<p>(Looking at doing featherstones method instead of NewtonEuler Method)</p>
+<p>Week 1 [May 23rd - May 30th]</p>
+<ul>
+<li>Create benchmarking tool to track project progress
+<ul>
+<li>The tool will run test code and simulations using both <code>KanesMethod</code> and <code>LagrangesMethod</code> and save the results in an SQLite database where each table represents a different test</li>
+<li>In addition to the speed results, each row in the table will include information on who ran the tests (probably see if I can access Github username for this),what version of python was used, what operating system was used and the hardware details of the computer used (CPU speed and RAM)</li>
+<li>A profile of portions of the tested code will be saved in a subfolder</li>
+<li>A viewer of the results would be made using the matplotlib library
+<ul>
+<li>Sub options for viewing results will be added as time allows</li>
+</ul></li>
+<li>Tool will be made such that it is easily extendable
+<ul>
+<li>Can be used by other members of the community for their projects</li>
+<li>Can be used with the <code>NewtonEuler</code> class that will be created later in the project</li>
+</ul></li>
+<li><strong>PR</strong>: Resulting tool could be introduced as a pull request depending on whether or not this is desired in the main code base</li>
+</ul></li>
+<li><p>Learn and practice Kane's method of generating equations of motion so that I will have a better understanding of how the code works</p></li>
+<li><p>Note: The items listed for week 1 would begin at the beginning of May much before the project officially begins</p></li>
+</ul>
+<p>Week 2, 3 [May 30th - June 13th]</p>
+<ul>
+<li><p>Begin going through internals of the <code>KanesMethod</code> and <code>LagrangesMethod</code> to determine what the commonalities are that could be drawn from a base class</p></li>
+<li><p>Create a basic implementation of the base class from which <code>KanesMethod</code> and <code>LagrangesMethod</code> would be subclasses</p></li>
+</ul>
+<p>Week 4, 5 [June 13th - June 27th]</p>
+<ul>
+<li>Continue working out and condensing code to complete the base class for the equations of motion generators
+<ul>
+<li>Keeping attention to enhancing speed and performance of code during consolidation</li>
+</ul></li>
+<li><p>Develop the supporting documentation for the base equations of motion generation class</p></li>
+<li>Complete the midterm evaluation with the functioning base class, test code for the base class and the supporting documentation as the deliverable
+<ul>
+<li><strong>PR</strong>: Base class code, test code for the base class and documentation for the base class</li>
+</ul></li>
+</ul>
+<p>Week 6, 7 [June 27th - July 11th]</p>
+<ul>
+<li>Look into best practices for coding a <code>NewtonEulerMethod</code> class and begin creation of that class. This will be a general design period and as the desired API is developed. Test code will be written to verify the agreed upon API.</li>
+</ul>
+<p>Week 8, 9 [July 11th - July 25th]</p>
+<ul>
+<li><p>Complete <code>NewtonEulerMethod</code> class</p></li>
+<li><p>Update the documentation explaining the new method</p></li>
+<li><p><strong>PR</strong>: <code>NewtonEulerMethod</code> class code, test code and documentation</p></li>
+</ul>
+<p>Week 10 - 13 [July 25th - August 23rd]</p>
+<ul>
+<li><p>Finish any documentation or code that is still needing to be completed</p></li>
+<li><p>Continue to refactor and improve the quality of the code written for the project</p></li>
+<li><p>By this point a complete understanding of the code underlying the methods should be obtained and thus effort towards performance enhancement and speed would return the greatest results</p></li>
+<li>Make final preparations for the final evaluation
+<ul>
+<li>Final deliverables would include
+<ul>
+<li>Equations of motion generator base class</li>
+<li>Newton-Euler equations of motion generator class</li>
+<li>Benchmarking results</li>
+</ul></li>
+<li><strong>PR</strong>: Any remaining items, code, documentation fixes etc.</li>
+</ul></li>
+</ul>
+</body>
+</html>
