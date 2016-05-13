@@ -4,6 +4,15 @@
 
 ## Pre-Week 2
 
+### 5/13/2016
+
+- Got pendulum example to match the hand derived results
+- Drew a diagram (svg) for the pendulum example
+- Created a [PR #351](https://github.com/pydy/pydy/pull/351) for the pendulum
+  example in the examples folder of pydy
+- Added RSS feed to PSF GSoC collection of blogs
+- Started the benchmarking program
+
 ### 5/12/2016
 
 - Worked on implementing [Basic Equation of
