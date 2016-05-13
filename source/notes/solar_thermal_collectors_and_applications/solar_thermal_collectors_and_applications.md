@@ -162,3 +162,34 @@ target="_blank">Full Article</a>
 >       - Integrated Compound Parabolic Collector (ICPC)
 >           - Combination of CPC and ETC where the ETC is used as the reciever
               for a CPC system
+
+> ### Sun tracking concentrating collectors
+
+> - By concentrating the solar energy, on can reduce the surface area over
+    which heat loss occurs
+>       - Results in higher possible temperatures
+
+> - Concentrating Advantages
+>       - Higher temperatures thus higher efficiencies
+>       - Able to achieve a thermodynamic match between temperature level and
+          required temperature level
+>       - Higher thermal efficiency
+>       - Requires less material and is structurally simpler than FPC
+>           - Can result in lower cost per unit area
+> - Concentrating Disadvantages
+>       - Collect little diffuse radiation depending on concentration ratio
+>       - Tracking system required to follow the sun
+>       - Reflector surfaces may lose reflectance over time and may require
+          cleaning and refurbishing
+
+> - Increase ratio of aperture to absorber area increases temperature bur
+    requires higher precision
+
+> - 2 Methods of tracking the sun's motion
+>       - Altazimuth method
+>       - One axis tracking
+
+> - Can attach mirrors to a FPC and make it a concentrating collector
+> - Another type of concentrating collector is CPC which can be tracking or
+    stationary
+> - Trouble collectiong diffuse component of radiation
