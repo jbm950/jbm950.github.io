@@ -1,5 +1,27 @@
 ### This is a raw work log and not meant to be a detailed overview of progress
 
+(Weeks start on Sundays)
+
+<hr>
+
+## Pre-Week 3
+
+### 5/16/2016
+
+- Asked for clarification about travel for scipy conference
+- Watched a video on using sqlite with python
+- Created a database for the benchmarking software
+- Created code to run the main overhead for the benchmarking software that
+  calls out individual tests
+- Created a test to run Kanes Equations based on the example mass spring damper
+  code in KanesMethod's docstring
+- Created a test to run Lagranges Equations based on the simple pendulum
+  example I added to pydy
+- Fixed some errors in the physics documentation and created a [PR
+  #11117](https://github.com/pydy/pydy/pull/351)
+- Began Reading [A Beginners Guide to 6-D Vectors (Part
+  2)](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5663690)
+
 <hr>
 
 ## Pre-Week 2
