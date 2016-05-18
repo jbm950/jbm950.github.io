@@ -6,6 +6,20 @@
 
 ## Pre-Week 3
 
+### 5/18/2016
+
+- Addressed Jasons comments on the simple pendulum example [PR
+  #351](https://github.com/pydy/pydy/pull/351)
+- Began email correspondance about the planning of weekly meetings
+- Began looking up flight prices from Austin to Gainesville
+    - Booked a flight
+- Started work on a custom viewer for the benchmarking database using tkinter
+    - Able to pull up the database, average all the data taken on a single day,
+      and plot the data using matplotlib
+- Started Roy Featherstones short course on spatial vector algebra
+    - Made it to slide 32 in both the slides and slide notes and ended while
+      working on questions A2
+
 ### 5/16/2016
 
 - Asked for clarification about travel for scipy conference
@@ -21,6 +35,9 @@
   #11117](https://github.com/pydy/pydy/pull/351)
 - Began Reading [A Beginners Guide to 6-D Vectors (Part
   2)](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5663690)
+- Fixed my adding of RSS feed to PSF GSoC collection of blogs
+    - Had accidentally made the pull request between branches of my repository
+      rather than my repository and the GSoC repository
 
 <hr>
 
