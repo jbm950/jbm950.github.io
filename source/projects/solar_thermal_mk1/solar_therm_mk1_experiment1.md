@@ -17,7 +17,29 @@ learning
 Need to do energy balances for control volumes to come up with some applicable
 theory
 
+$m_{tank}c\frac{dT}{dt} = -\dot{W}_{pump} + \dot{m}c(T_{in} - T_{tank})$
+
+- Gotten from page 208 of Fundamentals of Engineering Thermodynamics
+
 ### Procedure
+
+Will need a control test where just the bucket is used for the experiment
+
+Collect
+
+> _At beginning_
+
+> - Voltage of batteries
+> - Make sure the water hits a specific line on the bucket (same volume)
+
+> _During_ (5 min intervals)
+
+> - Water temp in bucket
+> - Current air temp 
+
+> _End_
+
+> - Voltage of batteries
 
 ### Data
 
