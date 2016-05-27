@@ -16,8 +16,111 @@ title: Raw Log
 <h3 id="this-is-a-raw-work-log-and-not-meant-to-be-a-detailed-overview-of-progress">This is a raw work log and not meant to be a detailed overview of progress</h3>
 <p>(Weeks start on Sundays)</p>
 <hr>
+<h2 id="week-1">Week 1</h2>
+<h3 id="section">5/27/2016</h3>
+<ul>
+<li>Fixed a docstring issue in models.py where it stated that the retun value was a pydy.system.System object which I had changed</li>
+<li>Changed the theta location in models.py's n_link_pendulum_on_cart() function in the sympy repository
+<ul>
+<li>Had to change initial work such that theta would represent a counter clockwise rotation as positive</li>
+<li>Updated the drawing in the docstring to indicate the new location of theta</li>
+</ul></li>
+<li>Cleaning up the tests so that there are no more extremely long lines and the tests check simplify(sym_expr - expected) == Matrix(0's)</li>
+<li>Refreshed knowledged by reading though python book on <span class="citation">@property</span> decorators</li>
+<li>Continued research of KanesMethod and LagrangesMethod</li>
+<li><a href="https://github.com/sympy/sympy_benchmarks/pull/27">PR #27</a> in sympy_benchmarks was merged and closed by Jason</li>
+</ul>
+<h3 id="section-1">5/26/2016</h3>
+<ul>
+<li>Ran the sympy_benchmarks using asv, published and previewed again to see if it would produce a second data point or if additional data points are collected by specifying more commits to test in the config
+<ul>
+<li>Added a second data point</li>
+</ul></li>
+<li>Added a mass spring damper test to the lagrange benchmarking code and commented it</li>
+<li>Renamed existing kanesmethod and lagrangesmethod benchmarking classes to reflect the dynamics situation they test</li>
+<li>Altered the README.rst of sympy_benchmarks to reflect a desire to mirror SymPy's directory tree</li>
+<li>Left a request for a determination of the desired scope of my benchmarking pull request</li>
+<li>Moved pydy.models to sympy/physics/mechanics
+<ul>
+<li>Changed the return statements to just return the KanesMethod object</li>
+<li>Altered the code to reflect the new argument order for .kanes_equations()</li>
+</ul></li>
+<li>Asked about why the documentation online does not reflect the changes that were made to the source code in <a href="https://github.com/sympy/sympy/blob/master/sympy/physics/mechanics/kane.py">Issue #10945</a></li>
+<li>Addressed Jason's review comments in <a href="https://github.com/sympy/sympy_benchmarks/pull/27">PR #27</a> in the sympy_benchmarking repository</li>
+<li>Created tests for the new sympy.physics.mechanics.models.py</li>
+<li>Created a <a href="https://github.com/sympy/sympy/pull/11168">PR #11168</a> for the migration of the models code from PyDy to SymPy</li>
+<li>Mentioned other members of SymPy to look at <a href="https://github.com/sympy/sympy/pull/10650">PR #10650</a> that I had done a review of yesterday. These members had been active in another pull request that was attempting to fix the same issue</li>
+<li>Took notes on Dynamics topics and generally spent time learning how the code works</li>
+</ul>
+<h3 id="section-2">5/25/2016</h3>
+<ul>
+<li>Reviewed Jason's comments on my benchmarking pull requests (<a href="https://github.com/sympy/sympy/pull/11154">PR #11154</a> in the sympy repository and <a href="https://github.com/sympy/sympy_benchmarks/pull/27">PR #27</a> in sympy_benchmarks repository)</li>
+<li>Looked over pydy.models code for use of KanesMethod interface</li>
+<li>Looked over pydy rolling disk example PR code for use of KanesMethod interface</li>
+<li>Looked over pydy Whipple bicycle model PR code for use of KanesMethod interface</li>
+<li>Looked over sympy test_kane3.py for use of KanesMethod interface</li>
+<li>Looked at <code>KanesMethod</code> to see what methods were not used in the above four locations</li>
+<li>Summarized findings in comments on the above mentioned bencharking pull requests</li>
+<li>Altered benchmarking code in sympy_benchmarks
+<ul>
+<li>Changed the class names for clarity</li>
+<li>Moved the initialization code for the EOMMethod classes to the setup code</li>
+<li>Added comments to the Kane's Method code</li>
+<li>Fixed a typo in the Kane's Method code</li>
+</ul></li>
+<li>Did a review of <a href="https://github.com/sympy/sympy/pull/10650">PR #10650</a> in the sympy repository</li>
+<li>Restructured SymPy mechanics benchmarks subdirectories to match the directory structure in SymPy</li>
+<li>Ran the sympy_benchmarks using asv, published and previewed</li>
+</ul>
+<h3 id="section-3">5/24/2016</h3>
+<ul>
+<li>Commented and added docstings to view.py in the benchmarking code</li>
+<li>Added the close() for the cursor and connection to the benchmarking scripts that were missing it</li>
+<li>Created a benchmarking branch on by sympy repo and added my benchmarking code to it under sympy/benchmarking/mechanics</li>
+<li>Commited the different benchmarking files in a way such that each commit was related to one topic (ie. the viewer, the main script, the tests)</li>
+<li>Created a <a href="https://github.com/sympy/sympy/pull/11154">PR #11154</a> for the benchmarking code
+<ul>
+<li>Jason Points out that there's already a sympy/benchmarking repository that uses ASV to perform benchmarking tasks</li>
+<li>Responded indicating that kane_1.py and lagrange_1.py could be moved to <code>sympy/sympy_benchmarks</code></li>
+</ul></li>
+<li>Finished reading through the slides and slide notes for Featherstone's short course on spatial vector algebra</li>
+<li>Continued reading <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5663690">A Beginners Guide to 6-D Vectors (Part 2)</a>
+<ul>
+<li>Made it to &quot;Arithmetic&quot; on page 6</li>
+</ul></li>
+<li>Read through ASV (airspeed velocity) website. (Python benchmarking package)
+<ul>
+<li>Read Using Airspeed velocity page and writing benchmarks page</li>
+</ul></li>
+<li>Created a file for and started collecting notes for the Base class for the equations of motion generation methods</li>
+<li>Forked and cloned sympy_benchmarks</li>
+<li>Added kane_1 and lagrange_1 to sympy_benchmarks in mechanics_benchmarks branch and altered them to meet airspeed velocity's structure for benchmarking tests</li>
+<li>Created a <a href="https://github.com/sympy/sympy_benchmarks/pull/27">PR #27</a> to add kane_1.py and lagrange_1.py to sympy_benchmarks repository</li>
+</ul>
+<h3 id="section-4">5/23/2016</h3>
+<ul>
+<li>Had a brief meeting with Angadh</li>
+<li>Worked on adding filters to benchmarking viewer
+<ul>
+<li>Had to find the proper widget for this task</li>
+<li>Figured out how to use tk.Menu</li>
+<li>Found SQLite command for determining all the tables in a database</li>
+<li>Got the matplotlib section of the GUI to be drawn over instead of trying to add additional graphs</li>
+<li>Viewer can now update the graph based on switching tables and specifying specific python version or platform</li>
+</ul></li>
+<li>Changed the benchmark code for kane's method and lagrange's method
+<ul>
+<li>put the LagrangesMethod and form equations in a function (same for KanesMethod) and call the function from timeit rather than import the whole file</li>
+<li>Needed to be run significantly fewer iterations to achieve the same run time</li>
+</ul></li>
+</ul>
+<hr>
 <h2 id="pre-week-3">Pre-Week 3</h2>
-<h3 id="section">5/18/2016</h3>
+<h3 id="section-5">5/20/2016</h3>
+<ul>
+<li>Wrote a blog post summerizing what has been done during the community bonding period</li>
+</ul>
+<h3 id="section-6">5/18/2016</h3>
 <ul>
 <li>Addressed Jasons comments on the simple pendulum example <a href="https://github.com/pydy/pydy/pull/351">PR #351</a></li>
 <li>Began email correspondance about the planning of weekly meetings</li>
@@ -34,7 +137,7 @@ title: Raw Log
 <li>Made it to slide 32 in both the slides and slide notes and ended while working on questions A2</li>
 </ul></li>
 </ul>
-<h3 id="section-1">5/16/2016</h3>
+<h3 id="section-7">5/16/2016</h3>
 <ul>
 <li>Asked for clarification about travel for scipy conference</li>
 <li>Watched a video on using sqlite with python</li>
@@ -51,7 +154,7 @@ title: Raw Log
 </ul>
 <hr>
 <h2 id="pre-week-2">Pre-Week 2</h2>
-<h3 id="section-2">5/13/2016</h3>
+<h3 id="section-8">5/13/2016</h3>
 <ul>
 <li>Got pendulum example to match the hand derived results</li>
 <li>Drew a diagram (svg) for the pendulum example</li>
@@ -59,7 +162,7 @@ title: Raw Log
 <li>Added RSS feed to PSF GSoC collection of blogs</li>
 <li>Started the benchmarking program</li>
 </ul>
-<h3 id="section-3">5/12/2016</h3>
+<h3 id="section-9">5/12/2016</h3>
 <ul>
 <li>Worked on implementing <a href="../notes/analytical_dynamics/analytical_dynamics_main.html#e_basic_equation_of_motion">Basic Equation of Motion</a> in code
 <ul>
@@ -68,12 +171,12 @@ title: Raw Log
 <li>Finished reading <a href="http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=5569032#article">A Beginners Guide to 6-D Vectors (Part 1)</a></li>
 <li>Figured out how to get the run time for the testing code</li>
 </ul>
-<h3 id="section-4">5/11/2016</h3>
+<h3 id="section-10">5/11/2016</h3>
 <ul>
 <li>Added a link to the timeline on my website so it was easier to access</li>
 <li>Worked out <a href="../notes/analytical_dynamics/analytical_dynamics_main.html#e_basic_equation_of_motion">Basic Equation of Motion</a> using Langrange's Method by hand as a refresher</li>
 </ul>
-<h3 id="section-5">5/10/2016</h3>
+<h3 id="section-11">5/10/2016</h3>
 <ul>
 <li>Created a <a href="https://github.com/pydy/pydy/pull/349">PR #349</a> for a simple grammar error on the pydy example page
 <ul>
@@ -91,11 +194,11 @@ title: Raw Log
 </ul>
 <hr>
 <h2 id="pre-week-1">Pre-Week 1</h2>
-<h3 id="section-6">5/7/2016</h3>
+<h3 id="section-12">5/7/2016</h3>
 <ul>
 <li>Edited permissions and changed name of google drive shared folder</li>
 </ul>
-<h3 id="section-7">5/6/2016</h3>
+<h3 id="section-13">5/6/2016</h3>
 <ul>
 <li>Added blog to Planet Sympy</li>
 <li>Added project details to GSoC-2016-Report on the wiki</li>
