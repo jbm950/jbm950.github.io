@@ -14,6 +14,7 @@ target="_blank">Full Article</a>
 2. [__Solar Collectors__](#solarcollectors)
 
 > - [Stationary Collectors](#stationarycollectors)
+> - [Sun Tracking Concentrating Collectors](#sun_tracking_collectors)
 
 
 ## 1. Introduction
@@ -163,7 +164,7 @@ target="_blank">Full Article</a>
 >           - Combination of CPC and ETC where the ETC is used as the reciever
               for a CPC system
 
-> ### Sun tracking concentrating collectors
+> ### Sun tracking concentrating collectors {#sun_tracking_collectors}
 
 > - By concentrating the solar energy, on can reduce the surface area over
     which heat loss occurs
@@ -193,3 +194,29 @@ target="_blank">Full Article</a>
 > - Another type of concentrating collector is CPC which can be tracking or
     stationary
 > - Trouble collectiong diffuse component of radiation
+> - Concentration can be obtained by reflection or refraction by use of mirrors
+    or lenses
+> - Concentrating collectors can be characterized as imaging or non-imaging
+>       - Is the image of the sun focused at the reciever or not?
+
+> - Imaging Collector Categories
+>       - Parabolic trough collector
+>       - Linear Fresnel Reflector (LFR)
+>       - Parabolic Dish
+>       - Central Reciever
+
+> - Parabolic Trough Collectors (PTC)
+>       - Can effectively produce heat at temps 50-400 deg C
+>       - Parabolic reflective material directs light at a metal black tube at
+          the focal point which is covered by a glass tube to reduce heat loss
+>       - N-S oriented have highest cosine loss at noon and lowest in the
+          morning and evening
+>           - E-W oriented has the opposite effect
+>           - Choice of orientation depends on application and if more energy
+              is needed in summer or winter
+>       - PTC's are most mature solar technology to generate temp up to 400 deg
+          C
+>       - Reciever typically has a selective coating
+>       - Disadvantage of glass tube is transmittance loss of the concentrated
+          light
+>           - Can reduce loss with anti reflective coating
