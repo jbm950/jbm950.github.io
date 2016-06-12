@@ -16,8 +16,182 @@ title: Raw Log
 <h3 id="this-is-a-raw-work-log-and-not-meant-to-be-a-detailed-overview-of-progress">This is a raw work log and not meant to be a detailed overview of progress</h3>
 <p>(Weeks start on Sundays)</p>
 <hr>
+<h2 id="week-3">Week 3</h2>
+<h3 id="section">6/10/2016</h3>
+<ul>
+<li>Began reading through latest changes to <a href="https://github.com/sympy/sympy/pull/11183#issuecomment-225102295">PR #11183</a>
+<ul>
+<li>Performed a code review of the latest commit's changes to kane.py</li>
+</ul></li>
+<li>Altered code in <a href="https://github.com/pydy/pydy/pull/353">PR #353</a> to show different methods of entering the equations of motion
+<ul>
+<li>Added input demonstrations for the different forms accepted by ODEFunctionGenerator in PyDy</li>
+<li>Added ability to give the EOM object additional equations such as kinetic energy, auxiliary equations, etc.</li>
+<li>Looked into combining coordinates and speeds into a single vector states and the effect that would have on pydy.system.System</li>
+</ul></li>
+<li>Discussion over <code>rhs</code> as a variable and the possible confusion it creates in <a href="https://github.com/pydy/pydy/pull/353">PR #353</a></li>
+</ul>
+<h3 id="section-1">6/9/2016</h3>
+<ul>
+<li>Diving into how KanesMethod is accessed by pydy.system.System</li>
+<li>Started work on a two mass spring damper system to provide an example for the api for the project
+<ul>
+<li>Solved the equation of motion and put in M * udot = F form by hand</li>
+<li>Coded up the example</li>
+<li>Created a <a href="https://github.com/pydy/pydy/pull/353">PR #353</a></li>
+<li>Created a .svg drawing to go along with the example</li>
+</ul></li>
+<li>Commented/reviewed <a href="https://github.com/sympy/sympy/pull/10698">PR #10698</a> about removing documentation the user view as redundant
+<ul>
+<li>Sartaj Singh agreed with me that the change wasn't useful and closed the PR</li>
+</ul></li>
+<li>Commented/reviewed <a href="https://github.com/sympy/sympy/pull/10693">PR #10693</a> about fixing documentation spelling/grammar</li>
+</ul>
+<h3 id="section-2">6/8/2016</h3>
+<ul>
+<li>Working through <a href="http://nbviewer.jupyter.org/github/bmcage/odes/blob/master/docs/ipython/Planar%20Pendulum%20as%20DAE.ipynb">Planar Pendulum Example</a>
+<ul>
+<li>Arranged equations into the equation form shown on <a href="http://docs.sympy.org/latest/modules/physics/mechanics/lagrange.html">Lagrange Docs 3 equations</a> and into mass matrix/forcing vector form and mass matrix full/forcing vector full form</li>
+<li>Made an outline of the things that are actually done in the tutorial</li>
+<li>Determined that the equations of motion are only used for the residual function for the dae object
+<ul>
+<li>DAE object found in scikits.odes</li>
+</ul></li>
+</ul></li>
+<li>Looked over <a href="http://www.pydy.org/examples/double_pendulum.html">Double Pendulum Example</a> in PyDy
+<ul>
+<li>The code shown in the documentation does not appear to be code found anywhere in PyDy</li>
+</ul></li>
+<li>Looked up <a href="http://www.scholarpedia.org/article/Sundials_equation_solvers">IDA</a> software for solving DAE's
+<ul>
+<li>Is part of Sundials equation solvers suite</li>
+</ul></li>
+<li>Looked over <a href="http://www.moorepants.info/blog/npendulum.html">Dynamics with Python</a> article written by Jason to get more ideas on the use of the generated equations of motion
+<ul>
+<li>Arranges the equations of motion such that odeint can solve the time simulation
+<ul>
+<li>odeint is found in SciPy</li>
+</ul></li>
+</ul></li>
+<li>Read documentation on <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html#scipy.integrate.odeint">scipy.integrate.odeint</a>
+<ul>
+<li>Uses xdot = f(x, t) as input (right hand side)</li>
+</ul></li>
+<li>Read documentation on <a href="https://github.com/bmcage/odes">scikit.odes.dae</a>
+<ul>
+<li>Uses 0 = xdot - f(x, t) as input (residual)</li>
+</ul></li>
+<li>Looked through <a href="http://nbviewer.jupyter.org/github/pydy/pydy/blob/master/examples/mass_spring_damper/mass_spring_damper.ipynb">PyDy Mass Spring Damper Example</a>
+<ul>
+<li>System class seems to handle the backend for formatting equations of motion for integrators and changing from symbolics to numerics</li>
+</ul></li>
+<li>Started going through pydy.system.System and disceting its internals
+<ul>
+<li>Made lists of all attributes, properties and non-property methods of the class</li>
+<li>Found all times eom_method is used in the code and what attributes are being accessed</li>
+</ul></li>
+</ul>
+<h3 id="section-3">6/7/2016</h3>
+<ul>
+<li>Worked on migrating the rest of the <span class="citation">@properties</span> from ~Methods into the base class</li>
+<li>Added a method to the base class to check if the equations of motion have been generated yet</li>
+<li>Made a pull request for the property migration, <a href="https://github.com/sympy/sympy/pull/11182">PR #11182</a> (Change from base class development)
+<ul>
+<li>Read through Jason's comments on this PR</li>
+<li>Replied suggesting a meeting tomorrow morning and moving the discussion to a wiki page</li>
+</ul></li>
+<li>Looked up differences between ODE and ADE</li>
+<li>Read through <a href="http://nbviewer.jupyter.org/github/bmcage/odes/blob/master/docs/ipython/Planar%20Pendulum%20as%20DAE.ipynb">Planar Pendulum Example</a> which demonstrates a problem from equations of motion generation to simulation/visualization</li>
+<li>Looked up difference between DAE's and ODE's and added the findings to a new notes page on website</li>
+</ul>
+<h3 id="section-4">6/6/2016</h3>
+<ul>
+<li>Cleaned up the test code for test_eombase.py</li>
+<li>Finished reading <a href="https://github.com/pydy/pydy-tutorial-human-standing">pydy-tutorial-human-standing</a></li>
+<li>Read through updated changes to <a href="https://github.com/sympy/sympy/pull/11183">PR #11183</a> (Jason's addition to Kanes method documentation)</li>
+<li>Created <a href="https://github.com/sympy/sympy/issues/11199">Issue #11199</a> mentioning how in the code base the old linearizer was scheduled to be deprecated in version 1.0 but it is still present</li>
+<li>Planning and working on ideas for base class implementation</li>
+</ul>
+<hr>
+<h2 id="week-2">Week 2</h2>
+<h3 id="section-5">6/3/2016</h3>
+<ul>
+<li>Worked on solidifying the eom test code such that it will actually run and is no longer entirely pseudo code</li>
+<li>Worked on filling out the eom code</li>
+<li>Asked for opinions on inputting the dynamical and kinematical diff eqs into EOM</li>
+<li>Wrote weekly blog post</li>
+<li>Modified test code and pushed changes to the SymPy PR</li>
+<li>Started reading <a href="https://github.com/pydy/pydy-tutorial-human-standing">pydy-tutorial-human-standing</a></li>
+</ul>
+<h3 id="section-6">6/2/2016</h3>
+<ul>
+<li>Looked over mass_matrix and forcing methods in both KanesMethod and Lagranges Method</li>
+<li>Created a mock up of an equations of motion class</li>
+<li>Read through some of https://en.wikipedia.org/wiki/Nonholonomic_system</li>
+<li>Watched <a href="https://www.youtube.com/watch?v=4RiRAIelAAQ">Constraints and generalized coordinates</a>
+<ul>
+<li>Less helpful</li>
+</ul></li>
+<li>Watched <a href="https://www.youtube.com/watch?v=fx4esbHWkkk">Nonholonomic constraints in Lagrangian mechanics by Prof Anindya Chatterjee</a>
+<ul>
+<li>Rather helpful</li>
+</ul></li>
+<li>Posted a question asking for clarification to the google groups forum</li>
+<li>Pushed my changes and mock up of an equations of motion class to the <a href="https://github.com/sympy/sympy/pull/11182">PR #11182</a></li>
+</ul>
+<h3 id="section-7">6/1/2016</h3>
+<ul>
+<li>Responded to Jason's question on <a href="https://github.com/sympy/sympy/pull/11117">PR #11117</a> (physics documentation fixes)
+<ul>
+<li>Jason Merged the PR</li>
+</ul></li>
+<li>Read through Jason's comments on <a href="https://github.com/sympy/sympy/pull/11182">PR #11182</a> (the base equations of motion PR/discussion)
+<ul>
+<li>Replied requesting some decisions and clarifications</li>
+</ul></li>
+<li>Read through Jasons comments on my question to the google groups forum</li>
+<li>Reviewed <a href="https://github.com/sympy/sympy/pull/11183">PR #11183</a> where Jason added descriptions of the equations mentioned in Kane's documentation</li>
+<li>Read through <a href="https://github.com/pydy/pydy/pull/345">PR #345</a> in the pydy repository where there was a discussion about a base class for the Method classes</li>
+<li>Minor fix to KanesMethod docstring, created <a href="https://github.com/sympy/sympy/pull/11186#issuecomment-223080554">PR #11186</a></li>
+</ul>
+<h3 id="section-8">5/31/2016</h3>
+<ul>
+<li>Finished reading <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=5663690">A Beginners Guide to 6-D Vectors (Part 2)</a></li>
+<li>Read through &quot;Linearization in Physics/Mechanics&quot; in sympy documentation</li>
+<li>Read through &quot;Potential Issues/Advanced Topics/Future Features in Physics/Mechanics&quot; in sympy documentation</li>
+<li>Read through &quot;A rolling disc, with Kane’s method&quot; in sympy documentation</li>
+<li>Read through &quot;A rolling disc, with Kane’s method and constraint forces&quot; in sympy documentation</li>
+<li>Read through &quot;A rolling disc using Lagrange’s Method&quot; in sympy documentation</li>
+<li>Read through &quot;A bicycle&quot; in sympy documentation</li>
+<li>Read through &quot;Nonminimal Coordinates Pendulum&quot; in sympy documentation</li>
+<li>Made a branch for EOMBase creation and made a file to hold the code and the test code</li>
+<li>Moved and fixed the examples from orient to orient new docstring for <a href="https://github.com/sympy/sympy/pull/11117">PR #11117</a>
+<ul>
+<li>Asked for some clarification about some of the physics documentation</li>
+<li>Removed a redundant section from physics/advanced.rst</li>
+<li>Removed colons from physics/masses.rst in the hopes that it fixes the problem of code syntax highlighting and SymPy Live compatibility</li>
+<li>Responded to Jason's Comments</li>
+<li>Reverted the colon commit</li>
+</ul></li>
+<li>Wrote some pseudo-code for test_eombase.py</li>
+<li>Opened an <a href="https://github.com/sympy/sympy-live/issues/96">Issue #96</a> in the sympy live repository over syntax highlighting and SymPy Live's ability to run</li>
+<li>Created a <a href="https://github.com/sympy/sympy/pull/11182">PR #11182</a> to discuss the development of the EOm base class</li>
+<li>Asked some terminology questions on the sympy google groups forum</li>
+</ul>
+<h3 id="section-9">5/30/2016</h3>
+<ul>
+<li>Changed the tests in sympy/physics/mechanics/tests/test_models.py so that mass matrices and forcing vectors were used for comparison in order to cut down run time
+<ul>
+<li><a href="https://github.com/sympy/sympy/pull/11168">PR #11168</a> was merged and closed by Jason</li>
+</ul></li>
+<li>Continued research of Kanes and Lagranges method classes</li>
+<li>Read through &quot;Kane’s Method in Physics/Mechanics&quot; in sympy documentation</li>
+<li>Skimmed through &quot;Masses, Inertias, Particles and Rigid Bodies in Physics/Mechanics&quot; in sympy documentation</li>
+<li>Read through &quot;Lagrange’s Method in Physics/Mechanics&quot; in sympy documentation</li>
+</ul>
+<hr>
 <h2 id="week-1">Week 1</h2>
-<h3 id="section">5/27/2016</h3>
+<h3 id="section-10">5/27/2016</h3>
 <ul>
 <li>Fixed a docstring issue in models.py where it stated that the retun value was a pydy.system.System object which I had changed</li>
 <li>Changed the theta location in models.py's n_link_pendulum_on_cart() function in the sympy repository
@@ -30,7 +204,7 @@ title: Raw Log
 <li>Continued research of KanesMethod and LagrangesMethod</li>
 <li><a href="https://github.com/sympy/sympy_benchmarks/pull/27">PR #27</a> in sympy_benchmarks was merged and closed by Jason</li>
 </ul>
-<h3 id="section-1">5/26/2016</h3>
+<h3 id="section-11">5/26/2016</h3>
 <ul>
 <li>Ran the sympy_benchmarks using asv, published and previewed again to see if it would produce a second data point or if additional data points are collected by specifying more commits to test in the config
 <ul>
@@ -52,7 +226,7 @@ title: Raw Log
 <li>Mentioned other members of SymPy to look at <a href="https://github.com/sympy/sympy/pull/10650">PR #10650</a> that I had done a review of yesterday. These members had been active in another pull request that was attempting to fix the same issue</li>
 <li>Took notes on Dynamics topics and generally spent time learning how the code works</li>
 </ul>
-<h3 id="section-2">5/25/2016</h3>
+<h3 id="section-12">5/25/2016</h3>
 <ul>
 <li>Reviewed Jason's comments on my benchmarking pull requests (<a href="https://github.com/sympy/sympy/pull/11154">PR #11154</a> in the sympy repository and <a href="https://github.com/sympy/sympy_benchmarks/pull/27">PR #27</a> in sympy_benchmarks repository)</li>
 <li>Looked over pydy.models code for use of KanesMethod interface</li>
@@ -72,7 +246,7 @@ title: Raw Log
 <li>Restructured SymPy mechanics benchmarks subdirectories to match the directory structure in SymPy</li>
 <li>Ran the sympy_benchmarks using asv, published and previewed</li>
 </ul>
-<h3 id="section-3">5/24/2016</h3>
+<h3 id="section-13">5/24/2016</h3>
 <ul>
 <li>Commented and added docstings to view.py in the benchmarking code</li>
 <li>Added the close() for the cursor and connection to the benchmarking scripts that were missing it</li>
@@ -97,7 +271,7 @@ title: Raw Log
 <li>Added kane_1 and lagrange_1 to sympy_benchmarks in mechanics_benchmarks branch and altered them to meet airspeed velocity's structure for benchmarking tests</li>
 <li>Created a <a href="https://github.com/sympy/sympy_benchmarks/pull/27">PR #27</a> to add kane_1.py and lagrange_1.py to sympy_benchmarks repository</li>
 </ul>
-<h3 id="section-4">5/23/2016</h3>
+<h3 id="section-14">5/23/2016</h3>
 <ul>
 <li>Had a brief meeting with Angadh</li>
 <li>Worked on adding filters to benchmarking viewer
@@ -116,11 +290,11 @@ title: Raw Log
 </ul>
 <hr>
 <h2 id="pre-week-3">Pre-Week 3</h2>
-<h3 id="section-5">5/20/2016</h3>
+<h3 id="section-15">5/20/2016</h3>
 <ul>
 <li>Wrote a blog post summerizing what has been done during the community bonding period</li>
 </ul>
-<h3 id="section-6">5/18/2016</h3>
+<h3 id="section-16">5/18/2016</h3>
 <ul>
 <li>Addressed Jasons comments on the simple pendulum example <a href="https://github.com/pydy/pydy/pull/351">PR #351</a></li>
 <li>Began email correspondance about the planning of weekly meetings</li>
@@ -137,7 +311,7 @@ title: Raw Log
 <li>Made it to slide 32 in both the slides and slide notes and ended while working on questions A2</li>
 </ul></li>
 </ul>
-<h3 id="section-7">5/16/2016</h3>
+<h3 id="section-17">5/16/2016</h3>
 <ul>
 <li>Asked for clarification about travel for scipy conference</li>
 <li>Watched a video on using sqlite with python</li>
@@ -154,7 +328,7 @@ title: Raw Log
 </ul>
 <hr>
 <h2 id="pre-week-2">Pre-Week 2</h2>
-<h3 id="section-8">5/13/2016</h3>
+<h3 id="section-18">5/13/2016</h3>
 <ul>
 <li>Got pendulum example to match the hand derived results</li>
 <li>Drew a diagram (svg) for the pendulum example</li>
@@ -162,7 +336,7 @@ title: Raw Log
 <li>Added RSS feed to PSF GSoC collection of blogs</li>
 <li>Started the benchmarking program</li>
 </ul>
-<h3 id="section-9">5/12/2016</h3>
+<h3 id="section-19">5/12/2016</h3>
 <ul>
 <li>Worked on implementing <a href="../notes/analytical_dynamics/analytical_dynamics_main.html#e_basic_equation_of_motion">Basic Equation of Motion</a> in code
 <ul>
@@ -171,12 +345,12 @@ title: Raw Log
 <li>Finished reading <a href="http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=5569032#article">A Beginners Guide to 6-D Vectors (Part 1)</a></li>
 <li>Figured out how to get the run time for the testing code</li>
 </ul>
-<h3 id="section-10">5/11/2016</h3>
+<h3 id="section-20">5/11/2016</h3>
 <ul>
 <li>Added a link to the timeline on my website so it was easier to access</li>
 <li>Worked out <a href="../notes/analytical_dynamics/analytical_dynamics_main.html#e_basic_equation_of_motion">Basic Equation of Motion</a> using Langrange's Method by hand as a refresher</li>
 </ul>
-<h3 id="section-11">5/10/2016</h3>
+<h3 id="section-21">5/10/2016</h3>
 <ul>
 <li>Created a <a href="https://github.com/pydy/pydy/pull/349">PR #349</a> for a simple grammar error on the pydy example page
 <ul>
@@ -194,11 +368,11 @@ title: Raw Log
 </ul>
 <hr>
 <h2 id="pre-week-1">Pre-Week 1</h2>
-<h3 id="section-12">5/7/2016</h3>
+<h3 id="section-22">5/7/2016</h3>
 <ul>
 <li>Edited permissions and changed name of google drive shared folder</li>
 </ul>
-<h3 id="section-13">5/6/2016</h3>
+<h3 id="section-23">5/6/2016</h3>
 <ul>
 <li>Added blog to Planet Sympy</li>
 <li>Added project details to GSoC-2016-Report on the wiki</li>

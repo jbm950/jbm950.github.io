@@ -4,6 +4,212 @@
 
 <hr>
 
+## Week 3
+
+### 6/10/2016
+
+- Began reading through latest changes to [PR
+  #11183](https://github.com/sympy/sympy/pull/11183#issuecomment-225102295)
+    - Performed a code review of the latest commit's changes to kane.py
+- Altered code in [PR #353](https://github.com/pydy/pydy/pull/353) to show
+  different methods of entering the equations of motion
+    - Added input demonstrations for the different forms accepted by
+      ODEFunctionGenerator in PyDy
+    - Added ability to give the EOM object additional equations such as kinetic
+      energy, auxiliary equations, etc.
+    - Looked into combining coordinates and speeds into a single vector states
+      and the effect that would have on pydy.system.System
+- Discussion over `rhs` as a variable and the possible confusion it creates in
+  [PR #353](https://github.com/pydy/pydy/pull/353)
+
+### 6/9/2016
+
+- Diving into how KanesMethod is accessed by pydy.system.System
+- Started work on a two mass spring damper system to provide an example for the
+  api for the project
+    - Solved the equation of motion and put in M * udot = F form by hand
+    - Coded up the example
+    - Created a [PR #353](https://github.com/pydy/pydy/pull/353)
+    - Created a .svg drawing to go along with the example
+- Commented/reviewed [PR #10698](https://github.com/sympy/sympy/pull/10698)
+  about removing documentation the user view as redundant
+    - Sartaj Singh agreed with me that the change wasn't useful and closed the
+      PR
+- Commented/reviewed [PR #10693](https://github.com/sympy/sympy/pull/10693)
+  about fixing documentation spelling/grammar
+
+### 6/8/2016
+
+- Working through [Planar Pendulum
+  Example](http://nbviewer.jupyter.org/github/bmcage/odes/blob/master/docs/ipython/Planar%20Pendulum%20as%20DAE.ipynb)
+    - Arranged equations into the equation form shown on [Lagrange Docs 3
+      equations](http://docs.sympy.org/latest/modules/physics/mechanics/lagrange.html)
+      and into mass matrix/forcing vector form and mass matrix full/forcing
+      vector full form
+    - Made an outline of the things that are actually done in the tutorial
+    - Determined that the equations of motion are only used for the residual
+      function for the dae object
+        - DAE object found in scikits.odes
+- Looked over [Double Pendulum
+  Example](http://www.pydy.org/examples/double_pendulum.html) in PyDy
+    - The code shown in the documentation does not appear to be code found
+      anywhere in PyDy
+- Looked up
+  [IDA](http://www.scholarpedia.org/article/Sundials_equation_solvers) software
+  for solving DAE's
+    - Is part of Sundials equation solvers suite
+- Looked over [Dynamics with
+  Python](http://www.moorepants.info/blog/npendulum.html) article written by
+  Jason to get more ideas on the use of the generated equations of motion
+    - Arranges the equations of motion such that odeint can solve the time
+      simulation
+        - odeint is found in SciPy
+- Read documentation on
+  [scipy.integrate.odeint](http://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html#scipy.integrate.odeint)
+    - Uses xdot = f(x, t) as input (right hand side)
+- Read documentation on [scikit.odes.dae](https://github.com/bmcage/odes)
+    - Uses 0 = xdot - f(x, t) as input (residual)
+- Looked through [PyDy Mass Spring Damper
+  Example](http://nbviewer.jupyter.org/github/pydy/pydy/blob/master/examples/mass_spring_damper/mass_spring_damper.ipynb)
+    - System class seems to handle the backend for formatting equations of
+      motion for integrators and changing from symbolics to numerics
+- Started going through pydy.system.System and disceting its internals
+    - Made lists of all attributes, properties and non-property methods of the
+      class
+    - Found all times eom_method is used in the code and what attributes are
+      being accessed
+
+### 6/7/2016
+
+- Worked on migrating the rest of the @properties from ~Methods into the base
+  class
+- Added a method to the base class to check if the equations of motion have
+  been generated yet
+- Made a pull request for the property migration, [PR
+  #11182](https://github.com/sympy/sympy/pull/11182) (Change from base class
+  development)
+    - Read through Jason's comments on this PR
+    - Replied suggesting a meeting tomorrow morning and moving the discussion
+      to a wiki page
+- Looked up differences between ODE and ADE
+- Read through [Planar Pendulum
+  Example](http://nbviewer.jupyter.org/github/bmcage/odes/blob/master/docs/ipython/Planar%20Pendulum%20as%20DAE.ipynb)
+  which demonstrates a problem from equations of motion generation to
+  simulation/visualization
+- Looked up difference between DAE's and ODE's and added the findings to a new
+  notes page on website
+
+### 6/6/2016
+
+- Cleaned up the test code for test_eombase.py
+- Finished reading
+  [pydy-tutorial-human-standing](https://github.com/pydy/pydy-tutorial-human-standing)
+- Read through updated changes to [PR
+  #11183](https://github.com/sympy/sympy/pull/11183) (Jason's addition to Kanes
+  method documentation)
+- Created [Issue #11199](https://github.com/sympy/sympy/issues/11199)
+  mentioning how in the code base the old linearizer was scheduled to be
+  deprecated in version 1.0  but it is still present
+- Planning and working on ideas for base class implementation
+
+<hr>
+
+## Week 2
+
+### 6/3/2016
+
+- Worked on solidifying the eom test code such that it will actually run and is
+  no longer entirely pseudo code
+- Worked on filling out the eom code
+- Asked for opinions on inputting the dynamical and kinematical diff eqs into
+  EOM
+- Wrote weekly blog post
+- Modified test code and pushed changes to the SymPy PR
+- Started reading
+  [pydy-tutorial-human-standing](https://github.com/pydy/pydy-tutorial-human-standing)
+
+### 6/2/2016
+
+- Looked over mass_matrix and forcing methods in both KanesMethod and Lagranges
+  Method
+- Created a mock up of an equations of motion class
+- Read through some of https://en.wikipedia.org/wiki/Nonholonomic_system
+- Watched [Constraints and generalized
+  coordinates](https://www.youtube.com/watch?v=4RiRAIelAAQ)
+    - Less helpful
+- Watched [Nonholonomic constraints in Lagrangian mechanics by Prof Anindya
+  Chatterjee](https://www.youtube.com/watch?v=fx4esbHWkkk)
+    - Rather helpful
+- Posted a question asking for clarification to the google groups forum
+- Pushed my changes and mock up of an equations of motion class to the [PR
+  #11182](https://github.com/sympy/sympy/pull/11182)
+
+### 6/1/2016
+
+- Responded to Jason's question on [PR
+  #11117](https://github.com/sympy/sympy/pull/11117) (physics documentation
+  fixes)
+    - Jason Merged the PR
+- Read through Jason's comments on [PR
+  #11182](https://github.com/sympy/sympy/pull/11182) (the base equations of
+  motion PR/discussion)
+    - Replied requesting some decisions and clarifications
+- Read through Jasons comments on my question to the google groups forum
+- Reviewed [PR #11183](https://github.com/sympy/sympy/pull/11183) where Jason
+  added descriptions of the equations mentioned in Kane's documentation
+- Read through [PR #345](https://github.com/pydy/pydy/pull/345) in the pydy
+  repository where there was a discussion about a base class for the Method
+  classes
+- Minor fix to KanesMethod docstring, created [PR
+  #11186](https://github.com/sympy/sympy/pull/11186#issuecomment-223080554)
+
+
+### 5/31/2016
+
+- Finished reading [A Beginners Guide to 6-D Vectors (Part
+  2)](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5663690)
+- Read through "Linearization in Physics/Mechanics" in sympy documentation
+- Read through "Potential Issues/Advanced Topics/Future Features in
+  Physics/Mechanics" in sympy documentation
+- Read through "A rolling disc, with Kane’s method" in sympy documentation
+- Read through "A rolling disc, with Kane’s method and constraint forces" in
+  sympy documentation
+- Read through "A rolling disc using Lagrange’s Method" in sympy documentation
+- Read through "A bicycle" in sympy documentation
+- Read through "Nonminimal Coordinates Pendulum" in sympy documentation
+- Made a branch for EOMBase creation and made a file to hold the code and the
+  test code
+- Moved and fixed the examples from orient to orient new docstring for [PR
+  #11117](https://github.com/sympy/sympy/pull/11117)
+    - Asked for some clarification about some of the physics documentation
+    - Removed a redundant section from physics/advanced.rst
+    - Removed colons from physics/masses.rst in the hopes that it fixes the
+      problem of code syntax highlighting and SymPy Live compatibility
+    - Responded to Jason's Comments
+    - Reverted the colon commit
+- Wrote some pseudo-code for test_eombase.py
+- Opened an [Issue #96](https://github.com/sympy/sympy-live/issues/96) in the
+  sympy live repository over syntax highlighting and SymPy Live's ability to
+  run
+- Created a [PR #11182](https://github.com/sympy/sympy/pull/11182) to discuss
+  the development of the EOm base class
+- Asked some terminology questions on the sympy google groups forum
+
+### 5/30/2016
+
+- Changed the tests in sympy/physics/mechanics/tests/test_models.py so that
+  mass matrices and forcing vectors were used for comparison in order to cut
+  down run time
+    - [PR #11168](https://github.com/sympy/sympy/pull/11168) was merged and
+      closed by Jason
+- Continued research of Kanes and Lagranges method classes
+- Read through "Kane’s Method in Physics/Mechanics" in sympy documentation
+- Skimmed through "Masses, Inertias, Particles and Rigid Bodies in
+  Physics/Mechanics" in sympy documentation
+- Read through "Lagrange’s Method in Physics/Mechanics" in sympy documentation
+
+<hr>
+
 ## Week 1
 
 ### 5/27/2016
