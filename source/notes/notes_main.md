@@ -10,6 +10,10 @@
 
 > - [Dynamics](./dynamics/dynamics_main.html)
 
+> #### Math
+
+> - [Differential Equations](./differential_equations/differential_equations.html)
+
 ### College Courses Notes
 
 > #### Undergrad courses (Engineering Related)
@@ -59,7 +63,10 @@
 > - [Numerical Methods in Engineering With Python
      3](numerical_methods_engineering_py3/num_methods_py3_main.html)
      (Jaan Kiusalaas)
-> - [Solar Thermal Collectors and
+> - [Review of Adsorption Refrigeration
+    Technologies](./review_of_adsorption_refrigeration_technologies/review_of_adsorption_refrigeration_technologies.html)
+    (Prof. B. A. Shah)
+>   - [Solar Thermal Collectors and
     Applications](./solar_thermal_collectors_and_applications/solar_thermal_collectors_and_applications.html)
     (Soteris A. Kalogirou)
 
