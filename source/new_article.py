@@ -11,7 +11,6 @@ author = input("What is the name of the author(s) of the article: ")
 date_pub = input("Date that the article was published (Month Year): ")
 journal = input("What was the name of the journal it was published in: ")
 link = input("Link to page displaying the article: ")
-subhead = input("Subheading for the article to fall under (if none put None): ")
 
 if sys.platform == 'win32':
     filesep = "\\"
@@ -24,3 +23,18 @@ if not os.path.exists(folderpath):
     os.makedirs(folderpath)
 else:
     AttributeError("Filename already exists")
+
+F = open(folderpath + filesep + filename + ".md", "w")
+headingln1 = "__" + name + "__  \n"
+headingln2 = "__" + author + "__  \n"
+headingln3 = "__Published in " + journal + ": " + date_pub + "__  \n"
+headingln4 = '<a href="' + link + '" target="_blank">Full Article</a>\n'
+
+heading = [headingln1, headingln2, headingln3, headingln4]
+
+for line in heading:
+    F.write(line)
+
+print("Add this to notes_main.md")
+print("[" + name + "](" + folderpath.replace("." + filesep + "notes", "") +
+      filesep + filename + ".html) (" + author + ")")
