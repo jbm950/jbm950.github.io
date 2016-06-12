@@ -26,10 +26,16 @@ where
 A nonholonomic system is a system whose state depends on the path taken in
 order to achieve it. (Path dependent system)
 
+A constraint which does not reduce the degrees of freedom (Knowing one
+generalized coordinate and the constraint allows solving for the other
+coordinate is a holonomic system, ie two points connected by a massless rod)
+
 <hr>
 
 ## Sources
 
 - [Mass Matrix, Wikipedia](https://en.wikipedia.org/wiki/Mass_matrix)
-- [Nonholonomic systems, Wikipedia](https://en.wikipedia.org/wiki/Nonholonomic_system)
-- [Nonholonomic Constraints](http://www.ingvet.kau.se/juerfuch/kurs/amek/prst/11_nhco.pdf)
+- [Nonholonomic systems,
+  Wikipedia](https://en.wikipedia.org/wiki/Nonholonomic_system)
+- [Nonholonomic
+  Constraints](http://www.ingvet.kau.se/juerfuch/kurs/amek/prst/11_nhco.pdf)
