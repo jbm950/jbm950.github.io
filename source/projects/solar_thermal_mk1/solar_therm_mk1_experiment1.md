@@ -21,6 +21,23 @@ $m_{tank}c\frac{dT}{dt} = -\dot{W}_{pump} + \dot{m}c(T_{in} - T_{tank})$
 
 - Gotten from page 208 of Fundamentals of Engineering Thermodynamics
 
+> __Bucket Volume Calculation__
+
+<div align="center">
+<table class="image">
+<tr><td><img src="./img/bucket_calc.svg"
+alt="Bucket Graphic" title="Bucket Graphic"/>
+</td></tr>
+</table>
+</div>
+
+> - Measurements
+> - Use half of bucket
+> - Trig to find height
+> - Cylinder with radius halfway between top and bottom
+>       - Trig find distance between vertical and edge to determine radius
+> - Volume calculation
+
 ### Procedure
 
 Will need a control test where just the bucket is used for the experiment
@@ -42,5 +59,7 @@ Collect
 > - Voltage of batteries
 
 ### Data
+
+> [Raw csv file](./solar_therm_mk1_experiment1.csv)
 
 ### Conclusions
