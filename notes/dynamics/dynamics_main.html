@@ -17,9 +17,78 @@ title: Dynamics
 <p>This will be the localized place for all future dynamics notes, however, much of my dynamics notes are currently located on the notes page for my <a href="../analytical_dynamics/analytical_dynamics_main.html">analytical dynamics class</a>.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
+<li><a href="#eom">Equations of Motion</a></li>
 <li><a href="#mass_matrix">Mass Matrix</a></li>
 <li><a href="#nonholonomic_system">Nonholonomic System</a></li>
 </ul>
+<h2 id="equations-of-motion">Equations of Motion</h2>
+<blockquote>
+<p><strong>Cannonical Form Given in Featherstone's Book</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=H%28q%29%5Cddot%7Bq%7D%2BC%28q%2C%5Cdot%7Bq%7D%29%3D%5Ctau" alt="H(q)\ddot{q}+C(q,\dot{q})=\tau" title="H(q)\ddot{q}+C(q,\dot{q})=\tau" />
+<ul>
+<li>Where:
+<ul>
+<li>H is the generalized inertia matrix</li>
+<li>C is the generalized bias force</li>
+<li>q is the generalized coordinate and its derivatives</li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Unlabeled Form in Kanes Book</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cfrac%7Bdx_%7Bi%7D%7D%7Bdt%7D%20%3D%20f_%7Bi%7D%28x_%7B1%7D%2C%5C%3B%20...%2C%5C%3B%20x_%7Bv%7D%3B%5C%3B%20t%29" alt="\frac{dx_{i}}{dt} = f_{i}(x_{1},\; ...,\; x_{v};\; t)" title="\frac{dx_{i}}{dt} = f_{i}(x_{1},\; ...,\; x_{v};\; t)" /> where <img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%28i%20%3D%201%2C%5C%3B%20...%2C%5C%3B%20v%29" alt="(i = 1,\; ...,\; v)" title="(i = 1,\; ...,\; v)" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=x_%7B1%7D%2C%5C%3B%20...%2C%5C%3B%20x_%7Bv%7D" alt="x_{1},\; ...,\; x_{v}" title="x_{1},\; ...,\; x_{v}" /> are undefined functions of time</li>
+<li>Sentence in book &quot;set of v first-order differential equations of the form&quot;. Doesn't give name to the form.</li>
+</ul></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>Forms Labeled in Robinovitch's Slides</strong></p>
+</blockquote>
+<blockquote>
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=M%28%5Cphi%29%5Cddot%7B%5Cphi%7D%20%3D%20T%5E%7Bmus%7D%20%2B%20V%28%5Cphi%2C%20%5Cdot%7B%5Cphi%7D%29%20%2B%20G%28%5Cphi%29" alt="M(\phi)\ddot{\phi} = T^{mus} + V(\phi, \dot{\phi}) + G(\phi)" title="M(\phi)\ddot{\phi} = T^{mus} + V(\phi, \dot{\phi}) + G(\phi)" />
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=M%28%5Cphi%29%20%3D" alt="M(\phi) =" title="M(\phi) =" /> inertia (or mass) matrix</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=T%5E%7Bmus%7D%20%3D" alt="T^{mus} =" title="T^{mus} =" /> net muscle moment vector</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=V%28%5Cphi%2C%20%5Cdot%7B%5Cphi%7D%29%20%3D" alt="V(\phi, \dot{\phi}) =" title="V(\phi, \dot{\phi}) =" /> vector of torques due to centripetal and coriolis forces</li>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=G%28%5Cphi%29%20%3D" alt="G(\phi) =" title="G(\phi) =" /> vector of joint torques due to gravity</li>
+</ul></li>
+<li>Equations appear to be more centered on rotational systems</li>
+</ul>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Forward Dynamics</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=%5Cddot%7B%5Cphi%7D%20%3D%20M%28%5Cphi%29%5E%7B-1%7DT%5E%7Bmus%7D%20%2B%20M%28%5Cphi%29%5E%7B-1%7DV%28%5Cphi%2C%20%5Cdot%7B%5Cphi%7D%29%20%2B%20%20M%28%5Cphi%29%5E%7B-1%7DG%28%5Cphi%29" alt="\ddot{\phi} = M(\phi)^{-1}T^{mus} + M(\phi)^{-1}V(\phi, \dot{\phi}) +  M(\phi)^{-1}G(\phi)" title="\ddot{\phi} = M(\phi)^{-1}T^{mus} + M(\phi)^{-1}V(\phi, \dot{\phi}) +  M(\phi)^{-1}G(\phi)" /></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>Inverse Dynamics</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=T%5E%7Bmus%7D%20%3D%20M%28%5Cphi%29%5Cddot%7B%5Cphi%7D%20%2B%20V%28%5Cphi%2C%20%5Cdot%7B%5Cphi%7D%29%20%2B%20G%28%5Cphi%29" alt="T^{mus} = M(\phi)\ddot{\phi} + V(\phi, \dot{\phi}) + G(\phi)" title="T^{mus} = M(\phi)\ddot{\phi} + V(\phi, \dot{\phi}) + G(\phi)" /></li>
+</ul>
+</blockquote>
+</blockquote>
 <h2 id="mass_matrix">Mass Matrix</h2>
 <p>The formal definition for a mass matrix M is</p>
 <p><img style="vertical-align:middle" src="http://chart.apis.google.com/chart?cht=tx&amp;chl=T%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5Cdot%7Bq%7D%5E%7BT%7D%20M%20%5Cdot%7Bq%7D" alt="T = \frac{1}{2} \dot{q}^{T} M \dot{q}" title="T = \frac{1}{2} \dot{q}^{T} M \dot{q}" /></p>
@@ -34,9 +103,12 @@ title: Dynamics
 <hr>
 <h2 id="sources">Sources</h2>
 <ul>
+<li><a href="https://ecommons.cornell.edu/handle/1813/638">Dynamics: Theory and Applications</a> (Thomas Kane and David Levinson)</li>
+<li><a href="http://www.sfu.ca/~stever/kin840/lecture_outlines/lecture_3_dynamics_pt_2.pdf">Dynamics pt. 2: Equations of motion and system identification</a> (Stephen Robinovitch)</li>
 <li><a href="https://en.wikipedia.org/wiki/Mass_matrix">Mass Matrix, Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Nonholonomic_system">Nonholonomic systems, Wikipedia</a></li>
 <li><a href="http://www.ingvet.kau.se/juerfuch/kurs/amek/prst/11_nhco.pdf">Nonholonomic Constraints</a></li>
+<li><a href="http://www.springer.com/us/book/9780387743141">Rigid Body Dynamics Algorithms</a> (Roy Featherstone)</li>
 </ul>
 </body>
 </html>
