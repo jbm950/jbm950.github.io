@@ -1,3 +1,7 @@
+## General Projects
+
+- [Raspberry Pi Server](./raspberry_pi_server/raspberry_pi_server.html)
+
 ## Sustainability {#sustainability}
 
 - DIY Solar Thermal Collector Mk1
