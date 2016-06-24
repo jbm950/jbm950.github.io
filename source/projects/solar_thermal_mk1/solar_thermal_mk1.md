@@ -255,6 +255,7 @@ alt="Battery Pic" title="Battery Pic" height="400" width="600"/>
 > - Add foil under the bottles
 > - Get a lid for the 5 gal bucket
 > - Automate the temperature collection process
+>       - [Arduino Temperature Sensor](https://www.amazon.com/dp/B00Q9YBIJI?psc=1)
 > - Insulate the bucket
 > - Use a splitter for the tubing so that both 25 ft segments can be used
 > - Wrap electrical tape or some equivalent around the tubing at the bottle
