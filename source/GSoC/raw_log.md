@@ -4,6 +4,127 @@
 
 <hr>
 
+## Week 5
+
+### 6/24/2016
+
+- Responded to [PR #354](https://github.com/pydy/pydy/pull/354) where I was
+  referenced directly
+    - Fixes a spot where an external dependency within conda needed to be
+      delcared for the testing environment
+- Researched doctests plotting errors and reported findings on [Issue
+  #10855](https://github.com/sympy/sympy/issues/10855)
+- Continued reading Featherstone's Book (pg 140)
+
+### 6/23/2016
+
+- Continued reading Featherstone's Book (pg 119)
+- Tried looking into [PR #10856](https://github.com/sympy/sympy/pull/10856) and
+  its associated [Issue #10855](https://github.com/sympy/sympy/issues/10855)
+    - Tries to remove tests but when I run locally the tests are not included
+      anyways?
+        - I dont have pyglet installed so the tests were probably skipped
+
+### 6/22/2016
+
+- Continued reading Featherstone's Book (pg 99)
+
+### 6/21/2016
+
+- Altered the information in pydy-tutorial-human-standing to show a dependence
+  on on older version of a specific package
+    - Pushed changes in [PR
+      #100](https://github.com/pydy/pydy-tutorial-human-standing/pull/100)
+- Continued reading Featherstone's Book (pg 78)
+- Made a branch for an overhaul of `LagrangesMethod` in SymPy
+- Began taking inventory of the changes that [PR
+  #11183](https://github.com/sympy/sympy/pull/11183) so I can mirror changes
+  for `LagrangesMethod`
+
+### 6/20/2016
+
+- Continued reading Featherstone's Book (pg 69)
+- Added a bodies attribute to `LagrangesMethod`
+    - Pushed changes in [PR #11263](https://github.com/sympy/sympy/pull/11263)
+    - Effort to create identical API between `KanesMethod` and `LagrangesMethod`
+
+<hr>
+
+## Week 4
+
+### 6/17/2016
+
+- Did a more in depth review of new changes to [PR
+  #11183](https://github.com/sympy/sympy/pull/11183#issuecomment-225102295)
+- Continued reading Featherstone's Book (pg 48)
+- Wrote weekly blog post
+
+### 6/16/2016
+
+- Began looking into reviewing [PR
+  #11209](https://github.com/sympy/sympy/pull/11209)
+    - Did not see any outright errors in the code changes. I know so little of
+      how it works though. Biggest change I tried to determine if it was
+      necessary is the indentation change but in the end I believe that the
+      change is correct.
+    - Said it looks good to me and someone else merged it, makes me nervous
+      that poeple over estimate my opinion
+    - Makes me believe that the code base can use significantly more commenting
+- Continued reading Featherstone's Book (pg 31)
+- Began a review of new changes to [PR
+  #11183](https://github.com/sympy/sympy/pull/11183#issuecomment-225102295)
+
+### 6/15/2016
+
+- Fixed a spot in the examples in [PR
+  #353](https://github.com/pydy/pydy/pull/353) where the desired output hadn't
+  been changed to match the fact that potential energy was added to
+  `output_eqns`.
+- Looked for more examples on equations of motion forms
+    - Most are focused solely on kinematics
+    - Finding a lot that deal with solving for the equations of motion but make
+      no attempt to describe different forms for the equations
+- Worked on determining what attributes and methods `EOM` should have and
+  figured out what wasn't currently represented in the example code
+- Added every attribute/method that is planned for eombase.EOM to the example
+  code
+- Added several error examples to the eombase.EOM example documentation
+- Began reading through Featherstone's Book (pg 10)
+
+### 6/14/2016
+
+- Looking for a way to run the kane benchmark on older versions of sympy
+    - Decided to a try/except clause
+- Continued changing the code eombase examples in pydy to documentation format
+- Put a reminder that the tests passed for [PR
+  #11186](https://github.com/sympy/sympy/pull/11186) Minor fix in  KanesMethod's
+  docstring
+- Addressed review comments on [PR #353](https://github.com/pydy/pydy/pull/353)
+  by making changes in the examples documentation.
+- Continued adding to dynamics notes on equations of motion forms
+    - Searched for more places that specify forms for the equations of motion
+    - Mentioned progress on base class PR
+
+### 6/13/2016
+
+- Started putting together an example of a pendulum using x, y coordinates and
+  manually input eom into `eombase`
+- Made some changes to the two mass spring damper example changing the api of
+  eombase
+- Looking for different distinctions of equations of motion forms
+    - Added some notes to the dyamics page
+- Looked into how pydy.system works and what sort of things it returns
+- Responded to Jason's comments/questions on [PR
+  #353](https://github.com/pydy/pydy/pull/353)
+    - Had to research in pydy and sympy some in order to provide well reasoned
+      responses
+- Moving all three examples to a single .rst page where input/output can be
+  more easily displayed
+- Have to alter the kane benchmark I wrote to account for the fact that the api
+  was changed for the kanes_equations(...) call
+
+<hr>
+
 ## Week 3
 
 ### 6/10/2016
