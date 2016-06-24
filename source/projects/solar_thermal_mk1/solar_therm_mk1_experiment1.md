@@ -6,7 +6,10 @@
 
 The goal of this experiment is to practice setting up and running an experiment
 on my own in addition to trying to tie experimental results to theoretical
-learning
+learning.
+
+This specific experiment will approximate the energy added to the bucket of
+water over the course of an hour.
 
 ### Applicable Theory
 
@@ -31,12 +34,18 @@ alt="Bucket Graphic" title="Bucket Graphic"/>
 </table>
 </div>
 
-> - Measurements
-> - Use half of bucket
-> - Trig to find height
-> - Cylinder with radius halfway between top and bottom
->       - Trig find distance between vertical and edge to determine radius
-> - Volume calculation
+> &nbsp;&nbsp;&nbsp;&nbsp;For the experiments I decided to only fill up
+> the bucket halfway. I am going to approximate the water volume by
+> determining the volume of a cylinder with a radius matching the radius
+> of the bucket at half of the water height (1/4 overall height). Thus the volume can be calculated by the following steps:
+
+> 1. Determine the angle $\theta$ from the side wall to vertical
+>       - $\theta = sin^{-1}(0.75/14.5)$
+> 1. Determine the radius at the half height of the water
+> 1. Determine the vertical height of the water
+> 1. Solve the formula of volume of a cylinder
+
+> Slightly different result if halving the vertical height instead of thewall height
 
 ### Procedure
 
@@ -62,4 +71,14 @@ Collect
 
 > [Raw csv file](./solar_therm_mk1_experiment1.csv)
 
-### Conclusions
+#Graph of Control 1
+#Graph of Control 2
+#Graph of Control 3
+#Control Avg Graph
+#Graph of Experiment 1
+#Graph of Experiment 2
+#Graph of Experiment 3
+#Experiment Avg Graph
+
+#Chart comparing energy input between controls, experiments and averages
+### Conclusions and Observations
