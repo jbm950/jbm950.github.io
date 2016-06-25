@@ -37,15 +37,22 @@ alt="Bucket Graphic" title="Bucket Graphic"/>
 > &nbsp;&nbsp;&nbsp;&nbsp;For the experiments I decided to only fill up
 > the bucket halfway. I am going to approximate the water volume by
 > determining the volume of a cylinder with a radius matching the radius
-> of the bucket at half of the water height (1/4 overall height). Thus the volume can be calculated by the following steps:
+> of the bucket at half of the water height (1/4 overall height). Thus the
+> volume can be calculated by the following steps:
 
 > 1. Determine the angle $\theta$ from the side wall to vertical
->       - $\theta = sin^{-1}(0.75/14.5)$
+>       - $\theta = sin^{-1}(0.75/14.5) = 2.96^{\circ}$
 > 1. Determine the radius at the half height of the water
+>       - $d = 3.625 \; in * sin(2.96^{\circ}) = 0.187 \; in$
+>       - $R = 10.25 \; in / 2 + 0.187 \; in = 5.312 \; in$
 > 1. Determine the vertical height of the water
+>       - $H = 14.5 \; in / 2 * cos(2.96^{\circ}) = 7.24 \; in$
 > 1. Solve the formula of volume of a cylinder
+>       - $V = \pi R^{2} H = \pi (5.312 \; in)^{2} (7.24 \; in) = 641.8 \;
+          in^{3}$
 
-> Slightly different result if halving the vertical height instead of thewall height
+> Slightly different result if halving the vertical height instead of the wall
+> height
 
 ### Procedure
 
