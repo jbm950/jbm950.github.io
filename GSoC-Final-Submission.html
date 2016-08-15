@@ -1,0 +1,126 @@
+---
+layout: default
+title: Gsoc-Final-Submission
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<p>Dates represent day the PR was closed, opened or reviewed</p>
+<p>In brief: The target of the link should contain a short description of what work was done, what code got merged, what code didn't get merged, and what's left to do.</p>
+<h1 id="benchmarking">Benchmarking</h1>
+<p>The first item for my project was to create benchmarking tools to measure the progress of later speed enhancements. I first made my own tool but switched to an existing sympy tool when I learned of its existance. The PR containing my custom tool was then closed. The benchmarks were added in PR #27 listed below. The benchmarks currently run fine and are in a state where additional tests can be added to test more complex variations of <code>KanesMethod</code> and <code>LagrangesMethod</code>'s use.</p>
+<ul>
+<li>(Closed) Mechanics Benchmarking <a
+  href="https://github.com/sympy/sympy/pull/11154" target="_blank">PR #11154</a></li>
+<li>(Merged) Added a test for KanesMethod and LagrangesMethod <a
+  href="https://github.com/sympy/sympy_benchmarks/pull/27" target="_blank">PR #27</a></li>
+<li>(Merged) Fixed kane benchmark for different input order <a
+  href="https://github.com/sympy/sympy_benchmarks/pull/29" target="_blank">PR #29</a></li>
+<li>(Merged) Pydy models migration <a
+  href="https://github.com/sympy/sympy/pull/11168" target="_blank">PR #11168</a></li>
+</ul>
+<h1 id="symbolicsystem">SymbolicSystem</h1>
+<ul>
+<li>(Open) [WIP] Created a basis on which to discuss EOM class <a
+  href="https://github.com/pydy/pydy/pull/353" target="_blank">PR #353</a></li>
+<li>(Closed) [WIP] EOMBase class development <a
+  href="https://github.com/sympy/sympy/pull/11182" target="_blank">PR #11182</a></li>
+<li>(Open) Added system.py to physics/mechanics <a
+  href="https://github.com/sympy/sympy/pull/11431" target="_blank">PR #11431</a></li>
+</ul>
+<h1 id="featherstones-method">Featherstone's Method</h1>
+<ul>
+<li>(Open) [WIP] Featherstones EOM support <a
+  href="https://github.com/sympy/sympy/pull/11331" target="_blank">PR #11331</a></li>
+<li>(Open) [WIP] FeatherstonesMethod <a
+  href="https://github.com/sympy/sympy/pull/11415" target="_blank">PR #11415</a></li>
+<li>(Merged) Docstring cleanup of physics/mechanics/body.py <a
+  href="https://github.com/sympy/sympy/pull/11416" target="_blank">PR #11416</a></li>
+<li>(Open) Fixed an error in frame.py <a
+  href="https://github.com/sympy/sympy/pull/11504" target="_blank">PR #11504</a></li>
+</ul>
+<h1 id="list-of-all-prs">List of all PR's</h1>
+<h3 id="pydy-prs">Pydy PR's</h3>
+<ul>
+<li>(Merged) Examples README typo <a
+  href="https://github.com/pydy/pydy/pull/349" target="_blank">PR #349</a></li>
+<li>(Merged) Pendulum example added <a
+  href="https://github.com/pydy/pydy/pull/351" target="_blank">PR #351</a></li>
+<li>(Open) [WIP] Created a basis on which to discuss EOM class <a
+  href="https://github.com/pydy/pydy/pull/353" target="_blank">PR #353</a></li>
+<li>(Open) Added a depencency on older version of ipywidgets <a
+  href="https://github.com/pydy/pydy-tutorial-human-standing/pull/100"
+  target="_blank">PR #100</a></li>
+</ul>
+<h3 id="sympy-prs">Sympy PR's</h3>
+<ul>
+<li>(Closed) Mechanics Benchmarking <a
+  href="https://github.com/sympy/sympy/pull/11154" target="_blank">PR #11154</a></li>
+<li>(Merged) Pydy models migration <a
+  href="https://github.com/sympy/sympy/pull/11168" target="_blank">PR #11168</a></li>
+<li>(Merged) Physics documentation <a
+  href="https://github.com/sympy/sympy/pull/11117" target="_blank">PR #11117</a></li>
+<li>(Closed) [WIP] EOMBase class development <a
+  href="https://github.com/sympy/sympy/pull/11182" target="_blank">PR #11182</a></li>
+<li>(Merged) Minor fix in KanesMethod's docstring <a
+  href="https://github.com/sympy/sympy/pull/11186" target="_blank">PR #11186</a></li>
+<li>(Merged) Added support for a bodies attribute to LagrangesMethod <a
+  href="https://github.com/sympy/sympy/pull/11263" target="_blank">PR #11263</a></li>
+<li>(Open) [WIP] Featherstones EOM support <a
+  href="https://github.com/sympy/sympy/pull/11331" target="_blank">PR #11331</a></li>
+<li>(Merged) Docstring cleanup of physics/mechanics/body.py <a
+  href="https://github.com/sympy/sympy/pull/11416" target="_blank">PR #11416</a></li>
+<li>(Open) Added system.py to physics/mechanics <a
+  href="https://github.com/sympy/sympy/pull/11431" target="_blank">PR #11431</a></li>
+<li>(Open) [WIP] FeatherstonesMethod <a
+  href="https://github.com/sympy/sympy/pull/11415" target="_blank">PR #11415</a></li>
+<li>(Open) Fixed an error in frame.py <a
+  href="https://github.com/sympy/sympy/pull/11504" target="_blank">PR #11504</a></li>
+</ul>
+<h3 id="sympy-benchmarking-prs">Sympy Benchmarking PR's</h3>
+<ul>
+<li>(Merged) Added a test for KanesMethod and LagrangesMethod <a
+  href="https://github.com/sympy/sympy_benchmarks/pull/27" target="_blank">PR #27</a></li>
+<li>(Merged) Fixed kane benchmark for different input order <a
+  href="https://github.com/sympy/sympy_benchmarks/pull/29" target="_blank">PR #29</a></li>
+</ul>
+<h3 id="prs-reviewed">PR's Reviewed</h3>
+<ul>
+<li>(Open) Fix matrix rank with complicated elements <a
+  href="https://github.com/sympy/sympy/pull/10650" target="_blank">PR #10650</a></li>
+<li>(Open) Improved the explanation of the 5 equations in the Kane's Method docs <a href="https://github.com/sympy/sympy/pull/11183" target="_blank">PR #11183</a></li>
+<li>(Closed) Remove documented redundant comments <a
+  href="https://github.com/sympy/sympy/pull/10698" target="_blank">PR #10698</a></li>
+<li>(Open) Docmentation comments corrections <a
+  href="https://github.com/sympy/sympy/pull/10693" target="_blank">PR #10693</a></li>
+<li>(Merged) Fix issue #8193 <a
+  href="https://github.com/sympy/sympy/pull/11209" target="_blank">PR #11209</a></li>
+<li>(Open) Blacklisted pygletplot from doctests when pyglet is installed <a href="https://github.com/sympy/sympy/pull/10856"
+  target="_blank">PR #10856</a></li>
+<li>(Merged) Fix multiarray import error on appveyor <a
+  href="https://github.com/pydy/pydy/pull/354" target="_blank">PR #354</a></li>
+<li>(Merged) Added docstrings to ast.py <a
+  href="https://github.com/sympy/sympy/pull/11333" target="_blank">PR #11333</a></li>
+<li>(Merged) Speeds up the linear system solve in KanesMethod.rhs() <a
+  href="https://github.com/sympy/sympy/pull/10965" target="_blank">PR #10965</a></li>
+<li>(Merged) Added docstrings to delta and mid property methods <a
+  href="https://github.com/sympy/sympy/pull/11432" target="_blank">PR #11432</a></li>
+<li>(Merged) Added top-level docstring for singularities.py <a
+  href="https://github.com/sympy/sympy/pull/11440" target="_blank">PR #11440</a></li>
+<li>(Merged) Intendation fixes -- sympy/concrete/summations.py<a
+  href="https://github.com/sympy/sympy/pull/11473" target="_blank">PR #11473</a></li>
+<li>(Open) Adjustments to Legendre, Jacobi symbols docstrings <a
+  href="https://github.com/sympy/sympy/pull/11474" target="_blank">PR #11474</a></li>
+<li>(Open) Added docstring to jordan_cell method <a
+  href="https://github.com/sympy/sympy/pull/10356" target="_blank">PR #10356</a></li>
+</ul>
+</body>
+</html>
