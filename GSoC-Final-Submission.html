@@ -27,14 +27,14 @@ title: Gsoc-Final-Submission
   href="https://github.com/sympy/sympy/pull/11168" target="_blank">PR #11168</a></li>
 </ul>
 <h2 id="symbolicsystem">SymbolicSystem</h2>
-<p>I began the discussion for a base class for the equations of motion generators on a PR in sympy. In this PR we started to narrow down what the final class should accomplish. In trying to figure out the need that the final result would fill though it became apparent that examples of use of the final result would be needed and these examples would be better suited for the Pydy repository, thus a new PR for discussion was created there. In writing out examples the API for a final result came together. It was decided that a class to make the equations of motion generators more uniform (thus easing the addition of new generators) would be better off as a container object for the equations of motion and other important aspects of rigid body dynamic systems. This way the output of the equations of motion generators would be consistent and so code that is written to handle the output of one generator can also handle the output of other generators. The final result was the <code>SymbolicSystem</code> class and is currently merged into the Sympy repository.</p>
+<p>I began the discussion for a base class for the equations of motion generators on a PR in sympy. In this PR we started to narrow down what the final class should accomplish. In trying to figure out the need that the final result would fill though it became apparent that examples of use of the final result would be needed and these examples would be better suited for the Pydy repository, thus a new PR for discussion was created there. In writing out examples the API for a final result came together. It was decided that a class to make the equations of motion generators more uniform (thus easing the addition of new generators) would be better off as a container object for the equations of motion and other important aspects of rigid body dynamic systems. This way the output of the equations of motion generators would be consistent and so code that is written to handle the output of one generator can also handle the output of other generators. The final result was the <code>SymbolicSystem</code> class and is currently merged into the Sympy repository. The PR in the Pydy repository remains open because it contains examples of future uses of <code>SymbolicSystem</code> and thus is not ready to be merged but should not be closed either as the examples could be added after <code>SymbolicSystem</code> and pydy.system.System have been expanded upon.</p>
 <p>The <code>SymbolicSystem</code> class is complete as far as the scope of the summer project is concerned but there are still some steps to fully integrate it into a normal workflow. First step would be to get <code>KanesMethod</code> and <code>LagrangesMethod</code> to have a method that produces the <code>SymbolicSystem</code> instance with as much information as the *Method class contains. Once both equations of motion generators have the ability to produce <code>SymbolicSystem</code> objects, the pydy.system.System class needs to be rewritten to accept <code>SymbolicSystem</code> objects instead of <code>KanesMethod</code> objects. These steps would go a long ways in getting the new class introduced into a standard workflow.</p>
 <ul>
 <li>(Open) [WIP] Created a basis on which to discuss EOM class <a
   href="https://github.com/pydy/pydy/pull/353" target="_blank">PR #353</a></li>
 <li>(Closed) [WIP] EOMBase class development <a
   href="https://github.com/sympy/sympy/pull/11182" target="_blank">PR #11182</a></li>
-<li>(Open) Added system.py to physics/mechanics <a
+<li>(Merged) Added system.py to physics/mechanics <a
   href="https://github.com/sympy/sympy/pull/11431" target="_blank">PR #11431</a></li>
 </ul>
 <h2 id="featherstones-method">Featherstone's Method</h2>
@@ -42,13 +42,13 @@ title: Gsoc-Final-Submission
 <p>In addition to the joint code, Featherstone's Method also required some proceesing fucntions for spatial vectors. Code for this has been written and put in a spatial vector PR. This code is currently awaiting the review process.</p>
 <p>Once the joint code is fixed up, the tests finished and is merged along with the spatial vector code, work on finishing Featherstone's method can begin. Currently the FeathsertonesMethod code runs without producing errors. Now what needs to happen is a basic example needs to be done by hand so that test code can be created for the class. Once the test code has been written, FeatherstonesMethod code should be fixed where needed and overall cleaned up. Last the documentation and docstrings should be written to reflect the final result of the equation of motion generator.</p>
 <ul>
-<li>(Open) [WIP] Featherstones EOM support <a
+<li>(Closed) [WIP] Featherstones EOM support <a
   href="https://github.com/sympy/sympy/pull/11331" target="_blank">PR #11331</a></li>
 <li>(Open) [WIP] FeatherstonesMethod <a
   href="https://github.com/sympy/sympy/pull/11415" target="_blank">PR #11415</a></li>
 <li>(Merged) Docstring cleanup of physics/mechanics/body.py <a
   href="https://github.com/sympy/sympy/pull/11416" target="_blank">PR #11416</a></li>
-<li>(Open) Fixed an error in frame.py <a
+<li>(Merged) Fixed an error in frame.py <a
   href="https://github.com/sympy/sympy/pull/11504" target="_blank">PR #11504</a></li>
 <li>(Open) [WIP] Spatial vector functions <a
   href="https://github.com/sympy/sympy/pull/11520" target="_blank">PR #11520</a></li>
@@ -81,15 +81,15 @@ title: Gsoc-Final-Submission
   href="https://github.com/sympy/sympy/pull/11186" target="_blank">PR #11186</a></li>
 <li>(Merged) Added support for a bodies attribute to LagrangesMethod <a
   href="https://github.com/sympy/sympy/pull/11263" target="_blank">PR #11263</a></li>
-<li>(Open) [WIP] Featherstones EOM support <a
+<li>(Closed) [WIP] Featherstones EOM support <a
   href="https://github.com/sympy/sympy/pull/11331" target="_blank">PR #11331</a></li>
 <li>(Merged) Docstring cleanup of physics/mechanics/body.py <a
   href="https://github.com/sympy/sympy/pull/11416" target="_blank">PR #11416</a></li>
-<li>(Open) Added system.py to physics/mechanics <a
+<li>(Merged) Added system.py to physics/mechanics <a
   href="https://github.com/sympy/sympy/pull/11431" target="_blank">PR #11431</a></li>
 <li>(Open) [WIP] FeatherstonesMethod <a
   href="https://github.com/sympy/sympy/pull/11415" target="_blank">PR #11415</a></li>
-<li>(Open) Fixed an error in frame.py <a
+<li>(Merged) Fixed an error in frame.py <a
   href="https://github.com/sympy/sympy/pull/11504" target="_blank">PR #11504</a></li>
 <li>(Open) [WIP] Spatial vector functions <a
   href="https://github.com/sympy/sympy/pull/11520" target="_blank">PR #11520</a></li>

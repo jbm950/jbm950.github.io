@@ -36,7 +36,11 @@ motion and other important aspects of rigid body dynamic systems. This way the
 output of the equations of motion generators would be consistent and so code
 that is written to handle the output of one generator can also handle the
 output of other generators. The final result was the `SymbolicSystem` class and
-is currently merged into the Sympy repository.
+is currently merged into the Sympy repository. The PR in the Pydy repository
+remains open because it contains examples of future uses of `SymbolicSystem`
+and thus is not ready to be merged but should not be closed either as the
+examples could be added after `SymbolicSystem` and pydy.system.System have been
+expanded upon.
 
 The `SymbolicSystem` class is complete as far as the scope of the summer
 project is concerned but there are still some steps to fully integrate it into
@@ -52,7 +56,7 @@ getting the new class introduced into a standard workflow.
   href="https://github.com/pydy/pydy/pull/353" target="_blank">PR #353</a>
 - (Closed) [WIP] EOMBase class development <a
   href="https://github.com/sympy/sympy/pull/11182" target="_blank">PR #11182</a>
-- (Open) Added system.py to physics/mechanics <a
+- (Merged) Added system.py to physics/mechanics <a
   href="https://github.com/sympy/sympy/pull/11431" target="_blank">PR #11431</a>
 
 ## Featherstone's Method
@@ -84,13 +88,13 @@ FeatherstonesMethod code should be fixed where needed and overall cleaned up.
 Last the documentation and docstrings should be written to reflect the final
 result of the equation of motion generator.
 
-- (Open) [WIP] Featherstones EOM support <a
+- (Closed) [WIP] Featherstones EOM support <a
   href="https://github.com/sympy/sympy/pull/11331" target="_blank">PR #11331</a>
 - (Open) [WIP] FeatherstonesMethod <a
   href="https://github.com/sympy/sympy/pull/11415" target="_blank">PR #11415</a>
 - (Merged) Docstring cleanup of physics/mechanics/body.py <a
   href="https://github.com/sympy/sympy/pull/11416" target="_blank">PR #11416</a>
-- (Open) Fixed an error in frame.py <a
+- (Merged) Fixed an error in frame.py <a
   href="https://github.com/sympy/sympy/pull/11504" target="_blank">PR #11504</a>
 - (Open) [WIP] Spatial vector functions <a
   href="https://github.com/sympy/sympy/pull/11520" target="_blank">PR #11520</a>
@@ -126,15 +130,15 @@ repeat PR's mentioned above for the different portions of the project.
   href="https://github.com/sympy/sympy/pull/11186" target="_blank">PR #11186</a>
 - (Merged) Added support for a bodies attribute to LagrangesMethod <a
   href="https://github.com/sympy/sympy/pull/11263" target="_blank">PR #11263</a>
-- (Open) [WIP] Featherstones EOM support <a
+- (Closed) [WIP] Featherstones EOM support <a
   href="https://github.com/sympy/sympy/pull/11331" target="_blank">PR #11331</a>
 - (Merged) Docstring cleanup of physics/mechanics/body.py <a
   href="https://github.com/sympy/sympy/pull/11416" target="_blank">PR #11416</a>
-- (Open) Added system.py to physics/mechanics <a
+- (Merged) Added system.py to physics/mechanics <a
   href="https://github.com/sympy/sympy/pull/11431" target="_blank">PR #11431</a>
 - (Open) [WIP] FeatherstonesMethod <a
   href="https://github.com/sympy/sympy/pull/11415" target="_blank">PR #11415</a>
-- (Open) Fixed an error in frame.py <a
+- (Merged) Fixed an error in frame.py <a
   href="https://github.com/sympy/sympy/pull/11504" target="_blank">PR #11504</a>
 - (Open) [WIP] Spatial vector functions <a
   href="https://github.com/sympy/sympy/pull/11520" target="_blank">PR #11520</a>
