@@ -13,9 +13,8 @@ title: Gsoc-Final-Submission
   <style type="text/css">code{white-space: pre;}</style>
 </head>
 <body>
-<p>Dates represent day the PR was closed, opened or reviewed</p>
-<p>In brief: The target of the link should contain a short description of what work was done, what code got merged, what code didn't get merged, and what's left to do.</p>
-<h1 id="benchmarking">Benchmarking</h1>
+<h1 id="work-product">Work Product</h1>
+<h2 id="benchmarking">Benchmarking</h2>
 <p>The first item for my project was to create benchmarking tools to measure the progress of later speed enhancements. I first made my own tool but switched to an existing sympy tool when I learned of its existance. The PR containing my custom tool was then closed. The benchmarks were added in PR #27 listed below. The benchmarks currently run fine and are in a state where additional tests can be added to test more complex variations of <code>KanesMethod</code> and <code>LagrangesMethod</code>'s use.</p>
 <ul>
 <li>(Closed) Mechanics Benchmarking <a
@@ -27,7 +26,9 @@ title: Gsoc-Final-Submission
 <li>(Merged) Pydy models migration <a
   href="https://github.com/sympy/sympy/pull/11168" target="_blank">PR #11168</a></li>
 </ul>
-<h1 id="symbolicsystem">SymbolicSystem</h1>
+<h2 id="symbolicsystem">SymbolicSystem</h2>
+<p>I began the discussion for a base class for the equations of motion generators on a PR in sympy. In this PR we started to narrow down what the final class should accomplish. In trying to figure out the need that the final result would fill though it became apparent that examples of use of the final result would be needed and these examples would be better suited for the Pydy repository, thus a new PR for discussion was created there. In writing out examples the API for a final result came together. It was decided that a class to make the equations of motion generators more uniform (thus easing the addition of new generators) would be better off as a container object for the equations of motion and other important aspects of rigid body dynamic systems. This way the output of the equations of motion generators would be consistent and so code that is written to handle the output of one generator can also handle the output of other generators. The final result was the <code>SymbolicSystem</code> class and is currently merged into the Sympy repository.</p>
+<p>The <code>SymbolicSystem</code> class is complete as far as the scope of the summer project is concerned but there are still some steps to fully integrate it into a normal workflow. First step would be to get <code>KanesMethod</code> and <code>LagrangesMethod</code> to have a method that produces the <code>SymbolicSystem</code> instance with as much information as the *Method class contains. Once both equations of motion generators have the ability to produce <code>SymbolicSystem</code> objects, the pydy.system.System class needs to be rewritten to accept <code>SymbolicSystem</code> objects instead of <code>KanesMethod</code> objects. These steps would go a long ways in getting the new class introduced into a standard workflow.</p>
 <ul>
 <li>(Open) [WIP] Created a basis on which to discuss EOM class <a
   href="https://github.com/pydy/pydy/pull/353" target="_blank">PR #353</a></li>
@@ -36,7 +37,10 @@ title: Gsoc-Final-Submission
 <li>(Open) Added system.py to physics/mechanics <a
   href="https://github.com/sympy/sympy/pull/11431" target="_blank">PR #11431</a></li>
 </ul>
-<h1 id="featherstones-method">Featherstone's Method</h1>
+<h2 id="featherstones-method">Featherstone's Method</h2>
+<p>In working on implementing Featherstone's method in Sympy, it became apparent that a body/joint implementation would be needed. There was some work on this front from a previous Google Summer of Code student, but the work was incomplete and was not merged. I decided to work on finishing his implentation but reduce its scope to two joints (revolute and prismatic). In beginning work on this though I found that his implementation does not quite fit the joint internals I would need and so I ended up rewriting the joint code. This code is written but the test code is incomplete. From the test code that is complete, however, it seems like there are possibly some errors in the code that will need to be fixed. Once the tests are able to run correctly, the joint code will probably need to be cleaned to be made presentable and the docstrings will need to be rewritten to reflect the changes that have been made. The current state of the joint code can be found in the FeatherstonesMethod PR.</p>
+<p>In addition to the joint code, Featherstone's Method also required some proceesing fucntions for spatial vectors. Code for this has been written and put in a spatial vector PR. This code is currently awaiting the review process.</p>
+<p>Once the joint code is fixed up, the tests finished and is merged along with the spatial vector code, work on finishing Featherstone's method can begin. Currently the FeathsertonesMethod code runs without producing errors. Now what needs to happen is a basic example needs to be done by hand so that test code can be created for the class. Once the test code has been written, FeatherstonesMethod code should be fixed where needed and overall cleaned up. Last the documentation and docstrings should be written to reflect the final result of the equation of motion generator.</p>
 <ul>
 <li>(Open) [WIP] Featherstones EOM support <a
   href="https://github.com/sympy/sympy/pull/11331" target="_blank">PR #11331</a></li>
@@ -46,8 +50,11 @@ title: Gsoc-Final-Submission
   href="https://github.com/sympy/sympy/pull/11416" target="_blank">PR #11416</a></li>
 <li>(Open) Fixed an error in frame.py <a
   href="https://github.com/sympy/sympy/pull/11504" target="_blank">PR #11504</a></li>
+<li>(Open) [WIP] Spatial vector functions <a
+  href="https://github.com/sympy/sympy/pull/11520" target="_blank">PR #11520</a></li>
 </ul>
-<h1 id="list-of-all-prs">List of all PR's</h1>
+<h2 id="list-of-all-prs">List of all PR's</h2>
+<p>This is a list of all PR's that I have interacted with over the summer and will repeat PR's mentioned above for the different portions of the project.</p>
 <h3 id="pydy-prs">Pydy PR's</h3>
 <ul>
 <li>(Merged) Examples README typo <a
@@ -84,6 +91,8 @@ title: Gsoc-Final-Submission
   href="https://github.com/sympy/sympy/pull/11415" target="_blank">PR #11415</a></li>
 <li>(Open) Fixed an error in frame.py <a
   href="https://github.com/sympy/sympy/pull/11504" target="_blank">PR #11504</a></li>
+<li>(Open) [WIP] Spatial vector functions <a
+  href="https://github.com/sympy/sympy/pull/11520" target="_blank">PR #11520</a></li>
 </ul>
 <h3 id="sympy-benchmarking-prs">Sympy Benchmarking PR's</h3>
 <ul>
