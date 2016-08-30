@@ -2,7 +2,7 @@
 
 ### Physics Formula Sheet
 
-* [Formula Sheet](./physics_formula_sheet.html)
+* [Formula Sheet](./notes/physics/physics_formula_sheet.html)
 
 ### Python Links
 
