@@ -1,6 +1,236 @@
 ### This is a raw work log and not meant to be a detailed overview of progress
-
 (Weeks start on Sundays)
+
+<hr>
+
+## Week 13
+
+### 8/12/2016
+
+- Added a test for the frame issue
+- Reviewed [PR #10356](https://github.com/sympy/sympy/pull/10356)
+- Added a test for the bug case in Frame to that PR
+- Worked on joint tests
+- Began working out joint kinematics by hand for the joint tests
+
+### 8/11/2016
+
+- Got Featherstone to a point where it does not raise any errors
+- Created a PR to fix a bug in Frame
+- Moved spatial test code to featherstone branch and updated one of its tests
+- Worked the calculation of spatial inertia by hand and used that to create
+  test code for body.spatial_inertia()
+- Planned out the tests for joints
+- Began implementing joints tests
+
+### 8/10/2016
+
+- Addressed review comments for system.py
+- Moved some spatial vector code to featherstone PR
+- Got body.spatial_inertia working
+- Spent time trying to get the joints to work
+- Worked on FeatherstonesMethod
+
+### 8/9/2016
+
+- Meeting with Jason
+- Changed joint axes to default to z axis
+- Figured out how to transform parent vector to the joint axis I want
+- Rewrote joint code
+
+### 8/8/2016
+
+- Added a function to calculate spatial inertia to the body object
+- Made it so coordinate and speed are now required arguments for joints
+- Made minor change in symsystem to the naming of a value
+- Downloaded sphinx to try to see what the problem is locally but may have to
+  try on a linux
+- Patterned out what would be needed to change how the joint code is implemented
+
+<hr>
+
+## Week 12
+
+### 8/5/2016
+
+- Added attributes to the joint docstrings
+- Moved the separate pass 1 code to init in featherstone's method
+- Looked over [PR #11473](https://github.com/sympy/sympy/pull/11473)
+- Asked questions in [PR #11474](https://github.com/sympy/sympy/pull/11474)
+- Asked questions about joint code in [PR
+  #11415](https://github.com/sympy/sympy/pull/11415)
+
+### 8/4/2016
+
+- Began familiarizing myself with the joint code
+
+### 8/3/2016
+
+- Finished rereading [A Beginners Guide to 6-D Vectors (Part
+  2)](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5663690) 
+- Started comparing the code I had to Featherstone's 2 matlab versions and the
+  provided python version
+
+### 8/2/2016
+
+- Prototyped pass 2 and 3 of the algorithm using the results from the more
+  detailed prototyping of pass 1
+- Worked on figuring out what some of the terms in the algorithm are
+
+### 8/1/2016
+
+- Prototyped Featherstone's articulated body algorithm's 3 passes
+- Prototyped forming the kinematic tree structure alongside pass 1 of the
+  algorithm and separate from thpass 1 of the algorithm
+
+<hr>
+
+## Week 11
+
+### 7/29/2016
+
+- Reviewed two PR's, ([PR #11432](https://github.com/sympy/sympy/pull/11432)
+  and [PR #11440](https://github.com/sympy/sympy/pull/11440)).
+    - There were documentation PR's that looked ready to be merged
+- Reread the beginning of Chapter 7 in Featherstone's book
+
+### 7/28/2016
+
+- Started looking into Jains version of the algorithm
+    - Looked like there were many differences in implementation and so I'm
+      going to stick to featherstones method for now
+
+### 7/27/2016
+
+- Wrote the documentation for mechanics/system.py
+- Looked into fixing the init_printing docstring until I ran into the problem
+  that the printers handle argument passing internally and thus inspect.getargs
+doesn't work
+- Read [Minimal formulation of joint motion for
+  biomechanisms](http://r.search.yahoo.com/_ylt=A0LEVr5_9ZhXWWAA2SJjmolQ;_ylu=X3oDMTByODJtaWUzBHNlYwNzcgRwb3MDMwRjb2xvA2JmMQR2dGlkAw--/RV=2/RE=1469670911/RO=10/RU=https%3a%2f%2fsimtk.org%2fdocman%2fview.php%2f47%2f1536%2fSeth-2010-ShermanEastmanDelp-MinimalJointFormulationForBiomechanisms-NonlinearDyn-v62-p291.pdf/RK=0/RS=02JxqzXFs5RjHt4Fi157gXkhPkU-)
+(an article by Michael Sherman on joints)
+
+### 7/26/2016
+
+- Finished the test code for mechanics/system.py
+- Finished the code for mechanics/system.py
+
+### 7/25/2016
+
+- Created a system file in sympy/physics/mechanics and started work on creating
+  all of the docstrings
+- Finished the docstrings
+- Met with Jason
+- Started the test code
+
+<hr>
+
+## Week 10
+
+### 7/22/2016
+
+- Reviewed [PR #10965](https://github.com/sympy/sympy/pull/10965) on changing
+  how the right hand side of the EOM are calculated in KanesMethod
+- Responded to comment in [PR
+  #11416](https://github.com/sympy/sympy/pull/11416) The PR with the changes to
+the Body docstrings
+- Changed [PR #353](https://github.com/pydy/pydy/pull/353) to address review
+  comments and solidify the api for work next week.
+
+### 7/21/2016
+
+- Went over possible problems that might arise in trying to implement
+  Featherstones Method
+- Had a meeting with Jason and Michael Sherman
+
+### 7/20/2016
+
+- Looked over simbody documentation
+- Looked over Sahil's joint code
+- Created a potential example for how Featherstone's Method would be
+  used/called
+- Began working on physics.mechanics.body docstrings and code fixing
+
+<hr>
+
+## Week 9
+
+- SciPy 2016 Conference
+- Worked on API design with Jason
+
+<hr>
+
+## Week 8
+
+### 7/11/2016
+
+- Worked on PyDy tutorial material
+- Took part in the PyDy tutorial at SciPy 2016
+
+### 7/12/2016
+
+<hr>
+
+## Week 7
+
+### 7/8/2016
+
+- Read through the notebooks I'll be presenting and took notes
+- Read through all of the note issues for human-standing
+- Wrote blog post
+
+### 7/7/2016
+
+- Filled out tutorial stipend payment form
+- Asked sympy group for a place to stay one night during conference
+- Ran the code from the notebooks I'm presenting
+- Began reading through the notebooks I'm presenting
+
+### 7/6/2016
+
+- Finished coding the tests for joints.py
+- Started and finished codeing the tests for spatial.py
+- Coded joints.py so that the tests all now pass
+- Coded spatial.py so that the tests all now pass
+
+### 7/5/2016
+
+- Added examples to docstrings of joints functions
+- Commented on [PR #11333](https://github.com/sympy/sympy/pull/11333) seeing
+  again if he'd be more specific 
+
+<hr>
+
+## Week 6
+
+### 7/1/2016
+
+- Reviewed [PR #11333](https://github.com/sympy/sympy/pull/11333)
+- Finished watching last year's pydy scipy tutorial
+
+### 6/30/2016
+
+- Started putting together documentation for spatial vector code
+- Made visible the spatial vector code and the joint code in [PR
+  #11331](https://github.com/sympy/sympy/pull/11331)
+- Began watching last year's pydy scipy tutorial
+
+### 6/29/2016
+
+- Continued reading Featherstone's Book
+    - Stopped at chapter 9 (pg 170)
+- Collected thoughts on organizing support material for Featherstone's methods
+- Began creating docstrings for the joint supporting material for
+  Featherstone's methods
+
+### 6/27/2016
+
+- Continued reading Featherstone's Book (pg 159)
+- Started learning a Scrum Software because I think it'd be a good tool going
+  forward
+    - Began working with Scrumdesk but I don't think basic features are
+      implemented such as setting a completion time for tasks
+- Began breaking down the steps of Featherstone's articulated body algorithm
 
 <hr>
 
@@ -39,14 +269,15 @@
 - Made a branch for an overhaul of `LagrangesMethod` in SymPy
 - Began taking inventory of the changes that [PR
   #11183](https://github.com/sympy/sympy/pull/11183) so I can mirror changes
-  for `LagrangesMethod`
+for `LagrangesMethod`
 
 ### 6/20/2016
 
 - Continued reading Featherstone's Book (pg 69)
 - Added a bodies attribute to `LagrangesMethod`
     - Pushed changes in [PR #11263](https://github.com/sympy/sympy/pull/11263)
-    - Effort to create identical API between `KanesMethod` and `LagrangesMethod`
+    - Effort to create identical API between `KanesMethod` and
+      `LagrangesMethod`
 
 <hr>
 
@@ -65,8 +296,8 @@
   #11209](https://github.com/sympy/sympy/pull/11209)
     - Did not see any outright errors in the code changes. I know so little of
       how it works though. Biggest change I tried to determine if it was
-      necessary is the indentation change but in the end I believe that the
-      change is correct.
+necessary is the indentation change but in the end I believe that the change is
+correct.
     - Said it looks good to me and someone else merged it, makes me nervous
       that poeple over estimate my opinion
     - Makes me believe that the code base can use significantly more commenting
@@ -78,8 +309,8 @@
 
 - Fixed a spot in the examples in [PR
   #353](https://github.com/pydy/pydy/pull/353) where the desired output hadn't
-  been changed to match the fact that potential energy was added to
-  `output_eqns`.
+been changed to match the fact that potential energy was added to
+`output_eqns`.
 - Looked for more examples on equations of motion forms
     - Most are focused solely on kinematics
     - Finding a lot that deal with solving for the equations of motion but make
@@ -97,8 +328,8 @@
     - Decided to a try/except clause
 - Continued changing the code eombase examples in pydy to documentation format
 - Put a reminder that the tests passed for [PR
-  #11186](https://github.com/sympy/sympy/pull/11186) Minor fix in  KanesMethod's
-  docstring
+  #11186](https://github.com/sympy/sympy/pull/11186) Minor fix in
+KanesMethod's docstring
 - Addressed review comments on [PR #353](https://github.com/pydy/pydy/pull/353)
   by making changes in the examples documentation.
 - Continued adding to dynamics notes on equations of motion forms
@@ -165,8 +396,8 @@
   Example](http://nbviewer.jupyter.org/github/bmcage/odes/blob/master/docs/ipython/Planar%20Pendulum%20as%20DAE.ipynb)
     - Arranged equations into the equation form shown on [Lagrange Docs 3
       equations](http://docs.sympy.org/latest/modules/physics/mechanics/lagrange.html)
-      and into mass matrix/forcing vector form and mass matrix full/forcing
-      vector full form
+and into mass matrix/forcing vector form and mass matrix full/forcing vector
+full form
     - Made an outline of the things that are actually done in the tutorial
     - Determined that the equations of motion are only used for the residual
       function for the dae object
@@ -177,11 +408,11 @@
       anywhere in PyDy
 - Looked up
   [IDA](http://www.scholarpedia.org/article/Sundials_equation_solvers) software
-  for solving DAE's
+for solving DAE's
     - Is part of Sundials equation solvers suite
 - Looked over [Dynamics with
   Python](http://www.moorepants.info/blog/npendulum.html) article written by
-  Jason to get more ideas on the use of the generated equations of motion
+Jason to get more ideas on the use of the generated equations of motion
     - Arranges the equations of motion such that odeint can solve the time
       simulation
         - odeint is found in SciPy
@@ -208,15 +439,15 @@
   been generated yet
 - Made a pull request for the property migration, [PR
   #11182](https://github.com/sympy/sympy/pull/11182) (Change from base class
-  development)
+development)
     - Read through Jason's comments on this PR
     - Replied suggesting a meeting tomorrow morning and moving the discussion
       to a wiki page
 - Looked up differences between ODE and ADE
 - Read through [Planar Pendulum
   Example](http://nbviewer.jupyter.org/github/bmcage/odes/blob/master/docs/ipython/Planar%20Pendulum%20as%20DAE.ipynb)
-  which demonstrates a problem from equations of motion generation to
-  simulation/visualization
+which demonstrates a problem from equations of motion generation to
+simulation/visualization
 - Looked up difference between DAE's and ODE's and added the findings to a new
   notes page on website
 
@@ -227,10 +458,10 @@
   [pydy-tutorial-human-standing](https://github.com/pydy/pydy-tutorial-human-standing)
 - Read through updated changes to [PR
   #11183](https://github.com/sympy/sympy/pull/11183) (Jason's addition to Kanes
-  method documentation)
+method documentation)
 - Created [Issue #11199](https://github.com/sympy/sympy/issues/11199)
   mentioning how in the code base the old linearizer was scheduled to be
-  deprecated in version 1.0  but it is still present
+deprecated in version 1.0  but it is still present
 - Planning and working on ideas for base class implementation
 
 <hr>
@@ -269,18 +500,18 @@
 
 - Responded to Jason's question on [PR
   #11117](https://github.com/sympy/sympy/pull/11117) (physics documentation
-  fixes)
+fixes)
     - Jason Merged the PR
 - Read through Jason's comments on [PR
   #11182](https://github.com/sympy/sympy/pull/11182) (the base equations of
-  motion PR/discussion)
+motion PR/discussion)
     - Replied requesting some decisions and clarifications
 - Read through Jasons comments on my question to the google groups forum
 - Reviewed [PR #11183](https://github.com/sympy/sympy/pull/11183) where Jason
   added descriptions of the equations mentioned in Kane's documentation
 - Read through [PR #345](https://github.com/pydy/pydy/pull/345) in the pydy
   repository where there was a discussion about a base class for the Method
-  classes
+classes
 - Minor fix to KanesMethod docstring, created [PR
   #11186](https://github.com/sympy/sympy/pull/11186#issuecomment-223080554)
 
@@ -311,7 +542,7 @@
 - Wrote some pseudo-code for test_eombase.py
 - Opened an [Issue #96](https://github.com/sympy/sympy-live/issues/96) in the
   sympy live repository over syntax highlighting and SymPy Live's ability to
-  run
+run
 - Created a [PR #11182](https://github.com/sympy/sympy/pull/11182) to discuss
   the development of the EOm base class
 - Asked some terminology questions on the sympy google groups forum
@@ -320,7 +551,7 @@
 
 - Changed the tests in sympy/physics/mechanics/tests/test_models.py so that
   mass matrices and forcing vectors were used for comparison in order to cut
-  down run time
+down run time
     - [PR #11168](https://github.com/sympy/sympy/pull/11168) was merged and
       closed by Jason
 - Continued research of Kanes and Lagranges method classes
@@ -341,7 +572,8 @@
   in the sympy repository
     - Had to change initial work such that theta would represent a counter
       clockwise rotation as positive
-    - Updated the drawing in the docstring to indicate the new location of theta
+    - Updated the drawing in the docstring to indicate the new location of
+      theta
 - Cleaning up the tests so that there are no more extremely long lines and the
   tests check simplify(sym_expr - expected) == Matrix(0's)
 - Refreshed knowledged by reading though python book on @property decorators
@@ -353,7 +585,7 @@
 
 - Ran the sympy_benchmarks using asv, published and previewed again to see if
   it would produce a second data point or if additional data points are
-  collected by specifying more commits to test in the config
+collected by specifying more commits to test in the config
     - Added a second data point
 - Added a mass spring damper test to the lagrange benchmarking code and
   commented it
@@ -368,17 +600,17 @@
     - Altered the code to reflect the new argument order for .kanes_equations()
 - Asked about why the documentation online does not reflect the changes that
   were made to the source code in [Issue
-  #10945](https://github.com/sympy/sympy/blob/master/sympy/physics/mechanics/kane.py)
+#10945](https://github.com/sympy/sympy/blob/master/sympy/physics/mechanics/kane.py)
 - Addressed Jason's review comments in [PR
   #27](https://github.com/sympy/sympy_benchmarks/pull/27) in the
-  sympy_benchmarking repository
+sympy_benchmarking repository
 - Created tests for the new sympy.physics.mechanics.models.py
 - Created a [PR #11168](https://github.com/sympy/sympy/pull/11168) for the
   migration of the models code from PyDy to SymPy
 - Mentioned other members of SymPy to look at [PR
   #10650](https://github.com/sympy/sympy/pull/10650) that I had done a review
-  of yesterday. These members had been active in another pull request that was
-  attempting to fix the same issue
+of yesterday. These members had been active in another pull request that was
+attempting to fix the same issue
 - Took notes on Dynamics topics and generally spent time learning how the code
   works
 
@@ -386,10 +618,11 @@
 
 - Reviewed Jason's comments on my benchmarking pull requests ([PR
   #11154](https://github.com/sympy/sympy/pull/11154) in the sympy repository
-  and [PR #27](https://github.com/sympy/sympy_benchmarks/pull/27) in
-  sympy_benchmarks repository)
+and [PR #27](https://github.com/sympy/sympy_benchmarks/pull/27) in
+sympy_benchmarks repository)
 - Looked over pydy.models code for use of KanesMethod interface
-- Looked over pydy rolling disk example PR code for use of KanesMethod interface
+- Looked over pydy rolling disk example PR code for use of KanesMethod
+  interface
 - Looked over pydy Whipple bicycle model PR code for use of KanesMethod
   interface
 - Looked over sympy test_kane3.py for use of KanesMethod interface
@@ -433,8 +666,9 @@
 - Created a file for and started collecting notes for the Base class for the
   equations of motion generation methods
 - Forked and cloned sympy_benchmarks
-- Added kane_1 and lagrange_1 to sympy_benchmarks in mechanics_benchmarks branch
-  and altered them to meet airspeed velocity's structure for benchmarking tests
+- Added kane_1 and lagrange_1 to sympy_benchmarks in mechanics_benchmarks
+  branch and altered them to meet airspeed velocity's structure for
+benchmarking tests
 - Created a [PR #27](https://github.com/sympy/sympy_benchmarks/pull/27) to add
   kane_1.py and lagrange_1.py to sympy_benchmarks repository
 
@@ -452,7 +686,7 @@
 - Changed the benchmark code for kane's method and lagrange's method
     - put the LagrangesMethod and form equations in a function (same for
       KanesMethod) and call the function from timeit rather than import the
-      whole file
+whole file
     - Needed to be run significantly fewer iterations to achieve the same run
       time
 
@@ -515,7 +749,7 @@
 
 - Worked on implementing [Basic Equation of
   Motion](../notes/analytical_dynamics/analytical_dynamics_main.html#e_basic_equation_of_motion)
-  in code
+in code
     - Got it to the point where it produces an equation of motion but it is not
       matching my handwritten result
 - Finished reading [A Beginners Guide to 6-D Vectors (Part
@@ -527,7 +761,7 @@
 - Added a link to the timeline on my website so it was easier to access
 - Worked out [Basic Equation of
   Motion](../notes/analytical_dynamics/analytical_dynamics_main.html#e_basic_equation_of_motion)
-  using Langrange's Method by hand as a refresher
+using Langrange's Method by hand as a refresher
 
 ### 5/10/2016
 
@@ -539,8 +773,10 @@
     - Made it to the beginning of section 6
 - Decided on what examples I want to do to learn the equations of motion
   generation with sympy
-    - [Basic Equation of Motion](../notes/analytical_dynamics/analytical_dynamics_main.html#e_basic_equation_of_motion)
-    - [Basic System of Particles](../notes/analytical_dynamics/analytical_dynamics_main.html#basic_sys_of_particles)
+    - [Basic Equation of
+      Motion](../notes/analytical_dynamics/analytical_dynamics_main.html#e_basic_equation_of_motion)
+    - [Basic System of
+      Particles](../notes/analytical_dynamics/analytical_dynamics_main.html#basic_sys_of_particles)
 
 <hr>
 
