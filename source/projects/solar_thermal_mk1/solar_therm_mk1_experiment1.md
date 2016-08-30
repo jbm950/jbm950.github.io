@@ -89,3 +89,5 @@ Collect
 
 #Chart comparing energy input between controls, experiments and averages
 ### Conclusions and Observations
+
+- Could be useful to have the time of day start and end times
