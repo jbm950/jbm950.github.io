@@ -127,6 +127,23 @@ th, td {
 
 >> __Storage__
 
+>>> __Hard Drive__
+
+>>> - IDE Hard drive or SATA Hard drive or PATA Hard drive
+>>>     - IDE old style
+>>> - RPM speeds determine how fast data can be read off the hard drive
+>>>     - Standard speeds are 5400, 7200 or 10000 RPM
+>>>     - Big bottle neck for computing
+>>> - Hard drive cache also important quality
+>>>     - 8 mb to 64 megabytes
+>>>     - temporary quick memory
+>>> - Numbers pulled from a 4 year old video
+
+>> - Sources
+>>      - [Hard Drive Buying
+          Advice](https://www.youtube.com/watch?v=NOAkI7gyZTI) (YouTube)
+
+
 >> __Video Card__
 
 >> - Multi video cards?
