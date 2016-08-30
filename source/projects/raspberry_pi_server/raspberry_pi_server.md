@@ -2,10 +2,6 @@
 
 Cost for system as individual components
 
-<script language="javascript" type="text/javascript">
-    document.write("Hello from javascript")
-</script>
-
 <style>
 table, th, td {
     border: 1px solid black;
