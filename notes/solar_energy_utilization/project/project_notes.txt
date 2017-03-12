@@ -1,0 +1,44 @@
+Method for cleaning heliostats
+    - Combine columb force cleaning with scrubbing
+        - "Scrubbing is typically five times slower than spraying, but requires
+          half the water"
+            - Would this be able to increase cleaning speed?
+            - Scrubbing uses less water than spraying and removes dirt film where spraying only removes dust
+    Articles/Sources
+        Reflector Soiling and Cleaning Methods
+            May 2013
+            http://sfera.sollab.eu/downloads/Schools/Reflector_Soiling_Fabian_Wolfertstetter_SFERA2013.pdf
+
+Wording in sylabus:
+    The final report will be based on a relevant topic of the student’s choice,
+    pending the approval of Prof. Scheffe. For undergraduates, the report will
+    be a 4000 word critical literature review of the selected technology and an
+    analysis of its potential for large scale (centralized or distributed) and
+    economical distribution. For graduate students, the report will be in the
+    form of a 5000 word research proposal; students will propose to investigate
+    a selected topic, propose why they believe the work is relevant, provide
+    justification in the form of preliminary analysis and specifically discuss
+    what they would do to achieve their stated goals (either experimentation,
+    computation or both).
+
+Performance Characteristics of Combined Scrubbing and Electrostatic Cleaning
+for Heliostats
+    
+    students will propose to investigate a selected topic
+
+    propose why they believe the work is relevant
+
+    provide justification in the form of preliminary analysis and specifically
+    discuss what they would do to achieve their stated goals (either
+    experimentation, computation or both).
+
+    Articles/Sources
+        Reflector Soiling and Cleaning Methods
+            May 2013
+            http://sfera.sollab.eu/downloads/Schools/Reflector_Soiling_Fabian_Wolfertstetter_SFERA2013.pdf
+
+Notes:
+    - Cant find Kattke and Vant Hull info aon the optimization of scrubbing vs
+      spraying for heliostats
+
+Sec 5.2 first article (prevention techniques)

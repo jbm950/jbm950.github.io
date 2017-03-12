@@ -1,0 +1,7 @@
+
+Problem 7, Summer Solstice 8:00
+	Beta = -11.2562305544 degrees
+
+Problem 7, Winter Solstice 8:00
+	Beta = 70.5047355532 degrees
+
