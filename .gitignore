@@ -1,5 +1,6 @@
 __pycache__/
 _site/
+.jekyll-metadata
 *.fuse_hidden*
 *.swp
 *.DS_Store
