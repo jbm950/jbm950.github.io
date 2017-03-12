@@ -1,0 +1,6 @@
+Time		Normal Method		Small-Time Approximation
+0.01		56.5				0.0
+1.00		253.5				253.4
+2.00		294.4				294.4
+3.00		313.3				313.3
+4.00		324.6				324.6
