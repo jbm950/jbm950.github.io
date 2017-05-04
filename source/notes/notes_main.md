@@ -4,6 +4,7 @@
 
 - [Linux Virtual Machine Setup](/notes/linux_virtual_machine/linux_vm_main.html)
 - [Money Management](/notes/money_management/money_management_main.html)
+- [Open Source Programming Beginning](/notes/open_source_beginning/open_source_beginning.html)
 - [Sustainability](/notes/sustainability/sustainability_main.html)
 
 > #### Engineering/Science
@@ -60,6 +61,26 @@
 
 > #### Engineering
 
+> - [Distributed Energy Management for Comprehensive Utilization of Residential
+    Photovoltaic
+    Outputs](./distributed_energy_management_for_comprehensive_utilization_of_residential_photovoltaic_outputs/distributed_energy_management_for_comprehensive_utilization_of_residential_photovoltaic_outputs.html)
+    (Yu Fujimoto, Hiroshi Kikusato, Shinya Yoshizawa, Shunsuke Kawano, Akira
+    Yoshida, Shinji Wakao, Noboru Murata, Yoshiharu Amano, Shin-ichi Tanabe,
+    and Yasuhiro Hayashi)
+> - [Energy management and power planning of a microgrid with a PV-based active
+    generator for Smart Grid
+    Applications](./energy_management_and_power_planning_of_a_microgrid_with_a_pv-based_active_generator_for_smart_grid_applications/energy_management_and_power_planning_of_a_microgrid_with_a_pv-based_active_generator_for_smart_grid_applications.html)
+    (Hristiyan KANCHEV, Di LU, Frédéric COLAS, Vladimir LAZAROV, Bruno
+    FRANCOIS)
+> - [Energy management in a microgrid with distributed energy
+    resources](./energy_management_in_a_microgrid_with_distributed_energy_resources/energy_management_in_a_microgrid_with_distributed_energy_resources.html)
+    (Linfeng Zhang, Nicolae Gari, Hmurcik Lawrence)
+> - [Multi Agent System based Distributed Energy Management of a
+    MicroGrid](./multi_agent_system_based_distributed_energy_management_of_a_microgrid/multi_agent_system_based_distributed_energy_management_of_a_microgrid.html)
+    (Raju Leo, Antony Amalraj Morais, R.S.Milton)
+> - [Multi-Agent System for
+    Distributed Management of Microgrids](./multi-agent_system_for_distributed/multi-agent_system_for_distributed.html)
+    (Y. S. Foo. Eddy, H. B. Gooi, and S. X. Chen)
 > - [Numerical Methods in Engineering With Python
      3](numerical_methods_engineering_py3/num_methods_py3_main.html)
      (Jaan Kiusalaas)
