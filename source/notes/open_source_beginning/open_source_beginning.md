@@ -5,7 +5,7 @@ source projects because that is where I have experience.
 
 # Git/Github
 
-Github is one of the most common place to find open source repositories and one
+Github is one of the most common places to find open source repositories and one
 of the easiest ways to contribute. As such this is the first step to learn
 towards open source programming contributions. Below is a series of two videos,
 the first describes how to use git the tool and the second describes how to
@@ -14,14 +14,22 @@ interact with Github the site.
 1. [Github YouTube Tutorial](https://www.youtube.com/watch?v=0fKg7e37bQE)
 1. [Github YouTube Tutorial 2](https://www.youtube.com/watch?v=oFYyTZwMyAg)
 
+# Obtain Git
+
+If your machine does not yet have git, it is easy to acquire. On windows follow
+this [guide](https://git-scm.com/downloads). On mac or linux, if you try to use
+a git command before git is installed, your system will suggest a command that
+you can use to acquire git.
+
 # Find a project to which you'd like to contribute
 
-It's important that you find a project that interests you as you'll be spending
-a lot of time on it. Once you find a project clone it to your local machine and
-use the `python setup.py develop`. By using the `develop` option instead of
-`install` your python instance will use the git repo version of the code rather
-than copying it internally. This means as you work in the git repository you do
-not have to reinstall the code to see the changes take effect.
+Choose a topic you like or something that is meaningful to you. You'll be more
+likely to stick with it and you'll learn more. Once you find a project clone it
+to your local machine and use the `python setup.py develop`. By using the
+`develop` option instead of `install` your python instance will use the git
+repo version of the code rather than copying it internally. This means as you
+work in the git repository you do not have to reinstall the code to see the
+changes take effect.
 
 > _Note:_ If `setup.py develop` is not working it may be that setup.py is using
 > distutils instead of setuptools. You can try just changing them in the import
@@ -39,6 +47,15 @@ your fellow contributors and get your feet wet with the contribution process.
 
 # Common Open Source Tools
 
+## PEP8
+
+Python Enhancement Proposal 8
+([PEP8](https://www.python.org/dev/peps/pep-0008/)) is a common style guide
+across open source projects as it is the one endorsed by Python Software
+Foundation itself. If the project you've found does not use a style guide it
+would be a good idea to bring this one to their attention. Otherwise use the
+exact same style guide that the project uses.
+
 ## TravisCI
 
 [TravisCI](https://travis-ci.org/) is a tool that runs a project's tests with
@@ -53,6 +70,15 @@ used by Python projects. A big reason for this is that is can pull
 documentation directly from the code itself. This allows projects to only have
 to maintain the code in the docstrings of the classes/functions and still have
 good documentation.
+
+The standard formatting for sphinx can lead to docstrings that are not very
+readable unrendered and so some extensions have been developed to allow
+readable docstrings. The two common extensions are
+[numpydoc](https://github.com/numpy/numpydoc/) and
+[Napoleon](http://www.sphinx-doc.org/en/stable/ext/napoleon.html). Napoleon is
+included with sphinx and numpydoc needs to be installed separately. To get
+sphinx to use them you need to add "numpydoc" or "sphinx.ext.napoleon" to the
+extensions list in your conf.py file.
 
 ## ReadTheDocs
 
