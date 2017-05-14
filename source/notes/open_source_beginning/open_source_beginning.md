@@ -21,6 +21,15 @@ this [guide](https://git-scm.com/downloads). On mac or linux, if you try to use
 a git command before git is installed, your system will suggest a command that
 you can use to acquire git.
 
+# Git SSH Keys
+
+In order to be able to push and pull to your repositories without having to
+enter your password every time you need to set up ssh keys with github. Github
+has a useful
+[guide](https://help.github.com/articles/connecting-to-github-with-ssh/) for
+setting up ssh keys. Once you have ssh set up make sure you use the ssh link
+for your `git clone` statement.
+
 # Find a project to which you'd like to contribute
 
 Choose a topic you like or something that is meaningful to you. You'll be more
